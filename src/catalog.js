@@ -57,12 +57,35 @@ export const featuredOrder = [
   'underdog','poke','ambi','cue','town','wabi','instinct','lindy'
 ];
 
-export const directoryViews = {
-  overview:{label:'Overview',fields:[['uniqueFeatures','What stands out'],['computerUse','Computer use'],['nativeApps','Native apps'],['messaging','Messaging']]},
-  capabilities:{label:'Capabilities',fields:[['browserUse','Browser control'],['passwordManager','Passwords'],['api','Developer API'],['voice','Voice & listening']]},
-  models:{label:'Models & plans',fields:[['models','Models'],['byom','Bring your own model'],['bundledPlan','Bundled with'],['pricing','Cost']]},
-  access:{label:'Apps & hardware',fields:[['nativeApps','Native apps'],['messaging','Messaging'],['hardware','Native hardware'],['api','Developer API']]},
-  company:{label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Stage'],['funding','Disclosed funding'],['launchDate','Launch']]},
-  continuity:{label:'If it goes away',fields:[['worksWithoutVendor','If the vendor stops'],['hosting','Where it runs'],['dataAfterExit','What you keep'],['license','Open source']]},
-  control:{label:'Ownership & control',fields:[['license','Open source'],['hosting','Where it runs'],['memory','Memory'],['scheduling','Background work']]}
-};
+// Every column a reader can switch on, grouped the way the picker shows them.
+// Short labels: a table header is not the place for a full question.
+export const columnCatalog = [
+  {label:'What it does',columns:[
+    ['computerUse','Computer use'],['onYourComputer','Your computer'],['agentComputer','Its own computer'],
+    ['whileYouAreOff','Works when off'],['browserUse','Browser'],['voice','Voice'],['scheduling','Background work'],
+    ['uniqueFeatures','What stands out']
+  ]},
+  {label:'Apps & access',columns:[
+    ['nativeApps','Apps'],['messaging','Messaging'],['channels','Web & messaging'],
+    ['hardware','Hardware'],['api','API'],['availability','Availability']
+  ]},
+  {label:'Models & price',columns:[
+    ['pricing','Price'],['models','Models'],['byom','BYO model'],['bundledPlan','Bundled with']
+  ]},
+  {label:'Control & privacy',columns:[
+    ['hosting','Where it runs'],['license','Open source'],['memory','Memory'],
+    ['approvals','Approvals'],['passwordManager','Passwords'],['portability','Export'],['security','Privacy']
+  ]},
+  {label:'If it goes away',columns:[
+    ['worksWithoutVendor','If vendor stops'],['remoteDisable','Remote shut-off'],['dataAfterExit','What you keep']
+  ]},
+  {label:'Company',columns:[
+    ['companyType','Company'],['companyStage','Stage'],['funding','Funding'],['launchDate','Launched']
+  ]}
+];
+
+export const columnLabels = Object.fromEntries(columnCatalog.flatMap(g=>g.columns));
+
+// Opening set: well-covered, short, and the questions people ask first.
+export const defaultColumns = ['nativeApps','messaging','computerUse','pricing','hosting','worksWithoutVendor'];
+export const maxColumns = 8;

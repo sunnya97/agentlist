@@ -204,7 +204,7 @@
       "sourceIds": [
         "town-pricing"
       ],
-      "shortValue": "Free; Starter $15/mo; Pro $49/mo annually"
+      "shortValue": "Free; $15–$49/mo"
     },
     {
       "field": "hosting",
@@ -213,7 +213,8 @@
       "sourceIds": [
         "town-start",
         "town-models"
-      ]
+      ],
+      "shortValue": "Provider cloud"
     },
     {
       "field": "approvals",

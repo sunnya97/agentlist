@@ -129,7 +129,7 @@
       "sourceIds": [
         "thine-recorder"
       ],
-      "shortValue": "Free · $14.99/month"
+      "shortValue": "Free; $14.99/mo"
     },
     {
       "field": "bundledPlan",
@@ -157,7 +157,7 @@
       "sourceIds": [
         "thine-privacy"
       ],
-      "shortValue": "Cloud-backed apps"
+      "shortValue": "Provider cloud"
     },
     {
       "field": "approvals",

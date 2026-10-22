@@ -43,7 +43,7 @@
       "sourceIds": [
         "instinct-home"
       ],
-      "shortValue": "Agent-operated phone and computer"
+      "shortValue": "Phone and computer"
     },
     {
       "field": "voice",
@@ -85,7 +85,8 @@
       "status": "limited",
       "sourceIds": [
         "instinct-privacy"
-      ]
+      ],
+      "shortValue": "Unverified"
     },
     {
       "field": "passwordManager",

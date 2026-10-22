@@ -148,7 +148,8 @@
       "status": "documented",
       "sourceIds": [
         "tomo-privacy"
-      ]
+      ],
+      "shortValue": "Provider cloud"
     },
     {
       "field": "security",
@@ -181,7 +182,7 @@
       "sourceIds": [
         "tomo-about"
       ],
-      "shortValue": "From $19.99/month"
+      "shortValue": "From $19.99/mo"
     },
     {
       "field": "availability",

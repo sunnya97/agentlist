@@ -49,7 +49,7 @@
       "sourceIds": [
         "ambi-home"
       ],
-      "shortValue": "Screen context and connected tools"
+      "shortValue": "Screen + apps"
     },
     {
       "field": "voice",
@@ -120,7 +120,7 @@
       "sourceIds": [
         "ambi-features"
       ],
-      "shortValue": "7-day trial; shared-credit paid plans"
+      "shortValue": "Trial, then paid"
     },
     {
       "field": "hosting",
@@ -128,7 +128,8 @@
       "sourceIds": [
         "ambi-home"
       ],
-      "status": "limited"
+      "status": "limited",
+      "shortValue": "Unverified"
     },
     {
       "field": "approvals",

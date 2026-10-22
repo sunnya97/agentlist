@@ -52,7 +52,7 @@
     {
       "field": "computerUse",
       "value": "Acts from its own appliance through connected accounts and a secure browser; it does not control your Mac or PC, and no remote interface onto the device's own screen is described",
-      "shortValue": "Own appliance; not your computer",
+      "shortValue": "Own appliance",
       "status": "limited",
       "sourceIds": [
         "vora-home",
@@ -146,7 +146,7 @@
     {
       "field": "pricing",
       "value": "US$2,499 Super Early Bird reservation with a US$50 refundable deposit; a published ladder runs to US$2,799 Early Bird and US$2,999 retail. Optional post-launch plans are US$20/month Guardian Care, US$20/month Aegis Pro and US$100/month Aegis Pro+",
-      "shortValue": "US$2,499 device; US$50 deposit",
+      "shortValue": "US$2,499 device",
       "status": "documented",
       "sourceIds": [
         "vora-faq",
@@ -167,7 +167,7 @@
     {
       "field": "hosting",
       "value": "Runs on the owner's appliance on EnclaveOS, a hardened security-first operating system. Account data flows from the provider straight to the device rather than through a Vora server. Optional frontier-model credits would send only approved content off-device, and are not available at launch",
-      "shortValue": "On your own appliance",
+      "shortValue": "Your own appliance",
       "status": "documented",
       "sourceIds": [
         "vora-specs",

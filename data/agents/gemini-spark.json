@@ -97,7 +97,7 @@
       "sourceIds": [
         "spark-evolution"
       ],
-      "shortValue": "Cloud agent; local desktop rollout unclear"
+      "shortValue": "Cloud; desktop unclear"
     },
     {
       "field": "browserUse",
@@ -173,7 +173,7 @@
     {
       "field": "pricing",
       "value": "Google AI Pro is US$19.99/month in the US. Tasks are also included with Google AI Ultra; Ultra's current price varies by tier and market.",
-      "shortValue": "US Pro US$19.99/mo; Ultra options",
+      "shortValue": "AI Pro $19.99/mo",
       "sourceIds": [
         "google-one-pricing",
         "google-ai-plans",
@@ -187,7 +187,8 @@
       "sourceIds": [
         "spark-keynote"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Google Cloud VMs"
     },
     {
       "field": "passwordManager",

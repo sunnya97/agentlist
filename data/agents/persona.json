@@ -179,7 +179,8 @@
       "status": "documented",
       "sourceIds": [
         "persona-privacy"
-      ]
+      ],
+      "shortValue": "Provider cloud"
     },
     {
       "field": "security",
@@ -196,7 +197,7 @@
       "sourceIds": [
         "persona-band"
       ],
-      "shortValue": "Free; optional $179 Band"
+      "shortValue": "Free; $179 Band"
     },
     {
       "field": "availability",

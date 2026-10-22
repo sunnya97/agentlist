@@ -97,7 +97,7 @@
     {
       "field": "pricing",
       "value": "China plans with dedicated Kimi Claw: Pro CNY199/month, Max CNY699/month, Ultra CNY1,399/month; annual discounts available. The deployed cloud host also consumes about 0.6% of membership credits daily.",
-      "shortValue": "China: from CNY199/mo + host credits",
+      "shortValue": "CNY199/mo (China)",
       "sourceIds": [
         "kimi-membership-pricing"
       ],
@@ -109,7 +109,8 @@
       "sourceIds": [
         "kimi-claw-overview"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Kimi cloud or self"
     },
     {
       "field": "memory",

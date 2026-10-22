@@ -31,5 +31,11 @@ export const continuityLabels = {
   dataAfterExit:'What you keep'
 };
 
+// Table wording; the detail carries the full answer.
+const short = {
+  worksWithoutVendor:{yes:'Keeps working',partial:'Partly',no:'Stops'},
+  remoteDisable:{none:'Not possible',possible:'Possible',required:'Licence check'},
+  dataAfterExit:{'self-serve':'Self-serve','on-request':'On request',partial:'Partial',none:'None described'}
+};
 export const continuitySummary = (facet, value) =>
-  value ? (continuityFacets[facet]?.[value.state] || value.state) : 'Not specified';
+  value ? (short[facet]?.[value.state] || continuityFacets[facet]?.[value.state] || value.state) : 'Not specified';

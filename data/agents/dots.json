@@ -62,7 +62,7 @@
       "sourceIds": [
         "dots-intro"
       ],
-      "shortValue": "Cloud + connected personal computer"
+      "shortValue": "Cloud + your computer"
     },
     {
       "field": "browserUse",
@@ -147,7 +147,7 @@
     {
       "field": "pricing",
       "value": "First dot included in ChatGPT Pro 100, 200 or 500 (US$100/200/500 per month) or Business Premium (US$125/user/month; US$100/user/month annually). Deeper-work allowances apply.",
-      "shortValue": "ChatGPT Pro from US$100/mo",
+      "shortValue": "ChatGPT Pro $100/mo",
       "status": "documented",
       "sourceIds": [
         "dots-help",
@@ -161,7 +161,8 @@
       "sourceIds": [
         "dots-intro"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Cloud + your PC"
     },
     {
       "field": "passwordManager",

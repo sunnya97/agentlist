@@ -61,7 +61,7 @@
       "sourceIds": [
         "hark-home"
       ],
-      "shortValue": "Cloud computer for web tasks"
+      "shortValue": "Cloud computer"
     },
     {
       "field": "browserUse",
@@ -130,7 +130,8 @@
       "sourceIds": [
         "hark-pricing"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Free; $20–$100/mo"
     },
     {
       "field": "hosting",
@@ -138,7 +139,8 @@
       "sourceIds": [
         "hark-using"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "passwordManager",

@@ -156,7 +156,7 @@
       "sourceIds": [
         "poke-faq"
       ],
-      "shortValue": "Free; Pro $19/mo; Ultra $199/mo + usage"
+      "shortValue": "Free; $19 or $199/mo"
     },
     {
       "field": "hosting",
@@ -164,7 +164,8 @@
       "sourceIds": [
         "poke-home"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "memory",

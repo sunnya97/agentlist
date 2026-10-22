@@ -91,7 +91,7 @@
       "sourceIds": [
         "grok-computer"
       ],
-      "shortValue": "Cloud desktop; one screen per Bot"
+      "shortValue": "Cloud desktop/Bot"
     },
     {
       "field": "browserUse",
@@ -175,7 +175,7 @@
     {
       "field": "pricing",
       "value": "New customers: The X Subscription Premium US$30/month, Super US$100/month or Ultra US$200/month; annual discounts available. Eligible legacy Cursor and linked SuperGrok plans continue.",
-      "shortValue": "From US$30/mo; legacy plans supported",
+      "shortValue": "From US$30/mo",
       "status": "documented",
       "sourceIds": [
         "grok-bot-plans",
@@ -188,7 +188,8 @@
       "sourceIds": [
         "grok-product"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "passwordManager",

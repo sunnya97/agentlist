@@ -141,7 +141,8 @@
       "sourceIds": [
         "picoclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Self-hosted"
     },
     {
       "field": "approvals",
@@ -187,7 +188,7 @@
     {
       "field": "pricing",
       "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
-      "shortValue": "Free software; model & hosting costs vary",
+      "shortValue": "Free; you pay models",
       "status": "documented",
       "sourceIds": [
         "picoclaw-readme"

@@ -121,7 +121,7 @@
       "sourceIds": [
         "eney-privacy"
       ],
-      "shortValue": "Local Mac tools and connected apps"
+      "shortValue": "Local Mac tools"
     },
     {
       "field": "desktopApps",
@@ -217,7 +217,7 @@
       "sourceIds": [
         "eney-home"
       ],
-      "shortValue": "Trial, then from $14.99/month"
+      "shortValue": "Trial, then $14.99/mo"
     },
     {
       "field": "hosting",
@@ -226,7 +226,7 @@
       "sourceIds": [
         "eney-privacy"
       ],
-      "shortValue": "Local tools + cloud inference"
+      "shortValue": "Local + cloud models"
     },
     {
       "field": "security",

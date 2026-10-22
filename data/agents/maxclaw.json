@@ -80,7 +80,7 @@
       "sourceIds": [
         "maxclaw-overview"
       ],
-      "shortValue": "$19/month"
+      "shortValue": "$19/mo"
     },
     {
       "field": "hosting",
@@ -88,7 +88,8 @@
       "sourceIds": [
         "maxclaw-overview"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "memory",

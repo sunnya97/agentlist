@@ -141,7 +141,7 @@
       "sourceIds": [
         "lucas-faq"
       ],
-      "shortValue": "Free · $20 · $100/month"
+      "shortValue": "Free; $20 or $100/mo"
     },
     {
       "field": "passwordManager",
@@ -178,7 +178,7 @@
       "sourceIds": [
         "lucas-privacy"
       ],
-      "shortValue": "Cloud"
+      "shortValue": "Provider cloud"
     },
     {
       "field": "portability",

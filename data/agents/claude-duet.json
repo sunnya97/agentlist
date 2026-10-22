@@ -144,7 +144,7 @@
     {
       "field": "pricing",
       "value": "US research preview included in Claude Pro (US$20/month or US$200/year) and Max (US$100 or US$200/month). Duet's background work shares Claude plan usage.",
-      "shortValue": "Claude Pro US$20/mo; Max US$100–200/mo",
+      "shortValue": "Claude Pro $20/mo",
       "status": "documented",
       "sourceIds": [
         "duet-product",
@@ -157,7 +157,8 @@
       "sourceIds": [
         "duet-product"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "passwordManager",

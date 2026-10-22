@@ -43,7 +43,7 @@
       "sourceIds": [
         "muse-design"
       ],
-      "shortValue": "Dedicated cloud computer"
+      "shortValue": "Own cloud computer"
     },
     {
       "field": "browserUse",
@@ -118,7 +118,7 @@
     {
       "field": "pricing",
       "value": "Free for everyday use, with paid subscriptions for higher usage; paid tier prices and numerical allowances are not listed in the launch announcement.",
-      "shortValue": "Free tier; paid upgrades",
+      "shortValue": "Free; paid upgrades",
       "status": "limited",
       "sourceIds": [
         "muse-intro"
@@ -130,7 +130,8 @@
       "sourceIds": [
         "muse-intro"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "passwordManager",

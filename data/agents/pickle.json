@@ -206,7 +206,8 @@
       "status": "documented",
       "sourceIds": [
         "pickle-home"
-      ]
+      ],
+      "shortValue": "Provider cloud"
     },
     {
       "field": "security",
@@ -240,7 +241,7 @@
       "sourceIds": [
         "pickle-plans"
       ],
-      "shortValue": "From $20/month"
+      "shortValue": "From $20/mo"
     },
     {
       "field": "availability",

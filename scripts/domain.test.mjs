@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {filterAgents,parseSelection,compareRows,sortedNews,sortAgents} from '../src/domain.js';
 import {validate} from './validate.mjs';
-import {fields,directoryViews,featuredOrder,compositeFields} from '../src/catalog.js';
+import {fields,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,compositeFields} from '../src/catalog.js';
 import {channelLabels,channelOrder} from '../src/channels.js';
 import {accessStates,accessSummary} from '../src/access.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
@@ -16,7 +16,15 @@ test('unknown never becomes an unsupported feature',()=>{const inst=data.agents.
 test('difference filter excludes only matching values',()=>{const a={claims:[{field:'memory',value:'Same'},{field:'hosting',value:'Cloud'}]},b={claims:[{field:'memory',value:'Same'},{field:'hosting',value:'Local'}]};assert.deepEqual(compareRows([a,b],[['memory','Memory'],['hosting','Hosting']],true).map(r=>r.key),['hosting'])});
 test('news combines agent, type, search and follow filters',()=>{assert(sortedNews(data.news,{agent:'claude-duet',type:'launch',search:'preview'}).length===1);assert.equal(sortedNews(data.news,{watchlist:[]}).length,0);assert(sortedNews(data.news,{watchlist:['hermes']}).every(n=>n.agentIds.includes('hermes')))});
 test('data validation rejects unsupported claims and dangling edges',()=>{assert(validate(data));const bad=structuredClone(data);bad.agents[0].claims[0].sourceIds=['absent'];assert.throws(()=>validate(bad));const edge=structuredClone(data);edge.relationships[0].to='nonexistent';assert.throws(()=>validate(edge))});
-test('comparison views use the same complete feature schema',()=>{const keys=new Set(fields.map(([key])=>key));for(const view of Object.values(directoryViews))for(const [key] of view.fields)assert(keys.has(key)||compositeFields[key]?.every(part=>keys.has(part)));for(const a of data.agents)assert.equal(a.claims.length,keys.size)});
+test('every offered column resolves to the feature schema',()=>{
+  const keys=new Set(fields.map(([key])=>key));
+  for(const group of columnCatalog)for(const [key] of group.columns)
+    assert(keys.has(key)||compositeFields[key]?.every(part=>keys.has(part)),`unknown column ${key}`);
+  for(const a of data.agents)assert.equal(a.claims.length,keys.size);
+  assert(defaultColumns.every(key=>columnLabels[key]),'defaults must be offerable');
+  assert(defaultColumns.length<=maxColumns);
+  assert.equal(new Set(Object.keys(columnLabels)).size,columnCatalog.flatMap(g=>g.columns).length,'duplicate column key');
+});
 test('feature search finds concrete capabilities, with coding tools still opt-in',()=>{assert(filterAgents(data.agents,{search:'ambient listening'}).some(a=>a.id==='ambi'));assert(filterAgents(data.agents,{search:'encrypted login'}).some(a=>a.id==='underdog'));assert(!filterAgents(data.agents,{search:'local models'}).some(a=>a.id==='codex'))});
 test('logos are local assets with provenance and unsupported API fields stay explicit',async()=>{for(const a of data.agents){assert((await readFile(new URL(`../src/${a.logo.path}`,import.meta.url))).length>0);assert(a.logo.sourceUrl)}const api=data.agents.find(a=>a.id==='ambi').claims.find(c=>c.field==='api');assert.match(api.value,/API not specified/i);assert.match(api.shortValue,/API not specified/i)});
 test('featured sorting preserves filters and input order, with stable alphabetical fallback',()=>{

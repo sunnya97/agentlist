@@ -63,7 +63,7 @@
         "underdog-home",
         "underdog-security"
       ],
-      "shortValue": "On-device AI + browser agent"
+      "shortValue": "On-device + browser"
     },
     {
       "field": "browserUse",
@@ -148,7 +148,8 @@
       "status": "documented",
       "sourceIds": [
         "underdog-pricing"
-      ]
+      ],
+      "shortValue": "Free"
     },
     {
       "field": "license",
@@ -166,7 +167,7 @@
         "underdog-home",
         "underdog-security"
       ],
-      "shortValue": "On-device AI; direct mail sync"
+      "shortValue": "On your device"
     },
     {
       "field": "passwordManager",

@@ -31,7 +31,7 @@
       "sourceIds": [
         "cue-home"
       ],
-      "shortValue": "Dedicated agent computer"
+      "shortValue": "Own agent computer"
     },
     {
       "field": "voice",
@@ -82,7 +82,8 @@
       "status": "limited",
       "sourceIds": [
         "cue-home"
-      ]
+      ],
+      "shortValue": "Unverified"
     },
     {
       "field": "approvals",

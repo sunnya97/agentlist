@@ -116,7 +116,7 @@
       "sourceIds": [
         "openclaw-computer-use"
       ],
-      "shortValue": "Local/paired Mac + cloud desktops; Windows/Linux experimental"
+      "shortValue": "Your Mac + cloud"
     },
     {
       "field": "browserUse",
@@ -212,7 +212,8 @@
       "sourceIds": [
         "openclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Free; you pay models"
     },
     {
       "field": "license",
@@ -228,7 +229,8 @@
       "sourceIds": [
         "openclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Self-hosted"
     },
     {
       "field": "passwordManager",

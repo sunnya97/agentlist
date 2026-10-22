@@ -86,7 +86,7 @@
         "lindy-home",
         "lindy-credentials"
       ],
-      "shortValue": "Browser automation + shell/code"
+      "shortValue": "Browser + shell"
     },
     {
       "field": "browserUse",
@@ -179,7 +179,7 @@
     {
       "field": "pricing",
       "value": "Seven-day trial with US$50 credits. Team starts at US$49.99 per active user/month for 5,000 pooled credits; top-ups cost US$10 per 1,000 credits.",
-      "shortValue": "Trial; US$49.99/user/mo + top-ups",
+      "shortValue": "$49.99/user/mo",
       "status": "documented",
       "sourceIds": [
         "lindy-pricing"
@@ -191,7 +191,8 @@
       "sourceIds": [
         "lindy-home"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Provider cloud"
     },
     {
       "field": "passwordManager",

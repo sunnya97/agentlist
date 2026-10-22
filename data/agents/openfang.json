@@ -123,7 +123,8 @@
       "sourceIds": [
         "openfang-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Self-hosted"
     },
     {
       "field": "passwordManager",
@@ -178,7 +179,7 @@
     {
       "field": "pricing",
       "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
-      "shortValue": "Free software; model & hosting costs vary",
+      "shortValue": "Free; you pay models",
       "status": "documented",
       "sourceIds": [
         "openfang-readme",

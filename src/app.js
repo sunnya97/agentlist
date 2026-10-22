@@ -1,5 +1,5 @@
 import {filterAgents,parseSelection,getClaim,compareRows,sortedNews,sortAgents,firstLaunch,formatCatalogDate} from './domain.js';
-import {fields,fieldGroups,directoryViews,featuredOrder,companyTypes,launchKinds} from './catalog.js';
+import {fields,fieldGroups,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,companyTypes,launchKinds} from './catalog.js';
 import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js';
 import {channelLabels,channelIcons} from './channels.js';
 import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
@@ -9,13 +9,17 @@ const safeUrl=u=>{try{const p=new URL(u);return /^https?:$/.test(p.protocol)?esc
 const external=(url,label,cls='')=>`<a class="${cls}" href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 const searchIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>';
 const uiIcon=(name)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${{star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',compare:'<rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',sliders:'<path d="M4 7h9m4 0h3M4 17h3m4 0h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',model:'<path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',exit:'<path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M10 8 6 12l4 4M6 12h9"/>'}[name]||''}</svg>`;
-const viewIcons={overview:'grid',capabilities:'sliders',models:'model',access:'grid',company:'grid',continuity:'exit',control:'lock'};
 const categoryLabels={managed:'Hosted agent',runtime:'Self-hosted',local:'Local-first app',watchlist:'Under review',adjacent:'Coding tool'};
 const typeLabels={'built-on':'Built on',fork:'Code fork',renamed:'Renamed'};
 const profileHref=(id,tab='overview')=>`#agent/${encodeURIComponent(id)}${tab==='overview'?'':'?tab='+tab}`;
 let profileState={id:null,tab:'overview'};
 let data,agents,byId,selected=[],watchlist=[],differences=false,newsState={agent:'all',type:'all',search:'',watching:false};
-let directoryState={search:'',category:'all',hosting:'all',companyType:'all',access:'all',adjacent:false,watching:false,sort:'featured',view:'overview'};
+let directoryState={search:'',category:'all',hosting:'all',companyType:'all',access:'all',adjacent:false,watching:false,sort:'featured'};
+let columns=[...defaultColumns];
+try{const saved=JSON.parse(localStorage.getItem('agentlist:columns')||'null');
+  if(Array.isArray(saved)&&saved.length)columns=saved.filter(key=>columnLabels[key]).slice(0,maxColumns);}catch{}
+function saveColumns(){try{localStorage.setItem('agentlist:columns',JSON.stringify(columns))}catch{}}
+const iconColumn=key=>key==='nativeApps'||key==='messaging';
 try{watchlist=JSON.parse(localStorage.getItem('agentlist:watchlist')||'[]');if(!Array.isArray(watchlist))watchlist=[]}catch{watchlist=[]}
 const icon=a=>`<span class="agent-icon ${a.id==='openfang'?'dark-logo':''}" aria-hidden="true"><img src="${esc(a.logo.path)}" alt="" width="40" height="40" loading="lazy"></span>`;
 const tag=a=>`<span class="tag ${esc(a.category)}">${categoryLabels[a.category]||esc(a.category)}</span>`;
@@ -43,6 +47,24 @@ const iconListHTML=(a,kind,limit,empty)=>{
 };
 const platformListHTML=a=>iconListHTML(a,'platforms',5,'App availability not specified');
 const messagingListHTML=a=>iconListHTML(a,'messaging',3,'Messaging services not specified');
+function renderColumnsPicker(){
+  const panel=$('#columns-popover');
+  panel.innerHTML=`<div class="columns-head"><h3>Columns</h3><button class="read-more" data-action="reset-columns">Reset</button></div>
+    <p class="columns-hint">${columns.length} of ${maxColumns} shown</p>
+    ${columnCatalog.map(group=>`<section><h4>${esc(group.label)}</h4><div class="columns-options">${group.columns.map(([key,label])=>{
+      const on=columns.includes(key),full=!on&&columns.length>=maxColumns;
+      return `<button class="column-option ${on?'on':''}" data-column="${key}" role="switch" aria-checked="${on}" ${full?'disabled':''}>${esc(label)}</button>`;
+    }).join('')}</div></section>`).join('')}`;
+}
+function toggleColumn(key){
+  if(columns.includes(key))columns=columns.filter(x=>x!==key);
+  else if(columns.length<maxColumns)columns=[...columns,key];
+  else{toast(`Show up to ${maxColumns} columns. Remove one to add another.`);return}
+  if(!columns.length)columns=[...defaultColumns];
+  saveColumns();renderDirectory();
+  const panel=$('#columns-popover');
+  if(panel.matches(':popover-open')){renderColumnsPicker();panel.showPopover()}
+}
 function openPlatform(button){
   const [id,index,kind='platforms']=button.dataset.platform.split(':'),a=byId.get(id),p=a?.[kind]?.[Number(index)];if(!p)return;
   const panel=$('#platform-popover');
@@ -88,7 +110,6 @@ function route(){
   updateTray();
 }
 function renderDirectory(){
-  const view=directoryViews[directoryState.view];
   $('#main').innerHTML=`<div class="page directory-page">
     <section class="directory-intro">
       <div><h1>Personal agents<span class="heading-count">${agents.filter(a=>a.category!=='adjacent').length}</span></h1><p>Find the right agent for the way you work.</p></div>
@@ -103,8 +124,8 @@ function renderDirectory(){
         <select id="sort-filter" aria-label="Sort agents">${options([['featured','Featured first'],['name','Name A–Z'],['category','Agent type'],['launch','Newest launches']],directoryState.sort)}</select>
         <button class="following-filter ${directoryState.watching?'active':''}" data-action="watch-filter" aria-pressed="${directoryState.watching}">${uiIcon('star')} Following${watchlist.length?` <span>${watchlist.length}</span>`:''}</button>
       </div>
-      <div class="table-toolbar"><div class="view-switch" role="group" aria-label="Comparison dimensions">${Object.entries(directoryViews).map(([key,item])=>`<button data-view="${key}" aria-pressed="${directoryState.view===key}" class="${directoryState.view===key?'active':''}">${uiIcon(viewIcons[key])}${item.label}</button>`).join('')}</div><span class="result-count" id="result-count"></span></div>
-      <div class="table-wrap"><table class="directory-table ${directoryState.view==='overview'?'overview-table':''}"><caption class="sr-only">Personal agent ${view.label.toLowerCase()}. Select up to four agents for comparison.</caption><colgroup><col class="selection-col"><col class="identity-col">${view.fields.map(([key])=>`<col class="field-col ${key==='uniqueFeatures'?'standout-col':key==='nativeApps'?'platform-col':key==='messaging'?'messaging-col':''}">`).join('')}<col class="follow-col"></colgroup><thead><tr><th class="check"><span class="sr-only">Compare</span></th><th scope="col">Agent</th>${view.fields.map(([,label])=>`<th scope="col">${label}</th>`).join('')}<th><span class="sr-only">Follow</span></th></tr></thead><tbody id="agent-rows"></tbody></table></div>
+      <div class="table-toolbar"><button class="button small" data-action="columns" aria-haspopup="dialog" aria-controls="columns-popover" aria-expanded="false">${uiIcon('sliders')} Columns <span>${columns.length}</span></button><span class="result-count" id="result-count"></span></div>
+      <div class="table-wrap"><table class="directory-table"><caption class="sr-only">Personal agents. Select up to four for comparison.</caption><colgroup><col class="selection-col"><col class="identity-col">${columns.map(key=>`<col class="field-col ${key==='nativeApps'?'platform-col':key==='messaging'?'messaging-col':''}">`).join('')}<col class="follow-col"></colgroup><thead><tr><th class="check"><span class="sr-only">Compare</span></th><th scope="col">Agent</th>${columns.map(key=>`<th scope="col">${esc(columnLabels[key])}</th>`).join('')}<th><span class="sr-only">Follow</span></th></tr></thead><tbody id="agent-rows"></tbody></table></div>
       <div class="table-note"><label><input type="checkbox" id="include-adjacent" ${directoryState.adjacent?'checked':''}> Include coding tools</label><span>Select up to 4 agents to compare</span></div>
     </section>
     <aside class="sidebar"><div class="section-top"><h2>From the ecosystem</h2><a href="#news">All updates ${uiIcon('arrow')}</a></div>${sortedNews(data.news).slice(0,3).map(n=>external(n.url,`<div class="news-meta"><time datetime="${n.date}">${formatDate(n.date)}</time><span class="type">${esc(n.type||'release')}</span></div><h3>${esc(n.title)} ${uiIcon('arrow')}</h3><span class="publisher">${esc(n.publisher||'Official release notes')}</span>`,'news-mini')).join('')}</aside>
@@ -113,9 +134,8 @@ function renderDirectory(){
 }
 function updateDirectoryRows(){
   const list=sortAgents(filterAgents(agents,{...directoryState,watchlist}),directoryState.sort,featuredOrder);
-  const view=directoryViews[directoryState.view];
   $('#result-count').textContent=`${list.length} agent${list.length===1?'':'s'}`;
-  $('#agent-rows').innerHTML=list.length?list.map(a=>`<tr class="${selected.includes(a.id)?'selected':''}"><td class="check"><input type="checkbox" aria-label="Compare ${esc(a.name)}" data-select="${a.id}" ${selected.includes(a.id)?'checked':''}></td><td><a class="agent-cell" href="${profileHref(a.id)}">${icon(a)}<span><b>${esc(a.name)}</b><small><span class="org">${esc(a.organization)}</span>${accessNote(a)}</small></span></a></td>${view.fields.map(([key,label])=>`<td data-label="${esc(label)}">${claimHTML(a,key,true)}</td>`).join('')}<td><button class="star ${watchlist.includes(a.id)?'saved':''}" data-watch="${a.id}" aria-label="${watchlist.includes(a.id)?'Unfollow':'Follow'} ${esc(a.name)}" aria-pressed="${watchlist.includes(a.id)}">${uiIcon('star')}</button></td></tr>`).join(''):`<tr class="no-results"><td colspan="${view.fields.length+3}">No agents match these filters. <button class="read-more" data-action="reset-filters">Reset filters →</button></td></tr>`;
+  $('#agent-rows').innerHTML=list.length?list.map(a=>`<tr class="${selected.includes(a.id)?'selected':''}"><td class="check"><input type="checkbox" aria-label="Compare ${esc(a.name)}" data-select="${a.id}" ${selected.includes(a.id)?'checked':''}></td><td><a class="agent-cell" href="${profileHref(a.id)}">${icon(a)}<span><b>${esc(a.name)}</b><small><span class="org">${esc(a.organization)}</span>${accessNote(a)}</small></span></a></td>${columns.map(key=>`<td data-label="${esc(columnLabels[key])}">${claimHTML(a,key,true)}</td>`).join('')}<td><button class="star ${watchlist.includes(a.id)?'saved':''}" data-watch="${a.id}" aria-label="${watchlist.includes(a.id)?'Unfollow':'Follow'} ${esc(a.name)}" aria-pressed="${watchlist.includes(a.id)}">${uiIcon('star')}</button></td></tr>`).join(''):`<tr class="no-results"><td colspan="${columns.length+3}">No agents match these filters. <button class="read-more" data-action="reset-filters">Reset filters →</button></td></tr>`;
 }
 function updateTray(){
   document.querySelectorAll('[data-profile-compare]').forEach(el=>{const active=selected.includes(el.dataset.profileCompare);el.textContent=active?'Remove from comparison':'Add to comparison ＋';el.setAttribute('aria-pressed',String(active))});
@@ -199,8 +219,8 @@ document.addEventListener('click',e=>{
   const target=e.target.closest('button,a,[data-profile]');if(!target)return;
   if(target.classList.contains('skip-link')){e.preventDefault();$('#main').focus();return}
   if(target.dataset.platform){openPlatform(target);return}
+  if(target.dataset.column){toggleColumn(target.dataset.column);return}
   if(target.dataset.watch){const id=target.dataset.watch;watchlist=watchlist.includes(id)?watchlist.filter(x=>x!==id):[...watchlist,id];saveWatchlist();if(profileState.id===id){target.textContent=watchlist.includes(id)?'★ Following':'☆ Follow updates';target.setAttribute('aria-pressed',String(watchlist.includes(id)))}if($('#agent-rows'))renderDirectory();if($('#news-results'))updateNews();toast(watchlist.includes(id)?'Following agent':'Removed from following');return}
-  if(target.dataset.view){directoryState.view=target.dataset.view;renderDirectory();return}
   if(target.dataset.category){directoryState.category=target.dataset.category;directoryState.watching=false;renderDirectory();return}
   if(target.dataset.remove){selected=selected.filter(x=>x!==target.dataset.remove);if(location.hash.startsWith('#compare')){history.replaceState(null,'',`#compare?agents=${selected.join(',')}`);renderCompare()}updateTray();return}
   if(target.dataset.profileCompare){selectAgent(target.dataset.profileCompare);return}
@@ -210,7 +230,17 @@ document.addEventListener('click',e=>{
     case 'contribute':$('#contribute-dialog').showModal();break;
     case 'close-contribute':$('#contribute-dialog').close();break;
     case 'watch-filter':directoryState.watching=!directoryState.watching;directoryState.category='all';renderDirectory();break;
-    case 'reset-filters':directoryState={search:'',category:'all',hosting:'all',companyType:'all',access:'all',adjacent:false,watching:false,sort:'featured',view:'overview'};renderDirectory();break;
+    case 'columns':{
+      const panel=$('#columns-popover');
+      if(panel.matches(':popover-open')){panel.hidePopover();break}
+      renderColumnsPicker();panel.showPopover();
+      const rect=target.getBoundingClientRect();
+      panel.style.left=`${Math.max(12,Math.min(rect.left,innerWidth-panel.offsetWidth-12))}px`;
+      panel.style.top=`${Math.max(12,rect.bottom+8)}px`;
+      break;
+    }
+    case 'reset-columns':columns=[...defaultColumns];saveColumns();renderDirectory();renderColumnsPicker();break;
+    case 'reset-filters':directoryState={search:'',category:'all',hosting:'all',companyType:'all',access:'all',adjacent:false,watching:false,sort:'featured'};renderDirectory();break;
     case 'clear-selection':selected=[];updateTray();break;
     case 'copy-comparison':copy(`${location.protocol==='file:'?'file://':location.origin}${location.pathname}#compare?agents=${selected.join(',')}`);break;
     case 'export-comparison':{const list=selected.map(id=>byId.get(id));const rows=[['Field',...list.map(a=>a.name)],...fields.flatMap(([k,l])=>[[l,...list.map(a=>getClaim(a,k).value)],[`${l}: evidence`,...list.map(a=>getClaim(a,k).status)],[`${l}: sources`,...list.map(a=>getClaim(a,k).sourceIds.map(id=>a.sources.find(s=>s.id===id)?.url).filter(Boolean).join(' '))]]),['Checked at',...list.map(()=>data.checkedAt)]];download('agentlist-comparison.csv','\ufeff'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');toast('Comparison exported');break}

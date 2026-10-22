@@ -58,7 +58,7 @@
     {
       "field": "computerUse",
       "value": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
-      "shortValue": "Connected-app actions only",
+      "shortValue": "Connected apps only",
       "status": "limited",
       "sourceIds": [
         "bond-home",
@@ -164,7 +164,7 @@
     {
       "field": "pricing",
       "value": "Free tier with 10,000 credits; individual plan US$49/month; Enterprise priced on request",
-      "shortValue": "Free tier; US$49/mo; Enterprise custom",
+      "shortValue": "Free; US$49/mo",
       "status": "documented",
       "sourceIds": [
         "bond-pricing"
@@ -173,7 +173,7 @@
     {
       "field": "hosting",
       "value": "Provider-hosted service that connects to the user's third-party work accounts",
-      "shortValue": "Provider-hosted",
+      "shortValue": "Provider cloud",
       "status": "documented",
       "sourceIds": [
         "bond-privacy",
