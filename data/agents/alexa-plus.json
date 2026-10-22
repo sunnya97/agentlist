@@ -1,0 +1,369 @@
+{
+  "id": "alexa-plus",
+  "name": "Alexa+",
+  "organization": "Amazon",
+  "website": "https://www.amazon.com/alexaplus",
+  "repository": null,
+  "category": "managed",
+  "summary": "Amazon's generative Alexa, with remembered personal details, routines and agentic web tasks across Echo devices, the Alexa app and the web.",
+  "sources": [
+    {
+      "id": "alexa-overview",
+      "title": "Alexa+ overview",
+      "url": "https://www.aboutamazon.com/what-we-do/devices-services/alexa-plus",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "alexa-intro",
+      "title": "Amazon introduces the next generation of Alexa",
+      "url": "https://www.aboutamazon.com/news/devices/new-alexa-generative-artificial-intelligence",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "alexa-prime",
+      "title": "Alexa+ is available free for Prime members",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-available-free-prime-members-us",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "alexa-ring",
+      "title": "Alexa+ and Ring doorbell greetings",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-ring-doorbell-ai-greetings",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "alexa-privacy",
+      "title": "Alexa privacy settings",
+      "url": "https://www.amazon.com/alexaprivacysettings",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "alexa-export",
+      "title": "Request your personal information from Amazon",
+      "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=TP1zlemejtTn6pwYKS",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Reaches Amazon's own services, including Ring footage and AI video search, Prime Video, Amazon Music and Photos, alongside shopping and smart home",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-prime",
+        "alexa-ring"
+      ],
+      "shortValue": "Ring, Prime Video and shopping"
+    },
+    {
+      "field": "computerUse",
+      "value": "Navigates the internet in a self-directed way to complete tasks behind the scenes; no control of the user's own device is described",
+      "status": "limited",
+      "sourceIds": [
+        "alexa-intro"
+      ],
+      "shortValue": "Its own web tasks"
+    },
+    {
+      "field": "browserUse",
+      "value": "Navigates the web on the user's behalf from Amazon's side",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-intro"
+      ],
+      "shortValue": "Agentic web navigation"
+    },
+    {
+      "field": "voice",
+      "value": "Voice is the primary interface, across Echo devices, Echo Show, Fire TV and the Alexa app",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-overview"
+      ],
+      "shortValue": "Voice-first"
+    },
+    {
+      "field": "scheduling",
+      "value": "Routines, reminders and calendar management, with agentic tasks completed behind the scenes; a user-facing scheduler for autonomous runs is not described",
+      "status": "limited",
+      "sourceIds": [
+        "alexa-intro",
+        "alexa-overview"
+      ],
+      "shortValue": "Routines and reminders"
+    },
+    {
+      "field": "desktopApps",
+      "value": "No native desktop app; the web experience is at Alexa.com",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-overview"
+      ],
+      "shortValue": "None; web at Alexa.com"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Alexa apps for iPhone and Android",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-overview"
+      ],
+      "shortValue": "iOS, Android"
+    },
+    {
+      "field": "channels",
+      "value": "Echo devices, Echo Show, Echo Hub, Fire TV, the Alexa app and Alexa.com",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-overview"
+      ],
+      "shortValue": "Echo devices, app and web"
+    },
+    {
+      "field": "models",
+      "value": "Amazon Nova and Anthropic models run in Amazon's cloud",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-prime"
+      ],
+      "shortValue": "Amazon Nova and Anthropic"
+    },
+    {
+      "field": "byom",
+      "value": "Fully managed; personal model keys are not described",
+      "status": "limited",
+      "sourceIds": [
+        "alexa-prime"
+      ],
+      "shortValue": "Included models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included with Prime at no extra cost; otherwise a standalone subscription",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-prime"
+      ],
+      "shortValue": "Included with Prime"
+    },
+    {
+      "field": "pricing",
+      "value": "US$19.99 a month, free for Prime members across the whole household; non-Prime customers can also use a limited free text chat on Alexa.com and in the app",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-prime",
+        "alexa-intro"
+      ],
+      "shortValue": "Free with Prime; US$19.99/mo"
+    },
+    {
+      "field": "hosting",
+      "value": "Amazon's cloud, reached through Echo devices, the app and the web",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-overview",
+        "alexa-prime"
+      ],
+      "shortValue": "Provider cloud"
+    },
+    {
+      "field": "api",
+      "value": "No public API for Alexa+ as a personal agent is described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "memory",
+      "value": "Remember This stores details on request; remembered items are reviewable under Alexa Privacy, and Amazon notes they may be accessible to anyone using the household's devices",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-privacy"
+      ],
+      "shortValue": "Remember This, household-visible"
+    },
+    {
+      "field": "portability",
+      "value": "Amazon's general personal-information request covers account data; a dedicated export of remembered items is not described",
+      "status": "limited",
+      "sourceIds": [
+        "alexa-export"
+      ],
+      "shortValue": "Amazon-wide data request"
+    },
+    {
+      "field": "security",
+      "value": "Voice recordings, transcripts and typed requests can be reviewed and deleted in Alexa Privacy settings",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-privacy"
+      ],
+      "shortValue": "Reviewable voice history"
+    },
+    {
+      "field": "availability",
+      "value": "Generally available in the United States and Canada, with early access in Brazil, the United Kingdom, Mexico, Italy, Spain, Germany, Austria and France",
+      "status": "documented",
+      "sourceIds": [
+        "alexa-prime"
+      ],
+      "shortValue": "US and Canada; early access elsewhere"
+    }
+  ],
+  "logo": {
+    "path": "./logos/alexa-plus.png",
+    "sourceUrl": "https://apps.apple.com/us/app/amazon-alexa/id944011620",
+    "sourcePage": "https://www.amazon.com/alexaplus",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Alexa.com, plus a limited free text chat for customers without Prime.",
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Alexa app for iPhone.",
+      "sourceIds": [
+        "alexa-overview"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Alexa app for Android.",
+      "sourceIds": [
+        "alexa-overview"
+      ]
+    }
+  ],
+  "color": "#00caff",
+  "aliases": [
+    "Alexa Plus",
+    "Amazon Alexa"
+  ],
+  "messaging": [],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "region"
+    ],
+    "detail": "Generally available in the United States and Canada; early access in eight further countries, with more to come.",
+    "sourceIds": [
+      "alexa-prime"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Nothing runs on the user's computer; Alexa+ acts from Amazon's side and on Echo hardware.",
+      "sourceIds": [
+        "alexa-intro"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "remote": "none",
+      "detail": "Runs in Amazon's cloud. No remote view of a machine of its own is offered.",
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "status": "limited",
+      "detail": "Runs on Amazon's cloud and Echo hardware rather than the user's computer, so tasks do not depend on a personal device being on.",
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted and tied to Amazon's services and devices. The company has not published what happens if it is discontinued.",
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "Amazon's general request-your-personal-information flow returns account data by download link; no self-serve export of remembered items is described.",
+      "sourceIds": [
+        "alexa-export"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Included with Prime",
+      "price": "US$0",
+      "billing": "Included in a Prime membership",
+      "includes": [
+        "Full Alexa+ across every Alexa-enabled device, Alexa.com and the app",
+        "Covers the whole household"
+      ],
+      "limits": [
+        "Requires a Prime membership"
+      ],
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    },
+    {
+      "name": "Alexa+",
+      "price": "US$19.99/month",
+      "billing": "Monthly, for customers without Prime",
+      "includes": [
+        "Full Alexa+ experience across devices, web and the app"
+      ],
+      "limits": [
+        "A limited free text chat is available without paying"
+      ],
+      "sourceIds": [
+        "alexa-prime",
+        "alexa-intro"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "optional",
+    "name": "Echo devices",
+    "detail": "Runs on Echo speakers, Echo Show, Echo Hub and Fire TV, and is also reachable from the Alexa app and Alexa.com without buying hardware.",
+    "sourceIds": [
+      "alexa-overview",
+      "alexa-prime"
+    ]
+  },
+  "company": {
+    "type": "public",
+    "sourceIds": [
+      "alexa-overview"
+    ],
+    "stage": "Public company · NASDAQ: AMZN"
+  },
+  "launches": [
+    {
+      "date": "2025-02-26",
+      "kind": "announcement",
+      "label": "Announced at Amazon's Devices and Services event",
+      "sourceIds": [
+        "alexa-intro"
+      ]
+    },
+    {
+      "date": "2026",
+      "kind": "launch",
+      "label": "General availability in the US and Canada, free for Prime",
+      "sourceIds": [
+        "alexa-prime"
+      ]
+    }
+  ]
+}

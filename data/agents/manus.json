@@ -1,0 +1,455 @@
+{
+  "id": "manus",
+  "name": "Manus",
+  "organization": "Manus AI",
+  "website": "https://manus.im",
+  "repository": null,
+  "category": "managed",
+  "summary": "A general agent with its own cloud computer and projects that carry instructions and files between tasks, plus scheduled and event-triggered automations.",
+  "sources": [
+    {
+      "id": "manus-home",
+      "title": "Manus official website",
+      "url": "https://manus.im/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-about",
+      "title": "About Manus",
+      "url": "https://manus.im/about",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-2",
+      "title": "Introducing Manus 2.0",
+      "url": "https://manus.im/blog/introducing-manus-2-0",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-cloud",
+      "title": "Manus Cloud Computer",
+      "url": "https://manus.im/blog/manus-cloud-computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-desktop",
+      "title": "Manus desktop app and My Computer",
+      "url": "https://manus.im/docs/features/desktop",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-projects",
+      "title": "Manus projects",
+      "url": "https://manus.im/docs/features/projects",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-automations",
+      "title": "Manus automations",
+      "url": "https://manus.im/docs/automations",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-plans",
+      "title": "Manus plans and credits",
+      "url": "https://manus.im/docs/introduction/plans",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-pricing",
+      "title": "Manus membership pricing",
+      "url": "https://help.manus.im/en/articles/11711111-what-is-the-current-membership-pricing-for-manus",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-api",
+      "title": "Manus API documentation",
+      "url": "https://open.manus.ai/docs",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-backup",
+      "title": "Backing up your Manus data",
+      "url": "https://help.manus.im/en/articles/16147892-service-change-overview-how-to-back-up-your-data",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "manus-independent",
+      "title": "Manus resumes independent operations",
+      "url": "https://manus.im/blog/manus-resumes-independent-operations",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "A persistent cloud computer that keeps running between tasks, plus projects holding a master instruction and a knowledge base",
+      "status": "documented",
+      "sourceIds": [
+        "manus-cloud",
+        "manus-projects"
+      ],
+      "shortValue": "Persistent cloud computer and projects"
+    },
+    {
+      "field": "computerUse",
+      "value": "Runs a dedicated Ubuntu cloud machine, and the desktop app's My Computer can read authorised local folders, run shell commands and launch applications with explicit approval",
+      "status": "documented",
+      "sourceIds": [
+        "manus-cloud",
+        "manus-desktop"
+      ],
+      "shortValue": "Cloud machine + your computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browses and acts on the web from its own machine as part of task execution",
+      "status": "documented",
+      "sourceIds": [
+        "manus-cloud",
+        "manus-2"
+      ],
+      "shortValue": "Yes, from its own machine"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described in the sources reviewed",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Automations run on a schedule down to five-minute intervals or on cron, and trigger on events from Gmail, Outlook, Notion, Google Calendar, GitHub, Shopify, RSS and webhooks",
+      "status": "documented",
+      "sourceIds": [
+        "manus-automations"
+      ],
+      "shortValue": "Schedules, cron and triggers"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS and Windows apps",
+      "status": "documented",
+      "sourceIds": [
+        "manus-2",
+        "manus-desktop"
+      ],
+      "shortValue": "macOS, Windows"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps",
+      "status": "documented",
+      "sourceIds": [
+        "manus-2"
+      ],
+      "shortValue": "iOS, Android"
+    },
+    {
+      "field": "channels",
+      "value": "Web, desktop and mobile apps, plus Slack and email",
+      "status": "documented",
+      "sourceIds": [
+        "manus-2",
+        "manus-automations"
+      ],
+      "shortValue": "Web, apps, Slack and email"
+    },
+    {
+      "field": "models",
+      "value": "Model providers are not named in the documentation reviewed",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "byom",
+      "value": "Fully managed; personal model keys are not described",
+      "status": "limited",
+      "sourceIds": [
+        "manus-plans"
+      ],
+      "shortValue": "Included models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Manus subscription",
+      "status": "documented",
+      "sourceIds": [
+        "manus-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free tier with 300 daily credits; Pro from US$20/month; a higher Pro tier at US$40/month; Team from US$20/seat/month. Annual billing is discounted 17%",
+      "status": "documented",
+      "sourceIds": [
+        "manus-pricing",
+        "manus-plans"
+      ],
+      "shortValue": "Free; from US$20/mo"
+    },
+    {
+      "field": "hosting",
+      "value": "Provider-hosted cloud sandbox and a dedicated always-on cloud computer; the desktop app also executes locally",
+      "status": "documented",
+      "sourceIds": [
+        "manus-cloud",
+        "manus-desktop"
+      ],
+      "shortValue": "Provider cloud + your computer"
+    },
+    {
+      "field": "api",
+      "value": "Public REST API with endpoints for tasks, projects, files, webhooks, skills and agents",
+      "status": "documented",
+      "sourceIds": [
+        "manus-api"
+      ],
+      "shortValue": "Public REST API"
+    },
+    {
+      "field": "approvals",
+      "value": "Local file and application access through My Computer requires explicit approval",
+      "status": "documented",
+      "sourceIds": [
+        "manus-desktop"
+      ],
+      "shortValue": "Approval for local access"
+    },
+    {
+      "field": "memory",
+      "value": "Projects hold a master instruction and a knowledge base of files; the cloud computer keeps a persistent disk across tasks",
+      "status": "documented",
+      "sourceIds": [
+        "manus-projects",
+        "manus-cloud"
+      ],
+      "shortValue": "Projects and persistent disk"
+    },
+    {
+      "field": "portability",
+      "value": "A backup tool exports task and account data for download or to Google Drive or OneDrive",
+      "status": "documented",
+      "sourceIds": [
+        "manus-backup"
+      ],
+      "shortValue": "Self-serve backup"
+    },
+    {
+      "field": "security",
+      "value": "Team plans add single sign-on and data privacy controls",
+      "status": "limited",
+      "sourceIds": [
+        "manus-pricing"
+      ],
+      "shortValue": "SSO on Team plans"
+    },
+    {
+      "field": "availability",
+      "value": "Open sign-up on the web, desktop and mobile",
+      "status": "documented",
+      "sourceIds": [
+        "manus-home",
+        "manus-2"
+      ],
+      "shortValue": "Public sign-up"
+    }
+  ],
+  "logo": {
+    "path": "./logos/manus.svg",
+    "sourceUrl": "https://manus.im/icon.svg",
+    "sourcePage": "https://manus.im/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Manus 2.0 is available on the web.",
+      "sourceIds": [
+        "manus-2"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS desktop app with local file and application access.",
+      "sourceIds": [
+        "manus-desktop",
+        "manus-2"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Windows desktop app with local file and application access.",
+      "sourceIds": [
+        "manus-desktop",
+        "manus-2"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS app.",
+      "sourceIds": [
+        "manus-2"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native Android app.",
+      "sourceIds": [
+        "manus-2"
+      ]
+    }
+  ],
+  "color": "#1a1a1a",
+  "aliases": [
+    "Manus AI"
+  ],
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Mention Manus in Slack to post updates and assign tasks.",
+      "sourceIds": [
+        "manus-automations"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Mail Manus to turn an email into an action; Gmail and Outlook also act as automation triggers.",
+      "sourceIds": [
+        "manus-automations"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open sign-up on the web, desktop and mobile.",
+    "sourceIds": [
+      "manus-home",
+      "manus-2"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "My Computer in the desktop app reads authorised folders, runs shell commands and launches applications, each with explicit approval.",
+      "sourceIds": [
+        "manus-desktop"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "A dedicated Ubuntu cloud computer runs bots and scripts around the clock, reachable over SSH or a web terminal.",
+      "sourceIds": [
+        "manus-cloud"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "The cloud computer runs around the clock independently of the user's device.",
+      "sourceIds": [
+        "manus-cloud"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "manus-cloud"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "A data backup tool produces task and account backups, downloadable or exported to Google Drive or OneDrive.",
+      "sourceIds": [
+        "manus-backup"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free tier",
+      "includes": [
+        "300 credits daily",
+        "One concurrent task"
+      ],
+      "limits": [
+        "Plan credits reset each cycle"
+      ],
+      "sourceIds": [
+        "manus-pricing",
+        "manus-plans"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "From US$20/month",
+      "billing": "Monthly; 17% discount billed annually",
+      "includes": [
+        "About 4,000 credits a month",
+        "Advanced research, website deployment and slides"
+      ],
+      "limits": [
+        "A higher Pro tier at US$40/month adds about 8,000 credits"
+      ],
+      "sourceIds": [
+        "manus-pricing"
+      ]
+    },
+    {
+      "name": "Team",
+      "price": "From US$20/user/month",
+      "billing": "Monthly; 17% discount billed annually",
+      "includes": [
+        "Single sign-on and data privacy controls",
+        "Team analytics and shared templates"
+      ],
+      "limits": [
+        "Priced per seat"
+      ],
+      "sourceIds": [
+        "manus-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "manus-about",
+      "manus-independent"
+    ],
+    "stage": "Independent; headquartered in Singapore"
+  },
+  "launches": [
+    {
+      "date": "2026-09-28",
+      "kind": "update",
+      "label": "Manus 2.0 on web, desktop and mobile",
+      "sourceIds": [
+        "manus-2"
+      ]
+    }
+  ]
+}

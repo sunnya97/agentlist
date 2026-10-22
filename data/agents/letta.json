@@ -1,0 +1,524 @@
+{
+  "id": "letta",
+  "name": "Letta",
+  "organization": "Letta",
+  "website": "https://www.letta.com",
+  "repository": "https://github.com/letta-ai/letta-code",
+  "category": "runtime",
+  "summary": "An open-source stateful agent harness whose memory is a git-backed filesystem you can read, edit and version, runnable on your own machine or on Letta Cloud.",
+  "sources": [
+    {
+      "id": "letta-home",
+      "title": "Letta official website",
+      "url": "https://www.letta.com/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-docs",
+      "title": "Letta documentation",
+      "url": "https://docs.letta.com/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-selfhost",
+      "title": "Letta self-hosting",
+      "url": "https://docs.letta.com/self-hosting",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-memfs",
+      "title": "Letta MemFS memory filesystem",
+      "url": "https://docs.letta.com/concepts/memfs",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-memory",
+      "title": "Letta memory configuration",
+      "url": "https://docs.letta.com/configuration/memory",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-schedules",
+      "title": "Letta schedules",
+      "url": "https://docs.letta.com/configuration/schedules",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-models",
+      "title": "Letta model providers",
+      "url": "https://docs.letta.com/configuration/models",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-channels",
+      "title": "Letta messaging channels",
+      "url": "https://docs.letta.com/self-hosting/channels",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-computers",
+      "title": "Letta computers and execution environments",
+      "url": "https://docs.letta.com/platform/computers",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-pricing",
+      "title": "Letta pricing",
+      "url": "https://docs.letta.com/pricing",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-api",
+      "title": "Letta API reference",
+      "url": "https://docs.letta.com/api/resources/agents",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-desktop",
+      "title": "Letta Desktop",
+      "url": "https://docs.letta.com/platform/letta-desktop",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-faq",
+      "title": "Letta frequently asked questions",
+      "url": "https://docs.letta.com/reference/faq",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-repo",
+      "title": "Letta Code repository",
+      "url": "https://github.com/letta-ai/letta-code",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-announce",
+      "title": "Announcing Letta",
+      "url": "https://www.letta.com/blog/announcing-letta",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "letta-code-blog",
+      "title": "Letta Code",
+      "url": "https://www.letta.com/blog/letta-code",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Memory is MemFS, a git-backed filesystem of Markdown files the agent and the user can both inspect and edit, with every change committed",
+      "status": "documented",
+      "sourceIds": [
+        "letta-memfs",
+        "letta-memory"
+      ],
+      "shortValue": "Git-backed memory filesystem"
+    },
+    {
+      "field": "computerUse",
+      "value": "A computer in Letta is an execution environment with a shell and filesystem, on the current machine, a cloud sandbox, or a machine you bring; it is not graphical desktop control",
+      "status": "limited",
+      "sourceIds": [
+        "letta-computers"
+      ],
+      "shortValue": "Shell and files, not a GUI"
+    },
+    {
+      "field": "browserUse",
+      "value": "A built-in browser-use skill appears in the changelog, but there is no dedicated documentation page for it; web search and page fetching are documented for cloud agents",
+      "status": "limited",
+      "sourceIds": [
+        "letta-faq"
+      ],
+      "shortValue": "Browser skill, lightly documented"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Schedules run one-off or recurring prompts on cron, server-side on Cloud and only while a session is open locally; sleep-time subagents review recent conversations and consolidate memory in the background",
+      "status": "documented",
+      "sourceIds": [
+        "letta-schedules",
+        "letta-memory"
+      ],
+      "shortValue": "Cron schedules and sleep-time agents"
+    },
+    {
+      "field": "desktopApps",
+      "value": "No native desktop app; Letta Desktop is the web app installed as a progressive web app, and the former Electron app was retired in October 2026",
+      "status": "documented",
+      "sourceIds": [
+        "letta-desktop"
+      ],
+      "shortValue": "PWA, not a native app"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No official iOS or Android app; the documentation recommends the mobile web app",
+      "status": "documented",
+      "sourceIds": [
+        "letta-faq"
+      ],
+      "shortValue": "None; mobile web"
+    },
+    {
+      "field": "channels",
+      "value": "Web app, desktop PWA and a command-line interface, plus messaging channels on the local backend",
+      "status": "documented",
+      "sourceIds": [
+        "letta-desktop",
+        "letta-channels"
+      ],
+      "shortValue": "Web, PWA and CLI"
+    },
+    {
+      "field": "models",
+      "value": "Model-agnostic across roughly 35 providers including Anthropic, OpenAI, Gemini, Bedrock, Mistral, DeepSeek and Groq, with local inference through Ollama, LM Studio and llama.cpp; the model can be changed mid-conversation",
+      "status": "documented",
+      "sourceIds": [
+        "letta-models"
+      ],
+      "shortValue": "~35 providers; local inference"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own API keys on every plan, including the free tier",
+      "status": "documented",
+      "sourceIds": [
+        "letta-pricing",
+        "letta-models"
+      ],
+      "shortValue": "BYOK on all plans"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Open-source harness, optionally with a Letta Cloud subscription",
+      "status": "documented",
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free software. Letta Cloud is free for three agents, Pro US$20/month, an API plan at US$20/month plus usage, Teams Pro US$20/seat/month and custom Enterprise pricing",
+      "status": "documented",
+      "sourceIds": [
+        "letta-pricing"
+      ],
+      "shortValue": "Free; Cloud from US$20/mo"
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0",
+      "status": "documented",
+      "sourceIds": [
+        "letta-repo"
+      ],
+      "shortValue": "Apache-2.0"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted locally or by Docker, or hosted on Letta Cloud; run locally, all agent state stays on the device and no account is required",
+      "status": "documented",
+      "sourceIds": [
+        "letta-selfhost"
+      ],
+      "shortValue": "Self-hosted or Letta Cloud"
+    },
+    {
+      "field": "api",
+      "value": "Public REST API at api.letta.com for Cloud agents, a TypeScript agent SDK, generated client SDKs, and a hosted MCP server",
+      "status": "documented",
+      "sourceIds": [
+        "letta-api",
+        "letta-faq"
+      ],
+      "shortValue": "REST API and SDKs"
+    },
+    {
+      "field": "memory",
+      "value": "A context repository of Markdown files holding persona, facts about the user, project facts, workflow rules and agent skills; files at the root load every turn and subdirectories load on demand",
+      "status": "documented",
+      "sourceIds": [
+        "letta-memfs",
+        "letta-memory"
+      ],
+      "shortValue": "Editable context repository"
+    },
+    {
+      "field": "portability",
+      "value": "Memory is a real git repository with full version history; local agents commit on the user's own machine and cloud agents can sync to GitHub",
+      "status": "documented",
+      "sourceIds": [
+        "letta-memfs"
+      ],
+      "shortValue": "Git history; syncs to GitHub"
+    },
+    {
+      "field": "security",
+      "value": "Run locally, agent state including messages, memory and provider connections stays on the device; Enterprise adds role-based access control and SSO",
+      "status": "documented",
+      "sourceIds": [
+        "letta-selfhost",
+        "letta-pricing"
+      ],
+      "shortValue": "Local state; SSO on Enterprise"
+    },
+    {
+      "field": "availability",
+      "value": "Open source and installable from npm; Letta Cloud has open sign-up with a free tier",
+      "status": "documented",
+      "sourceIds": [
+        "letta-selfhost",
+        "letta-pricing"
+      ],
+      "shortValue": "Open source; free Cloud tier"
+    }
+  ],
+  "logo": {
+    "path": "./logos/letta.png",
+    "sourceUrl": "https://www.letta.com/assets/images/webclip.png",
+    "sourcePage": "https://www.letta.com/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web app at chat.letta.com, installable as a progressive web app.",
+      "sourceIds": [
+        "letta-desktop"
+      ]
+    }
+  ],
+  "color": "#2b2b2b",
+  "aliases": [
+    "MemGPT",
+    "Letta Code"
+  ],
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "A self-hosted channel, and a first-party Slack integration for Cloud agents.",
+      "sourceIds": [
+        "letta-channels"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Self-hosted messaging channel on the local backend.",
+      "sourceIds": [
+        "letta-channels"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Self-hosted messaging channel on the local backend.",
+      "sourceIds": [
+        "letta-channels"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Self-hosted messaging channel on the local backend.",
+      "sourceIds": [
+        "letta-channels"
+      ]
+    },
+    {
+      "service": "signal",
+      "status": "available",
+      "detail": "Self-hosted messaging channel on the local backend.",
+      "sourceIds": [
+        "letta-channels"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open source, installable from npm; Letta Cloud offers open sign-up with a free tier.",
+    "sourceIds": [
+      "letta-selfhost",
+      "letta-pricing"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Runs a shell and filesystem on the current machine, which is execution rather than graphical desktop control.",
+      "sourceIds": [
+        "letta-computers"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Cloud sandboxes, or a machine you bring, with agents able to move between them.",
+      "sourceIds": [
+        "letta-computers"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "status": "limited",
+      "detail": "Cloud schedules run on a server-side timer; local schedules run only while a Letta session is open on that computer.",
+      "sourceIds": [
+        "letta-schedules"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "Apache-2.0 software that runs entirely on your own machine with no account required, so it keeps running if the company stops.",
+      "sourceIds": [
+        "letta-repo",
+        "letta-selfhost"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Run locally, there is no account requirement or activation check described.",
+      "sourceIds": [
+        "letta-selfhost"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "Memory is a git repository on your own disk with full history; the documentation notes you are responsible for backing it up.",
+      "sourceIds": [
+        "letta-memfs"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free tier on Letta Cloud",
+      "includes": [
+        "Three stateful agents",
+        "5 MiB of storage per memory repository",
+        "Bring your own API keys"
+      ],
+      "limits": [
+        "Limited use of Letta Auto"
+      ],
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$20/month",
+      "billing": "Monthly",
+      "includes": [
+        "Up to 20 stateful agents",
+        "50 MiB per memory repository",
+        "Weekly and monthly Letta Auto quota"
+      ],
+      "limits": [
+        "Pay-as-you-go overage"
+      ],
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    },
+    {
+      "name": "API",
+      "price": "US$20/month",
+      "billing": "Monthly plus usage",
+      "includes": [
+        "Unlimited agents",
+        "API key authentication"
+      ],
+      "limits": [
+        "US$0.10 per active agent per month",
+        "US$0.00015 per second of tool execution"
+      ],
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    },
+    {
+      "name": "Teams Pro",
+      "price": "US$20/user/month",
+      "billing": "Per seat, monthly",
+      "includes": [
+        "Shared agents with access control",
+        "Weekly and monthly Letta Auto quota"
+      ],
+      "limits": [
+        "Priced per seat"
+      ],
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "billing": "Priced on request",
+      "includes": [
+        "Role-based access control",
+        "SAML and OIDC single sign-on",
+        "Increased quotas and dedicated support"
+      ],
+      "limits": [
+        "Volume-based pricing on request"
+      ],
+      "sourceIds": [
+        "letta-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "research",
+    "sourceIds": [
+      "letta-home"
+    ],
+    "stage": "AI research lab in San Francisco, founded by the creators of MemGPT at UC Berkeley"
+  },
+  "launches": [
+    {
+      "date": "2023-10-26",
+      "kind": "release",
+      "label": "First release as MemGPT",
+      "sourceIds": [
+        "letta-repo"
+      ]
+    },
+    {
+      "date": "2024-09-23",
+      "kind": "update",
+      "label": "Renamed from MemGPT to Letta",
+      "sourceIds": [
+        "letta-announce"
+      ]
+    },
+    {
+      "date": "2025-12-16",
+      "kind": "update",
+      "label": "Letta Code, the memory-first agent harness",
+      "sourceIds": [
+        "letta-code-blog"
+      ]
+    }
+  ]
+}

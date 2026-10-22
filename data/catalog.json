@@ -322,16 +322,21 @@
     }
   ],
   "researchQueue": [
-    "Letta",
     "Khoj",
     "Agent Zero",
     "Moltis",
-    "Copilot Autopilot",
-    "Manus",
-    "Alexa+",
+    "Copilot Autopilot (private preview, tenant-scoped)",
     "OpenClaw rename history",
     "Verified Git fork ancestry",
-    "Permissions and memory export tests"
+    "Permissions and memory export tests",
+    "Perplexity Computer",
+    "Simular",
+    "Zo Computer",
+    "Hey Noah",
+    "Catch (closed beta)",
+    "OpenHuman",
+    "QwenPaw",
+    "Omi"
   ],
   "repository": "https://github.com/sunnya97/agentlist",
   "siteUrl": "https://agentlist.wiki"

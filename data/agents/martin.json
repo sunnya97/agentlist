@@ -1,0 +1,348 @@
+{
+  "id": "martin",
+  "name": "Martin",
+  "organization": "DCWU, Inc.",
+  "website": "https://www.trymartin.com",
+  "repository": null,
+  "category": "managed",
+  "summary": "A personal assistant reached by text, phone call or email that manages calendar and inbox, keeps notes and to-dos, and takes proactive actions.",
+  "sources": [
+    {
+      "id": "martin-home",
+      "title": "Martin official website",
+      "url": "https://www.trymartin.com/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-pricing",
+      "title": "Martin pricing",
+      "url": "https://www.trymartin.com/pricing",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-docs",
+      "title": "Martin documentation",
+      "url": "https://docs.trymartin.com/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-wake",
+      "title": "Martin wake-up calls",
+      "url": "https://docs.trymartin.com/background-tasks/wake-up-calls",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-reminders",
+      "title": "Martin reminders",
+      "url": "https://docs.trymartin.com/capabilities/reminders",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-calendar",
+      "title": "Martin calendar integration",
+      "url": "https://docs.trymartin.com/integrations/calendar",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-inbox",
+      "title": "Martin inbox integration",
+      "url": "https://docs.trymartin.com/integrations/inbox",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-appstore",
+      "title": "Martin on the App Store",
+      "url": "https://apps.apple.com/us/app/martin/id6453473083",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "martin-privacy",
+      "title": "Martin privacy policy",
+      "url": "https://info.trymartin.com/privacy",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Reached by text, phone call or email rather than a new interface, with wake-up calls and copy-on-an-email scheduling",
+      "status": "documented",
+      "sourceIds": [
+        "martin-home",
+        "martin-wake"
+      ],
+      "shortValue": "Text, call or email it"
+    },
+    {
+      "field": "computerUse",
+      "value": "Acts through connected accounts; control of a computer is not described",
+      "status": "limited",
+      "sourceIds": [
+        "martin-docs"
+      ],
+      "shortValue": "Connected apps only"
+    },
+    {
+      "field": "browserUse",
+      "value": "Interactive browser control is not described in the documentation reviewed",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "voice",
+      "value": "Phone calls in both directions, including spoken wake-up calls",
+      "status": "documented",
+      "sourceIds": [
+        "martin-home",
+        "martin-wake"
+      ],
+      "shortValue": "Inbound and outbound calls"
+    },
+    {
+      "field": "scheduling",
+      "value": "Background tasks including wake-up calls and reminders; paid tiers are sold on how many proactive actions they allow",
+      "status": "documented",
+      "sourceIds": [
+        "martin-wake",
+        "martin-reminders",
+        "martin-pricing"
+      ],
+      "shortValue": "Proactive actions and reminders"
+    },
+    {
+      "field": "desktopApps",
+      "value": "No native desktop app is described",
+      "status": "limited",
+      "sourceIds": [
+        "martin-home"
+      ],
+      "shortValue": "None described"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone and iPad app on the App Store",
+      "status": "documented",
+      "sourceIds": [
+        "martin-appstore"
+      ],
+      "shortValue": "iOS"
+    },
+    {
+      "field": "channels",
+      "value": "Text messages, phone calls, email, the iOS app and a web app",
+      "status": "documented",
+      "sourceIds": [
+        "martin-home",
+        "martin-appstore"
+      ],
+      "shortValue": "Text, call, email and apps"
+    },
+    {
+      "field": "models",
+      "value": "Plans distinguish basic from most advanced AI models; the providers are not named",
+      "status": "limited",
+      "sourceIds": [
+        "martin-pricing"
+      ],
+      "shortValue": "Tiered models, providers unnamed"
+    },
+    {
+      "field": "byom",
+      "value": "Fully managed; personal model keys are not described",
+      "status": "limited",
+      "sourceIds": [
+        "martin-pricing"
+      ],
+      "shortValue": "Included models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Martin subscription",
+      "status": "documented",
+      "sourceIds": [
+        "martin-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Basic US$21/month billed yearly or US$35 monthly; Pro US$30/month billed yearly or US$49 monthly, with seven days free",
+      "status": "documented",
+      "sourceIds": [
+        "martin-pricing"
+      ],
+      "shortValue": "From US$21/mo billed yearly"
+    },
+    {
+      "field": "hosting",
+      "value": "Provider-hosted service reached through messaging, calls and apps",
+      "status": "documented",
+      "sourceIds": [
+        "martin-home"
+      ],
+      "shortValue": "Provider cloud"
+    },
+    {
+      "field": "api",
+      "value": "A public API is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "memory",
+      "value": "Keeps notes and to-dos as a productivity suite alongside calendar and inbox context",
+      "status": "documented",
+      "sourceIds": [
+        "martin-docs",
+        "martin-home"
+      ],
+      "shortValue": "Notes and to-dos"
+    },
+    {
+      "field": "availability",
+      "value": "Open sign-up with a seven-day free trial",
+      "status": "documented",
+      "sourceIds": [
+        "martin-pricing"
+      ],
+      "shortValue": "Public sign-up"
+    }
+  ],
+  "logo": {
+    "path": "./logos/martin.png",
+    "sourceUrl": "https://framerusercontent.com/images/Jfch4TgklRztn6IdAgjnLMdB8LQ.png",
+    "sourcePage": "https://www.trymartin.com/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web application at app.trymartin.com.",
+      "sourceIds": [
+        "martin-home"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Martin: Personal Assistant on the App Store, supporting iPhone and iPad.",
+      "sourceIds": [
+        "martin-appstore"
+      ]
+    }
+  ],
+  "color": "#1c1c1c",
+  "aliases": [
+    "Try Martin"
+  ],
+  "messaging": [
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "Text Martin to give it instructions.",
+      "sourceIds": [
+        "martin-home"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Email Martin, or copy it on an email to schedule.",
+      "sourceIds": [
+        "martin-home",
+        "martin-inbox"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Slack is listed among Martin's integrations.",
+      "sourceIds": [
+        "martin-docs"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open sign-up with a seven-day free trial.",
+    "sourceIds": [
+      "martin-pricing"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "status": "limited",
+      "detail": "Nothing is described as running on the user's computer; Martin acts through connected accounts.",
+      "sourceIds": [
+        "martin-docs"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "martin-home"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Basic",
+      "price": "US$21/month billed yearly",
+      "billing": "US$35/month billed monthly; seven days free",
+      "includes": [
+        "Basic AI models",
+        "Two tasks at a time"
+      ],
+      "limits": [
+        "Limited proactive actions"
+      ],
+      "sourceIds": [
+        "martin-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$30/month billed yearly",
+      "billing": "US$49/month billed monthly; seven days free",
+      "includes": [
+        "Most advanced AI models",
+        "Unlimited proactive actions",
+        "Unlimited custom tasks"
+      ],
+      "limits": [
+        "Business pricing is listed separately"
+      ],
+      "sourceIds": [
+        "martin-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "martin-appstore"
+    ]
+  },
+  "launches": [
+    {
+      "date": "2023-08-17",
+      "kind": "launch",
+      "label": "iOS app first released",
+      "sourceIds": [
+        "martin-appstore"
+      ]
+    }
+  ]
+}
