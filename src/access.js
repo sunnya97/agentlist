@@ -17,7 +17,10 @@ export const accessRestrictions = {
   invite:'Invite required'
 };
 
-// Short directory wording. `available` with no catch needs no qualifier.
+// Directory wording: one short word, since it sits on an 11px metadata line.
+export const accessShort = {waitlist:'Waitlist',reservation:'Reservation',announced:'Announced',unverified:'Unverified'};
+
+// Full wording for comparisons and profiles; `available` with no catch needs no qualifier.
 export const accessSummary = access => {
   if(!access) return '';
   const caveats = (access.restrictions||[]).map(key=>({plan:'paid plan',region:'some regions',age:'age limits',rollout:'rolling out',invite:'invite'})[key]).filter(Boolean);

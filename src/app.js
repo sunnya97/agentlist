@@ -2,13 +2,14 @@ import {filterAgents,parseSelection,getClaim,compareRows,sortedNews,sortAgents,f
 import {fields,fieldGroups,directoryViews,featuredOrder,companyTypes,launchKinds} from './catalog.js';
 import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js';
 import {channelLabels,channelIcons} from './channels.js';
-import {accessStates,accessRestrictions,accessSummary} from './access.js';
+import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=u=>{try{const p=new URL(u);return /^https?:$/.test(p.protocol)?esc(p.href):'#'}catch{return '#'}};
 const external=(url,label,cls='')=>`<a class="${cls}" href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 const searchIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>';
-const uiIcon=(name)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${{star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',compare:'<rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',sliders:'<path d="M4 7h9m4 0h3M4 17h3m4 0h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',model:'<path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>'}[name]||''}</svg>`;
+const uiIcon=(name)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${{star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',compare:'<rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',sliders:'<path d="M4 7h9m4 0h3M4 17h3m4 0h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',model:'<path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',exit:'<path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M10 8 6 12l4 4M6 12h9"/>'}[name]||''}</svg>`;
+const viewIcons={overview:'grid',capabilities:'sliders',models:'model',access:'grid',company:'grid',continuity:'exit',control:'lock'};
 const categoryLabels={managed:'Hosted agent',runtime:'Self-hosted',local:'Local-first app',watchlist:'Under review',adjacent:'Coding tool'};
 const typeLabels={'built-on':'Built on',fork:'Code fork',renamed:'Renamed'};
 const profileHref=(id,tab='overview')=>`#agent/${encodeURIComponent(id)}${tab==='overview'?'':'?tab='+tab}`;
@@ -18,25 +19,30 @@ let directoryState={search:'',category:'all',hosting:'all',companyType:'all',acc
 try{watchlist=JSON.parse(localStorage.getItem('agentlist:watchlist')||'[]');if(!Array.isArray(watchlist))watchlist=[]}catch{watchlist=[]}
 const icon=a=>`<span class="agent-icon ${a.id==='openfang'?'dark-logo':''}" aria-hidden="true"><img src="${esc(a.logo.path)}" alt="" width="40" height="40" loading="lazy"></span>`;
 const tag=a=>`<span class="tag ${esc(a.category)}">${categoryLabels[a.category]||esc(a.category)}</span>`;
-// Only says something when there is something to say: shipping products stay unmarked.
-const accessChip=a=>{
-  const x=a.access;if(!x||x.state==='available'&&!(x.restrictions||[]).length)return '';
-  const detail=[accessStates[x.state],...(x.restrictions||[]).map(r=>accessRestrictions[r])].join(' · ');
-  return `<span class="access-chip ${esc(x.state)}" title="${esc(detail+' — '+x.detail)}">${esc(x.state==='available'?(x.restrictions||[]).map(r=>({plan:'paid plan',region:'regions',age:'18+',rollout:'rollout',invite:'invite'})[r]).join(', '):accessStates[x.state])}</span>`;
+// Availability rides on the metadata line, not beside the name: a single word
+// for the state only. Restrictions are detail and live in the data and profile.
+const accessNote=a=>{
+  const x=a.access;if(!x||x.state==='available')return '';
+  return `<span class="access-note ${esc(x.state)}" title="${esc(accessStates[x.state]+' — '+x.detail)}">${esc(accessShort[x.state]||accessStates[x.state])}</span>`;
 };
 const formatDate=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
 const sourceLinks=(a,c)=>c.sourceIds.map(id=>{const i=a.sources.findIndex(s=>s.id===id);if(i<0)return '';const s=a.sources[i];return external(s.url,`[${i+1}]`,'citation').replace('<a ',`<a aria-label="${esc(s.title)}" title="${esc(s.title)} · checked ${s.checkedAt}" `)}).join('');
-const platformListHTML=a=>a.platforms.length?`<div class="platform-list">${a.platforms.map((p,i)=>{
-  const label=platformLabels[p.platform],state=p.status==='available'?'':` · ${platformStatusLabels[p.status]}`;
-  return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${i}:platforms" aria-label="${esc(label+state)}" title="${esc(label+state+' — '+p.detail)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${platformIcons[p.platform]}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
-}).join('')}</div>`:'<span class="unknown-value" aria-label="App availability not specified" title="App availability not specified">—</span>';
-// Messaging services reuse the platform popover; the trigger names its list.
-const entryIcon=p=>p.platform?platformIcons[p.platform]:channelIcons[p.service];
-const entryLabel=p=>p.platform?platformLabels[p.platform]:channelLabels[p.service];
-const messagingListHTML=a=>a.messaging?.length?`<div class="platform-list messaging-list">${a.messaging.map((m,i)=>{
-  const label=channelLabels[m.service],state=m.status==='available'?'':` · ${platformStatusLabels[m.status]}`;
-  return `<button class="platform-icon ${m.status}" data-platform="${a.id}:${i}:messaging" aria-label="${esc(label+state)}" title="${esc(label+state+' — '+m.detail)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${channelIcons[m.service]}${m.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
-}).join('')}</div>`:'<span class="unknown-value" aria-label="Messaging services not specified" title="Messaging services not specified">—</span>';
+const iconListHTML=(a,kind,limit,empty)=>{
+  const list=(kind==='platforms'?a.platforms:a.messaging)||[];
+  if(!list.length)return `<span class="unknown-value" aria-label="${esc(empty)}" title="${esc(empty)}">—</span>`;
+  const isPlatform=kind==='platforms';
+  const nameOf=p=>isPlatform?platformLabels[p.platform]:channelLabels[p.service];
+  const iconOf=p=>isPlatform?platformIcons[p.platform]:channelIcons[p.service];
+  const shown=list.slice(0,limit),rest=list.slice(limit);
+  const button=(p,i)=>{
+    const label=nameOf(p),state=p.status==='available'?'':` · ${platformStatusLabels[p.status]}`;
+    return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${i}:${kind}" aria-label="${esc(label+state)}" title="${esc(label+state+' — '+p.detail)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${iconOf(p)}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
+  };
+  const more=rest.length?`<span class="platform-more" title="${esc(rest.map(nameOf).join(', '))}">+${rest.length}</span>`:'';
+  return `<div class="platform-list${isPlatform?'':' messaging-list'}">${shown.map(button).join('')}${more}</div>`;
+};
+const platformListHTML=a=>iconListHTML(a,'platforms',5,'App availability not specified');
+const messagingListHTML=a=>iconListHTML(a,'messaging',3,'Messaging services not specified');
 function openPlatform(button){
   const [id,index,kind='platforms']=button.dataset.platform.split(':'),a=byId.get(id),p=a?.[kind]?.[Number(index)];if(!p)return;
   const panel=$('#platform-popover');
@@ -97,7 +103,7 @@ function renderDirectory(){
         <select id="sort-filter" aria-label="Sort agents">${options([['featured','Featured first'],['name','Name A–Z'],['category','Agent type'],['launch','Newest launches']],directoryState.sort)}</select>
         <button class="following-filter ${directoryState.watching?'active':''}" data-action="watch-filter" aria-pressed="${directoryState.watching}">${uiIcon('star')} Following${watchlist.length?` <span>${watchlist.length}</span>`:''}</button>
       </div>
-      <div class="table-toolbar"><div class="view-switch" role="group" aria-label="Comparison dimensions">${Object.entries(directoryViews).map(([key,item],i)=>`<button data-view="${key}" aria-pressed="${directoryState.view===key}" class="${directoryState.view===key?'active':''}">${uiIcon(['grid','sliders','model','grid','grid','lock'][i])}${item.label}</button>`).join('')}</div><span class="result-count" id="result-count"></span></div>
+      <div class="table-toolbar"><div class="view-switch" role="group" aria-label="Comparison dimensions">${Object.entries(directoryViews).map(([key,item])=>`<button data-view="${key}" aria-pressed="${directoryState.view===key}" class="${directoryState.view===key?'active':''}">${uiIcon(viewIcons[key])}${item.label}</button>`).join('')}</div><span class="result-count" id="result-count"></span></div>
       <div class="table-wrap"><table class="directory-table ${directoryState.view==='overview'?'overview-table':''}"><caption class="sr-only">Personal agent ${view.label.toLowerCase()}. Select up to four agents for comparison.</caption><colgroup><col class="selection-col"><col class="identity-col">${view.fields.map(([key])=>`<col class="field-col ${key==='uniqueFeatures'?'standout-col':key==='nativeApps'?'platform-col':key==='messaging'?'messaging-col':''}">`).join('')}<col class="follow-col"></colgroup><thead><tr><th class="check"><span class="sr-only">Compare</span></th><th scope="col">Agent</th>${view.fields.map(([,label])=>`<th scope="col">${label}</th>`).join('')}<th><span class="sr-only">Follow</span></th></tr></thead><tbody id="agent-rows"></tbody></table></div>
       <div class="table-note"><label><input type="checkbox" id="include-adjacent" ${directoryState.adjacent?'checked':''}> Include coding tools</label><span>Select up to 4 agents to compare</span></div>
     </section>
@@ -109,7 +115,7 @@ function updateDirectoryRows(){
   const list=sortAgents(filterAgents(agents,{...directoryState,watchlist}),directoryState.sort,featuredOrder);
   const view=directoryViews[directoryState.view];
   $('#result-count').textContent=`${list.length} agent${list.length===1?'':'s'}`;
-  $('#agent-rows').innerHTML=list.length?list.map(a=>`<tr class="${selected.includes(a.id)?'selected':''}"><td class="check"><input type="checkbox" aria-label="Compare ${esc(a.name)}" data-select="${a.id}" ${selected.includes(a.id)?'checked':''}></td><td><a class="agent-cell" href="${profileHref(a.id)}">${icon(a)}<span><b>${esc(a.name)}${accessChip(a)}</b><small>${esc(a.organization)}</small></span></a></td>${view.fields.map(([key,label])=>`<td data-label="${esc(label)}">${claimHTML(a,key,true)}</td>`).join('')}<td><button class="star ${watchlist.includes(a.id)?'saved':''}" data-watch="${a.id}" aria-label="${watchlist.includes(a.id)?'Unfollow':'Follow'} ${esc(a.name)}" aria-pressed="${watchlist.includes(a.id)}">${uiIcon('star')}</button></td></tr>`).join(''):`<tr class="no-results"><td colspan="${view.fields.length+3}">No agents match these filters. <button class="read-more" data-action="reset-filters">Reset filters →</button></td></tr>`;
+  $('#agent-rows').innerHTML=list.length?list.map(a=>`<tr class="${selected.includes(a.id)?'selected':''}"><td class="check"><input type="checkbox" aria-label="Compare ${esc(a.name)}" data-select="${a.id}" ${selected.includes(a.id)?'checked':''}></td><td><a class="agent-cell" href="${profileHref(a.id)}">${icon(a)}<span><b>${esc(a.name)}</b><small><span class="org">${esc(a.organization)}</span>${accessNote(a)}</small></span></a></td>${view.fields.map(([key,label])=>`<td data-label="${esc(label)}">${claimHTML(a,key,true)}</td>`).join('')}<td><button class="star ${watchlist.includes(a.id)?'saved':''}" data-watch="${a.id}" aria-label="${watchlist.includes(a.id)?'Unfollow':'Follow'} ${esc(a.name)}" aria-pressed="${watchlist.includes(a.id)}">${uiIcon('star')}</button></td></tr>`).join(''):`<tr class="no-results"><td colspan="${view.fields.length+3}">No agents match these filters. <button class="read-more" data-action="reset-filters">Reset filters →</button></td></tr>`;
 }
 function updateTray(){
   document.querySelectorAll('[data-profile-compare]').forEach(el=>{const active=selected.includes(el.dataset.profileCompare);el.textContent=active?'Remove from comparison':'Add to comparison ＋';el.setAttribute('aria-pressed',String(active))});
