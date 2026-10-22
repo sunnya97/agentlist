@@ -55,3 +55,32 @@ test('canonical profile files match IDs and unknown claims are filled at build t
   for(const agent of data.agents){const raw=JSON.parse(await readFile(new URL(`../data/agents/${agent.id}.json`,import.meta.url),'utf8'));assert.equal(raw.id,agent.id);assert.deepEqual(raw.plans,agent.plans)}
   assert.equal(data.agents[0].claims.length,fields.length);
 });
+
+test('company filters separate makers without treating open source as a company stage',()=>{
+  const startups=filterAgents(data.agents,{companyType:'startup'}).map(a=>a.id);
+  assert(startups.includes('town'));assert(startups.includes('hermes'));assert(!startups.includes('muse'));
+  assert(filterAgents(data.agents,{companyType:'public'}).some(a=>a.id==='muse'));
+  assert(filterAgents(data.agents,{companyType:'independent'}).some(a=>a.id==='openclaw'));
+  assert(!filterAgents(data.agents,{companyType:'lab'}).some(a=>a.id==='codex'));
+});
+test('launch sorting uses debut dates, handles partial dates and puts missing dates last',()=>{
+  const rows=[
+    {id:'unknown',name:'A unknown',launches:[]},
+    {id:'update',name:'B update',launches:[{date:'2026-10-21',kind:'update'}]},
+    {id:'older',name:'Older',launches:[{date:'2025',kind:'release'},{date:'2026-10-20',kind:'update'}]},
+    {id:'month',name:'Month',launches:[{date:'2026-09',kind:'beta'}]},
+    {id:'day',name:'Day',launches:[{date:'2026-09-15',kind:'launch'}]}
+  ];
+  assert.deepEqual(sortAgents(rows,'launch').map(a=>a.id),['day','month','older','unknown','update']);
+  assert.equal(rows[0].id,'unknown');
+});
+test('company and launch records reject unsupported facts, invalid dates and weak lineage',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  invalid(d=>d.agents.find(a=>a.company).company.sourceIds=[]);
+  invalid(d=>d.agents.find(a=>a.company?.funding).company.funding.sourceIds=['missing']);
+  invalid(d=>d.agents.find(a=>a.launches.length).launches[0].date='2026-02-30');
+  invalid(d=>d.agents.find(a=>a.launches.length).launches[0].date='2027');
+  invalid(d=>d.agents.find(a=>a.launches.length).launches[0].sourceIds=[]);
+  invalid(d=>d.relationships[0].type='alternative');
+  assert(data.agents.some(a=>a.launches.some(e=>e.date.length===7)));
+});

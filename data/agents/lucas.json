@@ -257,5 +257,12 @@
     "sourceUrl": "https://meetlucas.ai/favicon.svg?v=3",
     "sourcePage": "https://meetlucas.ai/",
     "kind": "product"
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "lucas-about"
+    ]
   }
 }

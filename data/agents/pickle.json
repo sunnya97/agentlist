@@ -321,6 +321,12 @@
       "title": "Pickle 1 hardware announcement and refund notice",
       "url": "https://www.pickle.com/?pubDate=20260102",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-yc",
+      "title": "Pickle company profile at Y Combinator",
+      "url": "https://www.ycombinator.com/companies/pickle-2",
+      "checkedAt": "2026-10-21"
     }
   ],
   "logo": {
@@ -328,5 +334,12 @@
     "sourceUrl": "https://www.pickle.com/favicon.png",
     "sourcePage": "https://www.pickle.com/",
     "kind": "product"
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "pickle-yc"
+    ]
+  },
+  "launches": []
 }

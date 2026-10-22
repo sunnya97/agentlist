@@ -13,34 +13,6 @@
   "relationships": [
     {
       "from": "openclaw",
-      "to": "nanoclaw",
-      "type": "alternative",
-      "note": "NanoClaw positions itself as a smaller alternative to OpenClaw. This is a documented comparison, not proof of shared code or fork ancestry.",
-      "sourceUrl": "https://raw.githubusercontent.com/nanocoai/nanoclaw/main/README.md"
-    },
-    {
-      "from": "openclaw",
-      "to": "nanobot",
-      "type": "inspired",
-      "note": "The versioned v0.1.4.post6 README explicitly credits OpenClaw inspiration.",
-      "sourceUrl": "https://raw.githubusercontent.com/HKUDS/nanobot/v0.1.4.post6/README.md"
-    },
-    {
-      "from": "nanobot",
-      "to": "picoclaw",
-      "type": "inspired",
-      "note": "README explicitly credits nanobot inspiration and says PicoClaw was written from scratch, not forked.",
-      "sourceUrl": "https://raw.githubusercontent.com/sipeed/picoclaw/main/README.md"
-    },
-    {
-      "from": "openclaw",
-      "to": "ironclaw",
-      "type": "inspired",
-      "note": "README explicitly calls IronClaw an OpenClaw-inspired Rust reimplementation.",
-      "sourceUrl": "https://raw.githubusercontent.com/nearai/ironclaw/main/README.md"
-    },
-    {
-      "from": "openclaw",
       "to": "kimi-claw",
       "type": "built-on",
       "note": "Kimi documents deploying OpenClaw in its cloud and connecting existing OpenClaw installations.",
@@ -50,22 +22,15 @@
       "from": "openclaw",
       "to": "maxclaw",
       "type": "built-on",
-      "note": "MiniMax explicitly says MaxClaw is built on OpenClaw; this is a managed deployment relationship, not verified fork ancestry.",
+      "note": "MiniMax hosts OpenClaw as MaxClaw, with managed setup, model access, and a cloud workspace.",
       "sourceUrl": "https://agent.minimax.io/activity/max-claw"
-    },
-    {
-      "from": "hermes",
-      "to": "openfang",
-      "type": "inspired",
-      "note": "OpenFang v0.6.0 credits three Hermes-inspired features. This edge records feature influence, not whole-runtime ancestry.",
-      "sourceUrl": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.0"
     },
     {
       "from": "antigravity",
       "to": "gemini-spark",
       "type": "built-on",
-      "note": "Google identifies the Antigravity harness as part of Spark\u2019s execution stack at launch. This is a dependency, not a fork.",
-      "sourceUrl": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+      "note": "Google introduced Gemini Spark on the Antigravity harness. The product is now called Gemini Tasks.",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
     }
   ],
   "news": [
@@ -216,7 +181,7 @@
       "title": "Lucas launches an encrypted credential Vault",
       "url": "https://meetlucas.ai/updates/2026-09-15-introducing-vault/",
       "date": "2026-09-15",
-      "summary": "Vault stores logins, cards and IDs for browser errands while keeping secret fields out of the agent model\u2019s context; purchases still require approval.",
+      "summary": "Vault stores logins, cards and IDs for browser errands while keeping secret fields out of the agent model’s context; purchases still require approval.",
       "type": "release",
       "agentIds": [
         "lucas"

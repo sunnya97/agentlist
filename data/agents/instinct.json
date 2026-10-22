@@ -18,6 +18,12 @@
       "title": "Instinct privacy policy",
       "url": "https://instinct.com/privacy-policy",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "instinct-funding-2026",
+      "title": "Instinct\u2019s August 2026 Series B financing",
+      "url": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -149,5 +155,21 @@
       "X",
       "YouTube"
     ]
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "instinct-funding-2026"
+    ],
+    "stage": "Series B \u00b7 Aug 2026",
+    "funding": {
+      "amount": "US$250M",
+      "round": "Series B",
+      "date": "2026-08-26",
+      "sourceIds": [
+        "instinct-funding-2026"
+      ]
+    }
   }
 }

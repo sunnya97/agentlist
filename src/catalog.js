@@ -1,4 +1,8 @@
+export const companyTypes = {public:'Public company',lab:'Major AI lab',startup:'Startup',established:'Established company',independent:'Independent project',research:'Research group'};
+export const launchKinds = {launch:'Public launch',preview:'Research preview',beta:'Public beta',announcement:'Announcement',release:'Open-source release',update:'Major update'};
+
 export const fieldGroups = [
+  {id:'company',label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Company stage'],['funding','Disclosed funding'],['launchDate','Launch date']]},
   {id:'capabilities',label:'What it can do',fields:[
     ['uniqueFeatures','What stands out'],
     ['computerUse','Computer use'],
@@ -48,5 +52,6 @@ export const directoryViews = {
   capabilities:{label:'Capabilities',fields:[['browserUse','Browser control'],['passwordManager','Passwords'],['api','Developer API'],['voice','Voice & listening']]},
   models:{label:'Models & plans',fields:[['models','Models'],['byom','Bring your own model'],['bundledPlan','Bundled with'],['pricing','Cost']]},
   access:{label:'Apps & hardware',fields:[['nativeApps','Native apps'],['hardware','Native hardware'],['channels','Web & messaging'],['api','Developer API']]},
+  company:{label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Stage'],['funding','Disclosed funding'],['launchDate','Launch']]},
   control:{label:'Ownership & control',fields:[['license','Open source'],['hosting','Where it runs'],['memory','Memory'],['scheduling','Background work']]}
 };

@@ -6,7 +6,7 @@ Every agent has one file in `data/agents/`. A contribution can update a single f
 
 1. Fork and clone the repository. Use Node.js 22 or later; there are no dependencies to install.
 2. Run `npm run add:agent -- example-agent "Example Agent" https://example.com`.
-3. Fill in the summary, company, relevant claims, plans, platforms, and sources in `data/agents/example-agent.json`.
+3. Fill in the summary, company context, launch dates, relevant claims, plans, platforms, and sources in `data/agents/example-agent.json`.
 4. Save an official PNG, SVG, or WebP mark in `src/logos/`. Record its original URL and the official page in the `logo` object. Logos belong to their owners.
 5. Run `npm run verify` and open a pull request.
 
@@ -31,6 +31,38 @@ Each source has an ID, title, direct URL, and the date it was checked. Claims re
 ```
 
 Omit a claim if the answer is not established. The build fills missing fields with an unknown value. Use `limited` when a source establishes a preview, restricted feature, or partial answer. Unknown does not mean unavailable. Public APIs, MCP connectors, browser automation, password vaults, and saved browser sessions are different capabilities.
+
+## Company and launch history
+
+`organization` names the team that makes the product. Optional `company` records its type and company stage, separately from product availability. Types are `public`, `lab` (major AI lab), `startup`, `established`, `independent`, and `research`. These are editorial groupings, not rankings. Open-source software can still be built by a funded startup. Use `parent` for an owning company, and record acquisitions in `stage` with the date.
+
+Funding describes a dated, disclosed round at the company level. Keep the round amount separate from total raised and valuation; do not substitute one for another. Label committed capital or pre-acquisition funding in `note`. Leave stage or funding absent when not established. Company and funding entries each need their own `sourceIds`.
+
+```json
+"company": {
+  "type": "startup",
+  "stage": "Series A",
+  "sourceIds": ["example-funding"],
+  "funding": {
+    "amount": "US$20M",
+    "round": "Series A",
+    "date": "2026-06-03",
+    "sourceIds": ["example-funding"]
+  }
+},
+"launches": [
+  {
+    "date": "2026-02",
+    "kind": "beta",
+    "label": "Original public beta",
+    "sourceIds": ["example-launch"]
+  }
+]
+```
+
+Launch kinds are `announcement`, `preview`, `beta`, `launch`, `release` (open-source release), and `update` (later major version or rename). Record product events, not company incorporation, website registration, repository creation, or a source's checked date. Dates accept year, month, or day precision (`2026`, `2026-02`, `2026-02-03`); never invent a day. The earliest non-update event supplies the directory launch date and newest-launch sort. Later milestones remain in the profile timeline. State the original product name or release surface in `label` when it matters. Omit dates that cannot be established.
+
+The build derives company and launch comparison claims from these objects; do not duplicate them in `claims`.
 
 ## Plans
 
@@ -61,7 +93,7 @@ Aggregate `sentiment` records are separately attributed snapshots. They include 
 
 ## News and relationships
 
-Edit `data/catalog.json` for dated news and sourced relationships. Fork ancestry requires explicit evidence. Shared model providers, compatibility, and similar names do not prove a fork. Updates are curated; a pull request does not publish automatically.
+Edit `data/catalog.json` for dated news and sourced relationships. Relationships accept only `built-on`, `fork`, and `renamed`. Keep inspiration and competing alternatives out of the ancestry graph. Fork ancestry requires explicit evidence. Shared model providers, compatibility, and similar names do not prove a fork. Updates are curated; a pull request does not publish automatically.
 
 ## Preview and checks
 

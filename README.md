@@ -54,3 +54,5 @@ The project creator is affiliated with Ambi. It follows the same source requirem
 ## License
 
 Code and original catalog contributions are available under the [MIT License](LICENSE). Product marks remain the property of their owners. Third-party source text, linked posts, and Feedback Bench data retain their original rights and attribution.
+
+Agent profiles use shareable full-page routes (`#agent/town`, `#agent/town?tab=plans`). Company type, stage, dated funding, and launch history are maintained in each agent JSON file; the directory supports company filtering and newest-launch sorting. The ecosystem graph contains runtime dependencies, code forks, and renames.

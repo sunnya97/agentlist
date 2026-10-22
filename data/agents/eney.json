@@ -278,6 +278,12 @@
       "title": "Eney terms and credit rules",
       "url": "https://macpaw.com/legal/eney-terms-of-service",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "eney-original-announcement",
+      "title": "MacPaw introduces Eney in May 2025",
+      "url": "https://macpaw.com/news/why-we-built-eney",
+      "checkedAt": "2026-10-21"
     }
   ],
   "logo": {
@@ -285,5 +291,29 @@
     "sourceUrl": "https://eney.ai/_next-icons/apple-icon.png",
     "sourcePage": "https://eney.ai/",
     "kind": "product"
-  }
+  },
+  "company": {
+    "type": "established",
+    "sourceIds": [
+      "eney-launch"
+    ]
+  },
+  "launches": [
+    {
+      "date": "2026-10-15",
+      "kind": "launch",
+      "sourceIds": [
+        "eney-launch"
+      ],
+      "label": "Mac and iPhone release"
+    },
+    {
+      "date": "2025-05-22",
+      "kind": "announcement",
+      "sourceIds": [
+        "eney-original-announcement"
+      ],
+      "label": "Original Mac announcement"
+    }
+  ]
 }

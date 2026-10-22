@@ -42,6 +42,12 @@
       "title": "IronClaw approval system",
       "url": "https://github.com/nearai/ironclaw/blob/main/crates/kernel/ironclaw_approvals/README.md",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-launch",
+      "title": "NEAR AI introduces IronClaw at NEARCON",
+      "url": "https://near.ai/blog/near-ai-launches-ironclaw-confidential-gpu-marketplace-and-multimodal-confidential-inference",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -234,5 +240,20 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "ironclaw-launch"
+    ]
+  },
+  "launches": [
+    {
+      "date": "2026-02-23",
+      "kind": "launch",
+      "sourceIds": [
+        "ironclaw-launch"
+      ]
+    }
+  ]
 }

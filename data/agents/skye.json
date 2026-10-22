@@ -195,6 +195,12 @@
       "title": "Skye terms",
       "url": "https://skyeapp.ai/terms",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "skye-funding",
+      "title": "Skye\u2019s pre-seed financing",
+      "url": "https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "logo": {
@@ -202,5 +208,21 @@
     "sourceUrl": "https://skyeapp.ai/icon.png",
     "sourcePage": "https://skyeapp.ai/",
     "kind": "product"
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "skye-funding"
+    ],
+    "stage": "Pre-seed",
+    "funding": {
+      "amount": "US$3.58M+",
+      "round": "Pre-seed",
+      "date": "2025-09",
+      "sourceIds": [
+        "skye-funding"
+      ]
+    }
+  },
+  "launches": []
 }

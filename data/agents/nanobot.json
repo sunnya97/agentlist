@@ -54,6 +54,12 @@
       "title": "nanobot model providers",
       "url": "https://github.com/HKUDS/nanobot/blob/main/docs/providers.md",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-launch-history",
+      "title": "nanobot release archive: original launch",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/release-archive.md",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -267,5 +273,20 @@
     "name": "",
     "detail": "",
     "sourceIds": []
+  },
+  "launches": [
+    {
+      "date": "2026-02-02",
+      "kind": "release",
+      "sourceIds": [
+        "nanobot-launch-history"
+      ]
+    }
+  ],
+  "company": {
+    "type": "research",
+    "sourceIds": [
+      "nanobot-launch-history"
+    ]
   }
 }

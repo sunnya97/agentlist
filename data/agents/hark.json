@@ -30,6 +30,18 @@
       "title": "Introducing Hark Pro",
       "url": "https://hark.com/articles/introducing-hark-pro",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-series-a",
+      "title": "Hark announces Series A financing",
+      "url": "https://hark.com/articles/hark-announces-usd700-million-fundraising-round",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-launch-date",
+      "title": "Hark Pro public release date",
+      "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -282,5 +294,30 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "hark-series-a"
+    ],
+    "stage": "Series A",
+    "funding": {
+      "amount": "US$700M+",
+      "round": "Series A",
+      "date": "2026-05",
+      "sourceIds": [
+        "hark-series-a"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-10-06",
+      "kind": "launch",
+      "sourceIds": [
+        "hark-launch",
+        "hark-launch-date"
+      ]
+    }
+  ]
 }

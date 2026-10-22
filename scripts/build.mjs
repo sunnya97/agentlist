@@ -1,6 +1,7 @@
 import {cp,mkdir,readFile,readdir,writeFile} from 'node:fs/promises';
 import {validate} from './validate.mjs';
 import {fields} from '../src/catalog.js';
+import {contextClaims} from '../src/domain.js';
 const root=new URL('../',import.meta.url);
 const metadata=JSON.parse(await readFile(new URL('data/catalog.json',root),'utf8'));
 const files=(await readdir(new URL('data/agents/',root))).filter(name=>name.endsWith('.json')).sort();
@@ -11,11 +12,12 @@ const agents=await Promise.all(files.map(async file=>{
   const knownFields=new Set(fields.map(([key])=>key));
   for(const claim of record.claims)if(!knownFields.has(claim.field))throw new Error(`${file}: unrecognized field ${claim.field}`);
   const hardware=record.hardware||{status:'unknown',name:'',detail:'',sourceIds:[]};
+  const context=contextClaims(record);
   const claims=fields.map(([field])=>{
     if(field==='hardware'&&hardware.detail&&hardware.sourceIds.length)return {field,value:hardware.detail,shortValue:hardware.name?`${hardware.name} · ${hardware.status==='announced'?'announced':hardware.status==='unknown'?'availability unclear':hardware.status}`:hardware.status,status:['announced','unknown'].includes(hardware.status)?'limited':'documented',sourceIds:hardware.sourceIds,checkedAt:metadata.checkedAt};
-    return {field,value:'Not specified',status:'unknown',sourceIds:[],checkedAt:metadata.checkedAt,...record.claims.find(c=>c.field===field)};
+    return {field,value:'Not specified',status:'unknown',sourceIds:[],checkedAt:metadata.checkedAt,...(context.find(c=>c.field===field)||record.claims.find(c=>c.field===field))};
   });
-  const agent={...record,claims,hardware,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[]};
+  const agent={...record,claims,hardware,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[],company:record.company||null,launches:record.launches||[]};
   const logo=await readFile(new URL(`src/${agent.logo.path}`,root));
   if(!logo.length)throw new Error(`${file}: empty logo`);
   return agent;
@@ -33,7 +35,7 @@ const rss=`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><ti
 await writeFile(new URL('../dist/feed.xml',import.meta.url),rss);
 // A standalone edition remains usable when hosting or a local server is unavailable.
 const [html,css,app,domain,catalog,platformModule]=await Promise.all(['index.html','styles.css','app.js','domain.js','catalog.js','platforms.js'].map(name=>readFile(new URL(`../src/${name}`,import.meta.url),'utf8')));
-const bundledJS=[catalog,platformModule,domain].map(code=>code.replace(/^export /gm,'')).join('\n')+'\n'+app.replace(/^import .*?;\n/gm,'');
+const bundledJS=[catalog,platformModule,domain].map(code=>code.replace(/^import .*?;\n/gm,'').replace(/^export /gm,'')).join('\n')+'\n'+app.replace(/^import .*?;\n/gm,'');
 const embeddedData=structuredClone(dataset);
 for(const a of embeddedData.agents){const bytes=await readFile(new URL(`../src/${a.logo.path}`,import.meta.url));const mime=a.logo.path.endsWith('.svg')?'image/svg+xml':a.logo.path.endsWith('.webp')?'image/webp':'image/png';a.logo.path=`data:${mime};base64,${bytes.toString('base64')}`}
 const standalone=html.replace('<link rel="stylesheet" href="./styles.css">',`<style>${css}</style>`).replace('<script type="module" src="./app.js"></script>','').replace('</body>',`<script id="agentlist-data" type="application/json">${JSON.stringify(embeddedData).replaceAll('<','\\u003c')}</script><script type="module">${bundledJS.replaceAll('</script','<\\/script')}</script></body>`);

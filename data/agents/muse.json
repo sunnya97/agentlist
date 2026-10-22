@@ -18,6 +18,12 @@
       "title": "How We Designed Muse",
       "url": "https://introducing.muse.ai/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "muse-meta-stock",
+      "title": "Meta investor relations: stock listing",
+      "url": "https://investor.atmeta.com/stock-info/default.aspx",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -256,5 +262,21 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "public",
+    "sourceIds": [
+      "muse-meta-stock"
+    ],
+    "stage": "Public \u00b7 NASDAQ: META"
+  },
+  "launches": [
+    {
+      "date": "2026-09-08",
+      "kind": "launch",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    }
+  ]
 }

@@ -108,6 +108,18 @@
       "title": "Scheduled tasks",
       "url": "https://learn.chatgpt.com/docs/automations",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-funding-2026",
+      "title": "OpenAI closes its March 2026 funding round",
+      "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-cli-launch",
+      "title": "OpenAI introduces Codex CLI",
+      "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -350,5 +362,31 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "lab",
+    "sourceIds": [
+      "codex-funding-2026"
+    ],
+    "stage": "Private",
+    "funding": {
+      "amount": "US$122B",
+      "round": "Funding round",
+      "date": "2026-03-31",
+      "sourceIds": [
+        "codex-funding-2026"
+      ],
+      "note": "Committed capital"
+    }
+  },
+  "launches": [
+    {
+      "date": "2025-04-16",
+      "kind": "release",
+      "sourceIds": [
+        "codex-cli-launch"
+      ],
+      "label": "Codex CLI"
+    }
+  ]
 }

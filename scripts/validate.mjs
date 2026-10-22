@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-import {fields as fieldDefinitions} from '../src/catalog.js';
+import {fields as fieldDefinitions,companyTypes,launchKinds} from '../src/catalog.js';
 import {platformLabels,platformStatusLabels} from '../src/platforms.js';
 export function validate(data){
   const ids=new Set();const fields=fieldDefinitions.map(([key])=>key);
   const url=u=>assert(['https:','http:'].includes(new URL(u).protocol),`Invalid URL ${u}`);
   const date=d=>assert(typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&new Date(d+'T12:00:00Z').toISOString().startsWith(d)&&d<=data.checkedAt,`Invalid or future date ${d}`);
+  const partialDate=d=>{assert(typeof d==='string'&&/^\d{4}(-\d{2})?(-\d{2})?$/.test(d),`Invalid date ${d}`);date((d+'-01-01').slice(0,10))};
   if(data.repository)assert(/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(data.repository),'Repository must be a GitHub repository URL');
   for(const a of data.agents){
     assert(a.id&&!ids.has(a.id),`Duplicate agent ID ${a.id}`);ids.add(a.id);
@@ -16,6 +17,8 @@ export function validate(data){
     const sourceIds=new Set(a.sources.map(s=>s.id));assert(sourceIds.size===a.sources.length);
     for(const s of a.sources){url(s.url);assert(s.title);date(s.checkedAt)}
     const evidence=(item,label)=>{assert(Array.isArray(item.sourceIds)&&item.sourceIds.length,`${a.id}/${label} needs evidence`);for(const id of item.sourceIds)assert(sourceIds.has(id),`${a.id}/${label} references missing source ${id}`)};
+    if(a.company){assert(Object.hasOwn(companyTypes,a.company.type));evidence(a.company,'company');if(a.company.stage)assert(typeof a.company.stage==='string');if(a.company.funding){const f=a.company.funding;assert(f.amount&&f.round);partialDate(f.date);evidence(f,'funding')}}
+    const launches=new Set();for(const event of a.launches||[]){partialDate(event.date);assert(Object.hasOwn(launchKinds,event.kind));evidence(event,'launch');const key=event.date+':'+event.kind;assert(!launches.has(key),`${a.id}: duplicate launch event`);launches.add(key)}
     assert(Array.isArray(a.plans)&&Array.isArray(a.discussions),`${a.id} needs plans and discussions arrays`);
     const planNames=new Set();for(const p of a.plans){
       assert(p.name&&p.price&&p.billing&&!planNames.has(p.name),`${a.id}: invalid or duplicate plan`);planNames.add(p.name);
@@ -38,7 +41,7 @@ export function validate(data){
     for(const field of fields){const matches=a.claims.filter(c=>c.field===field);assert(matches.length===1,`${a.id} missing or duplicate ${field}`);const c=matches[0];assert(['documented','limited','unknown'].includes(c.status));assert(typeof c.value==='string'&&c.value);assert(c.status==='unknown'||c.sourceIds.length,`${a.id}/${field} needs evidence`);for(const s of c.sourceIds)assert(sourceIds.has(s),`${a.id}/${field} references missing source ${s}`)}
   }
   const nodes=new Set([...ids,...data.externalNodes.map(n=>n.id)]);
-  for(const r of data.relationships){assert(nodes.has(r.from)&&nodes.has(r.to));assert(r.from!==r.to);assert(['built-on','inspired','alternative','fork','renamed'].includes(r.type));url(r.sourceUrl);assert(r.note)}
+  for(const r of data.relationships){assert(nodes.has(r.from)&&nodes.has(r.to));assert(r.from!==r.to);assert(['built-on','fork','renamed'].includes(r.type));url(r.sourceUrl);assert(r.note)}
   const newsIds=new Set();for(const n of data.news){assert(!newsIds.has(n.id));newsIds.add(n.id);url(n.url);assert(/^\d{4}-\d{2}-\d{2}$/.test(n.date)&&n.date<=data.checkedAt);assert(n.title&&n.summary&&n.type);assert(n.agentIds.length);n.agentIds.forEach(id=>assert(ids.has(id)))}
   return true;
 }

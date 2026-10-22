@@ -54,6 +54,12 @@
       "title": "Lindy phone calls",
       "url": "https://www.lindy.ai/product/phone",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-launch",
+      "title": "Lindy\u2019s first product announcement",
+      "url": "https://www.lindy.ai/blog/meet-lindy",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -300,5 +306,20 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "lindy-launch"
+    ]
+  },
+  "launches": [
+    {
+      "date": "2023-03-21",
+      "kind": "announcement",
+      "sourceIds": [
+        "lindy-launch"
+      ]
+    }
+  ]
 }

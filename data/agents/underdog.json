@@ -36,6 +36,12 @@
       "title": "Conway Research Underdog-27B-1.0 model repository",
       "url": "https://huggingface.co/ConwayResearch/Underdog-27B-1.0",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "underdog-funding",
+      "title": "Andreessen Horowitz leads Conway Research\u2019s first funding round",
+      "url": "https://a16z.com/announcement/investing-in-conway-the-creator-of-underdog/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -296,5 +302,22 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "underdog-funding"
+    ],
+    "stage": "First funding round",
+    "funding": {
+      "amount": "Undisclosed",
+      "round": "First round",
+      "date": "2026-10-02",
+      "sourceIds": [
+        "underdog-funding"
+      ],
+      "note": "Led by a16z"
+    }
+  },
+  "launches": []
 }

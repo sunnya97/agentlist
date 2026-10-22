@@ -236,5 +236,29 @@
     "sourceUrl": "https://www.tomo.ai/apple-icon.png",
     "sourcePage": "https://www.tomo.ai/",
     "kind": "product"
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "tomo-launch"
+    ],
+    "stage": "Seed",
+    "funding": {
+      "amount": "US$5M",
+      "round": "Seed",
+      "date": "2026-06-25",
+      "sourceIds": [
+        "tomo-launch"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-06-25",
+      "kind": "launch",
+      "sourceIds": [
+        "tomo-launch"
+      ]
+    }
+  ]
 }

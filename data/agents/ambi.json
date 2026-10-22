@@ -284,5 +284,12 @@
     "sourceIds": [
       "ambi-home"
     ]
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "ambi-home"
+    ]
   }
 }

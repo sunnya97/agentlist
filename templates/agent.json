@@ -30,5 +30,7 @@
     "detail": "",
     "sourceIds": []
   },
-  "discussions": []
+  "discussions": [],
+  "company": null,
+  "launches": []
 }

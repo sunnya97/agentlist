@@ -256,5 +256,12 @@
     "sourceUrl": "https://yourpersona.com/icon.svg",
     "sourcePage": "https://yourpersona.com/",
     "kind": "product"
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "persona-terms"
+    ]
   }
 }

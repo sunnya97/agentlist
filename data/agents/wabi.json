@@ -36,6 +36,12 @@
       "title": "Wabi official App Store listing",
       "url": "https://apps.apple.com/us/app/wabi-ai-assistant/id6747768928",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "wabi-pre-seed",
+      "title": "Andreessen Horowitz invests in Wabi",
+      "url": "https://a16z.com/announcement/investing-in-wabi/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -271,5 +277,21 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "wabi-pre-seed"
+    ],
+    "stage": "Pre-seed",
+    "funding": {
+      "amount": "US$20M",
+      "round": "Pre-seed",
+      "date": "2025-11-05",
+      "sourceIds": [
+        "wabi-pre-seed"
+      ]
+    }
+  },
+  "launches": []
 }

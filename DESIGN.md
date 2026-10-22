@@ -42,7 +42,9 @@ Desktop rows align selection, identity, concise feature summaries, and following
 The overview combines desktop and mobile into Native apps, using platform icons with hover labels and click-to-open availability details.
 Announced platforms use muted dashed outlines; beta and limited access have small status dots.
 Keep summaries compact; open the agent identity to inspect its profile.
+Each agent has a full page at `#agent/<id>`, with a breadcrumb, company and launch facts, and linkable Overview, Plans, Discussion, and Sources tabs. Browser back and forward follow normal page navigation.
 Profiles and comparisons retain full claim text and numbered source links.
+A Company & launch view and company-type filter distinguish public companies, major labs, startups, established companies, independent projects, and research groups. Launch dates display the event kind; funding displays a round and announcement date. The newest-launch sort uses the earliest dated debut, not a later version update.
 Profiles also provide a complete source list with checked dates and official product links.
 The comparison matrix aligns feature rows across up to four agents and groups related fields.
 Show differences, agent replacement, CSV export, and comparison-link actions remain available.

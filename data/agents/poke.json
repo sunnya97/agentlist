@@ -42,6 +42,18 @@
       "title": "Poke plans and usage",
       "url": "https://poke.com/pricing",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-launch-funding",
+      "title": "Interaction announces Poke launch and seed funding",
+      "url": "https://www.webwire.com/ViewPressRel.asp?aId=343533",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-cognition",
+      "title": "Poke joins Cognition",
+      "url": "https://poke.com/docs/release-notes",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -267,5 +279,32 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "poke-cognition",
+      "poke-launch-funding"
+    ],
+    "stage": "Acquired \u00b7 July 2026",
+    "parent": "Cognition",
+    "funding": {
+      "amount": "US$15M",
+      "round": "Seed",
+      "date": "2025-09-08",
+      "sourceIds": [
+        "poke-launch-funding"
+      ],
+      "note": "Before joining Cognition"
+    }
+  },
+  "launches": [
+    {
+      "date": "2025-09-08",
+      "kind": "launch",
+      "sourceIds": [
+        "poke-launch-funding"
+      ]
+    }
+  ]
 }

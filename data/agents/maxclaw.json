@@ -12,6 +12,12 @@
       "title": "MaxClaw official hosted plan",
       "url": "https://agent.minimax.io/activity/max-claw",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "maxclaw-minimax-investors",
+      "title": "MiniMax investor relations",
+      "url": "https://ir.minimax.io/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -144,5 +150,13 @@
     "name": "",
     "detail": "",
     "sourceIds": []
+  },
+  "launches": [],
+  "company": {
+    "type": "public",
+    "sourceIds": [
+      "maxclaw-minimax-investors"
+    ],
+    "stage": "Public"
   }
 }

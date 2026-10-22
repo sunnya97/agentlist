@@ -242,6 +242,12 @@
       "title": "Pally MCP server",
       "url": "https://pally.com/mcp",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-yc",
+      "title": "Pally company profile at Y Combinator",
+      "url": "https://www.ycombinator.com/companies/pally",
+      "checkedAt": "2026-10-21"
     }
   ],
   "logo": {
@@ -249,5 +255,12 @@
     "sourceUrl": "https://pally.com/brand/app-icon.png?v=2",
     "sourcePage": "https://pally.com/",
     "kind": "product"
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "pally-yc"
+    ]
+  },
+  "launches": []
 }

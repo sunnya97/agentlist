@@ -54,6 +54,12 @@
       "title": "Hermes voice mode",
       "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/voice-mode.md",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-funding-2026",
+      "title": "Nous Research: October funding and Hermes release history",
+      "url": "https://nousresearch.com/a-note-on-our-fundraise",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -315,5 +321,29 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "hermes-funding-2026"
+    ],
+    "stage": "Venture-backed",
+    "funding": {
+      "amount": "US$90M",
+      "round": "Funding round",
+      "date": "2026-10",
+      "sourceIds": [
+        "hermes-funding-2026"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-02",
+      "kind": "release",
+      "sourceIds": [
+        "hermes-funding-2026"
+      ]
+    }
+  ]
 }

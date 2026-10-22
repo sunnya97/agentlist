@@ -66,6 +66,12 @@
       "title": "Town custom integrations through MCP",
       "url": "https://www.town.com/docs/integrations/mcp-servers",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-series-b",
+      "title": "Town announces Series B financing and launch history",
+      "url": "https://www.town.com/press/series-b",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -356,5 +362,29 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "town-series-b"
+    ],
+    "stage": "Series B",
+    "funding": {
+      "amount": "US$108M",
+      "round": "Series B",
+      "date": "2026-10-19",
+      "sourceIds": [
+        "town-series-b"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-06",
+      "kind": "launch",
+      "sourceIds": [
+        "town-series-b"
+      ]
+    }
+  ]
 }

@@ -60,6 +60,18 @@
       "title": "Configure Claude Code permissions",
       "url": "https://code.claude.com/docs/en/permissions",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-series-h",
+      "title": "Anthropic announces Series H financing",
+      "url": "https://www.anthropic.com/news/series-h",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-launch",
+      "title": "Anthropic introduces Claude Code",
+      "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -276,5 +288,29 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "lab",
+    "sourceIds": [
+      "claude-code-series-h"
+    ],
+    "stage": "Series H",
+    "funding": {
+      "amount": "US$65B",
+      "round": "Series H",
+      "date": "2026-05-28",
+      "sourceIds": [
+        "claude-code-series-h"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2025-02-24",
+      "kind": "preview",
+      "sourceIds": [
+        "claude-code-launch"
+      ]
+    }
+  ]
 }

@@ -36,6 +36,12 @@
       "title": "Monthly API credits bundled with Claude Max",
       "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-duet-series-h",
+      "title": "Anthropic announces Series H financing",
+      "url": "https://www.anthropic.com/news/series-h",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -291,5 +297,29 @@
     "name": "",
     "detail": "",
     "sourceIds": []
-  }
+  },
+  "company": {
+    "type": "lab",
+    "sourceIds": [
+      "claude-duet-series-h"
+    ],
+    "stage": "Series H",
+    "funding": {
+      "amount": "US$65B",
+      "round": "Series H",
+      "date": "2026-05-28",
+      "sourceIds": [
+        "claude-duet-series-h"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-10-21",
+      "kind": "preview",
+      "sourceIds": [
+        "duet-launch"
+      ]
+    }
+  ]
 }

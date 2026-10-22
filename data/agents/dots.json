@@ -36,6 +36,12 @@
       "title": "ChatGPT Business Premium seat pricing",
       "url": "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "dots-funding-2026",
+      "title": "OpenAI closes its March 2026 funding round",
+      "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -346,5 +352,30 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "lab",
+    "sourceIds": [
+      "dots-funding-2026"
+    ],
+    "stage": "Private",
+    "funding": {
+      "amount": "US$122B",
+      "round": "Funding round",
+      "date": "2026-03-31",
+      "sourceIds": [
+        "dots-funding-2026"
+      ],
+      "note": "Committed capital"
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-09-29",
+      "kind": "launch",
+      "sourceIds": [
+        "dots-intro"
+      ]
+    }
+  ]
 }

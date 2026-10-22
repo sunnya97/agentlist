@@ -66,6 +66,18 @@
       "title": "Google One US monthly pricing",
       "url": "https://one.google.com/about/plans",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "gemini-spark-alphabet-stock",
+      "title": "Alphabet annual report: listed shares and Google ownership",
+      "url": "https://abc.xyz/assets/99/21/46cafdba41089a12a2d86ea47d44/goog026-annualreport2024-web.pdf",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "gemini-spark-launch-2026",
+      "title": "Google I/O announcement: Gemini Spark and Antigravity",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -325,5 +337,23 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "public",
+    "sourceIds": [
+      "gemini-spark-alphabet-stock"
+    ],
+    "stage": "Public \u00b7 NASDAQ: GOOGL / GOOG",
+    "parent": "Alphabet"
+  },
+  "launches": [
+    {
+      "date": "2026-05-19",
+      "kind": "announcement",
+      "sourceIds": [
+        "gemini-spark-launch-2026"
+      ],
+      "label": "Introduced as Gemini Spark"
+    }
+  ]
 }

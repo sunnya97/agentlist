@@ -262,5 +262,12 @@
     "sourceUrl": "https://rene.co/apple-touch-icon.png?v=20260814-1",
     "sourcePage": "https://rene.co/",
     "kind": "product"
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "rene-home"
+    ]
   }
 }

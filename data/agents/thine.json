@@ -228,5 +228,12 @@
     "sourceUrl": "https://www.thine.com/apple-touch-icon.png",
     "sourcePage": "https://www.thine.com/",
     "kind": "product"
+  },
+  "launches": [],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "thine-privacy"
+    ]
   }
 }

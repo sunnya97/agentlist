@@ -84,6 +84,18 @@
       "title": "OpenClaw command approvals",
       "url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/exec-approvals.md",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-history",
+      "title": "OpenClaw: original launch and naming history",
+      "url": "https://openclaw.ai/blog/introducing-openclaw",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-foundation",
+      "title": "OpenClaw blog: formation of the independent foundation",
+      "url": "https://openclaw.ai/blog",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -393,5 +405,30 @@
       "X",
       "YouTube"
     ]
-  }
+  },
+  "company": {
+    "type": "independent",
+    "sourceIds": [
+      "openclaw-foundation"
+    ],
+    "stage": "Nonprofit foundation"
+  },
+  "launches": [
+    {
+      "date": "2025-11",
+      "kind": "release",
+      "sourceIds": [
+        "openclaw-history"
+      ],
+      "label": "Originally Clawd"
+    },
+    {
+      "date": "2026-01-29",
+      "kind": "update",
+      "sourceIds": [
+        "openclaw-history"
+      ],
+      "label": "Renamed OpenClaw"
+    }
+  ]
 }

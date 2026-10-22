@@ -1,7 +1,7 @@
 {
   "id": "nanoclaw",
   "name": "NanoClaw",
-  "organization": "nanocoai",
+  "organization": "NanoCo",
   "summary": "A customizable personal assistant running individual agents in isolated containers.",
   "website": "https://nanoclaw.dev",
   "repository": "https://github.com/nanocoai/nanoclaw",
@@ -35,6 +35,18 @@
       "id": "nanoclaw-approval-tools",
       "title": "NanoClaw approval-gated tools",
       "url": "https://github.com/nanocoai/nanoclaw/blob/main/src/modules/approvals/agent.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-funding-2026",
+      "title": "NanoCo seed financing and NanoClaw launch history",
+      "url": "https://www.helpnetsecurity.com/2026/05/20/nanoco-seed-funding-12-million/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-seed-announcement",
+      "title": "NanoCo announces its seed financing",
+      "url": "https://www.linkedin.com/posts/nanocoai_today-were-announcing-nanoco-our-enterprise-activity-7462898172324143105-beHf",
       "checkedAt": "2026-10-21"
     }
   ],
@@ -220,5 +232,31 @@
     "name": "",
     "detail": "",
     "sourceIds": []
+  },
+  "launches": [
+    {
+      "date": "2026-02",
+      "kind": "release",
+      "sourceIds": [
+        "nanoclaw-funding-2026"
+      ]
+    }
+  ],
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "nanoclaw-funding-2026",
+      "nanoclaw-seed-announcement"
+    ],
+    "stage": "Seed",
+    "funding": {
+      "amount": "US$12M",
+      "round": "Seed",
+      "date": "2026-05-20",
+      "sourceIds": [
+        "nanoclaw-funding-2026",
+        "nanoclaw-seed-announcement"
+      ]
+    }
   }
 }
