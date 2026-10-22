@@ -352,5 +352,14 @@
       "pickle-appstore",
       "pickle-start"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Uses its own computer for tasks; control of your local desktop is not specified.",
+      "sourceIds": [
+        "pickle-terms"
+      ]
+    }
   }
 }

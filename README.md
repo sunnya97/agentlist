@@ -34,6 +34,7 @@ Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` wor
 - `src/catalog.js`: feature definitions and editorial default ordering.
 - `src/platforms.js`, `src/channels.js`: native platform and messaging-service marks.
 - `src/access.js`: availability states, from shipping to waitlist and reservation.
+- `src/compute.js`: the three computer-control questions, kept independent.
 - `scripts/build.mjs`: builds the static site, dataset, RSS and standalone bundle.
 - `scripts/validate.mjs`: validates sources, platforms, messaging, plans, hardware, discussions and sentiment samples.
 - `scripts/domain.test.mjs`: comparison, filtering, catalog integrity and regression checks.

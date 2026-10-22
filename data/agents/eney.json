@@ -322,5 +322,25 @@
     "sourceIds": [
       "eney-launch"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos"
+      ],
+      "detail": "Local Mac tools read files, run commands and act across connected apps.",
+      "sourceIds": [
+        "eney-privacy"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Mac actions execute locally and need the Mac running; signed-in chats sync and model requests run in the cloud.",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "status": "limited"
+    }
   }
 }

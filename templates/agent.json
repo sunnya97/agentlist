@@ -29,6 +29,7 @@
     "detail": "",
     "sourceIds": []
   },
+  "compute": {},
   "plans": [],
   "hardware": {
     "status": "unknown",

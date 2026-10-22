@@ -298,5 +298,14 @@
     "sourceIds": [
       "muse-intro"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Dedicated cloud virtual machine with browser, terminal, and files; local desktop control is not specified.",
+      "sourceIds": [
+        "muse-design"
+      ]
+    }
   }
 }

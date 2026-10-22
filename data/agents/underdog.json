@@ -329,5 +329,16 @@
     "sourceIds": [
       "underdog-home"
     ]
+  },
+  "compute": {
+    "whileYouAreOff": {
+      "state": "no",
+      "detail": "AI inference runs on the user's own device, so nothing runs while that device is off.",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "status": "limited"
+    }
   }
 }

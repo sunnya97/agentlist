@@ -357,5 +357,26 @@
       "bond-pricing",
       "bond-app"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "none",
+      "remote": "none",
+      "detail": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ],
+      "status": "limited"
+    }
   }
 }

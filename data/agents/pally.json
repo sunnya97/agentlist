@@ -316,5 +316,17 @@
     "sourceIds": [
       "pally-pricing"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos"
+      ],
+      "detail": "Mac companion can read the screen, access granted folders and photos, control apps and run terminal commands. The Mac must be online.",
+      "sourceIds": [
+        "pally-mac"
+      ]
+    }
   }
 }

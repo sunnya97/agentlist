@@ -332,5 +332,21 @@
     "sourceIds": [
       "duet-launch"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Own cloud computer; does not require your device to remain on.",
+      "sourceIds": [
+        "duet-launch"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Runs on its own cloud computer and does not require your device to remain on.",
+      "sourceIds": [
+        "duet-launch"
+      ]
+    }
   }
 }

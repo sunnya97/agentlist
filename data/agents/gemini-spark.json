@@ -366,5 +366,22 @@
     "sourceIds": [
       "gemini-tasks-help"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Cloud agent; desktop control through the macOS app was announced, but completion of that rollout is not established by the reviewed sources.",
+      "sourceIds": [
+        "spark-evolution"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Dedicated Google Cloud virtual machines",
+      "sourceIds": [
+        "spark-keynote"
+      ]
+    }
   }
 }

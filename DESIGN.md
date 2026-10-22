@@ -38,6 +38,7 @@ Official agent logos sit in consistent 34px identity slots, preserving each logo
 ## Directory and detail
 Place a short introduction above one filter row, followed by the view tabs and agent data.
 Views organize overview, capabilities, models and plans, and ownership and control.
+Computer control is compared as three separate rows - whether it reaches your machine, whether it has one of its own that you can watch or drive, and whether work continues while your machine is off - beside the prose narrative.
 Desktop rows align selection, identity, concise feature summaries, and following controls.
 The overview combines desktop and mobile into Native apps, using platform icons with hover labels and click-to-open availability details.
 A separate Messaging column lists the services an agent can be reached through, using the same icon and popover treatment in a lighter weight. Messaging and native apps stay in distinct columns so an integration is never read as an app.

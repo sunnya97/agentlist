@@ -85,6 +85,25 @@ Use one entry per plan or add-on. Include currency, monthly versus annual billin
 
 `platforms` lists real native clients and web access. A Telegram integration or CLI running on Android does not establish an Android app. Statuses distinguish available, beta, preview, announced, and limited access. Use `watchos` for Apple Watch.
 
+`compute` splits computer control into three independent questions, because one prose field could not answer them separately:
+
+- `onYourComputer` — can it act on the machine you own? `full`, `partial`, or `none`, with optional `platforms`.
+- `agentComputer` — does it have a machine of its own? `cloud`, `local`, or `none`, with optional `remote` (`takeover`, `view`, `none`) for whether you can watch or drive it.
+- `whileYouAreOff` — does the work continue when your machine is off? `yes`, `no`, or `partial`.
+
+```json
+"compute": {
+  "onYourComputer": {
+    "state": "full",
+    "platforms": ["macos"],
+    "detail": "Controls the Mac desktop through a local companion.",
+    "sourceIds": ["example-docs"]
+  }
+}
+```
+
+Each facet needs a `detail` and its own `sourceIds`. **Omit a facet you cannot source.** An absent facet means unknown and must never be read as "no" — a cloud computer says nothing about whether the agent can touch your desktop, and desktop control says nothing about whether it has a machine of its own. Use `status: "limited"` when a source only partly answers the question.
+
 `access` records whether a person can actually get the product, separately from the agent category and from the prose `availability` claim. States are `available`, `waitlist`, `reservation`, `announced`, and `unverified`. Optional `restrictions` name the catches that survive an open signup: `plan`, `region`, `age`, `rollout`, and `invite`. Use `expected` for a stated ship or release date on something not yet available — unlike `launches`, it may be in the future, and a future date is never a launch event. The build derives the availability short text from this object, so the prose claim keeps the detail.
 
 ```json

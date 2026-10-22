@@ -5,6 +5,8 @@ import {fields as fieldDefinitions,companyTypes,launchKinds} from '../src/catalo
 import {platformLabels,platformStatusLabels} from '../src/platforms.js';
 import {channelLabels} from '../src/channels.js';
 import {accessStates,accessRestrictions} from '../src/access.js';
+import {computeFacets,agentScreenAccess} from '../src/compute.js';
+import {platformLabels as platformKeys} from '../src/platforms.js';
 export function validate(data){
   const ids=new Set();const fields=fieldDefinitions.map(([key])=>key);
   const url=u=>assert(['https:','http:'].includes(new URL(u).protocol),`Invalid URL ${u}`);
@@ -45,6 +47,16 @@ export function validate(data){
       assert(Object.hasOwn(channelLabels,m.service)&&!services.has(m.service),`${a.id} invalid or duplicate messaging service ${m.service}`);services.add(m.service);
       assert(Object.hasOwn(platformStatusLabels,m.status),`${a.id}/${m.service} invalid status`);
       assert(m.detail,`${a.id}/${m.service} needs a detail`);evidence(m,`messaging:${m.service}`);
+    }
+    for(const [facet,states] of Object.entries(computeFacets)){
+      const v=a.compute?.[facet];if(!v)continue;
+      assert(Object.hasOwn(states,v.state),`${a.id}/${facet}: invalid state ${v.state}`);
+      assert(v.detail,`${a.id}/${facet} needs a detail`);evidence(v,facet);
+      if(v.status)assert(['documented','limited'].includes(v.status),`${a.id}/${facet}: invalid status`);
+      if(facet==='onYourComputer')for(const key of v.platforms||[])assert(Object.hasOwn(platformKeys,key),`${a.id}/${facet}: unknown platform ${key}`);
+      if(facet==='agentComputer'&&v.remote)assert(Object.hasOwn(agentScreenAccess,v.remote),`${a.id}/${facet}: invalid remote access`);
+      // A facet that says the agent has no machine cannot also describe reaching into one.
+      if(facet==='agentComputer'&&v.state==='none')assert(!v.remote||v.remote==='none',`${a.id}: no agent computer cannot offer remote access`);
     }
     if(a.access){
       const x=a.access;

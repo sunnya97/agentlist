@@ -407,5 +407,22 @@
     "sourceIds": [
       "dots-help"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Own cloud computer, plus optional access to a connected personal computer.",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Managed cloud computer; optional connected devices",
+      "sourceIds": [
+        "dots-intro"
+      ]
+    }
   }
 }

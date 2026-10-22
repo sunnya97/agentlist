@@ -487,5 +487,25 @@
     "sourceIds": [
       "openclaw-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos"
+      ],
+      "detail": "Controls local/paired Mac desktops and cloud desktops; Windows/Linux driver support is experimental.",
+      "sourceIds": [
+        "openclaw-computer-use"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Depends on the deployment: a self-hosted install on your own computer stops with it, while a server install keeps running.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "limited"
+    }
   }
 }

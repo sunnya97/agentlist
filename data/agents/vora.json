@@ -369,5 +369,33 @@
       "vora-faq",
       "vora-shop"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Acts from its own appliance through connected accounts and a secure browser; it does not control your Mac or PC, and no remote interface onto the device's own screen is described",
+      "sourceIds": [
+        "vora-home",
+        "vora-faq"
+      ]
+    },
+    "agentComputer": {
+      "state": "local",
+      "remote": "none",
+      "detail": "The Aegis appliance is the agent's computer and it has no screen or keyboard; you reach it through the phone and web apps rather than viewing its desktop.",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "The appliance does the work and stays on by itself; your phone pairs with it and is not what runs the models.",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ],
+      "status": "limited"
+    }
   }
 }

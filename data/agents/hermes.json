@@ -394,5 +394,19 @@
     "sourceIds": [
       "hermes-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "detail": "Controls macOS, Windows, and Linux desktops; can target the host or a supported sandbox.",
+      "sourceIds": [
+        "hermes-computer-use"
+      ]
+    }
   }
 }

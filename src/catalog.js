@@ -6,6 +6,9 @@ export const fieldGroups = [
   {id:'capabilities',label:'What it can do',fields:[
     ['uniqueFeatures','What stands out'],
     ['computerUse','Computer use'],
+    ['onYourComputer','Controls your computer'],
+    ['agentComputer','Its own computer'],
+    ['whileYouAreOff','Works while your computer is off'],
     ['browserUse','Browser control'],
     ['voice','Voice & ambient listening'],
     ['scheduling','Background work & triggers']

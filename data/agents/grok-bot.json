@@ -396,5 +396,14 @@
     "sourceIds": [
       "grok-product"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Persistent cloud desktop; each Bot has a screen on the shared user computer.",
+      "sourceIds": [
+        "grok-computer"
+      ]
+    }
   }
 }

@@ -6,6 +6,7 @@ import {validate} from './validate.mjs';
 import {fields,directoryViews,featuredOrder,compositeFields} from '../src/catalog.js';
 import {channelLabels,channelOrder} from '../src/channels.js';
 import {accessStates,accessSummary} from '../src/access.js';
+import {computeFacets,computeSummary} from '../src/compute.js';
 const data=JSON.parse(await readFile(new URL('../dist/data.json',import.meta.url),'utf8'));
 test('every user-named anchor is represented without collapsing distinct products',()=>{for(const id of ['dots','claude-duet','grok-bot','hark','muse','hermes','openclaw','nanoclaw','ironclaw','instinct','poke','underdog','town','ambi','cue','wabi'])assert(data.agents.some(a=>a.id===id),id);assert.equal(data.agents.find(a=>a.id==='underdog').category,'local')});
 test('adjacent harnesses are opt-in and aliases resolve',()=>{assert(!filterAgents(data.agents).some(a=>a.category==='adjacent'));assert(filterAgents(data.agents,{adjacent:true}).some(a=>a.id==='codex'));assert.equal(filterAgents(data.agents,{search:'Grokbot'})[0].id,'grok-bot')});
@@ -145,4 +146,43 @@ test('access records reject unknown states, bad restrictions and unsourced claim
   invalid(d=>pick(d).access.expected='not-a-date');
   // An expected date only makes sense for something you cannot have yet.
   invalid(d=>{const a=pick(d);a.access.state='available';a.access.expected='2027-03'});
+});
+
+test('computer control splits into three questions and never guesses an answer',()=>{
+  const facets=Object.keys(computeFacets);
+  for(const a of data.agents){
+    for(const facet of facets){
+      const claim=a.claims.find(c=>c.field===facet);
+      const value=a.compute?.[facet];
+      if(!value){
+        // Absent evidence stays unknown; it must never read as a "no".
+        assert.equal(claim.status,'unknown',`${a.id}/${facet} should be unknown`);
+        assert.equal(claim.value,'Not specified');
+        continue;
+      }
+      assert(Object.hasOwn(computeFacets[facet],value.state),`${a.id}/${facet} state`);
+      assert(claim.sourceIds.length,`${a.id}/${facet} needs evidence`);
+      assert.equal(claim.shortValue,computeSummary(facet,value));
+    }
+  }
+  // The three questions are genuinely independent of one another.
+  const duet=data.agents.find(a=>a.id==='claude-duet');
+  assert.equal(duet.compute.whileYouAreOff.state,'yes');
+  assert.equal(duet.compute.agentComputer.state,'cloud');
+  assert(!duet.compute.onYourComputer,'a cloud computer says nothing about your desktop');
+  const hermes=data.agents.find(a=>a.id==='hermes');
+  assert.equal(hermes.compute.onYourComputer.state,'full');
+  assert(!hermes.compute.agentComputer,'desktop control says nothing about a machine of its own');
+});
+
+test('compute facets reject invalid states, platforms and impossible combinations',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  const hermes=d=>d.agents.find(a=>a.id==='hermes');
+  invalid(d=>hermes(d).compute.onYourComputer.state='sometimes');
+  invalid(d=>hermes(d).compute.onYourComputer.platforms=['commodore64']);
+  invalid(d=>hermes(d).compute.onYourComputer.sourceIds=[]);
+  invalid(d=>hermes(d).compute.onYourComputer.detail='');
+  // Claiming remote access to a machine the agent does not have.
+  invalid(d=>{d.agents.find(a=>a.id==='bond').compute.agentComputer.remote='takeover'});
+  invalid(d=>{d.agents.find(a=>a.id==='vora').compute.agentComputer.remote='beam'});
 });
