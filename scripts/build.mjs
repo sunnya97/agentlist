@@ -63,6 +63,12 @@ const xml=s=>String(s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'
 const origin=metadata.siteUrl||'http://127.0.0.1:4173';
 const rss=`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Agentlist — ecosystem updates</title><link>${origin}/#news</link><description>Curated primary-source updates about persistent personal agents. Snapshot checked ${metadata.checkedAt}.</description><lastBuildDate>${new Date(metadata.checkedAt+'T12:00:00Z').toUTCString()}</lastBuildDate>${news.map(n=>`<item><title>${xml(n.title)}</title><link>${xml(n.url)}</link><guid isPermaLink="false">${xml(n.id)}</guid><pubDate>${new Date(n.date+'T12:00:00Z').toUTCString()}</pubDate><description>${xml(n.summary)}</description></item>`).join('')}</channel></rss>`;
 await writeFile(new URL('../dist/feed.xml',import.meta.url),rss);
+// A custom domain needs a CNAME beside the output, and a static host should not
+// run Jekyll over it.
+if(metadata.siteUrl){
+  await writeFile(new URL('../dist/CNAME',import.meta.url),new URL(metadata.siteUrl).hostname+'\n');
+  await writeFile(new URL('../dist/.nojekyll',import.meta.url),'');
+}
 // A standalone edition remains usable when hosting or a local server is unavailable.
 const [html,css,app,domain,catalog,platformModule,channelModule,accessModule,computeModule,continuityModule,dataSourceModule]=await Promise.all(['index.html','styles.css','app.js','domain.js','catalog.js','platforms.js','channels.js','access.js','compute.js','continuity.js','datasources.js'].map(name=>readFile(new URL(`../src/${name}`,import.meta.url),'utf8')));
 const bundledJS=[catalog,platformModule,channelModule,accessModule,computeModule,continuityModule,dataSourceModule,domain].map(code=>code.replace(/^import .*?;\n/gm,'').replace(/^export /gm,'')).join('\n')+'\n'+app.replace(/^import .*?;\n/gm,'');

@@ -333,5 +333,6 @@
     "Verified Git fork ancestry",
     "Permissions and memory export tests"
   ],
-  "repository": "https://github.com/sunnya97/agentlist"
+  "repository": "https://github.com/sunnya97/agentlist",
+  "siteUrl": "https://agentlist.wiki"
 }
