@@ -10,7 +10,8 @@
     "dev": "node scripts/serve.mjs",
     "collect:news": "node scripts/collect-news.mjs",
     "verify": "npm run build && npm run check && npm test",
-    "add:agent": "node scripts/add-agent.mjs"
+    "add:agent": "node scripts/add-agent.mjs",
+    "collect:feedback": "node scripts/collect-feedback.mjs"
   },
   "license": "MIT"
 }

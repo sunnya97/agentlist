@@ -293,7 +293,83 @@
       "Reddit",
       "X",
       "YouTube"
-    ]
+    ],
+    "areas": [
+      {
+        "code": "vendor",
+        "label": "Dealing with the vendor",
+        "praise": 1,
+        "complaint": 30,
+        "praiseShare": 3.2,
+        "url": "https://feedbackbench.com/criteria/vendor.md"
+      },
+      {
+        "code": "act",
+        "label": "Getting tasks done",
+        "praise": 12,
+        "complaint": 18,
+        "praiseShare": 40,
+        "url": "https://feedbackbench.com/criteria/act.md"
+      },
+      {
+        "code": "ask",
+        "label": "Talking to the agent",
+        "praise": 19,
+        "complaint": 10,
+        "praiseShare": 65.5,
+        "url": "https://feedbackbench.com/criteria/ask.md"
+      },
+      {
+        "code": "billing",
+        "label": "Paying for the agent",
+        "praise": 6,
+        "complaint": 9,
+        "praiseShare": 40,
+        "url": "https://feedbackbench.com/criteria/billing.md"
+      },
+      {
+        "code": "auto",
+        "label": "Running on its own",
+        "praise": 6,
+        "complaint": 9,
+        "praiseShare": 40,
+        "url": "https://feedbackbench.com/criteria/auto.md"
+      },
+      {
+        "code": "trust",
+        "label": "Trusting it with data and safety",
+        "praise": 6,
+        "complaint": 2,
+        "praiseShare": 75,
+        "url": "https://feedbackbench.com/criteria/trust.md"
+      },
+      {
+        "code": "access",
+        "label": "Getting access and set up",
+        "praise": 3,
+        "complaint": 3,
+        "praiseShare": 50,
+        "url": "https://feedbackbench.com/criteria/access.md"
+      },
+      {
+        "code": "control",
+        "label": "Staying in control",
+        "praise": 2,
+        "complaint": 4,
+        "praiseShare": 33.3,
+        "url": "https://feedbackbench.com/criteria/control.md"
+      },
+      {
+        "code": "connect",
+        "label": "Connecting accounts, sites and devices",
+        "praise": 2,
+        "complaint": 3,
+        "praiseShare": 40,
+        "url": "https://feedbackbench.com/criteria/connect.md"
+      }
+    ],
+    "version": "1.1",
+    "builtOn": "2026-10-19"
   },
   "company": {
     "type": "startup",

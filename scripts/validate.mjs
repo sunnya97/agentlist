@@ -47,7 +47,15 @@ export function validate(data){
       url(d.url);date(d.date);assert(d.title&&d.summary&&d.platform&&!discussionUrls.has(d.url));discussionUrls.add(d.url);
       assert(['positive','mixed','critical','neutral'].includes(d.sentiment));assert(['community','announcement'].includes(d.kind));
     }
-    if(a.sentiment){const s=a.sentiment;url(s.url);url(s.dataUrl);date(s.windowStart);date(s.windowEnd);date(s.checkedAt);assert(s.windowStart<=s.windowEnd);assert(s.provider&&s.channels?.length);for(const key of ['posts','positiveUserWeeks','negativeUserWeeks'])assert(Number.isInteger(s[key])&&s[key]>=0);assert(s.positiveUserWeeks+s.negativeUserWeeks>0);assert(s.positiveShare>=0&&s.positiveShare<=100);assert(Math.abs(s.positiveShare-100*s.positiveUserWeeks/(s.positiveUserWeeks+s.negativeUserWeeks))<.15,'Sentiment percentage must match sample counts')}
+    if(a.sentiment){const s=a.sentiment;url(s.url);url(s.dataUrl);date(s.windowStart);date(s.windowEnd);date(s.checkedAt);assert(s.windowStart<=s.windowEnd);assert(s.provider&&s.channels?.length);for(const key of ['posts','positiveUserWeeks','negativeUserWeeks'])assert(Number.isInteger(s[key])&&s[key]>=0);assert(s.positiveUserWeeks+s.negativeUserWeeks>0);assert(s.positiveShare>=0&&s.positiveShare<=100);assert(Math.abs(s.positiveShare-100*s.positiveUserWeeks/(s.positiveUserWeeks+s.negativeUserWeeks))<.15,'Sentiment percentage must match sample counts');
+      const areaCodes=new Set();for(const area of s.areas||[]){
+        assert(area.code&&!areaCodes.has(area.code),`${a.id}: duplicate feedback area ${area.code}`);areaCodes.add(area.code);
+        assert(area.label,`${a.id}/${area.code} needs a label`);url(area.url);
+        for(const key of ['praise','complaint'])assert(Number.isInteger(area[key])&&area[key]>=0,`${a.id}/${area.code}: invalid ${key}`);
+        assert(area.praise+area.complaint>0,`${a.id}/${area.code}: empty sample`);
+        assert(Math.abs(area.praiseShare-100*area.praise/(area.praise+area.complaint))<.15,`${a.id}/${area.code}: share must match counts`);
+      }
+      if(s.areas?.length)assert(s.version&&s.builtOn,`${a.id}: an area breakdown must name the build it came from`)}
     assert(Array.isArray(a.platforms),`${a.id} missing platforms`);
     const platforms=new Set();for(const p of a.platforms){
       assert(Object.hasOwn(platformLabels,p.platform)&&!platforms.has(p.platform),`${a.id} invalid or duplicate platform`);platforms.add(p.platform);

@@ -31,6 +31,18 @@ dialog{border:0;border-radius:14px;padding:32px;color:var(--ink);width:min(860px
 .directory-table .platform-col{width:210px}.directory-table .messaging-col{width:165px}.directory-table .control-col{width:110px}
 .access-note{flex:none;color:#8a6a28;white-space:nowrap}.access-note::before{content:"·";margin:0 5px;color:#c3cad6}.access-note.unverified{color:var(--muted)}
 .platform-list{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}.messaging-list{flex-wrap:nowrap}.messaging-list .platform-icon{color:#798392}.no-exclusive{color:var(--muted)}
+.feedback-areas{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.feedback-areas-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+.feedback-areas-head h4{font-size:12px;font-weight:600}
+.feedback-areas-head span{font-size:10px;color:var(--muted)}
+.feedback-area{display:grid;grid-template-columns:1fr 120px 56px;align-items:center;gap:10px;padding:5px 0;color:inherit;text-decoration:none}
+.feedback-area:hover .feedback-area-label{color:var(--accent)}
+.feedback-area-label{font-size:12px;color:#4a5464}
+.feedback-area-bar{display:block;height:5px;border-radius:3px;background:#edeff5;overflow:hidden}
+.feedback-area-bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.feedback-area-figure{font-size:11px;font-weight:600;text-align:right;color:#4a5464}
+.feedback-area-figure small{display:block;font-weight:400;font-size:10px;color:var(--muted)}
+.feedback-areas-note{margin-top:10px;font-size:11px;line-height:1.6;color:var(--muted)}
 .platform-more{flex:none;font-size:11px;font-weight:600;color:#8a93a3;margin-left:3px;white-space:nowrap}.platform-icon{position:relative;width:28px;height:30px;padding:5px;border-radius:5px;color:#626d7e;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.platform-icon svg{width:18px;height:18px}.platform-icon:hover,.platform-icon[aria-expanded=true]{background:#eef0fa;color:var(--accent)}.platform-icon.announced{color:#98a2b1;border:1px dashed #dce1e9;padding:4px}.platform-status{position:absolute;width:5px;height:5px;right:1px;bottom:2px;border-radius:50%;background:#a0834b}.platform-icon.announced .platform-status{background:#a3acba}.platform-icon.limited .platform-status{background:#8996b2}
 .control-list{gap:5px}.platform-icon.control-icon{cursor:default}
 .platform-icon.ctl-yes{color:var(--accent)}

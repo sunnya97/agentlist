@@ -47,13 +47,13 @@ Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` wor
 
 This is a snapshot checked October 21, 2026. Product capabilities and plan details link to official sources. They are descriptions, not independent performance tests. The build fills unresearched fields without treating them as unsupported.
 
-Discussion summaries link to original dated threads and distinguish community posts from announcements. Nine profiles include attributed [Feedback Bench](https://feedbackbench.com/) snapshots for August 31–October 18, 2026. Their displayed percentage is the raw positive share of rated user-weeks, not Feedback Bench's composite score. Coverage varies by agent; collection and labels are explained in each profile. These snapshots and discussion links are curated, not a live social feed.
+Discussion summaries link to original dated threads and distinguish community posts from announcements. Nine profiles include attributed [Feedback Bench](https://feedbackbench.com/) snapshots for August 31–October 18, 2026, broken down by the areas it labels — what people praise and complain about, not one number. Their displayed percentage is the raw positive share of rated user-weeks, not Feedback Bench's composite score. Coverage varies by agent; collection and labels are explained in each profile. These snapshots and discussion links are curated, not a live social feed.
 
 The project creator is affiliated with Ambi. It follows the same source requirements as other entries. Followed agents are stored in the visitor's browser.
 
 ## Updates
 
-`npm run collect:news` gathers public GitHub releases into an ignored `research/inbox.json`. Review candidates before adding them to the catalog. Collection does not publish. The optional `--from-dir /path` flag supports saved API responses in restricted environments.
+`npm run collect:feedback` gathers the per-area breakdown behind each Feedback Bench snapshot into an ignored `research/feedback-inbox.json`; `-- --write` applies it. It takes counts and labels, not the ranking. `npm run collect:news` gathers public GitHub releases into an ignored `research/inbox.json`. Review candidates before adding them to the catalog. Collection does not publish. The optional `--from-dir /path` flag supports saved API responses in restricted environments.
 
 ## License
 

@@ -297,7 +297,83 @@
       "Reddit",
       "X",
       "YouTube"
-    ]
+    ],
+    "areas": [
+      {
+        "code": "act",
+        "label": "Getting tasks done",
+        "praise": 487,
+        "complaint": 147,
+        "praiseShare": 76.8,
+        "url": "https://feedbackbench.com/criteria/act.md"
+      },
+      {
+        "code": "billing",
+        "label": "Paying for the agent",
+        "praise": 99,
+        "complaint": 156,
+        "praiseShare": 38.8,
+        "url": "https://feedbackbench.com/criteria/billing.md"
+      },
+      {
+        "code": "ask",
+        "label": "Talking to the agent",
+        "praise": 142,
+        "complaint": 103,
+        "praiseShare": 58,
+        "url": "https://feedbackbench.com/criteria/ask.md"
+      },
+      {
+        "code": "auto",
+        "label": "Running on its own",
+        "praise": 174,
+        "complaint": 19,
+        "praiseShare": 90.2,
+        "url": "https://feedbackbench.com/criteria/auto.md"
+      },
+      {
+        "code": "connect",
+        "label": "Connecting accounts, sites and devices",
+        "praise": 52,
+        "complaint": 106,
+        "praiseShare": 32.9,
+        "url": "https://feedbackbench.com/criteria/connect.md"
+      },
+      {
+        "code": "vendor",
+        "label": "Dealing with the vendor",
+        "praise": 16,
+        "complaint": 139,
+        "praiseShare": 10.3,
+        "url": "https://feedbackbench.com/criteria/vendor.md"
+      },
+      {
+        "code": "access",
+        "label": "Getting access and set up",
+        "praise": 33,
+        "complaint": 69,
+        "praiseShare": 32.4,
+        "url": "https://feedbackbench.com/criteria/access.md"
+      },
+      {
+        "code": "trust",
+        "label": "Trusting it with data and safety",
+        "praise": 18,
+        "complaint": 67,
+        "praiseShare": 21.2,
+        "url": "https://feedbackbench.com/criteria/trust.md"
+      },
+      {
+        "code": "control",
+        "label": "Staying in control",
+        "praise": 50,
+        "complaint": 34,
+        "praiseShare": 59.5,
+        "url": "https://feedbackbench.com/criteria/control.md"
+      }
+    ],
+    "version": "1.1",
+    "builtOn": "2026-10-19"
   },
   "company": {
     "type": "startup",

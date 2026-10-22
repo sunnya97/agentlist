@@ -281,7 +281,83 @@
       "Reddit",
       "X",
       "YouTube"
-    ]
+    ],
+    "areas": [
+      {
+        "code": "act",
+        "label": "Getting tasks done",
+        "praise": 3830,
+        "complaint": 926,
+        "praiseShare": 80.5,
+        "url": "https://feedbackbench.com/criteria/act.md"
+      },
+      {
+        "code": "ask",
+        "label": "Talking to the agent",
+        "praise": 1405,
+        "complaint": 898,
+        "praiseShare": 61,
+        "url": "https://feedbackbench.com/criteria/ask.md"
+      },
+      {
+        "code": "access",
+        "label": "Getting access and set up",
+        "praise": 587,
+        "complaint": 1270,
+        "praiseShare": 31.6,
+        "url": "https://feedbackbench.com/criteria/access.md"
+      },
+      {
+        "code": "auto",
+        "label": "Running on its own",
+        "praise": 1151,
+        "complaint": 264,
+        "praiseShare": 81.3,
+        "url": "https://feedbackbench.com/criteria/auto.md"
+      },
+      {
+        "code": "billing",
+        "label": "Paying for the agent",
+        "praise": 878,
+        "complaint": 456,
+        "praiseShare": 65.8,
+        "url": "https://feedbackbench.com/criteria/billing.md"
+      },
+      {
+        "code": "connect",
+        "label": "Connecting accounts, sites and devices",
+        "praise": 615,
+        "complaint": 622,
+        "praiseShare": 49.7,
+        "url": "https://feedbackbench.com/criteria/connect.md"
+      },
+      {
+        "code": "trust",
+        "label": "Trusting it with data and safety",
+        "praise": 163,
+        "complaint": 559,
+        "praiseShare": 22.6,
+        "url": "https://feedbackbench.com/criteria/trust.md"
+      },
+      {
+        "code": "control",
+        "label": "Staying in control",
+        "praise": 363,
+        "complaint": 236,
+        "praiseShare": 60.6,
+        "url": "https://feedbackbench.com/criteria/control.md"
+      },
+      {
+        "code": "vendor",
+        "label": "Dealing with the vendor",
+        "praise": 77,
+        "complaint": 423,
+        "praiseShare": 15.4,
+        "url": "https://feedbackbench.com/criteria/vendor.md"
+      }
+    ],
+    "version": "1.1",
+    "builtOn": "2026-10-19"
   },
   "company": {
     "type": "public",

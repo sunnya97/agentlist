@@ -157,6 +157,8 @@ Use the service's own key even when a source names it differently: `wechat` cove
 
 Add original discussion URLs with dates and short summaries of the actual thread. Use `kind: "announcement"` for company or creator posts, and `community` for independent discussion. `sentiment` (`positive`, `mixed`, `critical`, `neutral`) describes that thread, not every user of the product. Avoid treating marketing testimonials or referral posts as independent feedback.
 
+`sentiment.areas` breaks a snapshot down by the areas the provider labels, with praise and complaint counts and a link to each area. `npm run collect:feedback` gathers these from Feedback Bench's published dataset into `research/feedback-inbox.json` for review; `-- --write` applies them. It collects numbers and labels only — the quoted posts stay on Feedback Bench, where their authors are credited and linked — and it deliberately does not import the Feedback Score or the ranking, half of which is popularity. An area breakdown must name the `version` and `builtOn` of the build it came from, because those numbers change with every build.
+
 Aggregate `sentiment` records are separately attributed snapshots. They include the provider, collection window, source channels, rated user-week counts and raw positive share. Do not infer an aggregate score from a few selected links. Current snapshots come from Feedback Bench; the profile explains their units and links to its method and data. When refreshing, update the entire sample, including the window and counts. Do not mix snapshots from different dates.
 
 ## News and relationships
