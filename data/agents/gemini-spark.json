@@ -90,6 +90,12 @@
       "title": "Google Photos APIs: library scopes removed",
       "url": "https://developers.google.com/photos/support/updates",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "gemini-windows",
+      "title": "The Gemini app is now on Windows",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -131,12 +137,13 @@
     },
     {
       "field": "desktopApps",
-      "value": "Gemini has a macOS app; Spark support was announced as a later rollout. Web access is available.",
+      "value": "Gemini has macOS and Windows apps; Tasks support on the desktop was announced as a later rollout. Web access is available.",
       "status": "limited",
       "sourceIds": [
-        "spark-evolution"
+        "spark-evolution",
+        "gemini-windows"
       ],
-      "shortValue": "Web; macOS Spark rollout unclear"
+      "shortValue": "macOS and Windows"
     },
     {
       "field": "mobileApps",
@@ -279,6 +286,14 @@
       "sourceIds": [
         "spark-ios",
         "spark-android"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Gemini app for Windows, announced 10 September 2026.",
+      "sourceIds": [
+        "gemini-windows"
       ]
     }
   ],

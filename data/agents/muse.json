@@ -42,6 +42,12 @@
       "title": "WhatsApp privacy questions: Meta AI and personal messages",
       "url": "https://www.whatsapp.com/privacyquestions",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "muse-mac",
+      "title": "Meta CEO announces Muse for Mac",
+      "url": "https://x.com/finkd/status/2100713341555712149",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -83,12 +89,12 @@
     },
     {
       "field": "desktopApps",
-      "value": "Web at muse.ai; no native desktop app is listed in the launch announcement.",
+      "value": "Native Mac app, released 17 September 2026 after the original launch announcement; Windows and Linux are not specified.",
       "status": "limited",
       "sourceIds": [
-        "muse-intro"
+        "muse-mac"
       ],
-      "shortValue": "Web on desktop"
+      "shortValue": "macOS"
     },
     {
       "field": "mobileApps",
@@ -233,6 +239,14 @@
       "detail": "Native iOS and Android apps, plus WhatsApp access.",
       "sourceIds": [
         "muse-intro"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Mac app announced as out on 17 September 2026, described as working across apps, files, calendar, notes and messages on the computer.",
+      "sourceIds": [
+        "muse-mac"
       ]
     }
   ],

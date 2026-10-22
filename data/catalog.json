@@ -113,6 +113,34 @@
       "dateBasis": "Date stated by publisher"
     },
     {
+      "date": "2026-10-08",
+      "agentIds": [
+        "hermes"
+      ],
+      "type": "availability",
+      "publisher": "Nous Research",
+      "title": "Hermes Agent arrives in the Microsoft Store",
+      "url": "https://x.com/NousResearch/status/2108231536772596193",
+      "summary": "Nous Research makes Hermes Agent installable from the Microsoft Store, with more Windows work signalled.",
+      "id": "hermes-2026-10-08-853a0c2497",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-06",
+      "agentIds": [
+        "hark"
+      ],
+      "type": "launch",
+      "publisher": "Hark Labs",
+      "title": "Hark Pro launches on web, iOS and Android",
+      "url": "https://hark.com/articles/introducing-hark-pro",
+      "summary": "Hark Labs introduces Hark Pro across web and both mobile platforms.",
+      "id": "hark-2026-10-06-6b5ba4e96d",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
       "title": "Skye rebuilds around a contextual home feed",
       "url": "https://apps.apple.com/us/app/skye-personal-ai-agent/id6748042747",
       "date": "2026-10-01",
@@ -165,6 +193,20 @@
       "dateBasis": "Date stated by publisher"
     },
     {
+      "date": "2026-09-17",
+      "agentIds": [
+        "muse"
+      ],
+      "type": "release",
+      "publisher": "Meta",
+      "title": "Muse for Mac released",
+      "url": "https://x.com/finkd/status/2100713341555712149",
+      "summary": "Meta's chief executive announces a Mac app nine days after launch, describing access to apps, files, calendar, notes and messages with user-controlled permissions.",
+      "id": "muse-2026-09-17-183aa4ccbe",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
       "date": "2026-09-15",
       "title": "nanobot v0.3.5 unifies terminal and browser continuity",
       "summary": "The release adds a native terminal client sharing saved conversations with the browser, plus improved automation views and session recovery.",
@@ -188,6 +230,20 @@
       ],
       "checkedAt": "2026-10-21",
       "id": "lucas-2026-09-15-04aef367e2"
+    },
+    {
+      "date": "2026-09-10",
+      "agentIds": [
+        "gemini-spark"
+      ],
+      "type": "release",
+      "publisher": "Google",
+      "title": "The Gemini app comes to Windows",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+      "summary": "Google ships a Gemini desktop app for Windows, alongside the existing macOS app.",
+      "id": "gemini-spark-2026-09-10-fcbdbdad08",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
     },
     {
       "date": "2026-09-08",
