@@ -85,6 +85,24 @@ Use one entry per plan or add-on. Include currency, monthly versus annual billin
 
 `platforms` lists real native clients and web access. A Telegram integration or CLI running on Android does not establish an Android app. Statuses distinguish available, beta, preview, announced, and limited access. Use `watchos` for Apple Watch.
 
+`continuity` answers what happens when the product goes away — the question buyers ask first and that almost no catalogue answers:
+
+- `worksWithoutVendor` — does it keep running if the company stops? `yes`, `partial`, or `no`.
+- `remoteDisable` — can the copy you already run be switched off by someone else? `none`, `possible`, or `required` (a licence or activation check).
+- `dataAfterExit` — what do you keep when you leave? `export`, `limited`, or `none`.
+
+```json
+"continuity": {
+  "worksWithoutVendor": {
+    "state": "yes",
+    "detail": "Open-source software you run yourself, so it keeps running if the project stops.",
+    "sourceIds": ["example-license"]
+  }
+}
+```
+
+Each facet needs a `detail` and its own `sourceIds`. Omit a facet you cannot source: an absent facet means unknown and must never read as reassurance. Use `status: "limited"` where the architecture settles the question but the vendor has not addressed it — a provider-hosted service plainly depends on the vendor's servers, but that is not the same as the company publishing a shutdown commitment. A retention period after cancellation belongs in the `dataAfterExit` detail.
+
 `compute` splits computer control into three independent questions, because one prose field could not answer them separately:
 
 - `onYourComputer` — can it act on the machine you own? `full`, `partial`, or `none`, with optional `platforms`.

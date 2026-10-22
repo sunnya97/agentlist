@@ -271,5 +271,28 @@
     "sourceIds": [
       "openfang-readme"
     ]
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "Open-source software you run yourself, so it keeps running if the project stops; it still depends on whichever model provider you point it at.",
+      "sourceIds": [
+        "openfang-readme"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Runs on hardware you control, with no vendor activation or licence check described.",
+      "sourceIds": [
+        "openfang-readme"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "limited",
+      "detail": "State lives on hardware you control, but a documented full export and restore path is not established.",
+      "sourceIds": [
+        "openfang-readme"
+      ]
+    }
   }
 }

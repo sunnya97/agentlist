@@ -242,5 +242,15 @@
     "sourceIds": [
       "thine-mac"
     ]
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "thine-privacy"
+      ],
+      "status": "limited"
+    }
   }
 }

@@ -342,5 +342,22 @@
       ],
       "status": "limited"
     }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "partial",
+      "detail": "Mac actions run locally but model requests go to the cloud, so the local half may outlive the service and the rest would not.",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "export",
+      "detail": "Memories can be exported to a file and imported again.",
+      "sourceIds": [
+        "eney-privacy"
+      ]
+    }
   }
 }

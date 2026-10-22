@@ -6,6 +6,7 @@ import {platformLabels,platformStatusLabels} from '../src/platforms.js';
 import {channelLabels} from '../src/channels.js';
 import {accessStates,accessRestrictions} from '../src/access.js';
 import {computeFacets,agentScreenAccess} from '../src/compute.js';
+import {continuityFacets} from '../src/continuity.js';
 import {platformLabels as platformKeys} from '../src/platforms.js';
 export function validate(data){
   const ids=new Set();const fields=fieldDefinitions.map(([key])=>key);
@@ -48,6 +49,15 @@ export function validate(data){
       assert(Object.hasOwn(platformStatusLabels,m.status),`${a.id}/${m.service} invalid status`);
       assert(m.detail,`${a.id}/${m.service} needs a detail`);evidence(m,`messaging:${m.service}`);
     }
+    for(const [facet,states] of Object.entries(continuityFacets)){
+      const v=a.continuity?.[facet];if(!v)continue;
+      assert(Object.hasOwn(states,v.state),`${a.id}/${facet}: invalid state ${v.state}`);
+      assert(v.detail,`${a.id}/${facet} needs a detail`);evidence(v,facet);
+      if(v.status)assert(['documented','limited'].includes(v.status),`${a.id}/${facet}: invalid status`);
+    }
+    // Software you run yourself cannot be remotely switched off by its vendor.
+    if(a.continuity?.remoteDisable?.state==='none'&&a.continuity?.worksWithoutVendor?.state==='no')
+      assert(false,`${a.id}: cannot both stop without the vendor and be immune to remote shut-off`);
     for(const [facet,states] of Object.entries(computeFacets)){
       const v=a.compute?.[facet];if(!v)continue;
       assert(Object.hasOwn(states,v.state),`${a.id}/${facet}: invalid state ${v.state}`);

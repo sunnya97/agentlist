@@ -30,6 +30,7 @@
     "sourceIds": []
   },
   "compute": {},
+  "continuity": {},
   "plans": [],
   "hardware": {
     "status": "unknown",

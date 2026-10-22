@@ -37,7 +37,7 @@ Official agent logos sit in consistent 34px identity slots, preserving each logo
 
 ## Directory and detail
 Place a short introduction above one filter row, followed by the view tabs and agent data.
-Views organize overview, capabilities, models and plans, and ownership and control.
+Views organize overview, capabilities, models and plans, ownership and control, and what happens if the product goes away.
 Computer control is compared as three separate rows - whether it reaches your machine, whether it has one of its own that you can watch or drive, and whether work continues while your machine is off - beside the prose narrative.
 Desktop rows align selection, identity, concise feature summaries, and following controls.
 The overview combines desktop and mobile into Native apps, using platform icons with hover labels and click-to-open availability details.

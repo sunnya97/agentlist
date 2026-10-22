@@ -378,5 +378,23 @@
       ],
       "status": "limited"
     }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "bond-privacy",
+        "bond-home"
+      ],
+      "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "export",
+      "detail": "Everything can be exported, and the company states it deletes customer data within 30 days of cancellation.",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    }
   }
 }

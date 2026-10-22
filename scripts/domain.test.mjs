@@ -7,6 +7,7 @@ import {fields,directoryViews,featuredOrder,compositeFields} from '../src/catalo
 import {channelLabels,channelOrder} from '../src/channels.js';
 import {accessStates,accessSummary} from '../src/access.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
+import {continuityFacets,continuitySummary} from '../src/continuity.js';
 const data=JSON.parse(await readFile(new URL('../dist/data.json',import.meta.url),'utf8'));
 test('every user-named anchor is represented without collapsing distinct products',()=>{for(const id of ['dots','claude-duet','grok-bot','hark','muse','hermes','openclaw','nanoclaw','ironclaw','instinct','poke','underdog','town','ambi','cue','wabi'])assert(data.agents.some(a=>a.id===id),id);assert.equal(data.agents.find(a=>a.id==='underdog').category,'local')});
 test('adjacent harnesses are opt-in and aliases resolve',()=>{assert(!filterAgents(data.agents).some(a=>a.category==='adjacent'));assert(filterAgents(data.agents,{adjacent:true}).some(a=>a.id==='codex'));assert.equal(filterAgents(data.agents,{search:'Grokbot'})[0].id,'grok-bot')});
@@ -185,4 +186,34 @@ test('compute facets reject invalid states, platforms and impossible combination
   // Claiming remote access to a machine the agent does not have.
   invalid(d=>{d.agents.find(a=>a.id==='bond').compute.agentComputer.remote='takeover'});
   invalid(d=>{d.agents.find(a=>a.id==='vora').compute.agentComputer.remote='beam'});
+});
+
+test('continuity answers what happens when the product goes away',()=>{
+  for(const a of data.agents){
+    for(const facet of Object.keys(continuityFacets)){
+      const claim=a.claims.find(c=>c.field===facet),value=a.continuity?.[facet];
+      if(!value){assert.equal(claim.status,'unknown',`${a.id}/${facet}`);continue}
+      assert(Object.hasOwn(continuityFacets[facet],value.state),`${a.id}/${facet} state`);
+      assert(claim.sourceIds.length,`${a.id}/${facet} needs evidence`);
+      assert.equal(claim.shortValue,continuitySummary(facet,value));
+    }
+  }
+  // Software you run yourself is the case where this question has a clear answer.
+  const openclaw=data.agents.find(a=>a.id==='openclaw');
+  assert.equal(openclaw.continuity.worksWithoutVendor.state,'yes');
+  assert.equal(openclaw.continuity.remoteDisable.state,'none');
+  // A hosted service that depends on its vendor must not claim immunity to shut-off.
+  const hosted=data.agents.filter(a=>a.continuity?.worksWithoutVendor?.state==='no');
+  assert(hosted.length,'expected hosted services');
+  for(const a of hosted)assert(a.continuity.remoteDisable?.state!=='none',`${a.id} contradiction`);
+  assert(data.agents.some(a=>a.continuity?.dataAfterExit?.state==='export'),'some product documents a full export');
+});
+
+test('continuity records reject invalid states and impossible combinations',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  const oc=d=>d.agents.find(a=>a.id==='openclaw');
+  invalid(d=>oc(d).continuity.worksWithoutVendor.state='probably');
+  invalid(d=>oc(d).continuity.worksWithoutVendor.sourceIds=[]);
+  invalid(d=>oc(d).continuity.dataAfterExit.detail='');
+  invalid(d=>{const a=d.agents.find(x=>x.id==='town');a.continuity.remoteDisable={state:'none',detail:'x',sourceIds:a.continuity.worksWithoutVendor.sourceIds}});
 });

@@ -397,5 +397,31 @@
       ],
       "status": "limited"
     }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "The company states the appliance keeps working without its servers, needs no subscription, and cannot be switched off by an activation server.",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "No activation server can disable it; the owner holds the keys and the machine runs without Vora.",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "export",
+      "detail": "Everything exports in open formats at any time, with no lock-in or exit fee described.",
+      "sourceIds": [
+        "vora-faq",
+        "vora-specs"
+      ]
+    }
   }
 }

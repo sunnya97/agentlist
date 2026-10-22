@@ -340,5 +340,24 @@
       ],
       "status": "limited"
     }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "partial",
+      "detail": "Inference runs on the user's own device, so the local app may keep working, though the app licence and update path are unverified.",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "limited",
+      "detail": "Memory is held locally, but a portable agent-state export is unverified.",
+      "sourceIds": [
+        "underdog-home"
+      ],
+      "status": "limited"
+    }
   }
 }

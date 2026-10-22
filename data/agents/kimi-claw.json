@@ -242,5 +242,15 @@
     "sourceIds": [
       "kimi-claw-overview"
     ]
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "partial",
+      "detail": "The hosted deployment depends on Kimi's cloud, but an existing self-hosted OpenClaw instance can connect and would survive it.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "limited"
+    }
   }
 }

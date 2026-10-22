@@ -361,5 +361,15 @@
         "pickle-terms"
       ]
     }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "pickle-home"
+      ],
+      "status": "limited"
+    }
   }
 }
