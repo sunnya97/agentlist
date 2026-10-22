@@ -105,7 +105,8 @@
       "sourceIds": [
         "hermes-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Built-in cron"
     },
     {
       "field": "desktopApps",
@@ -201,7 +202,8 @@
       "sourceIds": [
         "hermes-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Curated + skills"
     },
     {
       "field": "portability",

@@ -3,6 +3,7 @@ import {fields,fieldGroups,columnCatalog,columnLabels,defaultColumns,maxColumns,
 import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js';
 import {channelLabels,channelIcons} from './channels.js';
 import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
+import {computeFacets,computeLabels,computeIcons,computeTone,computeSummary} from './compute.js';
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=u=>{try{const p=new URL(u);return /^https?:$/.test(p.protocol)?esc(p.href):'#'}catch{return '#'}};
@@ -45,6 +46,13 @@ const iconListHTML=(a,kind,limit,empty)=>{
   const more=rest.length?`<span class="platform-more" title="${esc(rest.map(nameOf).join(', '))}">+${rest.length}</span>`:'';
   return `<div class="platform-list${isPlatform?'':' messaging-list'}">${shown.map(button).join('')}${more}</div>`;
 };
+const controlListHTML=a=>`<div class="platform-list control-list">${Object.keys(computeFacets).map(facet=>{
+  const value=a.compute?.[facet],tone=computeTone(facet,value),label=computeLabels[facet];
+  const summary=value?computeSummary(facet,value):'Not specified';
+  const title=esc(`${label}: ${summary}`+(value?` — ${value.detail}`:''));
+  if(!value)return `<span class="platform-icon control-icon ctl-unknown" title="${title}" aria-label="${title}">${computeIcons[facet]}</span>`;
+  return `<button class="platform-icon control-icon ctl-${tone}" data-platform="${a.id}:${facet}:compute" title="${title}" aria-label="${title}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${computeIcons[facet]}</button>`;
+}).join('')}</div>`;
 const platformListHTML=a=>iconListHTML(a,'platforms',5,'App availability not specified');
 const messagingListHTML=a=>iconListHTML(a,'messaging',3,'Messaging services not specified');
 function renderColumnsPicker(){
@@ -66,12 +74,14 @@ function toggleColumn(key){
   if(panel.matches(':popover-open')){renderColumnsPicker();panel.showPopover()}
 }
 function openPlatform(button){
-  const [id,index,kind='platforms']=button.dataset.platform.split(':'),a=byId.get(id),p=a?.[kind]?.[Number(index)];if(!p)return;
+  const [id,index,kind='platforms']=button.dataset.platform.split(':'),a=byId.get(id);
+  const p=kind==='compute'?a?.compute?.[index]:a?.[kind]?.[Number(index)];if(!p)return;
   const panel=$('#platform-popover');
   if(panel.matches(':popover-open')){panel.hidePopover();if(panel.dataset.trigger===button.dataset.platform)return}
   panel.dataset.trigger=button.dataset.platform;
   document.querySelectorAll('[data-platform][aria-expanded="true"]').forEach(el=>el.setAttribute('aria-expanded','false'));
-  panel.innerHTML=`<div class="platform-popover-heading">${entryIcon(p)}<div><h3>${esc(entryLabel(p))}</h3><span>${platformStatusLabels[p.status]}</span></div></div><p>${esc(p.detail)}</p><div class="platform-sources">${sourceLinks(a,p)}</div>`;
+  const isCompute=kind==='compute';
+  panel.innerHTML=`<div class="platform-popover-heading">${isCompute?computeIcons[index]:entryIcon(p)}<div><h3>${esc(isCompute?computeLabels[index]:entryLabel(p))}</h3><span>${esc(isCompute?computeSummary(index,p):platformStatusLabels[p.status])}</span></div></div><p>${esc(p.detail)}</p><div class="platform-sources">${sourceLinks(a,p)}</div>`;
   panel.showPopover();button.setAttribute('aria-expanded','true');
   const rect=button.getBoundingClientRect(),width=panel.offsetWidth,height=panel.offsetHeight;
   panel.style.left=`${Math.max(12,Math.min(rect.left,innerWidth-width-12))}px`;
@@ -79,6 +89,7 @@ function openPlatform(button){
 }
 const claimHTML=(a,key,compact=false)=>{
   if(key==='nativeApps')return platformListHTML(a);
+  if(key==='computerControl')return controlListHTML(a);
   if(key==='messaging')return messagingListHTML(a)+(compact||!a.messaging?.length?'':`<div class="platform-sources">${sourceLinks(a,getClaim(a,'messaging'))}</div>`);
   if(compact&&key==='launchDate'&&firstLaunch(a)){const event=firstLaunch(a);return `<div class="claim">${formatCatalogDate(event.date)}<small class="launch-detail">${launchKinds[event.kind]}</small></div>`}
   if(compact&&key==='funding'&&a.company?.funding){const f=a.company.funding;return `<div class="claim">${esc(f.amount)}<small class="launch-detail">${esc(f.round)} · ${formatCatalogDate(f.date)}</small></div>`}
@@ -125,7 +136,7 @@ function renderDirectory(){
         <button class="following-filter ${directoryState.watching?'active':''}" data-action="watch-filter" aria-pressed="${directoryState.watching}">${uiIcon('star')} Following${watchlist.length?` <span>${watchlist.length}</span>`:''}</button>
       </div>
       <div class="table-toolbar"><button class="button small" data-action="columns" aria-haspopup="dialog" aria-controls="columns-popover" aria-expanded="false">${uiIcon('sliders')} Columns <span>${columns.length}</span></button><span class="result-count" id="result-count"></span></div>
-      <div class="table-wrap"><table class="directory-table"><caption class="sr-only">Personal agents. Select up to four for comparison.</caption><colgroup><col class="selection-col"><col class="identity-col">${columns.map(key=>`<col class="field-col ${key==='nativeApps'?'platform-col':key==='messaging'?'messaging-col':''}">`).join('')}<col class="follow-col"></colgroup><thead><tr><th class="check"><span class="sr-only">Compare</span></th><th scope="col">Agent</th>${columns.map(key=>`<th scope="col">${esc(columnLabels[key])}</th>`).join('')}<th><span class="sr-only">Follow</span></th></tr></thead><tbody id="agent-rows"></tbody></table></div>
+      <div class="table-wrap"><table class="directory-table"><caption class="sr-only">Personal agents. Select up to four for comparison.</caption><colgroup><col class="selection-col"><col class="identity-col">${columns.map(key=>`<col class="field-col ${key==='nativeApps'?'platform-col':key==='messaging'?'messaging-col':key==='computerControl'?'control-col':''}">`).join('')}<col class="follow-col"></colgroup><thead><tr><th class="check"><span class="sr-only">Compare</span></th><th scope="col">Agent</th>${columns.map(key=>`<th scope="col">${esc(columnLabels[key])}</th>`).join('')}<th><span class="sr-only">Follow</span></th></tr></thead><tbody id="agent-rows"></tbody></table></div>
       <div class="table-note"><label><input type="checkbox" id="include-adjacent" ${directoryState.adjacent?'checked':''}> Include coding tools</label><span>Select up to 4 agents to compare</span></div>
     </section>
     <aside class="sidebar"><div class="section-top"><h2>From the ecosystem</h2><a href="#news">All updates ${uiIcon('arrow')}</a></div>${sortedNews(data.news).slice(0,3).map(n=>external(n.url,`<div class="news-meta"><time datetime="${n.date}">${formatDate(n.date)}</time><span class="type">${esc(n.type||'release')}</span></div><h3>${esc(n.title)} ${uiIcon('arrow')}</h3><span class="publisher">${esc(n.publisher||'Official release notes')}</span>`,'news-mini')).join('')}</aside>

@@ -87,7 +87,8 @@
       "sourceIds": [
         "duet-launch"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Daily briefs"
     },
     {
       "field": "desktopApps",
@@ -184,7 +185,8 @@
       "sourceIds": [
         "duet-product"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Claude account memory"
     },
     {
       "field": "security",

@@ -132,7 +132,7 @@
       "sourceIds": [
         "rene-app"
       ],
-      "shortValue": "Routines & reminders"
+      "shortValue": "Routines, reminders"
     },
     {
       "field": "models",
@@ -178,7 +178,7 @@
       "sourceIds": [
         "rene-privacy"
       ],
-      "shortValue": "Cross-conversation context"
+      "shortValue": "Cross-conversation"
     },
     {
       "field": "hosting",

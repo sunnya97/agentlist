@@ -73,7 +73,8 @@
       "sourceIds": [
         "picoclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Reminders + cron"
     },
     {
       "field": "desktopApps",
@@ -159,7 +160,8 @@
       "sourceIds": [
         "picoclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "JSONL store"
     },
     {
       "field": "portability",

@@ -117,7 +117,8 @@
       "sourceIds": [
         "grok-product"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Routines, 24/7"
     },
     {
       "field": "desktopApps",
@@ -215,7 +216,8 @@
       "sourceIds": [
         "grok-docs"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Builds across work"
     },
     {
       "field": "security",

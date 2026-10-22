@@ -75,7 +75,8 @@
       "sourceIds": [
         "nanoclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Recurring tasks"
     },
     {
       "field": "channels",
@@ -162,7 +163,8 @@
       "sourceIds": [
         "nanoclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Per-agent workspace"
     },
     {
       "field": "portability",

@@ -142,7 +142,8 @@
       "sourceIds": [
         "openclaw-scheduling"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Persistent scheduler"
     },
     {
       "field": "desktopApps",
@@ -257,7 +258,8 @@
       "sourceIds": [
         "openclaw-memory"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Editable Markdown"
     },
     {
       "field": "portability",

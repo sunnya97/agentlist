@@ -90,7 +90,8 @@
       "sourceIds": [
         "dots-help"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Ongoing + scheduled"
     },
     {
       "field": "desktopApps",
@@ -189,7 +190,8 @@
       "sourceIds": [
         "dots-help"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "ChatGPT memory"
     },
     {
       "field": "portability",

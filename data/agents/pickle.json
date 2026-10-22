@@ -174,7 +174,8 @@
       "status": "documented",
       "sourceIds": [
         "pickle-scheduled"
-      ]
+      ],
+      "shortValue": "One-off + repeating"
     },
     {
       "field": "approvals",
@@ -190,7 +191,8 @@
       "status": "documented",
       "sourceIds": [
         "pickle-start"
-      ]
+      ],
+      "shortValue": "Editable in Bubbles"
     },
     {
       "field": "portability",

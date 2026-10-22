@@ -227,3 +227,15 @@ test('continuity records reject invalid states and impossible combinations',()=>
   invalid(d=>oc(d).continuity.dataAfterExit.detail='');
   invalid(d=>{const a=d.agents.find(x=>x.id==='town');a.continuity.remoteDisable={state:'none',detail:'x',sourceIds:a.continuity.worksWithoutVendor.sourceIds}});
 });
+
+test('the control cell keeps "no" distinct from "nobody has said"',async()=>{
+  const {computeTone,computeFacets}=await import('../src/compute.js');
+  for(const a of data.agents)for(const facet of Object.keys(computeFacets)){
+    const value=a.compute?.[facet],tone=computeTone(facet,value);
+    assert(['yes','partial','no','unknown'].includes(tone),`${a.id}/${facet} tone`);
+    assert.equal(tone==='unknown',!value,`${a.id}/${facet}: unknown must mean absent, never a recorded "no"`);
+  }
+  const bond=data.agents.find(a=>a.id==='bond');
+  assert.equal(computeTone('onYourComputer',bond.compute.onYourComputer),'no');
+  assert.equal(computeTone('whileYouAreOff',bond.compute.whileYouAreOff),'unknown');
+});

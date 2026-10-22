@@ -48,7 +48,7 @@
       "sourceIds": [
         "cue-home"
       ],
-      "shortValue": "Routines and work after logout"
+      "shortValue": "Runs after logout"
     },
     {
       "field": "desktopApps",

@@ -61,7 +61,7 @@
       "sourceIds": [
         "muse-design"
       ],
-      "shortValue": "Schedules + event triggers"
+      "shortValue": "Schedules + events"
     },
     {
       "field": "desktopApps",
@@ -157,7 +157,8 @@
       "sourceIds": [
         "muse-intro"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Learns from chats"
     },
     {
       "field": "portability",

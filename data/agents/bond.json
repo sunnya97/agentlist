@@ -87,7 +87,7 @@
     {
       "field": "scheduling",
       "value": "Runs a daily morning brief, prepares briefs ahead of meetings, tracks overdue commitments owed by others, and runs custom routines on a daily, weekly or monthly cycle",
-      "shortValue": "Morning brief and custom routines",
+      "shortValue": "Brief + routines",
       "status": "documented",
       "sourceIds": [
         "bond-home",
@@ -192,7 +192,7 @@
     {
       "field": "memory",
       "value": "Builds lasting company context from documents, messages and decisions in connected tools; each person keeps their own context and to-do list",
-      "shortValue": "Company context from connected tools",
+      "shortValue": "Company context",
       "status": "documented",
       "sourceIds": [
         "bond-home",

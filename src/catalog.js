@@ -47,7 +47,7 @@ export const fieldGroups = [
 export const fields = fieldGroups.flatMap(group=>group.fields);
 
 // Compact directory columns can combine several detailed comparison fields.
-export const compositeFields = {nativeApps:['desktopApps','mobileApps','channels']};
+export const compositeFields = {nativeApps:['desktopApps','mobileApps','channels'],computerControl:['onYourComputer','agentComputer','whileYouAreOff']};
 export const structuredFields = {messaging:'messaging'};
 
 // Editorial overview: the original flagship shortlist, then distinct personal
@@ -61,7 +61,7 @@ export const featuredOrder = [
 // Short labels: a table header is not the place for a full question.
 export const columnCatalog = [
   {label:'What it does',columns:[
-    ['computerUse','Computer use'],['onYourComputer','Your computer'],['agentComputer','Its own computer'],
+    ['computerUse','Computer use'],['computerControl','Control'],['onYourComputer','Your computer'],['agentComputer','Its own computer'],
     ['whileYouAreOff','Works when off'],['browserUse','Browser'],['voice','Voice'],['scheduling','Background work'],
     ['uniqueFeatures','What stands out']
   ]},
@@ -87,5 +87,5 @@ export const columnCatalog = [
 export const columnLabels = Object.fromEntries(columnCatalog.flatMap(g=>g.columns));
 
 // Opening set: well-covered, short, and the questions people ask first.
-export const defaultColumns = ['nativeApps','messaging','computerUse','pricing','hosting','worksWithoutVendor'];
+export const defaultColumns = ['nativeApps','messaging','computerControl','pricing','hosting','worksWithoutVendor'];
 export const maxColumns = 8;

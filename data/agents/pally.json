@@ -153,7 +153,7 @@
       "sourceIds": [
         "pally-pricing"
       ],
-      "shortValue": "Time & event triggers"
+      "shortValue": "Time + event"
     },
     {
       "field": "pricing",
@@ -181,7 +181,7 @@
       "sourceIds": [
         "pally-home"
       ],
-      "shortValue": "Editable personal memory"
+      "shortValue": "Editable"
     },
     {
       "field": "portability",

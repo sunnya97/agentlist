@@ -87,7 +87,7 @@
       "sourceIds": [
         "skye-app"
       ],
-      "shortValue": "Briefings & contextual alerts"
+      "shortValue": "Briefings + alerts"
     },
     {
       "field": "voice",
@@ -132,7 +132,7 @@
       "sourceIds": [
         "skye-privacy"
       ],
-      "shortValue": "Context & relationship memory"
+      "shortValue": "Context + people"
     },
     {
       "field": "passwordManager",

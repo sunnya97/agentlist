@@ -67,7 +67,7 @@
       "sourceIds": [
         "ambi-features"
       ],
-      "shortValue": "Ongoing Routines with new context"
+      "shortValue": "Ongoing routines"
     },
     {
       "field": "desktopApps",
@@ -147,7 +147,7 @@
       "sourceIds": [
         "ambi-features"
       ],
-      "shortValue": "Conversation memory across devices"
+      "shortValue": "Across devices"
     },
     {
       "field": "security",

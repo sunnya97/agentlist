@@ -78,7 +78,8 @@
       "sourceIds": [
         "hark-using"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Scheduled tasks"
     },
     {
       "field": "desktopApps",
@@ -166,7 +167,8 @@
       "sourceIds": [
         "hark-using"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Chat; can forget"
     },
     {
       "field": "portability",

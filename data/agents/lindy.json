@@ -114,7 +114,8 @@
       "sourceIds": [
         "lindy-home"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Recurring routines"
     },
     {
       "field": "desktopApps",
@@ -218,7 +219,8 @@
       "sourceIds": [
         "lindy-home"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Editable files"
     },
     {
       "field": "portability",

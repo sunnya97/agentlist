@@ -57,7 +57,8 @@
       "sourceIds": [
         "kimi-claw-terminal"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Scheduled via /cron"
     },
     {
       "field": "channels",
@@ -118,7 +119,8 @@
       "sourceIds": [
         "kimi-claw-overview"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Long-term"
     },
     {
       "field": "portability",

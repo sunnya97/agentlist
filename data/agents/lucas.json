@@ -123,7 +123,7 @@
       "sourceIds": [
         "lucas-updates"
       ],
-      "shortValue": "Proactive texts & automations"
+      "shortValue": "Proactive texts"
     },
     {
       "field": "models",
@@ -169,7 +169,7 @@
         "lucas-faq",
         "lucas-privacy"
       ],
-      "shortValue": "Editable personal memory"
+      "shortValue": "Editable"
     },
     {
       "field": "hosting",

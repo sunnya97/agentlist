@@ -46,7 +46,7 @@
       "sourceIds": [
         "maxclaw-overview"
       ],
-      "shortValue": "Scheduled monitoring, reports, and recurring collection"
+      "shortValue": "Scheduled reports"
     },
     {
       "field": "channels",
@@ -97,7 +97,8 @@
       "sourceIds": [
         "maxclaw-overview"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Long-term + cloud"
     },
     {
       "field": "availability",

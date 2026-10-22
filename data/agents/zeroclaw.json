@@ -90,7 +90,8 @@
       "sourceIds": [
         "zeroclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Cron + event rules"
     },
     {
       "field": "desktopApps",
@@ -186,7 +187,8 @@
       "sourceIds": [
         "zeroclaw-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "SQLite + embeddings"
     },
     {
       "field": "portability",

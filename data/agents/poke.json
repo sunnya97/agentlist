@@ -103,7 +103,8 @@
       "sourceIds": [
         "poke-home"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Reminders + tasks"
     },
     {
       "field": "desktopApps",
@@ -173,7 +174,8 @@
       "sourceIds": [
         "poke-home"
       ],
-      "status": "limited"
+      "status": "limited",
+      "shortValue": "Unverified"
     },
     {
       "field": "portability",

@@ -111,7 +111,7 @@
     {
       "field": "scheduling",
       "value": "Tasks can run on a schedule or an event trigger, with up to 15 tasks executing concurrently. A scheduled run does not start if all 15 slots are occupied.",
-      "shortValue": "Scheduled + event-triggered; 15 concurrent",
+      "shortValue": "Scheduled + events",
       "sourceIds": [
         "gemini-tasks-help"
       ],

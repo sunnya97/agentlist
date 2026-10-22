@@ -88,7 +88,8 @@
       "sourceIds": [
         "wabi-appstore",
         "wabi-privacy"
-      ]
+      ],
+      "shortValue": "Proactive; cron n/a"
     },
     {
       "field": "desktopApps",
@@ -179,7 +180,8 @@
       "sourceIds": [
         "wabi-manifesto",
         "wabi-privacy"
-      ]
+      ],
+      "shortValue": "While account active"
     },
     {
       "field": "portability",

@@ -136,7 +136,8 @@
       "status": "documented",
       "sourceIds": [
         "persona-terms"
-      ]
+      ],
+      "shortValue": "Standing instructions"
     },
     {
       "field": "passwordManager",
@@ -163,7 +164,8 @@
       "status": "documented",
       "sourceIds": [
         "persona-privacy"
-      ]
+      ],
+      "shortValue": "Chats + accounts"
     },
     {
       "field": "portability",

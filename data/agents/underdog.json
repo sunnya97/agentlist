@@ -89,7 +89,8 @@
       "status": "limited",
       "sourceIds": [
         "underdog-ships"
-      ]
+      ],
+      "shortValue": "Auto-sort; cron n/a"
     },
     {
       "field": "desktopApps",
@@ -193,7 +194,8 @@
       "status": "documented",
       "sourceIds": [
         "underdog-home"
-      ]
+      ],
+      "shortValue": "Local, editable"
     },
     {
       "field": "portability",

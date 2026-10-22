@@ -63,7 +63,8 @@
       "sourceIds": [
         "openfang-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Scheduled runs"
     },
     {
       "field": "desktopApps",
@@ -150,7 +151,8 @@
       "sourceIds": [
         "openfang-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "SQLite + vectors"
     },
     {
       "field": "portability",

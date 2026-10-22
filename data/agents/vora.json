@@ -81,7 +81,7 @@
     {
       "field": "scheduling",
       "value": "Runs errands sent out to the internet and keeps a current brief in the app; scheduled or event-triggered routines are not specified",
-      "shortValue": "Errands and a brief; triggers not specified",
+      "shortValue": "Errands; no triggers",
       "status": "limited",
       "sourceIds": [
         "vora-faq"
@@ -197,7 +197,7 @@
     {
       "field": "memory",
       "value": "One encrypted database on the device holds mail, messages, photos, calendar, files, financial and health accounts; conversation history imports from ChatGPT, Claude and Gemini. One owner per device, with household modes not yet offered",
-      "shortValue": "One encrypted on-device database",
+      "shortValue": "On-device database",
       "status": "documented",
       "sourceIds": [
         "vora-faq",

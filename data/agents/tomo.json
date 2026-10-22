@@ -124,7 +124,8 @@
       "status": "documented",
       "sourceIds": [
         "tomo-about"
-      ]
+      ],
+      "shortValue": "Reminders, check-ins"
     },
     {
       "field": "memory",
@@ -132,7 +133,8 @@
       "status": "documented",
       "sourceIds": [
         "tomo-appstore"
-      ]
+      ],
+      "shortValue": "Context and goals"
     },
     {
       "field": "portability",

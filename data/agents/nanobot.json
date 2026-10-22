@@ -97,7 +97,8 @@
       "sourceIds": [
         "nanobot-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Cron + long goals"
     },
     {
       "field": "desktopApps",
@@ -194,7 +195,8 @@
       "sourceIds": [
         "nanobot-readme"
       ],
-      "status": "documented"
+      "status": "documented",
+      "shortValue": "Sessions + long-term"
     },
     {
       "field": "portability",

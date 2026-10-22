@@ -156,7 +156,8 @@
       "status": "documented",
       "sourceIds": [
         "eney-launch"
-      ]
+      ],
+      "shortValue": "Scheduled workflows"
     },
     {
       "field": "approvals",
@@ -173,7 +174,8 @@
       "sourceIds": [
         "eney-launch",
         "eney-privacy"
-      ]
+      ],
+      "shortValue": "Local; self-correcting"
     },
     {
       "field": "portability",

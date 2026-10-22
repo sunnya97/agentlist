@@ -131,7 +131,8 @@
       "status": "documented",
       "sourceIds": [
         "town-routines"
-      ]
+      ],
+      "shortValue": "Scheduled + events"
     },
     {
       "field": "desktopApps",
@@ -231,7 +232,8 @@
       "status": "documented",
       "sourceIds": [
         "town-memory"
-      ]
+      ],
+      "shortValue": "Editable profile"
     },
     {
       "field": "security",
