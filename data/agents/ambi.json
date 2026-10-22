@@ -30,6 +30,12 @@
       "title": "Ambi plans, trial and credit rules",
       "url": "https://www.ambi.ai/pricing/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ambi-privacy",
+      "title": "Ambi privacy policy",
+      "url": "https://ambi.ai/en/privacy",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -309,6 +315,15 @@
         "ambi-home"
       ],
       "status": "limited"
+    }
+  },
+  "continuity": {
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A right to receive a copy of held personal information in a portable format on request; no self-serve export is described. Confirmed deletion removes account information and stored content immediately.",
+      "sourceIds": [
+        "ambi-privacy"
+      ]
     }
   }
 }

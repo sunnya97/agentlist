@@ -84,6 +84,12 @@
       "title": "X Enterprise API: full public post firehose",
       "url": "https://docs.x.com/enterprise-api/introduction",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "grok-privacy",
+      "title": "xAI privacy policy",
+      "url": "https://x.ai/legal/privacy-policy",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -505,6 +511,13 @@
         "grok-product"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "none",
+      "detail": "The privacy policy describes rights to access, correct, update and delete, but no export or portability right. Account deletion removes data within 30 days.",
+      "sourceIds": [
+        "grok-privacy"
+      ]
     }
   },
   "dataAccess": [

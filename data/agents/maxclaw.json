@@ -18,6 +18,12 @@
       "title": "MiniMax investor relations",
       "url": "https://ir.minimax.io/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "maxclaw-privacy",
+      "title": "MiniMax Agent privacy policy",
+      "url": "https://agent.minimax.io/doc/en/privacy-policy.html",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -202,6 +208,13 @@
         "maxclaw-overview"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A written request to the data protection officer, and the policy states a reasonable fee will be charged for a copy of personal data. No retention period after deletion is stated.",
+      "sourceIds": [
+        "maxclaw-privacy"
+      ]
     }
   }
 }

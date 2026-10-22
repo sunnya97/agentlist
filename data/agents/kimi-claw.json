@@ -30,6 +30,12 @@
       "title": "Kimi China membership benefits and legacy plans",
       "url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "kimi-privacy",
+      "title": "Kimi Claw privacy agreement",
+      "url": "https://www.kimi.com/user/agreement/en/kimiClawPrivacy",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -254,6 +260,13 @@
         "kimi-claw-overview"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A request for a copy in a structured, machine-readable format, or transmission to another controller. No retention period after deletion is stated.",
+      "sourceIds": [
+        "kimi-privacy"
+      ]
     }
   }
 }

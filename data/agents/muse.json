@@ -48,6 +48,12 @@
       "title": "Meta CEO announces Muse for Mac",
       "url": "https://x.com/finkd/status/2100713341555712149",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "muse-data-controls",
+      "title": "Muse data controls and download",
+      "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -426,6 +432,13 @@
         "muse-intro"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "Settings, then Data controls, then Download your Muse data, covering chats, files and other agent information. No retention period after deletion is stated.",
+      "sourceIds": [
+        "muse-data-controls"
+      ]
     }
   },
   "dataAccess": [

@@ -42,6 +42,18 @@
       "title": "OpenAI closes its March 2026 funding round",
       "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "dots-privacy",
+      "title": "OpenAI privacy policy",
+      "url": "https://openai.com/policies/row-privacy-policy/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "dots-export",
+      "title": "Exporting your ChatGPT data",
+      "url": "https://help.openai.com/en/articles/7260999",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -512,6 +524,14 @@
         "dots-intro"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "ChatGPT history and data export from the account's data controls. Business, Enterprise and Healthcare workspaces have no self-service export. Deleted data is removed within 30 days.",
+      "sourceIds": [
+        "dots-export",
+        "dots-privacy"
+      ]
     }
   }
 }

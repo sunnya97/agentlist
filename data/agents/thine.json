@@ -251,6 +251,13 @@
         "thine-privacy"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "none",
+      "detail": "The privacy policy describes no export right; the terms mention downloading or exporting original recordings only conditionally, \"if available\".",
+      "sourceIds": [
+        "thine-privacy"
+      ]
     }
   }
 }

@@ -42,6 +42,18 @@
       "title": "Anthropic announces Series H financing",
       "url": "https://www.anthropic.com/news/series-h",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "duet-export",
+      "title": "Export your Claude data",
+      "url": "https://privacy.claude.com/en/articles/9450526-export-your-claude-data",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "duet-retention",
+      "title": "How long Anthropic stores personal data",
+      "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-personal-data",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -360,6 +372,14 @@
         "duet-product"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "Settings, then Privacy, then Export data, on Free, Pro and Max plans. Deleted data is removed from back-end storage within 30 days.",
+      "sourceIds": [
+        "duet-export",
+        "duet-retention"
+      ]
     }
   }
 }

@@ -256,5 +256,14 @@
     "sourceIds": [
       "instinct-home"
     ]
+  },
+  "continuity": {
+    "dataAfterExit": {
+      "state": "none",
+      "detail": "Neither the privacy policy nor the terms describe an export or portability right, and the terms state the company may but is not obliged to delete materials after account deletion.",
+      "sourceIds": [
+        "instinct-privacy"
+      ]
+    }
   }
 }

@@ -96,6 +96,18 @@
       "title": "The Gemini app is now on Windows",
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "gemini-data",
+      "title": "Gemini Apps data controls and export",
+      "url": "https://support.google.com/gemini/answer/13594961",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "gemini-retention",
+      "title": "Google data retention",
+      "url": "https://policies.google.com/technologies/retention",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -496,6 +508,14 @@
         "spark-keynote"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "Export through Google Takeout. Deletion generally takes around two months; temporary chats and those recorded with Keep Activity off are held 72 hours, and reviewed chats up to three years.",
+      "sourceIds": [
+        "gemini-data",
+        "gemini-retention"
+      ]
     }
   },
   "dataAccess": [

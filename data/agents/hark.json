@@ -42,6 +42,12 @@
       "title": "Hark Pro public release date",
       "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-privacy",
+      "title": "Hark privacy policy",
+      "url": "https://hark.com/privacy-policy",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -424,6 +430,13 @@
         "hark-using"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A portability right to information in a structured, commonly used, machine-readable format, exercised through privacy settings rather than a download. General retention lasts for the lifetime of the account.",
+      "sourceIds": [
+        "hark-privacy"
+      ]
     }
   }
 }

@@ -89,5 +89,5 @@ export const columnCatalog = [
 export const columnLabels = Object.fromEntries(columnCatalog.flatMap(g=>g.columns));
 
 // Opening set: well-covered, short, and the questions people ask first.
-export const defaultColumns = ['nativeApps','messaging','computerControl','pricing','hosting','worksWithoutVendor'];
+export const defaultColumns = ['nativeApps','messaging','computerControl','pricing','hosting','dataAfterExit'];
 export const maxColumns = 8;

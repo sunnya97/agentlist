@@ -300,6 +300,14 @@
         "lucas-privacy"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "The policy offers access, update, export and deletion of certain account information in-product \"where those tools are available\", which leaves what can actually be exported unsettled.",
+      "sourceIds": [
+        "lucas-privacy"
+      ],
+      "status": "limited"
     }
   }
 }
