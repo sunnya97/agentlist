@@ -1,0 +1,413 @@
+{
+  "id": "agent-zero",
+  "name": "Agent Zero",
+  "organization": "Agent Zero, s.r.o.",
+  "website": "https://agent-zero.ai",
+  "repository": "https://github.com/agent0ai/agent-zero",
+  "category": "runtime",
+  "summary": "An agent framework that gives the agent its own Dockerised Linux computer with a terminal, desktop and browser, and can also bridge to the machine you run it on.",
+  "sources": [
+    {
+      "id": "az-home",
+      "title": "Agent Zero official website",
+      "url": "https://agent-zero.ai",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-repo",
+      "title": "Agent Zero repository",
+      "url": "https://github.com/agent0ai/agent-zero",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-license",
+      "title": "Agent Zero licence",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/LICENSE",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-install",
+      "title": "Agent Zero installation",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/setup/installation.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-memory",
+      "title": "Agent Zero memory dashboard",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/memory.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-usage",
+      "title": "Agent Zero tasks and scheduling",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/usage.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-browser",
+      "title": "Agent Zero browser",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/browser.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-desktop",
+      "title": "Agent Zero Linux desktop",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/desktop.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-cli",
+      "title": "Agent Zero CLI connector",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/a0-cli-connector.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-models",
+      "title": "Agent Zero model presets",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/guides/model-presets.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-api",
+      "title": "Agent Zero connectivity and API",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/docs/developer/connectivity.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "az-release",
+      "title": "Agent Zero first release",
+      "url": "https://github.com/agent0ai/agent-zero/releases/tag/v0.2",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "The agent gets its own Linux computer inside Docker, with a terminal, an XFCE desktop and a browser it can watch and drive, plus Time Travel snapshots you can revert",
+      "status": "documented",
+      "sourceIds": [
+        "az-repo",
+        "az-desktop"
+      ],
+      "shortValue": "Its own Linux computer"
+    },
+    {
+      "field": "computerUse",
+      "value": "Two separate scopes: an XFCE desktop inside its own Docker container, and the A0 CLI Connector bridging to the host's files, shell and browser",
+      "status": "documented",
+      "sourceIds": [
+        "az-desktop",
+        "az-cli"
+      ],
+      "shortValue": "Its own desktop, and yours"
+    },
+    {
+      "field": "browserUse",
+      "value": "A built-in browser in its container, observable in a canvas panel; the CLI connector can also reach the host browser",
+      "status": "documented",
+      "sourceIds": [
+        "az-browser",
+        "az-cli"
+      ],
+      "shortValue": "Yes, both machines"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Tasks run scheduled, planned or ad hoc, scoped to a project, with a notification system",
+      "status": "documented",
+      "sourceIds": [
+        "az-usage"
+      ],
+      "shortValue": "Scheduled tasks per project"
+    },
+    {
+      "field": "desktopApps",
+      "value": "The A0 Launcher installs on macOS, Linux and Windows, on x86 and ARM; the agent interface itself is web",
+      "status": "documented",
+      "sourceIds": [
+        "az-install"
+      ],
+      "shortValue": "A0 Launcher on three OSes"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No mobile app",
+      "status": "documented",
+      "sourceIds": [
+        "az-repo"
+      ],
+      "shortValue": "None"
+    },
+    {
+      "field": "channels",
+      "value": "Web interface, the A0 Launcher desktop app and a command-line interface",
+      "status": "documented",
+      "sourceIds": [
+        "az-install",
+        "az-repo"
+      ],
+      "shortValue": "Web, launcher and CLI"
+    },
+    {
+      "field": "models",
+      "value": "Model presets for main, utility and embedding roles with your own provider keys; an OpenAI Codex plan connects over OAuth",
+      "status": "documented",
+      "sourceIds": [
+        "az-models"
+      ],
+      "shortValue": "Your keys; preset roles"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own provider keys; local models are documented for tool use",
+      "status": "documented",
+      "sourceIds": [
+        "az-models"
+      ],
+      "shortValue": "BYOK; local models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Open-source software with no hosted tier",
+      "status": "documented",
+      "sourceIds": [
+        "az-home"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free software; no hosted service or paid tier is published",
+      "status": "documented",
+      "sourceIds": [
+        "az-home",
+        "az-repo"
+      ],
+      "shortValue": "Free; you pay models"
+    },
+    {
+      "field": "license",
+      "value": "MIT. GitHub reports no assertion because contact lines precede the licence body, but the text is verbatim MIT",
+      "status": "documented",
+      "sourceIds": [
+        "az-license"
+      ],
+      "shortValue": "MIT"
+    },
+    {
+      "field": "hosting",
+      "value": "Docker on your own machine, an installer for macOS, Linux and Windows, or a VPS you control",
+      "status": "documented",
+      "sourceIds": [
+        "az-install"
+      ],
+      "shortValue": "Self-hosted"
+    },
+    {
+      "field": "api",
+      "value": "HTTP API with a key from settings, covering messaging, logs, chat reset and files, plus MCP and A2A",
+      "status": "documented",
+      "sourceIds": [
+        "az-api"
+      ],
+      "shortValue": "HTTP API, MCP and A2A"
+    },
+    {
+      "field": "approvals",
+      "value": "Time Travel keeps snapshot history with diffs so a run can be reverted",
+      "status": "documented",
+      "sourceIds": [
+        "az-repo"
+      ],
+      "shortValue": "Snapshot history and revert"
+    },
+    {
+      "field": "memory",
+      "value": "Facts, solutions, preferences and imported knowledge persist, with a dashboard to search, read, copy, edit and delete individual entries",
+      "status": "documented",
+      "sourceIds": [
+        "az-memory"
+      ],
+      "shortValue": "Editable memory dashboard"
+    },
+    {
+      "field": "portability",
+      "value": "Memory entries can be copied individually from the dashboard; all state lives in a Docker volume you control, though no single export command is described",
+      "status": "limited",
+      "sourceIds": [
+        "az-memory",
+        "az-repo"
+      ],
+      "shortValue": "Your volume; per-entry copy"
+    },
+    {
+      "field": "security",
+      "value": "Tool execution is contained in its own Docker container, separate from the host unless the CLI connector is used",
+      "status": "documented",
+      "sourceIds": [
+        "az-install",
+        "az-cli"
+      ],
+      "shortValue": "Containerised by default"
+    },
+    {
+      "field": "availability",
+      "value": "Open source; install by Docker, a desktop launcher or a script",
+      "status": "documented",
+      "sourceIds": [
+        "az-install"
+      ],
+      "shortValue": "Open source"
+    }
+  ],
+  "logo": {
+    "path": "./logos/agent-zero.png",
+    "sourceUrl": "https://avatars.githubusercontent.com/u/216033749",
+    "sourcePage": "https://github.com/agent0ai/agent-zero",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "The agent interface runs in a browser against your own instance.",
+      "sourceIds": [
+        "az-install"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "A0 Launcher desktop installer for macOS, x86 and ARM.",
+      "sourceIds": [
+        "az-install"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "A0 Launcher desktop installer for Windows.",
+      "sourceIds": [
+        "az-install"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "A0 Launcher desktop installer for Linux.",
+      "sourceIds": [
+        "az-install"
+      ]
+    }
+  ],
+  "color": "#1f2430",
+  "aliases": [
+    "AgentZero",
+    "A0"
+  ],
+  "messaging": [],
+  "access": {
+    "state": "available",
+    "detail": "Open source; install by Docker, the A0 Launcher or a script.",
+    "sourceIds": [
+      "az-install"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "detail": "The A0 CLI Connector bridges the agent to the host's files, shell and browser.",
+      "sourceIds": [
+        "az-cli"
+      ]
+    },
+    "agentComputer": {
+      "state": "local",
+      "remote": "takeover",
+      "detail": "An XFCE Linux desktop inside its Docker container, which the user can watch and drive in a canvas panel.",
+      "sourceIds": [
+        "az-desktop",
+        "az-browser"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "MIT-licensed software you run yourself in Docker or from a desktop installer, so it keeps running if the company stops.",
+      "sourceIds": [
+        "az-license",
+        "az-install"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Runs on your own hardware with no activation or licence check described.",
+      "sourceIds": [
+        "az-install"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "partial",
+      "status": "limited",
+      "detail": "State lives in a Docker volume you control and memory entries can be copied individually, but no single export command is described.",
+      "sourceIds": [
+        "az-memory",
+        "az-repo"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "US$0",
+      "billing": "Free software",
+      "includes": [
+        "Full features when self-hosted",
+        "Your own provider keys"
+      ],
+      "limits": [
+        "You provide hosting and model costs"
+      ],
+      "sourceIds": [
+        "az-home",
+        "az-models"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "independent",
+    "sourceIds": [
+      "az-home",
+      "az-license"
+    ],
+    "stage": "Agent Zero, s.r.o., Brno, Czech Republic"
+  },
+  "launches": [
+    {
+      "date": "2024-06-26",
+      "kind": "release",
+      "label": "First public release",
+      "sourceIds": [
+        "az-release"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "id": "openhuman",
+  "name": "OpenHuman",
+  "organization": "Tiny Human Intelligence Inc",
+  "website": "https://tinyhumans.ai/openhuman",
+  "repository": "https://github.com/tinyhumansai/openhuman",
+  "category": "runtime",
+  "summary": "A local-first desktop personal AI that drives your real browser and desktop apps, with editable memory and more than a dozen messaging channels.",
+  "sources": [
+    {
+      "id": "oh-home",
+      "title": "OpenHuman official page",
+      "url": "https://tinyhumans.ai/openhuman",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-repo",
+      "title": "OpenHuman repository",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-license",
+      "title": "OpenHuman licence",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/LICENSE",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-billing",
+      "title": "OpenHuman billing and usage",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/billing-and-usage.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-memory",
+      "title": "OpenHuman memory",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/memory.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-browser",
+      "title": "OpenHuman browser and computer control",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/native-tools/browser-and-computer.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-channels",
+      "title": "OpenHuman channels",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/channels.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-workflows",
+      "title": "OpenHuman workflows",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/workflows.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-models",
+      "title": "OpenHuman local and BYOK models",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/model-routing/local-and-byok-models.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-ios",
+      "title": "OpenHuman iOS companion",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/features/ios-companion.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "oh-move",
+      "title": "Moving OpenHuman to a new computer",
+      "url": "https://github.com/tinyhumansai/openhuman/blob/main/docs/gitbooks/en/guides/move-to-new-pc.md",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Drives your real Chrome and desktop apps while asking before anything it cannot undo, and is built to run many agents cheaply on modest hardware",
+      "status": "documented",
+      "sourceIds": [
+        "oh-browser",
+        "oh-repo"
+      ],
+      "shortValue": "Drives your real browser and apps"
+    },
+    {
+      "field": "computerUse",
+      "value": "Operates the user's own desktop applications, choosing targets from on-screen controls without screenshots, and stopping before any payment",
+      "status": "documented",
+      "sourceIds": [
+        "oh-browser"
+      ],
+      "shortValue": "Your desktop, with guardrails"
+    },
+    {
+      "field": "browserUse",
+      "value": "Drives a real Chrome browser on the user's machine",
+      "status": "documented",
+      "sourceIds": [
+        "oh-browser"
+      ],
+      "shortValue": "Your real Chrome"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "A native cron tool plus durable workflow graphs with cron, event or manual triggers, approval steps and resume after a pause",
+      "status": "documented",
+      "sourceIds": [
+        "oh-workflows",
+        "oh-repo"
+      ],
+      "shortValue": "Cron and durable workflows"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native installers for macOS, Windows and Linux, plus a terminal app",
+      "status": "documented",
+      "sourceIds": [
+        "oh-home",
+        "oh-repo"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "An iOS companion is documented as experimental and not shipping",
+      "status": "limited",
+      "sourceIds": [
+        "oh-ios"
+      ],
+      "shortValue": "iOS experimental, not shipped"
+    },
+    {
+      "field": "channels",
+      "value": "Desktop app and terminal, plus fourteen messaging channels",
+      "status": "documented",
+      "sourceIds": [
+        "oh-home",
+        "oh-channels"
+      ],
+      "shortValue": "Desktop, terminal and chat"
+    },
+    {
+      "field": "models",
+      "value": "Bring your own key across 26 providers, plus local models through Ollama, LM Studio and MLX, with automatic routing",
+      "status": "documented",
+      "sourceIds": [
+        "oh-models"
+      ],
+      "shortValue": "26 providers; local models"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own keys, or run local models; the optional hosted tiers buy cheaper inference rather than features",
+      "status": "documented",
+      "sourceIds": [
+        "oh-models",
+        "oh-billing"
+      ],
+      "shortValue": "BYOK or local"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Free open-source app, with optional paid hosted inference",
+      "status": "documented",
+      "sourceIds": [
+        "oh-billing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "The app is free. Optional hosted inference is Basic US$19.99/month or US$199/year and Pro US$199.99/month or US$1,799.99/year; every tier has every feature and higher tiers only buy cheaper inference",
+      "status": "documented",
+      "sourceIds": [
+        "oh-billing"
+      ],
+      "shortValue": "Free app; optional inference tiers"
+    },
+    {
+      "field": "license",
+      "value": "GPL-3.0",
+      "status": "documented",
+      "sourceIds": [
+        "oh-license"
+      ],
+      "shortValue": "GPL-3.0"
+    },
+    {
+      "field": "hosting",
+      "value": "Runs on the user's own Mac, Windows or Linux desktop, and can run headless on a Linux server; an optional hosted backend provides inference and billing",
+      "status": "documented",
+      "sourceIds": [
+        "oh-repo",
+        "oh-home"
+      ],
+      "shortValue": "Your desktop or your server"
+    },
+    {
+      "field": "api",
+      "value": "A JSON-RPC core over loopback or remote with a bearer token, a typed Rust embedding API, and an opt-in MCP server",
+      "status": "documented",
+      "sourceIds": [
+        "oh-repo"
+      ],
+      "shortValue": "JSON-RPC, Rust API and MCP"
+    },
+    {
+      "field": "approvals",
+      "value": "Asks before anything it cannot undo and stops before any payment",
+      "status": "documented",
+      "sourceIds": [
+        "oh-browser"
+      ],
+      "shortValue": "Asks before irreversible steps"
+    },
+    {
+      "field": "memory",
+      "value": "Remembers what you are working on, what you prefer and what is in your documents; the interface lets you add, delete, forget an item or forget a whole source",
+      "status": "documented",
+      "sourceIds": [
+        "oh-memory"
+      ],
+      "shortValue": "Editable, with forget"
+    },
+    {
+      "field": "portability",
+      "value": "No export feature is described; moving to another computer is a manual copy of the local data folder",
+      "status": "limited",
+      "sourceIds": [
+        "oh-move"
+      ],
+      "shortValue": "Manual folder copy"
+    },
+    {
+      "field": "security",
+      "value": "Sandboxing through an operating-system jail or Docker; memory can be stored on a self-hosted database instead of the vendor's",
+      "status": "documented",
+      "sourceIds": [
+        "oh-repo",
+        "oh-memory"
+      ],
+      "shortValue": "Jail or Docker sandbox"
+    },
+    {
+      "field": "availability",
+      "value": "Free download for macOS, Windows and Linux, described as an early beta under active development",
+      "status": "documented",
+      "sourceIds": [
+        "oh-home",
+        "oh-repo"
+      ],
+      "shortValue": "Free download; early beta"
+    }
+  ],
+  "logo": {
+    "path": "./logos/openhuman.png",
+    "sourceUrl": "https://avatars.githubusercontent.com/u/246003628",
+    "sourcePage": "https://github.com/tinyhumansai/openhuman",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS desktop app.",
+      "sourceIds": [
+        "oh-home"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Windows desktop app.",
+      "sourceIds": [
+        "oh-home"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Native Linux desktop app.",
+      "sourceIds": [
+        "oh-home"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "preview",
+      "detail": "An iOS companion is documented as experimental and not part of the shipped product.",
+      "sourceIds": [
+        "oh-ios"
+      ]
+    }
+  ],
+  "color": "#3b3b3b",
+  "aliases": [
+    "Tiny Humans"
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "signal",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "wechat",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "feishu",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Listed among OpenHuman's shipped channels.",
+      "sourceIds": [
+        "oh-channels"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Free download for macOS, Windows and Linux; the project describes itself as an early beta under active development.",
+    "sourceIds": [
+      "oh-home",
+      "oh-repo"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "detail": "Drives the user's real Chrome and desktop applications, asking before anything irreversible.",
+      "sourceIds": [
+        "oh-browser"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "status": "limited",
+      "detail": "Runs on the user's desktop, though a Linux server can host the core headless so work continues without a desktop session.",
+      "sourceIds": [
+        "oh-repo"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "GPL-3.0 software running on your own machine; a vendor account is optional and only buys hosted inference.",
+      "sourceIds": [
+        "oh-license",
+        "oh-home"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Runs locally with no activation requirement; the account is optional.",
+      "sourceIds": [
+        "oh-home"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "partial",
+      "status": "limited",
+      "detail": "State lives in a local folder you can copy, but no export feature is described and portability is offered only on request.",
+      "sourceIds": [
+        "oh-move"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free app and free tier",
+      "includes": [
+        "Every feature",
+        "Bring your own keys or run local models"
+      ],
+      "limits": [
+        "Hosted inference is charged per call"
+      ],
+      "sourceIds": [
+        "oh-billing"
+      ]
+    },
+    {
+      "name": "Basic",
+      "price": "US$19.99/month",
+      "billing": "US$199/year",
+      "includes": [
+        "Roughly 50% cheaper hosted inference per call"
+      ],
+      "limits": [
+        "Buys cheaper inference, not extra features"
+      ],
+      "sourceIds": [
+        "oh-billing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$199.99/month",
+      "billing": "US$1,799.99/year",
+      "includes": [
+        "Roughly 90% cheaper hosted inference per call"
+      ],
+      "limits": [
+        "Buys cheaper inference, not extra features"
+      ],
+      "sourceIds": [
+        "oh-billing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "oh-home"
+    ],
+    "stage": "Tiny Human Intelligence Inc, Delaware"
+  },
+  "launches": [
+    {
+      "date": "2026-02-18",
+      "kind": "release",
+      "label": "Repository first published",
+      "sourceIds": [
+        "oh-repo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "id": "heynoah",
+  "name": "Noah",
+  "organization": "Hey Noah AI Inc.",
+  "website": "https://www.heynoah.io",
+  "repository": null,
+  "category": "watchlist",
+  "summary": "An AI chief of staff reached by text and voice rather than an app, which schedules, chases follow-ups and surfaces insights. Pricing and sign-up are not published.",
+  "sources": [
+    {
+      "id": "hn-home",
+      "title": "Hey Noah official website",
+      "url": "https://www.heynoah.io",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "hn-privacy",
+      "title": "Hey Noah privacy policy",
+      "url": "https://www.heynoah.io/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "hn-terms",
+      "title": "Hey Noah terms of service",
+      "url": "https://www.heynoah.io/terms",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Presented as having its own identity and working across your network rather than waiting to be prompted, reached through voice and text instead of an app",
+      "status": "documented",
+      "sourceIds": [
+        "hn-home"
+      ],
+      "shortValue": "No app; voice and text"
+    },
+    {
+      "field": "computerUse",
+      "value": "Explicitly ruled out: the company states it does not access your screen, keystrokes, passwords or device location, and acts only through connected integrations",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "None, explicitly"
+    },
+    {
+      "field": "browserUse",
+      "value": "Not offered; the company states it does not access your screen or collect screenshots",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "None"
+    },
+    {
+      "field": "voice",
+      "value": "Voice is a primary channel, alongside phone calls",
+      "status": "documented",
+      "sourceIds": [
+        "hn-home",
+        "hn-terms"
+      ],
+      "shortValue": "Voice and calls"
+    },
+    {
+      "field": "scheduling",
+      "value": "Described as proactively helping rather than waiting for prompts, but no named scheduling or trigger feature is published",
+      "status": "limited",
+      "sourceIds": [
+        "hn-home"
+      ],
+      "shortValue": "Proactive, unnamed"
+    },
+    {
+      "field": "desktopApps",
+      "value": "No desktop app; the product is reached through messaging and a web application",
+      "status": "documented",
+      "sourceIds": [
+        "hn-home"
+      ],
+      "shortValue": "None"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No mobile app; the product is reached through messaging",
+      "status": "documented",
+      "sourceIds": [
+        "hn-home"
+      ],
+      "shortValue": "None"
+    },
+    {
+      "field": "channels",
+      "value": "Text messages, RCS, WhatsApp, iMessage, email, Slack and phone calls, plus a web application",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ],
+      "shortValue": "Messaging, calls and web"
+    },
+    {
+      "field": "models",
+      "value": "Third-party large language model providers, which are not named",
+      "status": "limited",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "Unnamed providers"
+    },
+    {
+      "field": "byom",
+      "value": "Bringing your own key is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Not published",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "pricing",
+      "value": "Not published. The terms state only that certain features may require payment and that fees may change on reasonable notice",
+      "status": "limited",
+      "sourceIds": [
+        "hn-terms"
+      ],
+      "shortValue": "Not published"
+    },
+    {
+      "field": "hosting",
+      "value": "Provider-hosted; no component runs on the user's device",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "Provider cloud"
+    },
+    {
+      "field": "api",
+      "value": "A public API is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "memory",
+      "value": "Keeps a copy of connected calendars to stay in sync and stores copies of the messages it works with; no user-facing memory view is described",
+      "status": "limited",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "Copies calendars and messages"
+    },
+    {
+      "field": "portability",
+      "value": "A right to receive your data in a structured, commonly used format by writing to the company; no in-product export is described",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "On written request"
+    },
+    {
+      "field": "security",
+      "value": "The company states it does not train models on customer data and does not collect screen captures or keystrokes",
+      "status": "documented",
+      "sourceIds": [
+        "hn-privacy"
+      ],
+      "shortValue": "No training; no screen capture"
+    },
+    {
+      "field": "availability",
+      "value": "No self-serve sign-up is published: the site offers only a demo and a login, and users must be eighteen or older",
+      "status": "documented",
+      "sourceIds": [
+        "hn-home",
+        "hn-terms"
+      ],
+      "shortValue": "No public sign-up; 18+"
+    }
+  ],
+  "logo": {
+    "path": "./logos/heynoah.png",
+    "sourceUrl": "https://www.heynoah.io/favicon-32x32.png",
+    "sourcePage": "https://www.heynoah.io",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web application at app.heynoah.io, reached by login.",
+      "sourceIds": [
+        "hn-home"
+      ]
+    }
+  ],
+  "color": "#1a1a1a",
+  "aliases": [
+    "Hey Noah"
+  ],
+  "messaging": [
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    },
+    {
+      "service": "rcs",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    },
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Listed in the privacy policy and terms as a channel.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-terms"
+      ]
+    }
+  ],
+  "access": {
+    "state": "unverified",
+    "restrictions": [
+      "age"
+    ],
+    "detail": "No self-serve sign-up or pricing is published; the site offers a demo and a login only. Users must be eighteen or older.",
+    "sourceIds": [
+      "hn-home",
+      "hn-terms"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "The company states it does not access your screen, keystrokes, passwords or device location.",
+      "sourceIds": [
+        "hn-privacy"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted with no component on the user's device. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "hn-privacy"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A right to receive your data in a structured, commonly used format by writing to the company.",
+      "sourceIds": [
+        "hn-privacy"
+      ]
+    }
+  },
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "hn-home"
+    ]
+  },
+  "launches": []
+}

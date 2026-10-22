@@ -1,0 +1,439 @@
+{
+  "id": "simular",
+  "name": "Simular",
+  "organization": "Simular Inc.",
+  "website": "https://www.simular.ai",
+  "repository": "https://github.com/simular-ai",
+  "category": "local",
+  "summary": "A computer-use agent that operates real desktops by seeing the screen, clicking and typing, on your own machine or on a cloud computer you keep.",
+  "sources": [
+    {
+      "id": "sim-home",
+      "title": "Simular official website",
+      "url": "https://www.simular.ai",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-sai",
+      "title": "Sai product site",
+      "url": "https://www.sai.work/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-desktop",
+      "title": "Simular Desktop",
+      "url": "https://www.simular.ai/simular-desktop",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-pricing",
+      "title": "Simular pricing",
+      "url": "https://www.simular.ai/pricing",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-about",
+      "title": "About Simular",
+      "url": "https://www.simular.ai/about",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-privacy",
+      "title": "Simular privacy policy",
+      "url": "https://www.simular.ai/product-sai/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-ga",
+      "title": "Sai becomes generally available",
+      "url": "https://www.simular.ai/articles/sai-your-first-robosecretary",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "sim-repo",
+      "title": "Agent S repository",
+      "url": "https://github.com/simular-ai/Agent-S",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Operates a real desktop the way a person does, on your own machine or on a cloud computer that keeps your logins, setup and context between sessions",
+      "status": "documented",
+      "sourceIds": [
+        "sim-sai",
+        "sim-desktop"
+      ],
+      "shortValue": "Real desktop, yours or cloud"
+    },
+    {
+      "field": "computerUse",
+      "value": "Full desktop control of either the user's own Mac or Windows machine or a Simular-hosted cloud desktop, driving native applications without APIs",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop",
+        "sim-sai"
+      ],
+      "shortValue": "Full control, your choice of machine"
+    },
+    {
+      "field": "browserUse",
+      "value": "Drives the browser as one of the desktop applications it operates",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop"
+      ],
+      "shortValue": "As a desktop app"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Saved workflows rerun nightly, weekly or on a trigger",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop"
+      ],
+      "shortValue": "Nightly, weekly or triggered"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS app for Apple Silicon and a Windows desktop app",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop"
+      ],
+      "shortValue": "macOS, Windows"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No official mobile app; an Android companion exists in the project's repositories",
+      "status": "limited",
+      "sourceIds": [
+        "sim-repo"
+      ],
+      "shortValue": "Android companion in repo"
+    },
+    {
+      "field": "channels",
+      "value": "Desktop apps, with notifications and approvals through messaging",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop",
+        "sim-sai"
+      ],
+      "shortValue": "Desktop apps and messaging"
+    },
+    {
+      "field": "models",
+      "value": "Built on the Agent S framework and Simulang; the underlying model providers are not named",
+      "status": "limited",
+      "sourceIds": [
+        "sim-repo",
+        "sim-sai"
+      ],
+      "shortValue": "Agent S; providers unnamed"
+    },
+    {
+      "field": "byom",
+      "value": "Bringing your own key or running local models is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Simular subscription",
+      "status": "documented",
+      "sourceIds": [
+        "sim-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Starter US$50/month with a cloud Windows computer, Premium US$200/month with an always-on Windows or Mac computer, Pro US$500/month with full API access, and Enterprise on request. No annual pricing is offered",
+      "status": "documented",
+      "sourceIds": [
+        "sim-pricing"
+      ],
+      "shortValue": "US$50–500/mo"
+    },
+    {
+      "field": "license",
+      "value": "The Agent S framework is Apache-2.0; the Sai product itself is not open source",
+      "status": "limited",
+      "sourceIds": [
+        "sim-repo"
+      ],
+      "shortValue": "Agent S Apache-2.0"
+    },
+    {
+      "field": "hosting",
+      "value": "Runs locally on your own Mac or Windows machine, or on an isolated cloud desktop that Simular hosts",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop"
+      ],
+      "shortValue": "Your machine or its cloud"
+    },
+    {
+      "field": "api",
+      "value": "A public REST API, with full access gated to the top tier, plus an MCP server",
+      "status": "documented",
+      "sourceIds": [
+        "sim-pricing"
+      ],
+      "shortValue": "REST API on Pro"
+    },
+    {
+      "field": "memory",
+      "value": "The agent's virtual machine is a permanent environment where setup, logins, preferences and context persist between sessions",
+      "status": "documented",
+      "sourceIds": [
+        "sim-sai"
+      ],
+      "shortValue": "Persistent machine state"
+    },
+    {
+      "field": "portability",
+      "value": "Access, correction, deletion and portability are offered by email request; no in-product export is described",
+      "status": "limited",
+      "sourceIds": [
+        "sim-privacy"
+      ],
+      "shortValue": "On request"
+    },
+    {
+      "field": "security",
+      "value": "Cloud work runs on an isolated desktop separate from the user's own machine",
+      "status": "documented",
+      "sourceIds": [
+        "sim-desktop"
+      ],
+      "shortValue": "Isolated cloud desktop"
+    },
+    {
+      "field": "availability",
+      "value": "Invite only, with a published route to move up the queue",
+      "status": "documented",
+      "sourceIds": [
+        "sim-pricing"
+      ],
+      "shortValue": "Invite only"
+    }
+  ],
+  "logo": {
+    "path": "./logos/simular.png",
+    "sourceUrl": "https://cdn.prod.website-files.com/666c58d71e64e2eb5bdf950b/67d27568cb910aa527bc5387_android-chrome-256fit.png",
+    "sourcePage": "https://www.simular.ai",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS app for Apple Silicon.",
+      "sourceIds": [
+        "sim-desktop"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Windows desktop app.",
+      "sourceIds": [
+        "sim-desktop"
+      ]
+    }
+  ],
+  "color": "#1d1d1f",
+  "aliases": [
+    "Sai",
+    "Agent S"
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Notifications and approvals arrive by iMessage.",
+      "sourceIds": [
+        "sim-sai"
+      ]
+    },
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "Notifications and approvals arrive by SMS.",
+      "sourceIds": [
+        "sim-sai"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Notifications and approvals arrive by Telegram.",
+      "sourceIds": [
+        "sim-sai"
+      ]
+    }
+  ],
+  "access": {
+    "state": "waitlist",
+    "detail": "Invite only, with the option to move up the queue by reposting the launch video, following the company or joining its community.",
+    "sourceIds": [
+      "sim-pricing"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "Drives the user's own Mac or Windows desktop, operating native applications directly.",
+      "sourceIds": [
+        "sim-desktop"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "remote": "takeover",
+      "detail": "An always-on hosted Windows or Mac desktop the user can also watch and take over.",
+      "sourceIds": [
+        "sim-desktop",
+        "sim-sai"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "status": "limited",
+      "detail": "The hosted always-on computer keeps running independently of the user's own machine, on the tiers that include one.",
+      "sourceIds": [
+        "sim-pricing",
+        "sim-sai"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "The Sai product is a subscription service, though the underlying Agent S framework is Apache-2.0 and would outlive it. The company has not published what happens if the service stops.",
+      "sourceIds": [
+        "sim-pricing",
+        "sim-repo"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "Access, correction, deletion and portability are offered by email request, with no in-product export described.",
+      "sourceIds": [
+        "sim-privacy"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "price": "US$50/month",
+      "billing": "Monthly; no annual pricing offered",
+      "includes": [
+        "A cloud Windows computer",
+        "Use of your own Windows or Mac machine"
+      ],
+      "limits": [
+        "Community support",
+        "Credit limits apply"
+      ],
+      "sourceIds": [
+        "sim-pricing"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": "US$200/month",
+      "billing": "Monthly",
+      "includes": [
+        "An always-on Windows or Mac computer",
+        "Higher credits and priority support"
+      ],
+      "limits": [
+        "Credit limits apply"
+      ],
+      "sourceIds": [
+        "sim-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$500/month",
+      "billing": "Monthly",
+      "includes": [
+        "Unlimited within fair use",
+        "Team workflow sharing",
+        "Full API access"
+      ],
+      "limits": [
+        "Fair-use limits apply"
+      ],
+      "sourceIds": [
+        "sim-pricing"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "billing": "Priced on request",
+      "includes": [
+        "Managed scaling",
+        "Single sign-on, role-based access control and SOC 2",
+        "Service level agreement"
+      ],
+      "limits": [
+        "Requires contacting the company"
+      ],
+      "sourceIds": [
+        "sim-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "optional",
+    "name": "Dedicated Mac mini",
+    "detail": "A Mac mini can be used as a dedicated machine for the agent, but no hardware is required; the cloud desktop needs none.",
+    "sourceIds": [
+      "sim-desktop"
+    ]
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "sim-about"
+    ],
+    "stage": "Series A",
+    "funding": {
+      "amount": "US$21.5M",
+      "round": "Series A",
+      "date": "2025-12-02",
+      "sourceIds": [
+        "sim-about"
+      ]
+    }
+  },
+  "launches": [
+    {
+      "date": "2026-09-16",
+      "kind": "launch",
+      "label": "Sai generally available",
+      "sourceIds": [
+        "sim-ga"
+      ]
+    }
+  ]
+}

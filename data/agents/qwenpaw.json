@@ -1,0 +1,417 @@
+{
+  "id": "qwenpaw",
+  "name": "QwenPaw",
+  "organization": "AgentScope",
+  "website": "https://qwenpaw.agentscope.io",
+  "repository": "https://github.com/agentscope-ai/QwenPaw",
+  "category": "runtime",
+  "summary": "A self-hostable personal agent workstation with three layers of memory kept as editable Markdown, heartbeat check-ins and more than a dozen chat channels.",
+  "sources": [
+    {
+      "id": "qp-home",
+      "title": "QwenPaw official site",
+      "url": "https://qwenpaw.agentscope.io",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "qp-repo",
+      "title": "QwenPaw repository",
+      "url": "https://github.com/agentscope-ai/QwenPaw",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "qp-license",
+      "title": "QwenPaw licence",
+      "url": "https://github.com/agentscope-ai/QwenPaw/blob/main/LICENSE",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "qp-memory",
+      "title": "QwenPaw memory documentation",
+      "url": "https://github.com/agentscope-ai/QwenPaw/blob/main/website/public/docs/memory.en.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "qp-channels",
+      "title": "QwenPaw channels documentation",
+      "url": "https://github.com/agentscope-ai/QwenPaw/blob/main/website/public/docs/channels.en.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "qp-release",
+      "title": "QwenPaw first release",
+      "url": "https://github.com/agentscope-ai/QwenPaw/releases",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Memory is a personal knowledge base of structured Markdown files that are readable, editable, searchable and linked, alongside a MEMORY.md the user and agent both maintain",
+      "status": "documented",
+      "sourceIds": [
+        "qp-memory"
+      ],
+      "shortValue": "Editable Markdown knowledge base"
+    },
+    {
+      "field": "computerUse",
+      "value": "An optional Computer Use plugin operates approved desktop applications on the user's own machine, limited to Windows 10 and later or macOS 14 and later in the desktop app, and marked beta",
+      "status": "limited",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Your desktop, beta, not Linux"
+    },
+    {
+      "field": "browserUse",
+      "value": "Launches its own Chromium, or drives the Chrome you are already signed in to through an extension",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Its Chromium or your Chrome"
+    },
+    {
+      "field": "voice",
+      "value": "Voice and SIP are listed among its channels",
+      "status": "documented",
+      "sourceIds": [
+        "qp-channels"
+      ],
+      "shortValue": "Voice and SIP channels"
+    },
+    {
+      "field": "scheduling",
+      "value": "Heartbeat runs at an interval and replies in the channel where you last chatted, alongside cron scheduled tasks that can run several recurring jobs in parallel",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Heartbeat and cron"
+    },
+    {
+      "field": "desktopApps",
+      "value": "A Tauri desktop app for Windows 10 and later and macOS 14 and later, marked beta and unnotarised on macOS, plus a console web interface and a full terminal interface",
+      "status": "limited",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Windows and macOS, beta"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No mobile app",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "None"
+    },
+    {
+      "field": "channels",
+      "value": "Desktop app, console web interface and terminal, plus more than a dozen chat channels",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo",
+        "qp-channels"
+      ],
+      "shortValue": "Desktop, web, terminal and chat"
+    },
+    {
+      "field": "models",
+      "value": "Built-in local QwenPaw-Flash models from 2B to 35B through llama.cpp, Ollama and LM Studio, plus keys for more than fourteen cloud providers including Qwen, OpenAI, Anthropic, Gemini, DeepSeek and Kimi",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Local models; 14+ providers"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own keys, or run the bundled local models",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "BYOK or local"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Open-source software; the AgentScope Platform offers free hosted deployment",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free software. A hosted deployment on the AgentScope Platform is offered free; a cloud model key is required unless you run local models",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Free; free hosted option"
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0",
+      "status": "documented",
+      "sourceIds": [
+        "qp-license"
+      ],
+      "shortValue": "Apache-2.0"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted by pip, a script, Docker or the desktop app, or deployed to Alibaba Cloud, the AgentScope Platform or ModelScope",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Self-hosted or free cloud"
+    },
+    {
+      "field": "api",
+      "value": "A REST API built on the AgentScope Runtime protocol, with an agent identifier header, plus ACP integration",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "REST API and ACP"
+    },
+    {
+      "field": "memory",
+      "value": "Three layers: a live working context, the full verbatim history, and a personal knowledge base of structured Markdown in a local workspace directory",
+      "status": "documented",
+      "sourceIds": [
+        "qp-memory"
+      ],
+      "shortValue": "Three layers, Markdown on disk"
+    },
+    {
+      "field": "portability",
+      "value": "Settings include a backup tool that exports the whole agent environment as a zip containing workspaces, persona, memory, skills, chat history, settings and secrets",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Self-serve zip backup"
+    },
+    {
+      "field": "security",
+      "value": "Deploy locally and data stays on your machine; secrets are held in the agent environment",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Local deployment"
+    },
+    {
+      "field": "availability",
+      "value": "Open source; install by pip, script, Docker or the desktop app, with a free hosted option",
+      "status": "documented",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "shortValue": "Open source; free hosting"
+    }
+  ],
+  "logo": {
+    "path": "./logos/qwenpaw.svg",
+    "sourceUrl": "https://qwenpaw.agentscope.io/qwenpaw-symbol.svg",
+    "sourcePage": "https://qwenpaw.agentscope.io",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Console web interface served by your own instance.",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "beta",
+      "detail": "Tauri desktop app for Windows 10 and later, marked beta.",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "beta",
+      "detail": "Tauri desktop app for macOS 14 and later, marked beta and unnotarised.",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    }
+  ],
+  "color": "#6b4bd8",
+  "aliases": [
+    "AgentScope QwenPaw"
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "wechat",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "wecom",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "feishu",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "matrix",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Listed among QwenPaw's channels.",
+      "sourceIds": [
+        "qp-channels"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open source; install by pip, script, Docker or the desktop app. A cloud model key is required unless local models are used.",
+    "sourceIds": [
+      "qp-repo"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "detail": "An optional Computer Use plugin operates approved desktop applications, in the desktop app only, marked beta and unavailable on Linux.",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "Apache-2.0 software you deploy yourself, so it keeps running if the project stops.",
+      "sourceIds": [
+        "qp-license",
+        "qp-repo"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Self-hosted with no activation or licence check described.",
+      "sourceIds": [
+        "qp-repo"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "A backup tool in settings exports the entire agent environment as a zip, and memory is plain Markdown on your own disk.",
+      "sourceIds": [
+        "qp-repo",
+        "qp-memory"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "US$0",
+      "billing": "Free software",
+      "includes": [
+        "Full features when self-hosted",
+        "Bundled local models, or your own provider keys",
+        "Free hosted deployment on the AgentScope Platform"
+      ],
+      "limits": [
+        "A cloud model key is required unless local models are used"
+      ],
+      "sourceIds": [
+        "qp-repo"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "research",
+    "sourceIds": [
+      "qp-repo"
+    ],
+    "stage": "Built by the AgentScope team"
+  },
+  "launches": [
+    {
+      "date": "2026-02-27",
+      "kind": "release",
+      "label": "First public release",
+      "sourceIds": [
+        "qp-release"
+      ]
+    }
+  ]
+}

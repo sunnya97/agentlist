@@ -1,0 +1,418 @@
+{
+  "id": "khoj",
+  "name": "Khoj",
+  "organization": "Khoj AI",
+  "website": "https://khoj.dev",
+  "repository": "https://github.com/khoj-ai/khoj",
+  "category": "runtime",
+  "summary": "A self-hosted personal AI that indexes your own documents and the web, answers questions over them, and runs scheduled research jobs.",
+  "sources": [
+    {
+      "id": "khoj-home",
+      "title": "Khoj official website",
+      "url": "https://khoj.dev",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-docs",
+      "title": "Khoj documentation",
+      "url": "https://docs.khoj.dev",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-setup",
+      "title": "Khoj self-hosting setup",
+      "url": "https://docs.khoj.dev/get-started/setup",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-automations",
+      "title": "Khoj automations",
+      "url": "https://docs.khoj.dev/features/automations",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-operator",
+      "title": "Khoj Operator",
+      "url": "https://github.com/khoj-ai/khoj/blob/master/src/khoj/processor/operator/README.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-whatsapp",
+      "title": "Khoj WhatsApp client",
+      "url": "https://docs.khoj.dev/clients/whatsapp",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-desktop",
+      "title": "Khoj desktop client",
+      "url": "https://docs.khoj.dev/clients/desktop",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-privacy",
+      "title": "Khoj privacy",
+      "url": "https://docs.khoj.dev/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-ollama",
+      "title": "Khoj with Ollama",
+      "url": "https://docs.khoj.dev/advanced/ollama",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-license",
+      "title": "Khoj licence",
+      "url": "https://github.com/khoj-ai/khoj/blob/master/LICENSE",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-release",
+      "title": "Khoj first release",
+      "url": "https://github.com/khoj-ai/khoj/releases/tag/v0.1.5-alpha",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-cloud-shutdown",
+      "title": "Khoj Cloud shutdown notice",
+      "url": "https://app.khoj.dev/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "khoj-yc",
+      "title": "Khoj at 10,000 stars, noting Y Combinator",
+      "url": "https://blog.khoj.dev/posts/10k-stars-in/",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Indexes your own documents alongside the web and answers over both, with custom agents carrying their own knowledge and personas",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-home",
+        "khoj-docs"
+      ],
+      "shortValue": "Searches your documents and the web"
+    },
+    {
+      "field": "computerUse",
+      "value": "Khoj Operator is experimental and drives its own isolated Docker container running an Ubuntu desktop, not the user's machine",
+      "status": "limited",
+      "sourceIds": [
+        "khoj-operator"
+      ],
+      "shortValue": "Its own container, not yours"
+    },
+    {
+      "field": "browserUse",
+      "value": "Operator drives a browser inside its own container; currently supports Anthropic models only",
+      "status": "limited",
+      "sourceIds": [
+        "khoj-operator"
+      ],
+      "shortValue": "In its own container"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Automations run cron-style scheduled queries and email the results; self-hosting requires configuring an email provider",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-automations"
+      ],
+      "shortValue": "Cron automations by email"
+    },
+    {
+      "field": "desktopApps",
+      "value": "A desktop companion app syncs files, and the web app installs as a progressive web app; there are also Obsidian and Emacs plugins",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-desktop"
+      ],
+      "shortValue": "Desktop sync app and plugins"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No iOS or Android app is listed in the current documentation",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "channels",
+      "value": "Web app, desktop companion, Obsidian and Emacs plugins, plus WhatsApp",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-desktop",
+        "khoj-whatsapp"
+      ],
+      "shortValue": "Web, desktop and editor plugins"
+    },
+    {
+      "field": "models",
+      "value": "Any online or local model, including OpenAI, Anthropic and Gemini, plus Ollama, LM Studio and offline GGUF models through llama.cpp",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-ollama",
+        "khoj-setup"
+      ],
+      "shortValue": "Any provider; local models"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own API key, or run entirely offline models",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-ollama",
+        "khoj-setup"
+      ],
+      "shortValue": "BYOK or fully offline"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Open-source software with no hosted tier; the vendor cloud was shut down in April 2026",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-cloud-shutdown"
+      ],
+      "shortValue": "Self-host only"
+    },
+    {
+      "field": "pricing",
+      "value": "Free software. The hosted Khoj Cloud closed on 15 April 2026 and no paid tier is published",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-cloud-shutdown"
+      ],
+      "shortValue": "Free; no hosted tier"
+    },
+    {
+      "field": "license",
+      "value": "AGPL-3.0",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-license"
+      ],
+      "shortValue": "AGPL-3.0"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted by pip or Docker on your own machine or server",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-setup"
+      ],
+      "shortValue": "Self-hosted"
+    },
+    {
+      "field": "api",
+      "value": "API keys are issued per client and used by the desktop, Obsidian and Emacs clients; no public API reference page was found",
+      "status": "limited",
+      "sourceIds": [
+        "khoj-desktop"
+      ],
+      "shortValue": "Client API keys"
+    },
+    {
+      "field": "memory",
+      "value": "Indexed documents and chat history in Postgres with embeddings, plus agents carrying their own knowledge; no user-facing memory browser is documented",
+      "status": "limited",
+      "sourceIds": [
+        "khoj-privacy",
+        "khoj-setup"
+      ],
+      "shortValue": "Indexed documents and history"
+    },
+    {
+      "field": "portability",
+      "value": "Self-hosted state lives in Postgres and a local directory you control; no self-serve export is described",
+      "status": "limited",
+      "sourceIds": [
+        "khoj-setup"
+      ],
+      "shortValue": "Your own database and files"
+    },
+    {
+      "field": "security",
+      "value": "Self-hosted deployment keeps documents and chat history on your own infrastructure",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-privacy",
+        "khoj-setup"
+      ],
+      "shortValue": "Runs on your infrastructure"
+    },
+    {
+      "field": "availability",
+      "value": "Open source and self-hostable; the hosted service is closed",
+      "status": "documented",
+      "sourceIds": [
+        "khoj-setup",
+        "khoj-cloud-shutdown"
+      ],
+      "shortValue": "Self-host only"
+    }
+  ],
+  "logo": {
+    "path": "./logos/khoj.png",
+    "sourceUrl": "https://khoj.dev/favicon.png",
+    "sourcePage": "https://khoj.dev",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Self-hosted web app, installable as a progressive web app.",
+      "sourceIds": [
+        "khoj-setup",
+        "khoj-desktop"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Desktop companion app for file sync.",
+      "sourceIds": [
+        "khoj-desktop"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Desktop companion app for file sync.",
+      "sourceIds": [
+        "khoj-desktop"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Desktop companion app for file sync.",
+      "sourceIds": [
+        "khoj-desktop"
+      ]
+    }
+  ],
+  "color": "#f9bf47",
+  "aliases": [],
+  "messaging": [
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "WhatsApp is documented as a Khoj client.",
+      "sourceIds": [
+        "khoj-whatsapp"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Automations deliver scheduled results by email; delivery is outbound only.",
+      "sourceIds": [
+        "khoj-automations"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open source and self-hostable; the hosted Khoj Cloud closed on 15 April 2026.",
+    "sourceIds": [
+      "khoj-setup",
+      "khoj-cloud-shutdown"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Operator drives its own Docker container rather than the user's desktop.",
+      "sourceIds": [
+        "khoj-operator"
+      ]
+    },
+    "agentComputer": {
+      "state": "local",
+      "remote": "view",
+      "detail": "An isolated Ubuntu desktop inside a Docker container on the host you run, observable over VNC.",
+      "sourceIds": [
+        "khoj-operator"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "AGPL-3.0 software you host yourself, so it keeps running if the company stops; the vendor's own hosted service has already closed while the project continues.",
+      "sourceIds": [
+        "khoj-license",
+        "khoj-cloud-shutdown"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Self-hosted with no activation or licence check described.",
+      "sourceIds": [
+        "khoj-setup"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "partial",
+      "status": "limited",
+      "detail": "State lives in a Postgres database and a local directory on your own host, but no documented export or restore path exists.",
+      "sourceIds": [
+        "khoj-setup"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "US$0",
+      "billing": "Free software",
+      "includes": [
+        "Full features when self-hosted",
+        "Bring your own model keys, or run offline models"
+      ],
+      "limits": [
+        "You provide hosting and model costs",
+        "The hosted Khoj Cloud closed on 15 April 2026"
+      ],
+      "sourceIds": [
+        "khoj-setup",
+        "khoj-cloud-shutdown"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "khoj-home",
+      "khoj-yc"
+    ],
+    "stage": "Y Combinator, Summer 2023"
+  },
+  "launches": [
+    {
+      "date": "2022-08-15",
+      "kind": "release",
+      "label": "First public release",
+      "sourceIds": [
+        "khoj-release"
+      ]
+    }
+  ]
+}

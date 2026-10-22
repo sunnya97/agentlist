@@ -1,0 +1,387 @@
+{
+  "id": "omi",
+  "name": "Omi",
+  "organization": "Based Hardware Inc.",
+  "website": "https://www.omi.me",
+  "repository": "https://github.com/BasedHardware/omi",
+  "category": "local",
+  "summary": "An always-listening personal AI that captures conversations and your screen, turning them into summaries, action items and searchable memory, with an optional pendant.",
+  "sources": [
+    {
+      "id": "omi-home",
+      "title": "Omi official website",
+      "url": "https://www.omi.me",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-repo",
+      "title": "Omi repository",
+      "url": "https://github.com/BasedHardware/omi",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-license",
+      "title": "Omi licence",
+      "url": "https://github.com/BasedHardware/omi/blob/main/LICENSE",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-pricing",
+      "title": "Omi pricing",
+      "url": "https://www.omi.me/pages/pricing",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-privacy",
+      "title": "Omi privacy policy",
+      "url": "https://www.omi.me/pages/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-api",
+      "title": "Omi API reference",
+      "url": "https://docs.omi.me/api-reference/introduction",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "omi-appstore",
+      "title": "Omi on the App Store",
+      "url": "https://apps.apple.com/us/app/friend-ai-wearable/id6502156163",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Captures conversations and screen context continuously and turns them into summaries, action items and searchable memory across phone, desktop and an optional pendant",
+      "status": "documented",
+      "sourceIds": [
+        "omi-home",
+        "omi-repo"
+      ],
+      "shortValue": "Always-on capture and recall"
+    },
+    {
+      "field": "computerUse",
+      "value": "The desktop app reads the screen; driving a browser or desktop is not described",
+      "status": "limited",
+      "sourceIds": [
+        "omi-home"
+      ],
+      "shortValue": "Reads your screen, does not drive"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browser control is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "voice",
+      "value": "Continuous listening and transcription is the core of the product, with on-phone transcription on the free plan",
+      "status": "documented",
+      "sourceIds": [
+        "omi-home",
+        "omi-pricing"
+      ],
+      "shortValue": "Always-listening capture"
+    },
+    {
+      "field": "scheduling",
+      "value": "Capture is continuous and summarising automatic, but no scheduled or event-triggered autonomy is described for the user's own agent",
+      "status": "limited",
+      "sourceIds": [
+        "omi-repo"
+      ],
+      "shortValue": "Continuous, not scheduled"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS and Windows desktop apps",
+      "status": "documented",
+      "sourceIds": [
+        "omi-home"
+      ],
+      "shortValue": "macOS, Windows"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps, plus an Apple Watch app",
+      "status": "documented",
+      "sourceIds": [
+        "omi-appstore",
+        "omi-home"
+      ],
+      "shortValue": "iOS, Android, watch"
+    },
+    {
+      "field": "channels",
+      "value": "iPhone, Android, Apple Watch, macOS, Windows and the web",
+      "status": "documented",
+      "sourceIds": [
+        "omi-home"
+      ],
+      "shortValue": "Apps and web"
+    },
+    {
+      "field": "models",
+      "value": "The hosted backend names Soniox for speech recognition; the language model providers are not disclosed",
+      "status": "limited",
+      "sourceIds": [
+        "omi-repo"
+      ],
+      "shortValue": "Soniox speech; models unnamed"
+    },
+    {
+      "field": "byom",
+      "value": "Bringing your own key is possible only by self-hosting the backend; no local model mode is described for the consumer app",
+      "status": "limited",
+      "sourceIds": [
+        "omi-repo"
+      ],
+      "shortValue": "Only by self-hosting"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Free plan included with every device; Pro is a standalone subscription",
+      "status": "documented",
+      "sourceIds": [
+        "omi-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free plan with unlimited on-phone transcription and 300 cloud minutes a month; Pro US$269 a year. The pendant is US$179 with a US$50 discount applied at checkout, and a glasses developer kit is US$499",
+      "status": "documented",
+      "sourceIds": [
+        "omi-pricing"
+      ],
+      "shortValue": "Free; Pro US$269/yr"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "status": "documented",
+      "sourceIds": [
+        "omi-license"
+      ],
+      "shortValue": "MIT"
+    },
+    {
+      "field": "hosting",
+      "value": "Apps on your own devices talking to a hosted backend, with the whole backend self-hostable from the repository",
+      "status": "documented",
+      "sourceIds": [
+        "omi-repo"
+      ],
+      "shortValue": "Hosted, or self-host the backend"
+    },
+    {
+      "field": "api",
+      "value": "A public developer API with bearer keys covering memories, conversations and action items, rate limited per key and per user, plus an MCP server",
+      "status": "documented",
+      "sourceIds": [
+        "omi-api"
+      ],
+      "shortValue": "Public developer API"
+    },
+    {
+      "field": "memory",
+      "value": "Conversations, transcripts, summaries, action items and remembered facts, preferences and relationships persist and are searchable",
+      "status": "documented",
+      "sourceIds": [
+        "omi-privacy",
+        "omi-home"
+      ],
+      "shortValue": "Facts, preferences, relationships"
+    },
+    {
+      "field": "portability",
+      "value": "A copy of personal data can be requested by email; no self-serve export is described, though the developer API can read your own conversations and memories",
+      "status": "limited",
+      "sourceIds": [
+        "omi-privacy",
+        "omi-api"
+      ],
+      "shortValue": "On request; API reads own data"
+    },
+    {
+      "field": "security",
+      "value": "Deleting a conversation deletes its transcript and associated data including stored audio",
+      "status": "documented",
+      "sourceIds": [
+        "omi-privacy"
+      ],
+      "shortValue": "Deletion removes audio too"
+    },
+    {
+      "field": "availability",
+      "value": "Open sign-up with free apps on every platform; the device ships worldwide",
+      "status": "documented",
+      "sourceIds": [
+        "omi-home",
+        "omi-pricing"
+      ],
+      "shortValue": "Public sign-up"
+    }
+  ],
+  "logo": {
+    "path": "./logos/omi.png",
+    "sourceUrl": "https://www.omi.me/cdn/shop/files/gempages_515188559477474548-70787bc7-dc96-46e3-a981-20de912c2ae0.png",
+    "sourcePage": "https://www.omi.me",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web app at app.omi.me.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS app on the App Store.",
+      "sourceIds": [
+        "omi-appstore"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native Android app on Google Play.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS desktop app.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Windows desktop app.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    },
+    {
+      "platform": "watchos",
+      "status": "available",
+      "detail": "Apple Watch app.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    }
+  ],
+  "color": "#1b1b1b",
+  "aliases": [
+    "Friend",
+    "Based Hardware"
+  ],
+  "messaging": [],
+  "access": {
+    "state": "available",
+    "detail": "Open sign-up; free apps on every platform and the device ships worldwide.",
+    "sourceIds": [
+      "omi-home",
+      "omi-pricing"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "The desktop app reads the screen for context but does not drive applications.",
+      "sourceIds": [
+        "omi-home"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "partial",
+      "detail": "MIT-licensed with a self-hostable backend, so a technical owner could keep it running, though the consumer apps point at the hosted service by default.",
+      "sourceIds": [
+        "omi-license",
+        "omi-repo"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A copy of personal data can be requested by email; the developer API can also read your own conversations and memories.",
+      "sourceIds": [
+        "omi-privacy",
+        "omi-api"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Included with every device",
+      "includes": [
+        "Unlimited on-phone transcription",
+        "300 cloud minutes a month"
+      ],
+      "limits": [
+        "No subscription needed to start"
+      ],
+      "sourceIds": [
+        "omi-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$269/year",
+      "billing": "Billed yearly",
+      "includes": [
+        "The full feature set"
+      ],
+      "limits": [
+        "A monthly price is implied but not published"
+      ],
+      "sourceIds": [
+        "omi-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "optional",
+    "name": "Omi pendant",
+    "detail": "A US$179 pendant discounted to US$129 at checkout, with ten to fourteen hours of battery, shipping worldwide; a glasses developer kit is US$499. Neither is required, since the free plan works with phone-only transcription, and the hardware designs are open source.",
+    "sourceIds": [
+      "omi-pricing",
+      "omi-home"
+    ]
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "omi-home"
+    ],
+    "stage": "Based Hardware Inc., San Francisco"
+  },
+  "launches": [
+    {
+      "date": "2024-03-22",
+      "kind": "release",
+      "label": "Repository first published, under the earlier name Friend",
+      "sourceIds": [
+        "omi-repo"
+      ]
+    }
+  ]
+}

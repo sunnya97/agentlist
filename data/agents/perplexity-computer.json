@@ -1,0 +1,459 @@
+{
+  "id": "perplexity-computer",
+  "name": "Perplexity Computer",
+  "organization": "Perplexity AI, Inc.",
+  "website": "https://www.perplexity.ai/computer",
+  "repository": null,
+  "category": "managed",
+  "summary": "A cloud agent with a real filesystem and browser, a memory called Brain that models your projects and people, and an optional desktop app that controls your own machine.",
+  "sources": [
+    {
+      "id": "pc-help",
+      "title": "What is Perplexity Computer",
+      "url": "https://www.perplexity.ai/help-center/en/articles/13837784-what-is-computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-blog",
+      "title": "Introducing Perplexity Computer",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-perplexity-computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-brain",
+      "title": "What is Brain",
+      "url": "https://www.perplexity.ai/help-center/en/articles/19700001-what-is-brain",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-personal",
+      "title": "What is Personal Computer",
+      "url": "https://www.perplexity.ai/help-center/en/articles/14659663-what-is-personal-computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-portable",
+      "title": "What is Portable Computer",
+      "url": "https://www.perplexity.ai/help-center/en/articles/20260915-what-is-portable-computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-tasks",
+      "title": "Perplexity Tasks",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11521526-perplexity-tasks",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-plans",
+      "title": "Perplexity subscription plans",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-max",
+      "title": "Perplexity Max",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-slack",
+      "title": "Perplexity in Slack",
+      "url": "https://www.perplexity.ai/help-center/en/articles/14016915-using-perplexity-in-slack",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-email",
+      "title": "Computer in email",
+      "url": "https://www.perplexity.ai/help-center/en/articles/20260715-computer-in-email",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pc-gdpr",
+      "title": "Exporting your Perplexity data",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11564568-gdpr-compliance-at-perplexity",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Brain builds a wiki-style memory of concepts, entities and workstreams from your sessions, connectors and files, which you can read, edit and correct",
+      "status": "documented",
+      "sourceIds": [
+        "pc-brain"
+      ],
+      "shortValue": "Editable wiki-style memory"
+    },
+    {
+      "field": "computerUse",
+      "value": "Cloud tasks get a real filesystem and browser on Perplexity's isolated machine; the separate Personal Computer desktop app controls the user's own machine including native apps like Mail and Finder",
+      "status": "documented",
+      "sourceIds": [
+        "pc-blog",
+        "pc-personal"
+      ],
+      "shortValue": "Its cloud machine, and yours"
+    },
+    {
+      "field": "browserUse",
+      "value": "A real browser in its isolated cloud environment",
+      "status": "documented",
+      "sourceIds": [
+        "pc-blog"
+      ],
+      "shortValue": "Yes, on its own machine"
+    },
+    {
+      "field": "voice",
+      "value": "Voice control is listed as part of the Personal Computer desktop app",
+      "status": "documented",
+      "sourceIds": [
+        "pc-personal"
+      ],
+      "shortValue": "Voice in the desktop app"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled Tasks run hourly, daily, weekly, monthly or on a custom cadence, at most once an hour and up to fifteen active per conversation, managed in an automations dashboard",
+      "status": "documented",
+      "sourceIds": [
+        "pc-tasks"
+      ],
+      "shortValue": "Scheduled tasks, hourly minimum"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Desktop apps for macOS 15 and later, Windows 10 and 11, and Ubuntu",
+      "status": "documented",
+      "sourceIds": [
+        "pc-personal"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps",
+      "status": "documented",
+      "sourceIds": [
+        "pc-help"
+      ],
+      "shortValue": "iOS, Android"
+    },
+    {
+      "field": "channels",
+      "value": "Web, iOS, Android and desktop apps, plus Slack and email",
+      "status": "documented",
+      "sourceIds": [
+        "pc-help",
+        "pc-slack",
+        "pc-email"
+      ],
+      "shortValue": "Apps, Slack and email"
+    },
+    {
+      "field": "models",
+      "value": "Multi-provider, using Claude for core reasoning at launch alongside Gemini, Grok and ChatGPT as sub-agents; Portable Computer runs local models on your own hardware",
+      "status": "documented",
+      "sourceIds": [
+        "pc-blog",
+        "pc-portable"
+      ],
+      "shortValue": "Multi-provider; local on Portable"
+    },
+    {
+      "field": "byom",
+      "value": "Custom API credentials are for third-party services the agent calls, not for model providers",
+      "status": "limited",
+      "sourceIds": [
+        "pc-help"
+      ],
+      "shortValue": "Service keys, not model keys"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included with a paid Perplexity subscription",
+      "status": "documented",
+      "sourceIds": [
+        "pc-plans"
+      ],
+      "shortValue": "With a Perplexity plan"
+    },
+    {
+      "field": "pricing",
+      "value": "Requires a paid plan: Pro US$20/month or US$200/year, Max US$200/month or US$2,000/year including 10,000 Computer credits a month; Pro includes no Computer credits. Enterprise Pro starts at US$40/month per seat",
+      "status": "documented",
+      "sourceIds": [
+        "pc-plans",
+        "pc-max"
+      ],
+      "shortValue": "Pro US$20/mo; Max US$200/mo"
+    },
+    {
+      "field": "hosting",
+      "value": "A secure isolated environment in Perplexity's cloud by default; Portable Computer runs the model and agent on your own hardware, and Personal Computer runs on your desktop",
+      "status": "documented",
+      "sourceIds": [
+        "pc-help",
+        "pc-portable",
+        "pc-personal"
+      ],
+      "shortValue": "Provider cloud, or your hardware"
+    },
+    {
+      "field": "api",
+      "value": "A developer API platform exists, but a public API for controlling the Computer agent is not described",
+      "status": "limited",
+      "sourceIds": [
+        "pc-help"
+      ],
+      "shortValue": "No agent API described"
+    },
+    {
+      "field": "memory",
+      "value": "Brain stores concepts, entities and workstreams drawn from sessions, connectors, files and your corrections, excluding incognito sessions",
+      "status": "documented",
+      "sourceIds": [
+        "pc-brain"
+      ],
+      "shortValue": "Brain, built from your work"
+    },
+    {
+      "field": "portability",
+      "value": "A self-serve export from the account details page",
+      "status": "documented",
+      "sourceIds": [
+        "pc-gdpr"
+      ],
+      "shortValue": "Self-serve export"
+    },
+    {
+      "field": "security",
+      "value": "Cloud tasks run in a secure isolated environment, and incognito sessions are excluded from memory",
+      "status": "documented",
+      "sourceIds": [
+        "pc-help",
+        "pc-brain"
+      ],
+      "shortValue": "Isolated cloud; incognito excluded"
+    },
+    {
+      "field": "availability",
+      "value": "Available to subscribers on web, iOS and Android; Brain remains a research preview limited to Max and Enterprise Max subscribers",
+      "status": "documented",
+      "sourceIds": [
+        "pc-help",
+        "pc-brain"
+      ],
+      "shortValue": "Paid plans; Brain preview"
+    }
+  ],
+  "logo": {
+    "path": "./logos/perplexity-computer.svg",
+    "sourceUrl": "https://www.perplexity.ai/favicon.svg",
+    "sourcePage": "https://www.perplexity.ai/computer",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Available on the web to active subscribers.",
+      "sourceIds": [
+        "pc-help"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS app.",
+      "sourceIds": [
+        "pc-help"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native Android app.",
+      "sourceIds": [
+        "pc-help"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Personal Computer desktop app for macOS 15 and later.",
+      "sourceIds": [
+        "pc-personal"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Personal Computer desktop app for Windows 10 and 11.",
+      "sourceIds": [
+        "pc-personal"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Personal Computer desktop app for Ubuntu and DGX OS.",
+      "sourceIds": [
+        "pc-personal"
+      ]
+    }
+  ],
+  "color": "#20808d",
+  "aliases": [
+    "Perplexity Brain",
+    "Comet"
+  ],
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Perplexity is usable inside Slack.",
+      "sourceIds": [
+        "pc-slack"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Computer is reachable by email.",
+      "sourceIds": [
+        "pc-email"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "plan"
+    ],
+    "detail": "Requires an active paid subscription; Brain is a research preview limited to Max and Enterprise Max subscribers.",
+    "sourceIds": [
+      "pc-help",
+      "pc-brain"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "detail": "The Personal Computer desktop app reaches local files and native applications including Mail, Finder and Slack.",
+      "sourceIds": [
+        "pc-personal"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "A secure isolated cloud machine with a real filesystem and browser; Portable Computer can instead run it on your own GPU hardware.",
+      "sourceIds": [
+        "pc-blog",
+        "pc-portable"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Cloud tasks and schedules run in Perplexity's environment rather than on the user's device.",
+      "sourceIds": [
+        "pc-help",
+        "pc-tasks"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted and tied to a Perplexity subscription. The company has not published what happens if it is discontinued.",
+      "sourceIds": [
+        "pc-help"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "An export button on the account details page.",
+      "sourceIds": [
+        "pc-gdpr"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Pro",
+      "price": "US$20/month",
+      "billing": "US$200/year",
+      "includes": [
+        "Access to Computer on web, iOS and Android"
+      ],
+      "limits": [
+        "No Computer credits included",
+        "Brain is not available on Pro"
+      ],
+      "sourceIds": [
+        "pc-plans"
+      ]
+    },
+    {
+      "name": "Max",
+      "price": "US$200/month",
+      "billing": "US$2,000/year, annual on the web only",
+      "includes": [
+        "10,000 Computer credits a month",
+        "Brain research preview"
+      ],
+      "limits": [
+        "Brain remains a research preview"
+      ],
+      "sourceIds": [
+        "pc-max",
+        "pc-brain"
+      ]
+    },
+    {
+      "name": "Enterprise Pro",
+      "price": "From US$40/user/month",
+      "billing": "From US$400/year per seat",
+      "includes": [
+        "Team administration"
+      ],
+      "limits": [
+        "Priced per seat"
+      ],
+      "sourceIds": [
+        "pc-plans"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "optional",
+    "name": "GPU hardware for Portable Computer",
+    "detail": "Portable Computer runs the model and agent on your own hardware, requiring an NVIDIA DGX Spark or an RTX-class GPU with at least 24 GB of video memory. It is optional; the cloud service needs no hardware.",
+    "sourceIds": [
+      "pc-portable"
+    ]
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "pc-blog"
+    ]
+  },
+  "launches": [
+    {
+      "date": "2026-02-25",
+      "kind": "launch",
+      "label": "Perplexity Computer introduced",
+      "sourceIds": [
+        "pc-blog"
+      ]
+    }
+  ]
+}

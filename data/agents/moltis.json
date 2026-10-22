@@ -1,0 +1,444 @@
+{
+  "id": "moltis",
+  "name": "Moltis",
+  "organization": "Fabien Penso",
+  "website": "https://moltis.org",
+  "repository": "https://github.com/moltis-org/moltis",
+  "category": "runtime",
+  "summary": "A single-binary Rust agent server you run on your own hardware, with durable memory, sandboxed tool execution and more than ten chat channels.",
+  "sources": [
+    {
+      "id": "mo-home",
+      "title": "Moltis official website",
+      "url": "https://moltis.org",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-repo",
+      "title": "Moltis repository",
+      "url": "https://github.com/moltis-org/moltis",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-docs",
+      "title": "Moltis documentation",
+      "url": "https://docs.moltis.org",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-quick",
+      "title": "Moltis quickstart",
+      "url": "https://docs.moltis.org/quickstart.html",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-docker",
+      "title": "Moltis with Docker",
+      "url": "https://docs.moltis.org/docker.html",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-cloud",
+      "title": "Moltis cloud deployment",
+      "url": "https://docs.moltis.org/cloud-deploy.html",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-security",
+      "title": "Moltis security",
+      "url": "https://docs.moltis.org/security.html",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-license",
+      "title": "Moltis licence",
+      "url": "https://github.com/moltis-org/moltis/blob/main/LICENSE.md",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "mo-release",
+      "title": "Moltis first release",
+      "url": "https://github.com/moltis-org/moltis/releases/tag/v0.1.1",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "One Rust binary holding the agent, its memory and more than ten chat channels, with a native desktop client that attaches to the running daemon locally or over SSH",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo",
+        "mo-home"
+      ],
+      "shortValue": "One Rust binary, many channels"
+    },
+    {
+      "field": "computerUse",
+      "value": "Browser automation runs on the host where the daemon runs, which may be your own machine; desktop or GUI control is not claimed",
+      "status": "limited",
+      "sourceIds": [
+        "mo-repo",
+        "mo-security"
+      ],
+      "shortValue": "Browser only, on its host"
+    },
+    {
+      "field": "browserUse",
+      "value": "Built-in browser automation, with SSRF protection on web fetching",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo",
+        "mo-security"
+      ],
+      "shortValue": "Built-in automation"
+    },
+    {
+      "field": "voice",
+      "value": "Telephony and voice are listed among its channels",
+      "status": "documented",
+      "sourceIds": [
+        "mo-docs"
+      ],
+      "shortValue": "Telephony and voice"
+    },
+    {
+      "field": "scheduling",
+      "value": "Cron scheduling, with durable local CalDAV and email connectors",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo",
+        "mo-docs"
+      ],
+      "shortValue": "Cron scheduling"
+    },
+    {
+      "field": "desktopApps",
+      "value": "A native Rust desktop client attaches to a running daemon locally, over HTTPS or through an SSH tunnel, with keychain-stored scoped keys and certificate pinning",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo"
+      ],
+      "shortValue": "Native desktop client"
+    },
+    {
+      "field": "mobileApps",
+      "value": "A mobile progressive web app with push notifications; no native mobile app",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo"
+      ],
+      "shortValue": "Mobile PWA"
+    },
+    {
+      "field": "channels",
+      "value": "Web interface, native desktop client, mobile progressive web app and an API, plus messaging channels",
+      "status": "documented",
+      "sourceIds": [
+        "mo-repo",
+        "mo-docs"
+      ],
+      "shortValue": "Desktop, web, PWA and chat"
+    },
+    {
+      "field": "models",
+      "value": "Anthropic, OpenAI, Gemini, DeepSeek, Mistral, Groq, xAI, OpenRouter, Ollama and local models, plus GitHub Copilot and OpenAI Codex over OAuth",
+      "status": "documented",
+      "sourceIds": [
+        "mo-docs",
+        "mo-quick"
+      ],
+      "shortValue": "Ten providers; local models"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own keys, held in an encrypted vault",
+      "status": "documented",
+      "sourceIds": [
+        "mo-quick",
+        "mo-docs"
+      ],
+      "shortValue": "BYOK, encrypted vault"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Open-source software with no hosted tier",
+      "status": "documented",
+      "sourceIds": [
+        "mo-home"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free software; no hosted service or paid tier is published",
+      "status": "documented",
+      "sourceIds": [
+        "mo-home",
+        "mo-docs"
+      ],
+      "shortValue": "Free; you pay models"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "status": "documented",
+      "sourceIds": [
+        "mo-license"
+      ],
+      "shortValue": "MIT"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted from an install script, Homebrew, Docker or cargo, or deployed to a cloud host you manage",
+      "status": "documented",
+      "sourceIds": [
+        "mo-quick",
+        "mo-docker",
+        "mo-cloud"
+      ],
+      "shortValue": "Self-hosted"
+    },
+    {
+      "field": "api",
+      "value": "GraphQL API with scoped keys and webhooks",
+      "status": "documented",
+      "sourceIds": [
+        "mo-docs"
+      ],
+      "shortValue": "GraphQL and webhooks"
+    },
+    {
+      "field": "memory",
+      "value": "Long-term memory in SQLite with full-text search and vector embeddings, plus session persistence with auto-compaction; you add knowledge by dropping Markdown files into a local memory directory",
+      "status": "documented",
+      "sourceIds": [
+        "mo-quick",
+        "mo-repo"
+      ],
+      "shortValue": "SQLite plus Markdown files"
+    },
+    {
+      "field": "portability",
+      "value": "Sessions are stored as JSONL on your own disk and the web interface exports Markdown",
+      "status": "documented",
+      "sourceIds": [
+        "mo-quick",
+        "mo-repo"
+      ],
+      "shortValue": "JSONL and Markdown export"
+    },
+    {
+      "field": "security",
+      "value": "Tool and code execution is sandboxed in Docker, Podman, Apple Container or WebAssembly, and web fetching is protected against server-side request forgery",
+      "status": "documented",
+      "sourceIds": [
+        "mo-security"
+      ],
+      "shortValue": "Sandboxed execution"
+    },
+    {
+      "field": "availability",
+      "value": "Open source; install by script, Homebrew, Docker or cargo",
+      "status": "documented",
+      "sourceIds": [
+        "mo-quick"
+      ],
+      "shortValue": "Open source"
+    }
+  ],
+  "logo": {
+    "path": "./logos/moltis.svg",
+    "sourceUrl": "https://moltis.org/favicon.svg",
+    "sourcePage": "https://moltis.org",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web interface served by the daemon.",
+      "sourceIds": [
+        "mo-repo"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native Rust desktop client; installable by Homebrew.",
+      "sourceIds": [
+        "mo-repo",
+        "mo-quick"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Native desktop client and install script.",
+      "sourceIds": [
+        "mo-repo",
+        "mo-quick"
+      ]
+    },
+    {
+      "platform": "mobile",
+      "status": "available",
+      "detail": "Mobile progressive web app with push notifications.",
+      "sourceIds": [
+        "mo-repo"
+      ]
+    }
+  ],
+  "color": "#2d2a26",
+  "aliases": [],
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "teams",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "matrix",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "signal",
+      "status": "available",
+      "detail": "Listed among Moltis chat channels.",
+      "sourceIds": [
+        "mo-docs"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Email through Gmail and Himalaya connectors.",
+      "sourceIds": [
+        "mo-repo"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open source; install by script, Homebrew, Docker or cargo.",
+    "sourceIds": [
+      "mo-quick"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Browser automation runs on the host where the daemon runs, which may be your own machine; desktop control is not claimed.",
+      "sourceIds": [
+        "mo-repo",
+        "mo-security"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "yes",
+      "detail": "MIT-licensed single binary you run on your own hardware, so it keeps running if the author stops.",
+      "sourceIds": [
+        "mo-license",
+        "mo-quick"
+      ]
+    },
+    "remoteDisable": {
+      "state": "none",
+      "detail": "Runs on your own hardware with no activation or licence check described.",
+      "sourceIds": [
+        "mo-quick"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "Sessions are JSONL files in a local data directory and the web interface exports Markdown.",
+      "sourceIds": [
+        "mo-quick",
+        "mo-repo"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "US$0",
+      "billing": "Free software",
+      "includes": [
+        "Full features when self-hosted",
+        "Your own provider keys in an encrypted vault"
+      ],
+      "limits": [
+        "You provide hosting and model costs"
+      ],
+      "sourceIds": [
+        "mo-home",
+        "mo-quick"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "independent",
+    "sourceIds": [
+      "mo-home",
+      "mo-license"
+    ],
+    "stage": "Built by an individual developer"
+  },
+  "launches": [
+    {
+      "date": "2026-02-03",
+      "kind": "release",
+      "label": "First public release",
+      "sourceIds": [
+        "mo-release"
+      ]
+    }
+  ]
+}

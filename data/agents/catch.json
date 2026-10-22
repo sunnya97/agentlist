@@ -1,0 +1,316 @@
+{
+  "id": "catch",
+  "name": "Catch",
+  "organization": "Catch",
+  "website": "https://www.catchagent.ai",
+  "repository": null,
+  "category": "managed",
+  "summary": "An AI executive assistant for scheduling, inbox triage, travel and outbound calls, reached through ordinary chat and email rather than an app. Closed beta.",
+  "sources": [
+    {
+      "id": "ca-home",
+      "title": "Catch official website",
+      "url": "https://www.catchagent.ai",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "ca-about",
+      "title": "About Catch",
+      "url": "https://www.catchagent.ai/about",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "ca-security",
+      "title": "Catch security",
+      "url": "https://www.catchagent.ai/security",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "No app to manage: reached through Slack, Messages, email or a phone call, and a scheduling thread can be handed over simply by copying in an address, free and without an account",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "No app; copy it on a thread"
+    },
+    {
+      "field": "computerUse",
+      "value": "Acts through integrations and outbound phone calls from its own cloud; no control of a browser or of the user's machine is described",
+      "status": "limited",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Integrations, not a computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browser control is not described; form filling and booking are presented as agent actions awaiting approval",
+      "status": "limited",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Not described"
+    },
+    {
+      "field": "voice",
+      "value": "Makes outbound phone calls, and is reachable by call",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Outbound and inbound calls"
+    },
+    {
+      "field": "scheduling",
+      "value": "Described as proactive by default, with a morning brief, daily sync, smart reminders, proactive updates, follow-ups and calendar protection",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Proactive by default"
+    },
+    {
+      "field": "desktopApps",
+      "value": "No desktop app; the product states there is no app to manage",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "None by design"
+    },
+    {
+      "field": "mobileApps",
+      "value": "No mobile app; the product states there is no app to manage",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "None by design"
+    },
+    {
+      "field": "channels",
+      "value": "Slack, Messages, email and phone calls, with integrations across more than seventy tools",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Slack, Messages, email, calls"
+    },
+    {
+      "field": "models",
+      "value": "Described as built on the company's own AI, while the security pages disclose unnamed third-party vendors contractually barred from retaining or training on customer data",
+      "status": "limited",
+      "sourceIds": [
+        "ca-home",
+        "ca-security"
+      ],
+      "shortValue": "Own AI; vendors unnamed"
+    },
+    {
+      "field": "byom",
+      "value": "Bringing your own key is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Catch subscription",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "US$99 a month, billed monthly and cancellable at any time, with a ten-day free trial. One scheduling feature is free and needs no account",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "US$99/mo; 10-day trial"
+    },
+    {
+      "field": "hosting",
+      "value": "Provider cloud, with AWS Secrets Manager and key management named; no self-hosting",
+      "status": "documented",
+      "sourceIds": [
+        "ca-security"
+      ],
+      "shortValue": "Provider cloud"
+    },
+    {
+      "field": "api",
+      "value": "A public API is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "memory",
+      "value": "Described as adapting to your rhythm, priorities and preferences, with OAuth-scoped access to email and calendar; no memory viewer or editor is described",
+      "status": "limited",
+      "sourceIds": [
+        "ca-home",
+        "ca-security"
+      ],
+      "shortValue": "Adapts; not itemised"
+    },
+    {
+      "field": "portability",
+      "value": "No export is described; the security pages offer revocation of access and deletion on request",
+      "status": "limited",
+      "sourceIds": [
+        "ca-security"
+      ],
+      "shortValue": "Deletion only, no export"
+    },
+    {
+      "field": "security",
+      "value": "SOC 2 Type II and CASA Tier-2 are listed, and AI vendors are contractually barred from retaining or training on customer data",
+      "status": "documented",
+      "sourceIds": [
+        "ca-security"
+      ],
+      "shortValue": "SOC 2 Type II; no training"
+    },
+    {
+      "field": "availability",
+      "value": "Closed beta with limited spots, entered by answering a short eligibility questionnaire or joining a waiting list",
+      "status": "documented",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "shortValue": "Closed beta"
+    }
+  ],
+  "logo": {
+    "path": "./logos/catch.svg",
+    "sourceUrl": "https://www.catchagent.ai/favicon.svg",
+    "sourcePage": "https://www.catchagent.ai",
+    "kind": "product"
+  },
+  "platforms": [],
+  "color": "#1f1f1f",
+  "aliases": [
+    "Catch Agent"
+  ],
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "One of the four ways to chat with Catch.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Reachable through Messages; iMessage appears in the integration list.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "Listed among Catch's integrations.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Listed among Catch's integrations.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "service": "teams",
+      "status": "available",
+      "detail": "Listed among Catch's integrations.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Reachable by email, including copying it on a scheduling thread.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    }
+  ],
+  "access": {
+    "state": "waitlist",
+    "detail": "Closed beta with limited spots; entry is by a short eligibility questionnaire or a waiting list. One scheduling feature is free without an account.",
+    "sourceIds": [
+      "ca-home"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "status": "limited",
+      "detail": "Nothing runs on the user's machine; Catch acts through integrations and phone calls from its own cloud.",
+      "sourceIds": [
+        "ca-home"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted with no self-hosting option. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "ca-security"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "none",
+      "detail": "Access can be revoked and data deleted on request, but no export or portability right is described.",
+      "sourceIds": [
+        "ca-security"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Catch",
+      "price": "US$99/month",
+      "billing": "Billed monthly, cancel at any time; ten-day free trial",
+      "includes": [
+        "Works across all your calendars",
+        "Schedules meetings and drafts email in your voice",
+        "Outgoing phone calls",
+        "Unlimited tasks, reminders and integrations"
+      ],
+      "limits": [
+        "Closed beta: a spot must be available"
+      ],
+      "sourceIds": [
+        "ca-home"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "ca-about"
+    ]
+  },
+  "launches": []
+}

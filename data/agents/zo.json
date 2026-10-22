@@ -1,0 +1,481 @@
+{
+  "id": "zo",
+  "name": "Zo Computer",
+  "organization": "Zo Computer Company",
+  "website": "https://zo.computer",
+  "repository": null,
+  "category": "managed",
+  "summary": "A personal always-on cloud computer with a real filesystem, reachable over chat, text or email, which runs automations and can also host sites and services.",
+  "sources": [
+    {
+      "id": "zo-home",
+      "title": "Zo Computer official website",
+      "url": "https://zo.computer",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-pricing",
+      "title": "Zo pricing",
+      "url": "https://zo.computer/pricing",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-automations",
+      "title": "Zo automations",
+      "url": "https://www.zo.computer/automations",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-browser",
+      "title": "Zo browser guide",
+      "url": "https://www.zo.computer/guide/browser",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-devices",
+      "title": "Zo devices guide",
+      "url": "https://www.zo.computer/guide/devices",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-messaging",
+      "title": "Zo messaging channels",
+      "url": "https://www.zo.computer/guide/messaging-channels",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-desktop",
+      "title": "Zo desktop app",
+      "url": "https://www.zo.computer/guide/desktop",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-models",
+      "title": "Zo models",
+      "url": "https://www.zo.computer/models",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-byok",
+      "title": "Zo bring your own key",
+      "url": "https://www.zo.computer/guide/byok",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-api",
+      "title": "Zo API",
+      "url": "https://www.zo.computer/guide/api",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-privacy",
+      "title": "Zo privacy policy",
+      "url": "https://www.zo.computer/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "zo-team",
+      "title": "Zo team",
+      "url": "https://www.zo.computer/team",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "An always-on cloud computer of your own with a 100 GB filesystem that keeps running with your laptop closed, and can host sites and services on custom domains",
+      "status": "documented",
+      "sourceIds": [
+        "zo-home",
+        "zo-automations",
+        "zo-pricing"
+      ],
+      "shortValue": "Your own always-on computer"
+    },
+    {
+      "field": "computerUse",
+      "value": "Runs its own Chromium on your Zo workspace; the desktop app's Devices feature can additionally drive your physical computer, with separate opt-in for browser, shell and file access",
+      "status": "documented",
+      "sourceIds": [
+        "zo-browser",
+        "zo-devices"
+      ],
+      "shortValue": "Its machine, and optionally yours"
+    },
+    {
+      "field": "browserUse",
+      "value": "Its own Chromium streamed into a browser tab, where you sign in once and it can then act on those sites as you",
+      "status": "documented",
+      "sourceIds": [
+        "zo-browser"
+      ],
+      "shortValue": "Its own Chromium, signed in"
+    },
+    {
+      "field": "voice",
+      "value": "A voice interface is not described",
+      "status": "unknown",
+      "sourceIds": []
+    },
+    {
+      "field": "scheduling",
+      "value": "Automations are described as a skill with a clock, triggered by events such as incoming email or file changes, by daily, weekly, monthly or custom schedules, or manually, and run even while your laptop is closed",
+      "status": "documented",
+      "sourceIds": [
+        "zo-automations"
+      ],
+      "shortValue": "Event and schedule automations"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Desktop apps for macOS, Windows and Linux with file sync",
+      "status": "documented",
+      "sourceIds": [
+        "zo-desktop"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Mobile access is through the web; no native mobile app is described",
+      "status": "limited",
+      "sourceIds": [
+        "zo-home"
+      ],
+      "shortValue": "Mobile web only"
+    },
+    {
+      "field": "channels",
+      "value": "Web interface and desktop apps, plus messaging channels and a personal email address",
+      "status": "documented",
+      "sourceIds": [
+        "zo-home",
+        "zo-messaging"
+      ],
+      "shortValue": "Web, desktop and chat"
+    },
+    {
+      "field": "models",
+      "value": "Anthropic, OpenAI, Google, xAI, DeepSeek, Moonshot, Z.ai, ByteDance, MiniMax and AssemblyAI; every model is unlocked on paid tiers",
+      "status": "documented",
+      "sourceIds": [
+        "zo-models",
+        "zo-pricing"
+      ],
+      "shortValue": "Ten providers"
+    },
+    {
+      "field": "byom",
+      "value": "Connect your own keys from OpenAI-compatible, Anthropic-compatible or Groq endpoints, and sign in to Codex and Gemini subscriptions",
+      "status": "documented",
+      "sourceIds": [
+        "zo-byok"
+      ],
+      "shortValue": "BYOK and subscription sign-in"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Zo subscription",
+      "status": "documented",
+      "sourceIds": [
+        "zo-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free fourteen-day trial, then Basic US$18/month with US$10 of AI credits, Pro US$64/month with US$40, and Ultra US$200/month with US$100. Every tier has a 100 GB disk",
+      "status": "documented",
+      "sourceIds": [
+        "zo-pricing"
+      ],
+      "shortValue": "US$18–200/mo after trial"
+    },
+    {
+      "field": "hosting",
+      "value": "Primarily an always-on computer in Zo's cloud; the desktop app can also connect your own machine",
+      "status": "documented",
+      "sourceIds": [
+        "zo-automations",
+        "zo-devices"
+      ],
+      "shortValue": "Zo cloud, plus your machine"
+    },
+    {
+      "field": "api",
+      "value": "A public API with a token from advanced settings",
+      "status": "documented",
+      "sourceIds": [
+        "zo-api"
+      ],
+      "shortValue": "Public API"
+    },
+    {
+      "field": "memory",
+      "value": "A persistent 100 GB filesystem with chat history, personas and rules; improved memory that remembers your work across sessions is a paid-tier feature, and files are directly browsable and editable",
+      "status": "documented",
+      "sourceIds": [
+        "zo-pricing",
+        "zo-home"
+      ],
+      "shortValue": "Persistent filesystem; paid recall"
+    },
+    {
+      "field": "portability",
+      "value": "A right to receive your data in a portable format by contacting the company, and ZIP archives from support after a trial ends; files themselves are directly downloadable",
+      "status": "limited",
+      "sourceIds": [
+        "zo-privacy",
+        "zo-pricing"
+      ],
+      "shortValue": "On request; files downloadable"
+    },
+    {
+      "field": "security",
+      "value": "The Devices feature requires separate opt-in for browser, shell and file access on your physical computer",
+      "status": "documented",
+      "sourceIds": [
+        "zo-devices"
+      ],
+      "shortValue": "Per-capability opt-in"
+    },
+    {
+      "field": "availability",
+      "value": "Open self-serve sign-up with a fourteen-day trial and no credit card required; after the trial, ordinary computer access ends without a subscription",
+      "status": "documented",
+      "sourceIds": [
+        "zo-pricing"
+      ],
+      "shortValue": "Public sign-up; 14-day trial"
+    }
+  ],
+  "logo": {
+    "path": "./logos/zo.png",
+    "sourceUrl": "https://zo.computer/favicon.png",
+    "sourcePage": "https://zo.computer",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Primary web interface.",
+      "sourceIds": [
+        "zo-home"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Desktop app with file sync and optional device control.",
+      "sourceIds": [
+        "zo-desktop",
+        "zo-devices"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Desktop app with file sync and optional device control.",
+      "sourceIds": [
+        "zo-desktop"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Desktop app for Linux, x64 and ARM.",
+      "sourceIds": [
+        "zo-desktop"
+      ]
+    }
+  ],
+  "color": "#111111",
+  "aliases": [
+    "Zo"
+  ],
+  "messaging": [
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Listed among Zo messaging channels.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Listed among Zo messaging channels.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Listed among Zo messaging channels.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    },
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "Listed among Zo messaging channels.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    },
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Listed on the Zo messaging page.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Each account gets a personal address at zo.computer.",
+      "sourceIds": [
+        "zo-messaging"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Open self-serve sign-up with a fourteen-day trial and no credit card; sustained use requires a subscription.",
+    "sourceIds": [
+      "zo-pricing"
+    ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "detail": "The desktop app's Devices feature runs commands on your physical machine, with separate opt-in for browser, shell and file access.",
+      "sourceIds": [
+        "zo-devices"
+      ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "remote": "takeover",
+      "detail": "An always-on cloud computer with its own Chromium, streamed into a browser tab where you can watch and take over.",
+      "sourceIds": [
+        "zo-browser",
+        "zo-automations"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Automations run on the Zo cloud computer even while your laptop is closed.",
+      "sourceIds": [
+        "zo-automations"
+      ]
+    }
+  },
+  "continuity": {
+    "worksWithoutVendor": {
+      "state": "no",
+      "status": "limited",
+      "detail": "Provider-hosted, so the computer and its filesystem depend on the vendor. The company has not published what happens if it shuts down.",
+      "sourceIds": [
+        "zo-automations"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A portability right exercised by contacting the company, and ZIP archives from support after a trial; individual files are directly downloadable.",
+      "sourceIds": [
+        "zo-privacy",
+        "zo-pricing"
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free trial",
+      "price": "US$0",
+      "billing": "Fourteen days, no credit card",
+      "includes": [
+        "100 GB disk",
+        "One hosted service"
+      ],
+      "limits": [
+        "Computer sleeps when you step away",
+        "Limited AI and no improved memory",
+        "Ordinary computer access ends after fourteen days"
+      ],
+      "sourceIds": [
+        "zo-pricing"
+      ]
+    },
+    {
+      "name": "Basic",
+      "price": "US$18/month",
+      "billing": "Monthly",
+      "includes": [
+        "Always on, with improved memory",
+        "US$10 a month of AI credits",
+        "Five services and three custom domains"
+      ],
+      "limits": [
+        "2 vCPU and 8 GB memory"
+      ],
+      "sourceIds": [
+        "zo-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$64/month",
+      "billing": "Monthly",
+      "includes": [
+        "US$40 a month of AI credits",
+        "Ten services and five custom domains",
+        "Priority support"
+      ],
+      "limits": [
+        "4 vCPU and 16 GB memory"
+      ],
+      "sourceIds": [
+        "zo-pricing"
+      ]
+    },
+    {
+      "name": "Ultra",
+      "price": "US$200/month",
+      "billing": "Monthly",
+      "includes": [
+        "US$100 a month of AI credits",
+        "Fifty services and ten custom domains"
+      ],
+      "limits": [
+        "8 vCPU and 32 GB memory"
+      ],
+      "sourceIds": [
+        "zo-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "zo-team"
+    ]
+  },
+  "launches": []
+}
