@@ -89,7 +89,7 @@ Use one entry per plan or add-on. Include currency, monthly versus annual billin
 
 - `worksWithoutVendor` — does it keep running if the company stops? `yes`, `partial`, or `no`.
 - `remoteDisable` — can the copy you already run be switched off by someone else? `none`, `possible`, or `required` (a licence or activation check).
-- `dataAfterExit` — what do you keep when you leave? `export`, `limited`, or `none`.
+- `dataAfterExit` — what do you keep when you leave? `self-serve` (you export it yourself in the product), `on-request` (the vendor sends a copy if you ask), `partial`, or `none`. Keep these apart: a privacy-rights email is not an export button, and most products only offer the former. Put retention periods after cancellation in the detail.
 
 ```json
 "continuity": {

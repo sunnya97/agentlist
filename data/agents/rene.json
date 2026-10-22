@@ -316,6 +316,13 @@
         "rene-models"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "Access, correction, export or deletion by contacting the company; no self-serve export, no format stated and no retention period after cancellation.",
+      "sourceIds": [
+        "rene-privacy"
+      ]
     }
   }
 }

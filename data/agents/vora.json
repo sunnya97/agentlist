@@ -416,7 +416,7 @@
       ]
     },
     "dataAfterExit": {
-      "state": "export",
+      "state": "self-serve",
       "detail": "Everything exports in open formats at any time, with no lock-in or exit fee described.",
       "sourceIds": [
         "vora-faq",

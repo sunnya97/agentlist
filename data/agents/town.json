@@ -72,6 +72,18 @@
       "title": "Town announces Series B financing and launch history",
       "url": "https://www.town.com/press/series-b",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-privacy",
+      "title": "Town privacy policy",
+      "url": "https://town.com/privacy-policy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "town-trust",
+      "title": "Town trust and data retention",
+      "url": "https://town.com/trust",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -445,6 +457,14 @@
         "town-models"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A privacy right to a machine-readable copy on request, not a self-serve export. Deleted data is soft-deleted immediately and permanently removed within 30 days.",
+      "sourceIds": [
+        "town-privacy",
+        "town-trust"
+      ]
     }
   }
 }

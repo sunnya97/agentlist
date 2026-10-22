@@ -390,7 +390,7 @@
       "status": "limited"
     },
     "dataAfterExit": {
-      "state": "export",
+      "state": "self-serve",
       "detail": "Everything can be exported, and the company states it deletes customer data within 30 days of cancellation.",
       "sourceIds": [
         "bond-pricing"

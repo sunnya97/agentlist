@@ -238,11 +238,17 @@
   "continuity": {
     "worksWithoutVendor": {
       "state": "no",
-      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "detail": "The terms contemplate cessation of the app and promise advance notice where practicable, but set out no data-rescue provision.",
+      "sourceIds": [
+        "skye-terms"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A portable copy by emailing the company. Most connected-service data is kept no longer than 90 days, memories until deletion is requested, and deletion requests are handled within 48 hours.",
       "sourceIds": [
         "skye-privacy"
-      ],
-      "status": "limited"
+      ]
     }
   }
 }

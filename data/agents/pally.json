@@ -248,6 +248,18 @@
       "title": "Pally company profile at Y Combinator",
       "url": "https://www.ycombinator.com/companies/pally",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-privacy",
+      "title": "Pally privacy policy",
+      "url": "https://pally.com/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "pally-terms",
+      "title": "Pally terms of service",
+      "url": "https://pally.com/terms",
+      "checkedAt": "2026-10-22"
     }
   ],
   "logo": {
@@ -326,6 +338,15 @@
       "detail": "Mac companion can read the screen, access granted folders and photos, control apps and run terminal commands. The Mac must be online.",
       "sourceIds": [
         "pally-mac"
+      ]
+    }
+  },
+  "continuity": {
+    "dataAfterExit": {
+      "state": "self-serve",
+      "detail": "The product lets you ask what it remembers, disconnect accounts, download your data and delete your account in-product. No format is stated, and no retention period is given for adult accounts.",
+      "sourceIds": [
+        "pally-privacy"
       ]
     }
   }

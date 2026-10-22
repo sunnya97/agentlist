@@ -304,11 +304,17 @@
   "continuity": {
     "worksWithoutVendor": {
       "state": "no",
-      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "detail": "The terms reserve the right to modify or discontinue all or any portion of the service at any time and without notice; data may transfer to a successor in a merger, bankruptcy or liquidation.",
       "sourceIds": [
         "wabi-privacy"
-      ],
-      "status": "limited"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A right to request a copy in a structured, commonly used, machine-readable format. Deleted accounts are deleted or anonymised within 30 days.",
+      "sourceIds": [
+        "wabi-privacy"
+      ]
     }
   }
 }

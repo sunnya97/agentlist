@@ -353,7 +353,7 @@
       "status": "limited"
     },
     "dataAfterExit": {
-      "state": "export",
+      "state": "self-serve",
       "detail": "Memories can be exported to a file and imported again.",
       "sourceIds": [
         "eney-privacy"

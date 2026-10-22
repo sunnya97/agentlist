@@ -279,5 +279,14 @@
       "tomo-home",
       "tomo-appstore"
     ]
+  },
+  "continuity": {
+    "dataAfterExit": {
+      "state": "none",
+      "detail": "Rights to request access, correction or deletion are described, but no export or portability right is. Deletion requests are processed within 30 days.",
+      "sourceIds": [
+        "tomo-privacy"
+      ]
+    }
   }
 }

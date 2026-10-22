@@ -206,7 +206,9 @@ test('continuity answers what happens when the product goes away',()=>{
   const hosted=data.agents.filter(a=>a.continuity?.worksWithoutVendor?.state==='no');
   assert(hosted.length,'expected hosted services');
   for(const a of hosted)assert(a.continuity.remoteDisable?.state!=='none',`${a.id} contradiction`);
-  assert(data.agents.some(a=>a.continuity?.dataAfterExit?.state==='export'),'some product documents a full export');
+  assert(data.agents.some(a=>a.continuity?.dataAfterExit?.state==='self-serve'),'some product offers a self-serve export');
+  // A privacy-rights request is not the same answer as an export button.
+  assert(data.agents.some(a=>a.continuity?.dataAfterExit?.state==='on-request'),'some product offers export only on request');
 });
 
 test('continuity records reject invalid states and impossible combinations',()=>{

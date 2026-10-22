@@ -524,7 +524,7 @@
       ]
     },
     "dataAfterExit": {
-      "state": "limited",
+      "state": "partial",
       "detail": "State lives on hardware you control, but a documented full export and restore path is not established.",
       "sourceIds": [
         "openclaw-readme"

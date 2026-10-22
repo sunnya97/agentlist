@@ -301,10 +301,10 @@
       "status": "limited"
     },
     "dataAfterExit": {
-      "state": "export",
-      "detail": "Export and deletion controls are offered for account content.",
+      "state": "on-request",
+      "detail": "A portable copy on request through a legal address, not a self-serve export. No retention period after deletion is stated.",
       "sourceIds": [
-        "persona-home"
+        "persona-privacy"
       ]
     }
   }

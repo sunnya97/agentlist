@@ -17,8 +17,9 @@ export const remoteDisable = {
 };
 
 export const dataAfterExit = {
-  export:'Full export',
-  limited:'Partial export',
+  'self-serve':'Export it yourself',
+  'on-request':'Export on request',
+  partial:'Partial export',
   none:'No export described'
 };
 

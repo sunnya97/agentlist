@@ -60,6 +60,12 @@
       "title": "Lindy’s first product announcement",
       "url": "https://www.lindy.ai/blog/meet-lindy",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-privacy",
+      "title": "Lindy privacy policy",
+      "url": "https://www.lindy.ai/privacy",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -337,6 +343,13 @@
         "lindy-home"
       ],
       "status": "limited"
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "Review, update or deletion by emailing a privacy address; no self-serve export, no stated format, and no retention period after cancellation.",
+      "sourceIds": [
+        "lindy-privacy"
+      ]
     }
   }
 }

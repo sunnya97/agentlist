@@ -365,11 +365,17 @@
   "continuity": {
     "worksWithoutVendor": {
       "state": "no",
-      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "detail": "Alone among hosted products here, the terms address discontinuation: where reasonable the company will say why and give users a chance to export their content.",
       "sourceIds": [
-        "pickle-home"
-      ],
-      "status": "limited"
+        "pickle-terms"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A copy of personal information on request. Account deletion starts immediately; diagnostic records go within 30 days, server logs within 90, and credential-use records are held in write-once storage until 365 days old.",
+      "sourceIds": [
+        "pickle-privacy"
+      ]
     }
   }
 }

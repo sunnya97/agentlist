@@ -352,7 +352,7 @@
       "status": "limited"
     },
     "dataAfterExit": {
-      "state": "limited",
+      "state": "partial",
       "detail": "Memory is held locally, but a portable agent-state export is unverified.",
       "sourceIds": [
         "underdog-home"

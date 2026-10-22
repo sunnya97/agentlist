@@ -54,6 +54,18 @@
       "title": "Poke joins Cognition",
       "url": "https://poke.com/docs/release-notes",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-privacy",
+      "title": "Poke privacy policy",
+      "url": "https://poke.com/privacy",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "poke-terms",
+      "title": "Poke terms of service",
+      "url": "https://poke.com/terms",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -343,11 +355,17 @@
   "continuity": {
     "worksWithoutVendor": {
       "state": "no",
-      "detail": "Provider-hosted, so the service depends on the vendor's servers. The company has not published what happens if it shuts down.",
+      "detail": "The terms reserve the right to \"change or stop providing the Service\" with or without prior notice, and set out no wind-down or data-rescue provision.",
       "sourceIds": [
-        "poke-home"
-      ],
-      "status": "limited"
+        "poke-terms"
+      ]
+    },
+    "dataAfterExit": {
+      "state": "on-request",
+      "detail": "A portability right to a structured, machine-readable copy on request, offered in the EEA, UK and Switzerland section only. No self-serve export and no stated retention period after deletion.",
+      "sourceIds": [
+        "poke-privacy"
+      ]
     }
   }
 }
