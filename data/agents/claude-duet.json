@@ -336,7 +336,7 @@
   "compute": {
     "agentComputer": {
       "state": "cloud",
-      "detail": "Own cloud computer; does not require your device to remain on.",
+      "detail": "Its own cloud computer. Whether you can watch or take over its screen is not specified.",
       "sourceIds": [
         "duet-launch"
       ]

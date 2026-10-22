@@ -494,7 +494,7 @@
       "platforms": [
         "macos"
       ],
-      "detail": "Controls local/paired Mac desktops and cloud desktops; Windows/Linux driver support is experimental.",
+      "detail": "Drives a local or paired Mac desktop; Windows and Linux driver support is experimental.",
       "sourceIds": [
         "openclaw-computer-use"
       ]

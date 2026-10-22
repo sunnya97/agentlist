@@ -370,7 +370,7 @@
   "compute": {
     "onYourComputer": {
       "state": "partial",
-      "detail": "Cloud agent; desktop control through the macOS app was announced, but completion of that rollout is not established by the reviewed sources.",
+      "detail": "Desktop control through the macOS app was announced, but completion of that rollout is not established by the sources reviewed.",
       "sourceIds": [
         "spark-evolution"
       ],
@@ -378,7 +378,7 @@
     },
     "agentComputer": {
       "state": "cloud",
-      "detail": "Dedicated Google Cloud virtual machines",
+      "detail": "Dedicated Google Cloud virtual machines. Whether you can watch or drive one is not specified.",
       "sourceIds": [
         "spark-keynote"
       ]

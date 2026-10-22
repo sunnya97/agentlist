@@ -330,7 +330,7 @@
   "compute": {
     "agentComputer": {
       "state": "cloud",
-      "detail": "Handoff runs on a personal cloud computer; published workflows focus on websites, not local desktop control.",
+      "detail": "A personal cloud computer runs Handoff tasks. Whether you can watch its screen is not specified.",
       "sourceIds": [
         "hark-home"
       ]

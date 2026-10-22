@@ -356,7 +356,7 @@
   "compute": {
     "agentComputer": {
       "state": "cloud",
-      "detail": "Uses its own computer for tasks; control of your local desktop is not specified.",
+      "detail": "A computer of its own, with isolated task execution. Whether you can watch it is not specified.",
       "sourceIds": [
         "pickle-terms"
       ]

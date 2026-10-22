@@ -302,7 +302,7 @@
   "compute": {
     "agentComputer": {
       "state": "cloud",
-      "detail": "Dedicated cloud virtual machine with browser, terminal, and files; local desktop control is not specified.",
+      "detail": "A dedicated secure virtual machine with its own browser. Whether you can watch it is not specified.",
       "sourceIds": [
         "muse-design"
       ]

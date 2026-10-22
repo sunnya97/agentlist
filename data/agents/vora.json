@@ -373,7 +373,7 @@
   "compute": {
     "onYourComputer": {
       "state": "none",
-      "detail": "Acts from its own appliance through connected accounts and a secure browser; it does not control your Mac or PC, and no remote interface onto the device's own screen is described",
+      "detail": "Nothing runs on your Mac or PC. The Aegis appliance is a separate machine that does the work itself.",
       "sourceIds": [
         "vora-home",
         "vora-faq"

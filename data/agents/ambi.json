@@ -303,7 +303,7 @@
   "compute": {
     "onYourComputer": {
       "state": "partial",
-      "detail": "Reads permitted conversations, screens and connected tools; full desktop control is not specified",
+      "detail": "Reads permitted conversations, screens and connected tools; full desktop control is not specified.",
       "sourceIds": [
         "ambi-home"
       ],

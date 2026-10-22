@@ -63,6 +63,6 @@ export const directoryViews = {
   models:{label:'Models & plans',fields:[['models','Models'],['byom','Bring your own model'],['bundledPlan','Bundled with'],['pricing','Cost']]},
   access:{label:'Apps & hardware',fields:[['nativeApps','Native apps'],['messaging','Messaging'],['hardware','Native hardware'],['api','Developer API']]},
   company:{label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Stage'],['funding','Disclosed funding'],['launchDate','Launch']]},
-  continuity:{label:'If it goes away',fields:[['worksWithoutVendor','If the vendor stops'],['remoteDisable','Remote shut-off'],['dataAfterExit','What you keep'],['license','Open source']]},
+  continuity:{label:'If it goes away',fields:[['worksWithoutVendor','If the vendor stops'],['hosting','Where it runs'],['dataAfterExit','What you keep'],['license','Open source']]},
   control:{label:'Ownership & control',fields:[['license','Open source'],['hosting','Where it runs'],['memory','Memory'],['scheduling','Background work']]}
 };

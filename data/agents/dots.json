@@ -411,7 +411,7 @@
   "compute": {
     "onYourComputer": {
       "state": "partial",
-      "detail": "Own cloud computer, plus optional access to a connected personal computer.",
+      "detail": "An optional connection to a personal computer, alongside the cloud machine it normally works on.",
       "sourceIds": [
         "dots-intro"
       ],
@@ -419,7 +419,7 @@
     },
     "agentComputer": {
       "state": "cloud",
-      "detail": "Managed cloud computer; optional connected devices",
+      "detail": "Its own cloud computer. Whether you can watch or take over its screen is not specified.",
       "sourceIds": [
         "dots-intro"
       ]

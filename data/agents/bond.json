@@ -361,7 +361,7 @@
   "compute": {
     "onYourComputer": {
       "state": "none",
-      "detail": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
+      "detail": "Nothing runs on your machine; it works only through connected app integrations.",
       "sourceIds": [
         "bond-home",
         "bond-pricing"
@@ -371,7 +371,7 @@
     "agentComputer": {
       "state": "none",
       "remote": "none",
-      "detail": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
+      "detail": "No machine of its own. It reads and writes through connected accounts rather than operating a computer.",
       "sourceIds": [
         "bond-home",
         "bond-pricing"

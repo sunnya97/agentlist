@@ -403,7 +403,7 @@
         "windows",
         "linux"
       ],
-      "detail": "Controls macOS, Windows, and Linux desktops; can target the host or a supported sandbox.",
+      "detail": "Drives the desktop on macOS, Windows and Linux, targeting either the host machine or a supported sandbox.",
       "sourceIds": [
         "hermes-computer-use"
       ]

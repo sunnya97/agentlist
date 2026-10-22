@@ -329,7 +329,7 @@
       "platforms": [
         "macos"
       ],
-      "detail": "Local Mac tools read files, run commands and act across connected apps.",
+      "detail": "Local tools on the Mac read files, run commands and act across connected apps.",
       "sourceIds": [
         "eney-privacy"
       ]
