@@ -4,7 +4,7 @@ import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js'
 import {channelLabels,channelIcons} from './channels.js';
 import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
 import {computeFacets,computeLabels,computeIcons,computeTone,computeSummary} from './compute.js';
-import {thirdPartyAccess,accessPaths} from './datasources.js';
+import {thirdPartyAccess,accessPaths,pathTone} from './datasources.js';
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=u=>{try{const p=new URL(u);return /^https?:$/.test(p.protocol)?esc(p.href):'#'}catch{return '#'}};
@@ -218,6 +218,19 @@ function companyFactsHTML(a){
   const access=a.access;
   return `<dl class="company-facts"><div><dt>Availability</dt><dd>${access?`${esc(accessSummary(access))}${sourceLinks(a,getClaim(a,'availability'))}${access.expected?`<small>Expected ${formatCatalogDate(access.expected)}</small>`:''}`:'—'}</dd></div><div><dt>Company</dt><dd>${esc(a.organization)}${company?sourceLinks(a,company):''}${company?`<small>${esc(companyTypes[company.type])}${company.parent?' · '+esc(company.parent):''}</small>`:''}</dd></div><div><dt>Company stage</dt><dd>${company?.stage?esc(company.stage):'—'}</dd></div><div><dt>Disclosed funding</dt><dd>${funding?`${esc(funding.amount)}${sourceLinks(a,funding)}<small>${esc(funding.round)} · ${formatCatalogDate(funding.date)}</small>${funding.note?`<small>${esc(funding.note)}</small>`:''}`:'—'}</dd></div><div><dt>Launch date</dt><dd>${launch?`${formatCatalogDate(launch.date)}${sourceLinks(a,launch)}<small>${launchKinds[launch.kind]}${launch.label?' · '+esc(launch.label):''}</small>`:'—'}</dd></div></dl>`;
 }
+function dataAccessHTML(a){
+  const list=a.dataAccess||[];
+  if(!list.length)return '';
+  const order={'first-party':0,'official-api':1,portability:2,automation:3,none:4};
+  return `<section class="profile-group"><h3>Data it can reach</h3><div class="reach-list">${[...list]
+    .sort((x,y)=>order[x.path]-order[y.path])
+    .map(entry=>{
+      const item=dataSourceById(entry.source);if(!item)return '';
+      return `<article class="reach-item"><div class="reach-head"><b>${esc(item.label)}</b><span class="reach-path reach-${pathTone[entry.path]}">${esc(accessPaths[entry.path])}</span></div>
+        <p>${esc(entry.detail)}${sourceLinks(a,entry)}</p>
+        <p class="reach-openness">${esc(thirdPartyAccess[item.thirdParty])} · ${esc(item.note)}</p></article>`;
+    }).join('')}</div></section>`;
+}
 function timelineHTML(a){
   if(!a.launches.length)return '';
   return `<section class="profile-group"><h3>Launch history</h3><ol class="profile-timeline">${[...a.launches].sort((x,y)=>y.date.localeCompare(x.date)).map(event=>`<li><time datetime="${event.date}">${formatCatalogDate(event.date)}</time><div><b>${esc(event.label||launchKinds[event.kind])}</b>${event.label?`<span class="launch-detail">${launchKinds[event.kind]}</span>`:''}${sourceLinks(a,event)}</div></li>`).join('')}</ol></section>`;
@@ -231,7 +244,7 @@ function renderProfile(id,tab='overview'){
   if(tab==='plans')content=`<div class="profile-section-heading"><h3>Plans & pricing</h3><span>Checked ${formatDate(data.checkedAt)}</span></div>${plansHTML(a)}`;
   else if(tab==='discussion')content=`${sentimentHTML(a)}<div class="profile-section-heading"><h3>In the conversation</h3>${data.repository?external(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('Discussion: '+a.name),'Add a thread ↗','read-more'):''}</div>${discussionHTML(a)}`;
   else if(tab==='sources')content=`<ol class="source-list">${a.sources.map(source=>`<li>${external(source.url,esc(source.title)+' ↗')} <span>· checked ${source.checkedAt}</span></li>`).join('')}</ol>`;
-  else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>`<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${group.fields.map(([key,label])=>`<section class="profile-field"><h4>${label}</h4>${key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`:claimHTML(a,key)}</section>`).join('')}</div></section>`).join('')}${timelineHTML(a)}`;
+  else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>`<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${group.fields.map(([key,label])=>`<section class="profile-field"><h4>${label}</h4>${key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`:claimHTML(a,key)}</section>`).join('')}</div></section>`).join('')}${dataAccessHTML(a)}${timelineHTML(a)}`;
   $('#main').innerHTML=`<article class="page agent-page"><nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="#directory">All agents</a><span aria-hidden="true">/</span><span>${esc(a.name)}</span></nav><header class="profile-header"><div class="profile-heading">${icon(a)}<div><h1>${esc(a.name)}</h1><small>${esc(a.organization)}</small></div></div>${tag(a)}<p class="profile-summary">${esc(a.summary)}</p>${a.identityNote?`<div class="disclosure">${esc(a.identityNote)}</div>`:''}${a.disclosure?`<div class="disclosure">${esc(a.disclosure)}</div>`:''}<div class="profile-actions">${external(a.website,'Official website ↗','button small')}${a.repository?external(a.repository,'Source code ↗','button small'):''}<button class="button small" data-profile-compare="${a.id}">${selected.includes(a.id)?'Remove from comparison':'Add to comparison ＋'}</button><button class="button small" data-watch="${a.id}" aria-pressed="${watchlist.includes(a.id)}">${watchlist.includes(a.id)?'★ Following':'☆ Follow updates'}</button>${data.repository?external(data.repository+'/edit/main/data/agents/'+a.id+'.json','Edit on GitHub ↗','button small ghost'):''}<button class="button small ghost" data-copy-profile="${a.id}">Copy link ↗</button></div>${companyFactsHTML(a)}</header><div class="profile-tabs" role="tablist" aria-label="Agent details">${tabs.map(([key,label])=>`<a href="${profileHref(a.id,key)}" role="tab" id="profile-tab-${key}" aria-controls="profile-panel" aria-selected="${key===tab}" tabindex="${key===tab?0:-1}" >${label}${key==='discussion'&&a.discussions.length?` <span>${a.discussions.length}</span>`:''}</a>`).join('')}</div><section id="profile-panel" role="tabpanel" aria-labelledby="profile-tab-${tab}">${content}</section></article>`;
 }
 function configureContributions(){
