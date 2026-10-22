@@ -58,6 +58,8 @@ dialog{border:0;border-radius:14px;padding:32px;color:var(--ink);width:min(860px
 .platform-icon.ctl-no{color:#cbd2dc}
 .platform-icon.ctl-unknown{color:#dfe4ec;border:1px dashed #e4e8ef;padding:4px}
 button.platform-icon.control-icon{cursor:pointer}
+#icon-tip{position:fixed;z-index:60;pointer-events:none;padding:4px 8px;border-radius:5px;background:#20242d;color:#fff;font-size:11px;line-height:1.45;white-space:nowrap;max-width:min(300px,calc(100vw - 16px));overflow:hidden;text-overflow:ellipsis;box-shadow:0 4px 14px rgba(24,30,45,.18)}
+.platform-more{cursor:default}.platform-more:focus-visible,.control-icon:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}
 #columns-popover{position:fixed;inset:auto;margin:0;width:min(420px,calc(100vw - 24px));max-height:70vh;overflow:auto;padding:16px;background:var(--paper);border:1px solid var(--line);border-radius:10px;color:var(--ink);box-shadow:0 12px 32px rgba(24,30,45,.13)}
 .columns-head{display:flex;align-items:baseline;justify-content:space-between}.columns-head h3{font-size:14px;font-weight:600}
 .columns-hint{font-size:11px;color:var(--muted);margin-top:2px}

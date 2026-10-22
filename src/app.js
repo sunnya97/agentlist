@@ -61,17 +61,18 @@ const iconListHTML=(a,kind,limit,empty)=>{
   const shown=list.slice(0,limit),rest=list.slice(limit);
   const button=(p,i)=>{
     const label=nameOf(p),state=p.status==='available'?'':` · ${platformStatusLabels[p.status]}`;
-    return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${i}:${kind}" aria-label="${esc(label+state)}" title="${esc(label+state+' — '+p.detail)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${iconOf(p)}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
+    return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${i}:${kind}" data-tip="${esc(label+state)}" aria-label="${esc(label+state)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${iconOf(p)}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
   };
-  const more=rest.length?`<span class="platform-more" title="${esc(rest.map(nameOf).join(', '))}">+${rest.length}</span>`:'';
+  const more=rest.length?`<span class="platform-more" data-tip="${esc(rest.map(nameOf).join(', '))}" tabindex="0">+${rest.length}</span>`:'';
   return `<div class="platform-list${isPlatform?'':' messaging-list'}">${shown.map(button).join('')}${more}</div>`;
 };
 const controlListHTML=a=>`<div class="platform-list control-list">${Object.keys(computeFacets).map(facet=>{
   const value=a.compute?.[facet],tone=computeTone(facet,value),label=computeLabels[facet];
   const summary=value?computeSummary(facet,value):'Not specified';
   const title=esc(`${label}: ${summary}`+(value?` — ${value.detail}`:''));
-  if(!value)return `<span class="platform-icon control-icon ctl-unknown" title="${title}" aria-label="${title}">${computeIcons[facet]}</span>`;
-  return `<button class="platform-icon control-icon ctl-${tone}" data-platform="${a.id}:${facet}:compute" title="${title}" aria-label="${title}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${computeIcons[facet]}</button>`;
+  const tip=esc(`${label}: ${summary}`);
+  if(!value)return `<span class="platform-icon control-icon ctl-unknown" data-tip="${tip}" aria-label="${tip}" tabindex="0">${computeIcons[facet]}</span>`;
+  return `<button class="platform-icon control-icon ctl-${tone}" data-platform="${a.id}:${facet}:compute" data-tip="${tip}" aria-label="${tip}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${computeIcons[facet]}</button>`;
 }).join('')}</div>`;
 const dataSourceById=id=>data.dataSources?.items.find(x=>x.id===id);
 const exclusiveReach=a=>(a.dataAccess||[]).filter(e=>e.path==='first-party'&&['closed','none'].includes(dataSourceById(e.source)?.thirdParty));
@@ -101,6 +102,27 @@ function toggleColumn(key){
   const panel=$('#columns-popover');
   if(panel.matches(':popover-open')){renderColumnsPicker();panel.showPopover()}
 }
+let tipTimer;
+function showTip(target){
+  const text=target.dataset.tip;if(!text)return;
+  const tip=$('#icon-tip');
+  tip.textContent=text;tip.hidden=false;
+  const rect=target.getBoundingClientRect(),width=tip.offsetWidth,height=tip.offsetHeight;
+  tip.style.left=`${Math.max(8,Math.min(rect.left+rect.width/2-width/2,innerWidth-width-8))}px`;
+  const above=rect.top-height-8;
+  tip.style.top=`${above>8?above:rect.bottom+8}px`;
+}
+function hideTip(){clearTimeout(tipTimer);$('#icon-tip').hidden=true}
+document.addEventListener('pointerover',e=>{
+  const target=e.target.closest?.('[data-tip]');
+  if(!target){hideTip();return}
+  clearTimeout(tipTimer);tipTimer=setTimeout(()=>showTip(target),60);
+});
+document.addEventListener('pointerdown',hideTip);
+document.addEventListener('focusout',hideTip);
+window.addEventListener('scroll',hideTip,true);
+// Keyboard users get the same label when an icon takes focus.
+document.addEventListener('focusin',e=>{const target=e.target.closest?.('[data-tip]');if(target)showTip(target);else hideTip()});
 function openPlatform(button){
   const [id,index,kind='platforms']=button.dataset.platform.split(':'),a=byId.get(id);
   const p=kind==='compute'?a?.compute?.[index]:a?.[kind]?.[Number(index)];if(!p)return;
