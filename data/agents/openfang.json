@@ -1,0 +1,230 @@
+{
+  "id": "openfang",
+  "name": "OpenFang",
+  "organization": "RightNow AI",
+  "summary": "A Rust agent operating system whose autonomous packages perform ongoing scheduled work.",
+  "website": "https://openfang.sh",
+  "repository": "https://github.com/RightNow-AI/openfang",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "openfang-readme",
+      "title": "OpenFang README",
+      "url": "https://raw.githubusercontent.com/RightNow-AI/openfang/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openfang-hermes",
+      "title": "OpenFang v0.6.0: Hermes-inspired capabilities",
+      "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.0",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openfang-desktop-app",
+      "title": "OpenFang desktop app",
+      "url": "https://github.com/RightNow-AI/openfang/blob/main/docs/desktop.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openfang-developer-api",
+      "title": "OpenFang API reference",
+      "url": "https://github.com/RightNow-AI/openfang/blob/main/docs/api-reference.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openfang-model-providers",
+      "title": "OpenFang LLM provider guide",
+      "url": "https://github.com/RightNow-AI/openfang/blob/main/docs/providers.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Prebuilt autonomous Hands for ongoing research, lead generation, browser tasks, and publishing workflows.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "shortValue": "Prebuilt scheduled research, sales, and browser agents"
+    },
+    {
+      "field": "browserUse",
+      "value": "Playwright browser automation with persistent sessions for forms and multi-step workflows.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "shortValue": "Playwright browser automation with saved sessions"
+    },
+    {
+      "field": "scheduling",
+      "value": "Autonomous Hands and scheduled agent runs.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native Tauri apps for macOS, Windows, and Linux.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-desktop-app"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "channels",
+      "value": "Messaging adapters including Telegram; browser dashboard.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "REST, WebSocket, and streaming APIs; also exposes an OpenAI-compatible chat endpoint.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-developer-api",
+        "openfang-readme"
+      ],
+      "shortValue": "REST + WebSocket + OpenAI-compatible chat API"
+    },
+    {
+      "field": "models",
+      "value": "Anthropic, Gemini, OpenAI-compatible providers, Ollama, vLLM.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Own provider keys or local Ollama, vLLM, and LM Studio servers.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-model-providers"
+      ],
+      "shortValue": "Own keys or local Ollama, vLLM, LM Studio"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted daemon and dashboard.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in encrypted credential vault for extensions; website-login autofill not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "shortValue": "Encrypted extension credential vault"
+    },
+    {
+      "field": "approvals",
+      "value": "Browser Hand requires approval before purchases; Twitter Hand queues posts for approval.",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "shortValue": "Approval before purchases and queued social posts"
+    },
+    {
+      "field": "memory",
+      "value": "SQLite persistence and vector embeddings.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Imports OpenClaw agents, history, skills, and configuration. Full state export / restore not verified.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "WASM sandbox, capability gates, audit chain; pre-1.0.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/openfang.png",
+    "sourceUrl": "https://raw.githubusercontent.com/RightNow-AI/openfang/main/crates/openfang-api/static/logo.png",
+    "sourcePage": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-api/static",
+    "kind": "product",
+    "note": "White mascot artwork intended for a dark background."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Messaging adapters including Telegram; browser dashboard.",
+      "sourceIds": [
+        "openfang-readme"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native Tauri apps for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "openfang-desktop-app"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Tauri apps for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "openfang-desktop-app"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Native Tauri apps for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "openfang-desktop-app"
+      ]
+    }
+  ],
+  "color": "#4e7d68",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

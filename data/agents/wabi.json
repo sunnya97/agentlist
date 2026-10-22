@@ -1,0 +1,275 @@
+{
+  "id": "wabi",
+  "name": "Wabi",
+  "organization": "Wabi, Inc.",
+  "summary": "A shared personal agent for friends and family, with group chats and custom apps built inside each conversation.",
+  "website": "https://wabi.ai/",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "wabi-home",
+      "title": "Wabi personal assistant",
+      "url": "https://wabi.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "wabi-manifesto",
+      "title": "Wabi manifesto",
+      "url": "https://wabi.ai/manifesto",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "wabi-download",
+      "title": "Download Wabi",
+      "url": "https://wabi.ai/download",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "wabi-privacy",
+      "title": "Wabi privacy notice",
+      "url": "https://wabi.ai/privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "wabi-appstore",
+      "title": "Wabi official App Store listing",
+      "url": "https://apps.apple.com/us/app/wabi-ai-assistant/id6747768928",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "A shared agent that turns group conversations into plans, trackers, bookings and custom mini-apps.",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-home",
+        "wabi-appstore"
+      ],
+      "shortValue": "Shared agent with in-chat apps"
+    },
+    {
+      "field": "computerUse",
+      "value": "Hosted browser sessions; Mac app can read permitted screen and file context, but general desktop control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Cloud browser + permitted Mac context"
+    },
+    {
+      "field": "browserUse",
+      "value": "Hosted browser sessions complete tasks on websites",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-privacy"
+      ]
+    },
+    {
+      "field": "voice",
+      "value": "Voice input and voice/video calls; Mac screen sharing during a call",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Voice/video calls and Mac screen sharing"
+    },
+    {
+      "field": "scheduling",
+      "value": "Proactive updates; optional location-triggered help; recurring schedules unverified",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-appstore",
+        "wabi-privacy"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS app; Windows and Linux apps not specified",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-download",
+        "wabi-privacy"
+      ],
+      "shortValue": "macOS"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-download"
+      ]
+    },
+    {
+      "field": "channels",
+      "value": "iOS, Android, Mac; group conversations",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-home",
+        "wabi-download"
+      ]
+    },
+    {
+      "field": "models",
+      "value": "Google, Anthropic and OpenAI; specific models not listed",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Google, Anthropic and OpenAI"
+    },
+    {
+      "field": "byom",
+      "value": "Uses Google, Anthropic and OpenAI providers; personal inference keys are not specified",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Models included; BYO keys not specified"
+    },
+    {
+      "field": "pricing",
+      "value": "Free App Store download; no public tier or usage-limit table.",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-appstore"
+      ],
+      "shortValue": "Free download"
+    },
+    {
+      "field": "hosting",
+      "value": "Cloud service and hosted browsers, with permitted local context from the Mac app",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Cloud + Mac context"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in Wallet encrypts saved credentials and releases them after device authentication",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Encrypted Wallet; device unlock required"
+    },
+    {
+      "field": "approvals",
+      "value": "Checks before important actions; Mac Messages sends require approval; Wallet requires device authentication",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-appstore",
+        "wabi-privacy"
+      ],
+      "shortValue": "Action approvals and device-unlocked Wallet"
+    },
+    {
+      "field": "memory",
+      "value": "Persistent personal memory; retained while account is active",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-manifesto",
+        "wabi-privacy"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Can import conversation history and preferences from other assistants; full state export not specified",
+      "status": "limited",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "shortValue": "Assistant-history import"
+    },
+    {
+      "field": "security",
+      "value": "Approval boundaries; connected-account content excluded from model training",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-appstore",
+        "wabi-privacy"
+      ]
+    },
+    {
+      "field": "availability",
+      "value": "iOS, Android, and Mac downloads listed",
+      "status": "documented",
+      "sourceIds": [
+        "wabi-download"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/wabi.svg",
+    "sourceUrl": "https://wabi.ai/icon0.svg",
+    "sourcePage": "https://wabi.ai/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS app; Windows and Linux apps not specified",
+      "sourceIds": [
+        "wabi-download",
+        "wabi-privacy"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS and Android apps",
+      "sourceIds": [
+        "wabi-download"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native iOS and Android apps",
+      "sourceIds": [
+        "wabi-download"
+      ]
+    }
+  ],
+  "color": "#5e8985",
+  "aliases": [
+    "Wabi 2.0"
+  ],
+  "plans": [
+    {
+      "name": "Wabi",
+      "price": "Free download",
+      "billing": "App Store",
+      "includes": [
+        "Group conversations and generated mini-apps"
+      ],
+      "limits": [
+        "Public usage limits are not listed"
+      ],
+      "sourceIds": [
+        "wabi-appstore"
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Replika 2? Wabi",
+      "url": "https://www.reddit.com/r/replika/comments/1xaid4i/replika_2_wabi/",
+      "platform": "Reddit",
+      "date": "2026-10-20",
+      "summary": "Early users welcome the agentic update and wider platform access, and describe building apps together.",
+      "sentiment": "positive",
+      "kind": "community"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

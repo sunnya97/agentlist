@@ -1,0 +1,197 @@
+{
+  "id": "nanoclaw",
+  "name": "NanoClaw",
+  "organization": "nanocoai",
+  "summary": "A customizable personal assistant running individual agents in isolated containers.",
+  "website": "https://nanoclaw.dev",
+  "repository": "https://github.com/nanocoai/nanoclaw",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "nanoclaw-readme",
+      "title": "NanoClaw README",
+      "url": "https://raw.githubusercontent.com/nanocoai/nanoclaw/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-repo",
+      "title": "NanoClaw official repository and license",
+      "url": "https://github.com/nanocoai/nanoclaw",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-browser-skill",
+      "title": "NanoClaw bundled browser automation",
+      "url": "https://github.com/nanocoai/nanoclaw/blob/main/container/skills/agent-browser/SKILL.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-adapter-api",
+      "title": "NanoClaw channel adapter interface",
+      "url": "https://github.com/nanocoai/nanoclaw/blob/main/docs/api-details.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanoclaw-approval-tools",
+      "title": "NanoClaw approval-gated tools",
+      "url": "https://github.com/nanocoai/nanoclaw/blob/main/src/modules/approvals/agent.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Separate agent containers and reusable agent templates containing instructions, tools, and skills.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "shortValue": "Separate agent containers + reusable templates"
+    },
+    {
+      "field": "browserUse",
+      "value": "Bundled agent-browser skill opens pages, clicks, fills forms, and captures screenshots inside the agent container.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-browser-skill"
+      ],
+      "shortValue": "Browser automation inside the agent container"
+    },
+    {
+      "field": "scheduling",
+      "value": "Recurring tasks with optional script gates.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "channels",
+      "value": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "MCP tools and a TypeScript channel-adapter interface; public REST API not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "nanoclaw-readme",
+        "nanoclaw-adapter-api"
+      ],
+      "shortValue": "Tool/adapter interfaces; REST API not specified"
+    },
+    {
+      "field": "models",
+      "value": "Claude default; optional Codex, OpenCode, Cursor, or Ollama.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Anthropic-compatible endpoints, optional Codex/OpenCode/Cursor providers, and local Ollama models.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "shortValue": "Own endpoints; multiple providers; local Ollama"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Optional Codex provider uses a ChatGPT subscription; optional Cursor provider uses a Cursor account.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "shortValue": "ChatGPT or Cursor accounts via optional providers"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "nanoclaw-repo"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted Docker on macOS, Linux, or WSL2.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Separate credential gateway, currently OneCLI Agent Vault; injects API credentials outside agent containers.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "shortValue": "OneCLI Agent Vault credential-gateway integration"
+    },
+    {
+      "field": "approvals",
+      "value": "Admin approval for package installs and MCP additions; the credential gateway can gate credentialed requests.",
+      "status": "documented",
+      "sourceIds": [
+        "nanoclaw-approval-tools"
+      ],
+      "shortValue": "Admin approval for agent changes and credential access"
+    },
+    {
+      "field": "memory",
+      "value": "Separate per-agent workspace, instructions, and memory.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "User-customized code forks; reusable agent templates. Full state export / restore not verified.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Container filesystem isolation and credential gateway.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/nanoclaw.png",
+    "sourceUrl": "https://nanoclaw.dev/favicon-192x192.png",
+    "sourcePage": "https://nanoclaw.dev",
+    "kind": "product",
+    "note": "Official NanoClaw mascot icon."
+  },
+  "platforms": [],
+  "color": "#a28349",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

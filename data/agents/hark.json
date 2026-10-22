@@ -1,0 +1,286 @@
+{
+  "id": "hark",
+  "name": "Hark Pro",
+  "organization": "Hark Labs",
+  "summary": "A personal agent combining a continuing conversation, memory, and a cloud browser called Handoff.",
+  "website": "https://hark.com",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "hark-using",
+      "title": "Using Hark Pro \u00b7 Hark",
+      "url": "https://hark.com/using-hark",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-pricing",
+      "title": "Hark subscriptions",
+      "url": "https://hark.com/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-home",
+      "title": "Hark Pro product overview",
+      "url": "https://hark.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hark-launch",
+      "title": "Introducing Hark Pro",
+      "url": "https://hark.com/articles/introducing-hark-pro",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Action Buttons handle suggested chores in one tap; custom Panels are mini-apps built inside Hark.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "shortValue": "Action Buttons \u00b7 custom mini-apps"
+    },
+    {
+      "field": "computerUse",
+      "value": "Handoff runs on a personal cloud computer; published workflows focus on websites, not local desktop control.",
+      "status": "limited",
+      "sourceIds": [
+        "hark-home"
+      ],
+      "shortValue": "Cloud computer for web tasks"
+    },
+    {
+      "field": "browserUse",
+      "value": "Full cloud browser can sign in, complete forms, and place orders.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "shortValue": "Cloud browser for real web tasks"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled tasks and reusable Specialties",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Web app on desktop; the product lists no native desktop app.",
+      "status": "limited",
+      "sourceIds": [
+        "hark-launch"
+      ],
+      "shortValue": "Web on desktop"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-launch"
+      ],
+      "shortValue": "iOS \u00b7 Android"
+    },
+    {
+      "field": "channels",
+      "value": "Hark app and web",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Service includes model usage; free and paid plans differ in usage allowance. BYO keys are not listed.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-pricing"
+      ],
+      "shortValue": "Usage included; BYO not listed"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Hark subscription: free tier and paid usage upgrades.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-pricing"
+      ],
+      "shortValue": "Standalone Hark plans"
+    },
+    {
+      "field": "pricing",
+      "value": "Free usage cap; $20 / $100 monthly tiers increase usage",
+      "sourceIds": [
+        "hark-pricing"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Managed cloud computer through Handoff",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in Secured by Hark vault stores encrypted logins and payment details; values are supplied only to the destination page.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "shortValue": "Built-in encrypted login + payment vault"
+    },
+    {
+      "field": "approvals",
+      "value": "Checks in before actions requiring your approval; user-facing Action Buttons can authorize suggested chores.",
+      "status": "documented",
+      "sourceIds": [
+        "hark-home"
+      ],
+      "shortValue": "Action approvals + one-tap action cards"
+    },
+    {
+      "field": "memory",
+      "value": "Conversation memory; ask it to forget",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Memory deletion documented; export not verified",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Action Buttons and user-directed Handoffs; full control policy not assessed",
+      "sourceIds": [
+        "hark-using"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "availability",
+      "value": "Free and paid plans",
+      "sourceIds": [
+        "hark-pricing"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/hark.png",
+    "sourceUrl": "https://hark.com/images/favicon-dark.png",
+    "sourcePage": "https://hark.com",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web app on desktop; the product lists no native desktop app.",
+      "sourceIds": [
+        "hark-launch"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS and Android apps.",
+      "sourceIds": [
+        "hark-launch"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native iOS and Android apps.",
+      "sourceIds": [
+        "hark-launch"
+      ]
+    }
+  ],
+  "color": "#6b80a1",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Hark Pro",
+      "price": "US$0",
+      "billing": "Free",
+      "includes": [
+        "Every product feature; no ads"
+      ],
+      "limits": [
+        "Base usage allowance"
+      ],
+      "sourceIds": [
+        "hark-pricing"
+      ]
+    },
+    {
+      "name": "Hark Pro\u00b2",
+      "price": "US$20/month",
+      "billing": "Monthly",
+      "includes": [
+        "Same features as Free"
+      ],
+      "limits": [
+        "Twice the base usage"
+      ],
+      "sourceIds": [
+        "hark-pricing"
+      ]
+    },
+    {
+      "name": "Hark Pro\u00b3",
+      "price": "US$100/month",
+      "billing": "Monthly",
+      "includes": [
+        "Same features as Free"
+      ],
+      "limits": [
+        "Ten times the base usage"
+      ],
+      "sourceIds": [
+        "hark-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 5024,
+    "positiveUserWeeks": 959,
+    "negativeUserWeeks": 621,
+    "positiveShare": 60.7,
+    "channels": [
+      "App Store",
+      "Play Store",
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

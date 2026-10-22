@@ -1,0 +1,260 @@
+{
+  "plans": [
+    {
+      "name": "Persona",
+      "price": "Free",
+      "billing": "No subscription",
+      "includes": [
+        "Messaging and task service"
+      ],
+      "limits": [
+        "Public usage caps are not listed"
+      ],
+      "sourceIds": [
+        "persona-band"
+      ]
+    },
+    {
+      "name": "Persona Band",
+      "price": "$179",
+      "billing": "One-time early-bird purchase",
+      "includes": [
+        "Band, black strap, charging dock and cable"
+      ],
+      "limits": [
+        "Shipping December 2026"
+      ],
+      "sourceIds": [
+        "persona-band"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ios",
+      "detail": "iPhone app listed in the Band FAQ.",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "android",
+      "detail": "Android app listed in the Band FAQ.",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "web",
+      "detail": "Web account dashboard.",
+      "sourceIds": [
+        "persona-home"
+      ],
+      "status": "limited"
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "announced",
+    "name": "Persona Band",
+    "detail": "Optional wristband with microphones and speaker. $179 early-bird; December 2026 shipping. Software works without it.",
+    "sourceIds": [
+      "persona-band"
+    ]
+  },
+  "id": "persona",
+  "name": "Persona",
+  "organization": "Iris Assistant, Inc.",
+  "summary": "A personal agent for messages, calls and errands, with an optional voice-activated wristband.",
+  "website": "https://yourpersona.com/",
+  "repository": null,
+  "category": "managed",
+  "aliases": [
+    "yourpersona",
+    "@yourpersona"
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Handles calls, appointments and purchases from messaging or an optional Band.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-terms",
+        "persona-band"
+      ],
+      "shortValue": "Calls and errands, with optional wristband"
+    },
+    {
+      "field": "browserUse",
+      "value": "Operates a browser inside authorized services to complete tasks.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-privacy"
+      ]
+    },
+    {
+      "field": "computerUse",
+      "value": "Browser-based tasks; general desktop control is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "persona-privacy"
+      ],
+      "shortValue": "Browser-based tasks"
+    },
+    {
+      "field": "mobileApps",
+      "value": "iPhone and Android apps are listed in the official FAQ.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "shortValue": "iOS and Android"
+    },
+    {
+      "field": "channels",
+      "value": "iMessage, WhatsApp and a web dashboard.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-band",
+        "persona-home"
+      ]
+    },
+    {
+      "field": "voice",
+      "value": "Outbound calls; the announced Band uses press/wrist activation, not continuous listening.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "shortValue": "Calls; push-to-talk Band"
+    },
+    {
+      "field": "scheduling",
+      "value": "Standing instructions support reminders, mail triage and tasks that continue in the background.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-terms"
+      ]
+    },
+    {
+      "field": "passwordManager",
+      "value": "Stores authorized passwords, tokens and browser sessions; a user-facing vault is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "persona-privacy"
+      ],
+      "shortValue": "Stored credentials and sessions"
+    },
+    {
+      "field": "approvals",
+      "value": "FAQ promises approval for spending and messages; terms also allow transactions under standing authority.",
+      "status": "limited",
+      "sourceIds": [
+        "persona-band",
+        "persona-terms"
+      ],
+      "shortValue": "Approvals and standing authority"
+    },
+    {
+      "field": "memory",
+      "value": "Persistent context from conversations, connected accounts and earlier tasks.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-privacy"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Export and deletion controls for account content.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-home"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed service using cloud infrastructure and third-party AI providers.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-privacy"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Encrypted in transit and at rest; the company reports SOC 2 Type I certification.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-home"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Software is free; optional Band costs $179 at the early-bird price.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "shortValue": "Free; optional $179 Band"
+    },
+    {
+      "field": "availability",
+      "value": "Messaging service available; Band ships in December 2026.",
+      "status": "documented",
+      "sourceIds": [
+        "persona-band"
+      ]
+    },
+    {
+      "field": "hardware",
+      "value": "Optional Persona Band wrist device, announced for December 2026.",
+      "status": "limited",
+      "sourceIds": [
+        "persona-band"
+      ],
+      "shortValue": "Persona Band, shipping December"
+    },
+    {
+      "field": "license",
+      "value": "Proprietary software under a limited personal license.",
+      "shortValue": "Proprietary",
+      "status": "documented",
+      "sourceIds": [
+        "persona-terms"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "persona-home",
+      "title": "Persona personal intelligence",
+      "url": "https://yourpersona.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "persona-band",
+      "title": "Persona Band, pricing and FAQ",
+      "url": "https://yourpersona.com/band",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "persona-privacy",
+      "title": "Persona privacy policy",
+      "url": "https://yourpersona.com/legal/privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "persona-terms",
+      "title": "Persona terms of service",
+      "url": "https://yourpersona.com/legal/terms",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/persona.svg",
+    "sourceUrl": "https://yourpersona.com/icon.svg",
+    "sourcePage": "https://yourpersona.com/",
+    "kind": "product"
+  }
+}

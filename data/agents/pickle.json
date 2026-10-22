@@ -1,0 +1,332 @@
+{
+  "plans": [
+    {
+      "name": "Plus",
+      "price": "$20/month",
+      "billing": "Monthly; renews automatically",
+      "includes": [
+        "470 usage credits each week",
+        "Chat, calls and tasks"
+      ],
+      "limits": [
+        "Resets Monday, 4 AM Pacific",
+        "Scheduled tasks pause when credits run out"
+      ],
+      "sourceIds": [
+        "pickle-plans",
+        "pickle-usage"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "$50/month",
+      "billing": "Monthly; renews automatically",
+      "includes": [
+        "1,170 usage credits each week",
+        "Chat, calls and tasks"
+      ],
+      "limits": [
+        "Resets Monday, 4 AM Pacific",
+        "Scheduled tasks pause when credits run out"
+      ],
+      "sourceIds": [
+        "pickle-plans",
+        "pickle-usage"
+      ]
+    },
+    {
+      "name": "Max",
+      "price": "$100/month",
+      "billing": "Monthly; renews automatically",
+      "includes": [
+        "2,330 usage credits each week",
+        "Chat, calls and tasks"
+      ],
+      "limits": [
+        "Resets Monday, 4 AM Pacific",
+        "Scheduled tasks pause when credits run out"
+      ],
+      "sourceIds": [
+        "pickle-plans",
+        "pickle-usage"
+      ]
+    },
+    {
+      "name": "Ultra",
+      "price": "$200/month",
+      "billing": "Monthly; renews automatically",
+      "includes": [
+        "4,670 usage credits each week",
+        "Chat, calls and tasks"
+      ],
+      "limits": [
+        "Resets Monday, 4 AM Pacific",
+        "Scheduled tasks pause when credits run out"
+      ],
+      "sourceIds": [
+        "pickle-plans",
+        "pickle-usage"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ios",
+      "detail": "Pickle iPhone app.",
+      "sourceIds": [
+        "pickle-appstore"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "android",
+      "detail": "Android is marked coming soon on the English homepage.",
+      "sourceIds": [
+        "pickle-home"
+      ],
+      "status": "announced"
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "Pickle 1 glasses",
+    "detail": "Previously announced glasses. An earlier official page says batch-one refunds are being processed; the current site focuses on the app.",
+    "sourceIds": [
+      "pickle-glasses",
+      "pickle-home"
+    ]
+  },
+  "id": "pickle",
+  "name": "Pickle",
+  "organization": "Pickle, Inc.",
+  "summary": "An AI character with its own browser, outbound phone calls, a credential Vault, and agent-to-agent conversations.",
+  "website": "https://www.pickle.com/",
+  "repository": null,
+  "category": "managed",
+  "aliases": [],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "AI character that calls businesses, uses websites and coordinates with friends\u2019 Pickles.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-start"
+      ],
+      "shortValue": "Character, calls and agent-to-agent coordination"
+    },
+    {
+      "field": "computerUse",
+      "value": "Uses its own computer for tasks; control of your local desktop is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "pickle-terms"
+      ],
+      "shortValue": "Agent computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Navigates websites, completes forms and checkout; you can watch or take over.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore"
+      ],
+      "shortValue": "Browser with live takeover"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in Vault keeps passwords and card details encrypted separately from the model.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-privacy"
+      ],
+      "shortValue": "Encrypted credential and payment Vault"
+    },
+    {
+      "field": "mobileApps",
+      "value": "iPhone app available; Android marked coming soon.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore",
+        "pickle-home"
+      ],
+      "shortValue": "iOS; Android coming soon"
+    },
+    {
+      "field": "channels",
+      "value": "Text and voice within the Pickle app; phone calls.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore"
+      ]
+    },
+    {
+      "field": "voice",
+      "value": "In-app voice conversations and outbound calls to businesses.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "One-time and repeating daily, weekly or monthly tasks.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-scheduled"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "Requests approval for purchases, bookings and irreversible actions.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "Remembers conversations; memories can be read, edited and deleted in Bubbles.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-start"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Memory editing and deletion; full state export is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "pickle-start"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed service with isolated task execution.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-home"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Secrets bypass the model. Authorized staff may review conversations; the policy excludes advertising and model training.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-access"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "AI processing comes with a usage plan; personal model keys are not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "pickle-plans",
+        "pickle-access"
+      ]
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Pickle subscription.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-plans"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Plus $20, Pro $50, Max $100, Ultra $200 per month; weekly credit allowances.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-plans"
+      ],
+      "shortValue": "From $20/month"
+    },
+    {
+      "field": "availability",
+      "value": "iPhone app; 18 and older.",
+      "status": "documented",
+      "sourceIds": [
+        "pickle-appstore",
+        "pickle-start"
+      ]
+    },
+    {
+      "field": "hardware",
+      "value": "Pickle 1 glasses were announced; batch-one refunds were noted, and current availability is unclear.",
+      "status": "limited",
+      "sourceIds": [
+        "pickle-glasses"
+      ],
+      "shortValue": "Pickle 1: availability unclear"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pickle-home",
+      "title": "Pickle personal agent",
+      "url": "https://www.pickle.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-appstore",
+      "title": "Pickle iPhone app",
+      "url": "https://apps.apple.com/us/app/pickle-your-personal-ai-agent/id6795790129",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-start",
+      "title": "What is Pickle?",
+      "url": "https://www.pickle.com/help/start/what-is-pickle",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-plans",
+      "title": "Pickle plans and weekly allowances",
+      "url": "https://www.pickle.com/help/credits/plans",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-usage",
+      "title": "Pickle usage credits and limits",
+      "url": "https://www.pickle.com/help/credits/usage-credits",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-scheduled",
+      "title": "Pickle scheduled tasks",
+      "url": "https://www.pickle.com/help/tasks/scheduled",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-privacy",
+      "title": "How Pickle protects your privacy",
+      "url": "https://pickle.com/how-your-pickle-protects-your-privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-access",
+      "title": "Who can see your information?",
+      "url": "https://www.pickle.com/help/privacy/who-can-see",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-terms",
+      "title": "Pickle terms of service",
+      "url": "https://www.pickle.com/terms-of-service",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pickle-glasses",
+      "title": "Pickle 1 hardware announcement and refund notice",
+      "url": "https://www.pickle.com/?pubDate=20260102",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/pickle.png",
+    "sourceUrl": "https://www.pickle.com/favicon.png",
+    "sourcePage": "https://www.pickle.com/",
+    "kind": "product"
+  }
+}

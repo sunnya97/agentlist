@@ -1,0 +1,264 @@
+{
+  "id": "gemini-spark",
+  "name": "Gemini Spark",
+  "organization": "Google",
+  "summary": "A cloud personal agent connected to Workspace, designed to work in the background under user direction.",
+  "website": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "spark-intro",
+      "title": "Workspace updates \u00b7 Google",
+      "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-keynote",
+      "title": "Google I/O 2026 keynote \u00b7 Google",
+      "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-india",
+      "title": "Gemini Spark in India \u00b7 Google",
+      "url": "https://blog.google/intl/en-in/company-news/technology/introducing-gemini-spark-your-247-personal-ai-agent-in-country/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-evolution",
+      "title": "The Gemini app becomes more agentic",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-chrome",
+      "title": "Gemini Spark now integrates with Chrome",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-ios",
+      "title": "Manage Gemini tasks on iPhone and iPad",
+      "url": "https://support.google.com/gemini/answer/17094196?co=GENIE.Platform%3DiOS&hl=en",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "spark-android",
+      "title": "Manage Gemini tasks on Android",
+      "url": "https://support.google.com/gemini/answer/17094196?co=GENIE.Platform%3DAndroid&hl=en",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Deep Gmail, Docs, and Sheets integration; trigger workflows from incoming email.",
+      "status": "documented",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "shortValue": "Google Workspace \u00b7 email-triggered tasks"
+    },
+    {
+      "field": "computerUse",
+      "value": "Cloud agent; desktop control through the macOS app was announced, but completion of that rollout is not established by the reviewed sources.",
+      "status": "limited",
+      "sourceIds": [
+        "spark-evolution"
+      ],
+      "shortValue": "Cloud agent; local desktop rollout unclear"
+    },
+    {
+      "field": "browserUse",
+      "value": "Chrome auto browse works with signed-in accounts; the feature initially rolled out in the US.",
+      "status": "limited",
+      "sourceIds": [
+        "spark-chrome"
+      ],
+      "shortValue": "Chrome auto browse; regional rollout"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled and email-triggered tasks",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Gemini has a macOS app; Spark support was announced as a later rollout. Web access is available.",
+      "status": "limited",
+      "sourceIds": [
+        "spark-evolution"
+      ],
+      "shortValue": "Web; macOS Spark rollout unclear"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Task management in the Gemini apps for iOS and Android; account and feature availability apply.",
+      "status": "limited",
+      "sourceIds": [
+        "spark-ios",
+        "spark-android"
+      ],
+      "shortValue": "iOS \u00b7 Android"
+    },
+    {
+      "field": "channels",
+      "value": "Gemini app with Workspace integrations",
+      "sourceIds": [
+        "spark-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "Gemini 3.6 Flash in July rollout",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Gemini model usage included through Google AI plans; BYO model keys are not listed for Spark.",
+      "status": "documented",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "shortValue": "Gemini included; BYO not listed"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included with eligible Google AI Pro and Ultra subscriptions.",
+      "status": "documented",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "shortValue": "Google AI Pro / Ultra"
+    },
+    {
+      "field": "pricing",
+      "value": "Eligible Google AI Pro / Ultra subscription",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Dedicated Google Cloud virtual machines",
+      "sourceIds": [
+        "spark-keynote"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Uses saved passwords through Chrome with permission; no separate Spark vault is described.",
+      "status": "limited",
+      "sourceIds": [
+        "spark-chrome"
+      ],
+      "shortValue": "Chrome saved-password integration"
+    },
+    {
+      "field": "approvals",
+      "value": "Asks before sensitive actions such as spending money or sending email; Chrome hands sensitive steps back to you.",
+      "status": "documented",
+      "sourceIds": [
+        "spark-india",
+        "spark-chrome"
+      ],
+      "shortValue": "Approval for sending + spending"
+    },
+    {
+      "field": "security",
+      "value": "User-controlled connections; approval for high-stakes actions",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Regional rollout; confirm account eligibility",
+      "sourceIds": [
+        "spark-india"
+      ],
+      "status": "limited"
+    }
+  ],
+  "logo": {
+    "path": "./logos/gemini-spark.png",
+    "sourceUrl": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+    "sourcePage": "https://gemini.google.com/",
+    "kind": "product",
+    "note": "Gemini product-family mark; a distinct Spark icon was not located."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Gemini has a macOS app; Spark support was announced as a later rollout. Web access is available.",
+      "sourceIds": [
+        "spark-evolution"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "announced",
+      "detail": "Gemini has a macOS app; Spark support was announced as a later rollout. Web access is available.",
+      "sourceIds": [
+        "spark-evolution"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "limited",
+      "detail": "Task management in the Gemini apps for iOS and Android; account and feature availability apply.",
+      "sourceIds": [
+        "spark-ios",
+        "spark-android"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "limited",
+      "detail": "Task management in the Gemini apps for iOS and Android; account and feature availability apply.",
+      "sourceIds": [
+        "spark-ios",
+        "spark-android"
+      ]
+    }
+  ],
+  "color": "#4d7ca0",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 3981,
+    "positiveUserWeeks": 457,
+    "negativeUserWeeks": 449,
+    "positiveShare": 50.4,
+    "channels": [
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

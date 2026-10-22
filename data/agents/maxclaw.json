@@ -1,0 +1,131 @@
+{
+  "id": "maxclaw",
+  "name": "MaxClaw",
+  "organization": "MiniMax",
+  "summary": "A managed cloud assistant built on OpenClaw with integrated tools and expert agents.",
+  "website": "https://agent.minimax.io/max-claw",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "maxclaw-overview",
+      "title": "MaxClaw official cloud agent overview",
+      "url": "https://agent.minimax.io/activity/max-claw",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "50 GB cloud workspace plus custom expert agents built with natural language and visual tools.",
+      "status": "documented",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "shortValue": "50 GB workspace + custom expert-agent builder"
+    },
+    {
+      "field": "browserUse",
+      "value": "Built-in browser actions for multi-step tasks in the hosted agent.",
+      "status": "documented",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "shortValue": "Built-in browser actions"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled monitoring, recurring data collection, and automatic reports.",
+      "status": "documented",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "shortValue": "Scheduled monitoring, reports, and recurring collection"
+    },
+    {
+      "field": "channels",
+      "value": "Web, mobile, Telegram, Discord, Slack.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "MiniMax M2.7, according to product FAQ.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "MiniMax model access is included without separate API setup; own-model support is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "shortValue": "MiniMax included; own-model support unspecified"
+    },
+    {
+      "field": "pricing",
+      "value": "$19/month is listed on the official MaxClaw page.",
+      "status": "documented",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "shortValue": "$19/month"
+    },
+    {
+      "field": "hosting",
+      "value": "MiniMax-managed cloud, continuously available.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "memory",
+      "value": "Long-term memory and cloud workspace.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available as a hosted subscription.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/maxclaw.png",
+    "sourceUrl": "https://agent.minimax.io/assets/logo/apple-touch_v2.png?v=5",
+    "sourcePage": "https://agent.minimax.io/max-claw",
+    "kind": "organization",
+    "note": "Official MiniMax Agent icon used on MaxClaw; a distinct MaxClaw mark was not found."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web, mobile, Telegram, Discord, Slack.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    }
+  ],
+  "color": "#817aa2",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

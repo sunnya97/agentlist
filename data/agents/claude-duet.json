@@ -1,0 +1,295 @@
+{
+  "id": "claude-duet",
+  "name": "Claude Duet",
+  "organization": "Anthropic",
+  "summary": "A proactive agent for ongoing professional work, daily briefings, and tasks that continue while you are away.",
+  "website": "https://claude.com/product/claude-duet",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "duet-product",
+      "title": "Claude Duet preview access and shared usage",
+      "url": "https://claude.com/product/claude-duet",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "duet-launch",
+      "title": "Introducing Claude Duet",
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-plans",
+      "title": "Choose a Claude plan",
+      "url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-max",
+      "title": "Claude Max pricing and usage limits",
+      "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-api-credits",
+      "title": "Monthly API credits bundled with Claude Max",
+      "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Morning work briefings; carries over Claude memory, skills, and connected apps.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "Morning briefings \u00b7 shared Claude context"
+    },
+    {
+      "field": "computerUse",
+      "value": "Own cloud computer; does not require your device to remain on.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "shortValue": "Cloud computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Uses its own cloud browser; viewing or taking over that browser is not yet available.",
+      "status": "limited",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "shortValue": "Cloud browser; no live browser view yet"
+    },
+    {
+      "field": "voice",
+      "value": "Voice messages in the ongoing conversation; ambient listening is not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "Voice messaging"
+    },
+    {
+      "field": "scheduling",
+      "value": "Daily briefs and background checks",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Desktop web at claude.ai; no native Duet desktop app is listed.",
+      "status": "limited",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "Web on desktop"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Standalone Duet apps for iOS and Android.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "iOS \u00b7 Android"
+    },
+    {
+      "field": "channels",
+      "value": "Web, iOS, Android; text and voice",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "Claude Opus 5.5",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Opus 5.5 is included through the Claude subscription; no BYO-model option is listed.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "Claude included; BYO not listed"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included in Claude Pro and Max during the US research preview; shares Claude usage limits.",
+      "status": "limited",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "shortValue": "Claude Pro / Max"
+    },
+    {
+      "field": "pricing",
+      "value": "US research preview included in Claude Pro (US$20/month or US$200/year) and Max (US$100 or US$200/month). Duet's background work shares Claude plan usage.",
+      "shortValue": "Claude Pro US$20/mo; Max US$100\u2013200/mo",
+      "status": "documented",
+      "sourceIds": [
+        "duet-product",
+        "claude-plans"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed cloud computer",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Credential isolation is built in. 1Password saved-login integration is announced as coming soon.",
+      "status": "limited",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "shortValue": "Isolated credentials; 1Password planned"
+    },
+    {
+      "field": "approvals",
+      "value": "Waits before sending, paying, signing, or deleting; some financial actions remain unavailable.",
+      "status": "documented",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "shortValue": "Approval before sending, paying or deleting"
+    },
+    {
+      "field": "memory",
+      "value": "Claude account memory, skills, and one ongoing thread",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "security",
+      "value": "Approval before sensitive actions; visible activity",
+      "sourceIds": [
+        "duet-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "US Pro / Max waitlist research preview",
+      "sourceIds": [
+        "duet-launch"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/claude-duet.svg",
+    "sourceUrl": "https://claude.com/static/claude-duet/app-icon.svg",
+    "sourcePage": "https://claude.com/product/claude-duet",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Desktop web at claude.ai; no native Duet desktop app is listed.",
+      "sourceIds": [
+        "duet-product"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Standalone Duet apps for iOS and Android.",
+      "sourceIds": [
+        "duet-product"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Standalone Duet apps for iOS and Android.",
+      "sourceIds": [
+        "duet-product"
+      ]
+    }
+  ],
+  "color": "#b76b4e",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Claude Pro",
+      "price": "US$20/month",
+      "billing": "Monthly, or US$200/year",
+      "includes": [
+        "Duet research preview in the US",
+        "Claude subscription and Claude Code"
+      ],
+      "limits": [
+        "Waitlist applies",
+        "Duet tasks and background checks share Claude usage limits"
+      ],
+      "sourceIds": [
+        "duet-product",
+        "claude-plans"
+      ]
+    },
+    {
+      "name": "Claude Max 5x",
+      "price": "US$100/month",
+      "billing": "Monthly web subscription",
+      "includes": [
+        "Duet preview; five times Pro's session allowance",
+        "US$100/month in claimable Claude Platform API credits"
+      ],
+      "limits": [
+        "Claude session and weekly limits apply",
+        "API credits require seven days on the plan; do not extend Duet usage"
+      ],
+      "sourceIds": [
+        "duet-product",
+        "claude-max",
+        "claude-api-credits"
+      ]
+    },
+    {
+      "name": "Claude Max 20x",
+      "price": "US$200/month",
+      "billing": "Monthly web subscription",
+      "includes": [
+        "Duet preview; twenty times Pro's session allowance",
+        "US$200/month in claimable Claude Platform API credits"
+      ],
+      "limits": [
+        "Claude session and weekly limits apply",
+        "API credits require seven days on the plan; do not extend Duet usage"
+      ],
+      "sourceIds": [
+        "duet-product",
+        "claude-max",
+        "claude-api-credits"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

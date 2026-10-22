@@ -1,0 +1,34 @@
+{
+  "id": "example-agent",
+  "name": "Example Agent",
+  "organization": "Example",
+  "summary": "Describe the agent and its distinctive capabilities.",
+  "website": "https://example.com",
+  "repository": null,
+  "category": "managed",
+  "aliases": [],
+  "logo": {
+    "path": "./logos/example-agent.png",
+    "sourceUrl": "https://example.com/logo.png",
+    "sourcePage": "https://example.com",
+    "kind": "product"
+  },
+  "claims": [],
+  "sources": [
+    {
+      "id": "example-home",
+      "title": "Example official website",
+      "url": "https://example.com",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "platforms": [],
+  "plans": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "discussions": []
+}

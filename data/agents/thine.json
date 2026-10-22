@@ -1,0 +1,232 @@
+{
+  "plans": [
+    {
+      "name": "Recorder",
+      "price": "Free",
+      "billing": "Free for life",
+      "includes": [
+        "Unlimited recording and transcription",
+        "Retain recordings, transcripts and notes"
+      ],
+      "limits": [
+        "AI chat and speaker tagging require Intelligence."
+      ],
+      "sourceIds": [
+        "thine-recorder"
+      ]
+    },
+    {
+      "name": "Intelligence",
+      "price": "$14.99/month",
+      "billing": "Optional monthly subscription",
+      "includes": [
+        "AI chat about recordings",
+        "Speaker identification",
+        "50+ app integrations, including Google, Teams and Outlook"
+      ],
+      "limits": [
+        "Cancelling removes paid features; recording and transcripts remain available."
+      ],
+      "sourceIds": [
+        "thine-recorder"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native app for Apple Silicon Macs with macOS 15+.",
+      "sourceIds": [
+        "thine-mac"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iPhone app; iOS 26+.",
+      "sourceIds": [
+        "thine-app"
+      ]
+    },
+    {
+      "platform": "watchos",
+      "status": "available",
+      "detail": "Apple Watch companion; watchOS 11+.",
+      "sourceIds": [
+        "thine-app"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "id": "thine",
+  "name": "Thine",
+  "organization": "Foyer Tech",
+  "website": "https://www.thine.com/",
+  "summary": "A conversation-memory assistant that records speech and meetings, then uses the shared context for questions, notes and connected-app actions.",
+  "repository": null,
+  "category": "managed",
+  "aliases": [
+    "Thine AI"
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "A shared memory across recordings and chats, with speaker identification and calendar-aware conversations.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-recorder"
+      ],
+      "shortValue": "Conversation memory"
+    },
+    {
+      "field": "voice",
+      "value": "Background recording on iPhone, natural voice conversation, and automatic Mac meeting capture using microphone and system audio.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-recorder",
+        "thine-mac"
+      ],
+      "shortValue": "Ambient audio & meetings"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native Mac app for Apple Silicon with macOS 15+; Windows is not yet available.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-mac"
+      ],
+      "shortValue": "macOS \u00b7 Apple Silicon"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone app requires iOS 26+; Apple Watch companion requires watchOS 11+.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-app"
+      ],
+      "shortValue": "iPhone \u00b7 Apple Watch"
+    },
+    {
+      "field": "models",
+      "value": "OpenAI, Anthropic and Google provide transcription, summaries, chat and context processing.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-privacy"
+      ],
+      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Google"
+    },
+    {
+      "field": "pricing",
+      "value": "Unlimited recording and transcription are free. Optional Intelligence costs $14.99/month for AI chat, speaker identification and integrations.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-recorder"
+      ],
+      "shortValue": "Free \u00b7 $14.99/month"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "One Thine account and plan carries across iPhone and Mac.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-mac"
+      ],
+      "shortValue": "iPhone + Mac"
+    },
+    {
+      "field": "memory",
+      "value": "Recordings and conversations share persistent memory; facts and relationship storage require explicit permission.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-recorder",
+        "thine-privacy"
+      ],
+      "shortValue": "Recordings + chat memory"
+    },
+    {
+      "field": "hosting",
+      "value": "Stores data with Google Cloud and Cloudflare and uses external AI processing.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-privacy"
+      ],
+      "shortValue": "Cloud-backed apps"
+    },
+    {
+      "field": "approvals",
+      "value": "Mac capture has a countdown and can be skipped or disabled. External AI processing and memory require consent.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-mac",
+        "thine-privacy"
+      ],
+      "shortValue": "Recording & processing controls"
+    },
+    {
+      "field": "portability",
+      "value": "Delete recordings and transcripts; request account and memory deletion through support.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-privacy"
+      ],
+      "shortValue": "Recording & memory deletion"
+    },
+    {
+      "field": "security",
+      "value": "Data encrypted in transit and at rest; the provider says personal data is not used for model training.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-privacy"
+      ],
+      "shortValue": "Encryption; no training"
+    },
+    {
+      "field": "availability",
+      "value": "iPhone and Mac apps are available.",
+      "status": "documented",
+      "sourceIds": [
+        "thine-mac"
+      ],
+      "shortValue": "Available"
+    }
+  ],
+  "sources": [
+    {
+      "id": "thine-recorder",
+      "title": "Thine Recorder and Intelligence pricing",
+      "url": "https://www.thine.com/recorder",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "thine-mac",
+      "title": "Thine for Mac",
+      "url": "https://www.thine.com/desktop",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "thine-app",
+      "title": "Thine AI on the App Store",
+      "url": "https://apps.apple.com/us/app/thine-ai/id6757556695",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "thine-privacy",
+      "title": "Thine privacy policy",
+      "url": "https://www.thine.com/privacy-policy",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/thine.png",
+    "sourceUrl": "https://www.thine.com/apple-touch-icon.png",
+    "sourcePage": "https://www.thine.com/",
+    "kind": "product"
+  }
+}

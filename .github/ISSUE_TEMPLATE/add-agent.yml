@@ -1,0 +1,34 @@
+name: Add an agent
+description: Suggest a persistent personal agent for the directory.
+title: "Add: "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Agent name
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: features
+    attributes:
+      label: What makes it useful?
+      description: Memory, background tasks, computer use, native apps, hardware, or another distinctive feature. Links to official documentation help.
+    validations:
+      required: true
+  - type: textarea
+    id: plans
+    attributes:
+      label: Plans and pricing
+      description: Link to the current pricing page. Include billing interval and usage limits if known.
+  - type: textarea
+    id: discussion
+    attributes:
+      label: Discussion or reviews
+      description: Link to useful conversations from people who have used it.

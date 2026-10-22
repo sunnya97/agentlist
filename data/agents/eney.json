@@ -1,0 +1,289 @@
+{
+  "plans": [
+    {
+      "name": "Trial",
+      "price": "Free",
+      "billing": "One trial",
+      "includes": [
+        "10,000 AI credits"
+      ],
+      "limits": [
+        "Ends after 14 days or when credits run out"
+      ],
+      "sourceIds": [
+        "eney-terms"
+      ]
+    },
+    {
+      "name": "Starter",
+      "price": "$14.99/month",
+      "billing": "USD, billed monthly; tax included",
+      "includes": [
+        "10,000 AI credits per month"
+      ],
+      "limits": [
+        "Unused monthly credits do not roll over"
+      ],
+      "sourceIds": [
+        "eney-home"
+      ]
+    },
+    {
+      "name": "Boost",
+      "price": "$29.99/month",
+      "billing": "USD, billed monthly; tax included",
+      "includes": [
+        "25,000 AI credits per month"
+      ],
+      "limits": [
+        "Unused monthly credits do not roll over"
+      ],
+      "sourceIds": [
+        "eney-home"
+      ]
+    },
+    {
+      "name": "Power",
+      "price": "$49.99/month",
+      "billing": "USD, billed monthly; tax included",
+      "includes": [
+        "50,000 AI credits per month"
+      ],
+      "limits": [
+        "Unused monthly credits do not roll over"
+      ],
+      "sourceIds": [
+        "eney-home"
+      ]
+    },
+    {
+      "name": "Credit top-up",
+      "price": "Shown at checkout",
+      "billing": "One-time purchase",
+      "includes": [
+        "Additional Setapp AI credits"
+      ],
+      "limits": [
+        "12-month credit package"
+      ],
+      "sourceIds": [
+        "eney-terms"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "macos",
+      "detail": "Apple silicon; macOS 15 or later.",
+      "sourceIds": [
+        "eney-home"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "ios",
+      "detail": "Available on the iPhone App Store.",
+      "sourceIds": [
+        "eney-home"
+      ],
+      "status": "available"
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "No dedicated hardware is specified in the reviewed product pages.",
+    "sourceIds": []
+  },
+  "id": "eney",
+  "name": "Eney",
+  "organization": "MacPaw",
+  "summary": "A Mac and iPhone assistant that handles app and file tasks, captures meeting notes, and suggests what to do next.",
+  "website": "https://eney.ai/",
+  "repository": null,
+  "category": "managed",
+  "aliases": [],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Mac-aware suggestions, screen selection with Eney Wand, meeting notes and ready-made workflows.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch"
+      ],
+      "shortValue": "Mac-aware actions, Wand and meeting notes"
+    },
+    {
+      "field": "computerUse",
+      "value": "Local Mac tools read files, run commands and act across connected apps.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "shortValue": "Local Mac tools and connected apps"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native Mac app; Apple silicon and macOS 15 or later.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-home"
+      ],
+      "shortValue": "macOS, Apple silicon"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone app.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-home"
+      ],
+      "shortValue": "iOS"
+    },
+    {
+      "field": "voice",
+      "value": "Voice input, read-aloud replies and meeting transcription.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch",
+        "eney-privacy"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "Workflows run on demand or on a schedule, including morning briefs and weekly reviews.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "Asks before writes by default; permitted read-only tools run without repeated approval.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "Mnemos stores memories locally and updates corrected or outdated facts.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch",
+        "eney-privacy"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Memories can be imported from a file and exported.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ]
+    },
+    {
+      "field": "models",
+      "value": "OpenAI for Fast mode; Claude for More thorough and iPhone; Gemini for image generation.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "shortValue": "OpenAI, Claude and Gemini"
+    },
+    {
+      "field": "byom",
+      "value": "Cloud models are supplied through the Setapp AI gateway; no local inference.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "shortValue": "Included cloud models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Uses Setapp AI credits; a Setapp app-library membership is not required.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch"
+      ],
+      "shortValue": "Setapp AI credits"
+    },
+    {
+      "field": "pricing",
+      "value": "14-day trial with 10,000 credits, then $14.99\u2013$49.99/month.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-home"
+      ],
+      "shortValue": "Trial, then from $14.99/month"
+    },
+    {
+      "field": "hosting",
+      "value": "Mac actions execute locally; model requests run in the cloud and signed-in chats sync.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "shortValue": "Local tools + cloud inference"
+    },
+    {
+      "field": "security",
+      "value": "Permission-based app/file access; provider training disabled; synced chats are not end-to-end encrypted.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-privacy"
+      ]
+    },
+    {
+      "field": "license",
+      "value": "Proprietary software under a limited, non-transferable license.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-terms"
+      ],
+      "shortValue": "Proprietary"
+    },
+    {
+      "field": "availability",
+      "value": "Available for Mac and iPhone; released October 15, 2026.",
+      "status": "documented",
+      "sourceIds": [
+        "eney-launch"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "eney-home",
+      "title": "Eney features, platforms and credit plans",
+      "url": "https://eney.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "eney-launch",
+      "title": "MacPaw launches Eney for Mac and iPhone",
+      "url": "https://macpaw.com/news/eney-announcement",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "eney-privacy",
+      "title": "Eney privacy notice",
+      "url": "https://macpaw.com/legal/eney-privacy-policy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "eney-terms",
+      "title": "Eney terms and credit rules",
+      "url": "https://macpaw.com/legal/eney-terms-of-service",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/eney.png",
+    "sourceUrl": "https://eney.ai/_next-icons/apple-icon.png",
+    "sourcePage": "https://eney.ai/",
+    "kind": "product"
+  }
+}

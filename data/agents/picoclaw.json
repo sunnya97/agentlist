@@ -1,0 +1,223 @@
+{
+  "id": "picoclaw",
+  "name": "PicoClaw",
+  "organization": "Sipeed",
+  "summary": "A Go personal assistant designed for small devices and diverse hardware.",
+  "website": "https://picoclaw.io",
+  "repository": "https://github.com/sipeed/picoclaw",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "picoclaw-readme",
+      "title": "PicoClaw README",
+      "url": "https://raw.githubusercontent.com/sipeed/picoclaw/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "picoclaw-browser-skill",
+      "title": "PicoClaw bundled browser skill",
+      "url": "https://github.com/sipeed/picoclaw/blob/main/workspace/skills/agent-browser/SKILL.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "picoclaw-approval-hooks",
+      "title": "PicoClaw hook system",
+      "url": "https://github.com/sipeed/picoclaw/blob/main/docs/architecture/hooks/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "picoclaw-speech-recognition",
+      "title": "PicoClaw speech recognition",
+      "url": "https://github.com/sipeed/picoclaw/blob/main/pkg/audio/asr/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "picoclaw-speech-synthesis",
+      "title": "PicoClaw speech synthesis",
+      "url": "https://github.com/sipeed/picoclaw/blob/main/pkg/audio/tts/README.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Lightweight Go runtime for small Linux boards, RISC-V devices, and older Android phones.",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "shortValue": "Runs on small boards, RISC-V, and Android phones"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browser automation through the bundled agent-browser skill.",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-browser-skill"
+      ],
+      "shortValue": "Bundled agent-browser automation skill"
+    },
+    {
+      "field": "voice",
+      "value": "Speech-to-text and text-to-speech using configured providers; ambient listening not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-speech-recognition",
+        "picoclaw-speech-synthesis"
+      ],
+      "shortValue": "Speech transcription + spoken output"
+    },
+    {
+      "field": "scheduling",
+      "value": "One-shot reminders, recurring tasks, and cron.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Launcher opens chat in your browser; Windows/Linux system-tray support. Not a separate native chat UI.",
+      "status": "limited",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "shortValue": "Browser launcher + Windows/Linux system tray"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Android APK runs PicoClaw on the phone; Termux is optional.",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "shortValue": "Android APK; agent runs on the phone"
+    },
+    {
+      "field": "channels",
+      "value": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "MCP client for external tools; a developer HTTP API is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "shortValue": "API not specified; MCP client available"
+    },
+    {
+      "field": "models",
+      "value": "Hosted providers plus Ollama and vLLM.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Own API keys for hosted providers, or local Ollama/vLLM servers.",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "shortValue": "Own API keys or local Ollama/vLLM"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted binary, Docker, or Android.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "approvals",
+      "value": "Extensible tool-approval hooks can allow or deny actions; setup is required.",
+      "status": "limited",
+      "sourceIds": [
+        "picoclaw-approval-hooks"
+      ],
+      "shortValue": "Configurable tool-approval hooks"
+    },
+    {
+      "field": "memory",
+      "value": "JSONL memory store.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Binaries for RISC-V, ARM, MIPS, and x86. Full state export / restore not verified.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Pre-1.0 security caveats; configurable isolation documented.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/picoclaw.png",
+    "sourceUrl": "https://picoclaw.io/icon.png",
+    "sourcePage": "https://picoclaw.io",
+    "kind": "product",
+    "note": "Official PicoClaw header icon."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Launcher opens chat in your browser; Windows/Linux system-tray support. Not a separate native chat UI.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Android APK runs PicoClaw on the phone; Termux is optional.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    }
+  ],
+  "color": "#687c4a",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

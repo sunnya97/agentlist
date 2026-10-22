@@ -1,0 +1,253 @@
+{
+  "plans": [
+    {
+      "name": "Free",
+      "price": "$0",
+      "billing": "Ongoing free plan",
+      "includes": [
+        "All connections and automations",
+        "Calls, personal number and email",
+        "Web research, bookings, purchases and memory",
+        "Trusted Pals sharing"
+      ],
+      "limits": [
+        "Usage allowance refills through the week; chat continues after the limit."
+      ],
+      "sourceIds": [
+        "pally-pricing"
+      ]
+    },
+    {
+      "name": "Cloud Mac",
+      "price": "Price not published",
+      "billing": "Optional paid add-on",
+      "includes": [
+        "Cloud Mac"
+      ],
+      "limits": [],
+      "sourceIds": [
+        "pally-pricing"
+      ]
+    },
+    {
+      "name": "VIP",
+      "price": "$1,000/month or $10,000/year",
+      "billing": "Monthly or annual subscription",
+      "includes": [
+        "Higher usage limits",
+        "Same AI models as Free"
+      ],
+      "limits": [
+        "Invitation only."
+      ],
+      "sourceIds": [
+        "pally-pricing"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Mac companion for screen, app, file and terminal access; macOS 13+.",
+      "sourceIds": [
+        "pally-mac"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "id": "pally",
+  "name": "Pally",
+  "organization": "Pally Technologies",
+  "website": "https://pally.com/",
+  "summary": "A personal assistant in messaging that remembers people, handles bookings and calls, and can work with your Mac or other people\u2019s Pallys.",
+  "repository": null,
+  "category": "managed",
+  "aliases": [
+    "Pally AI"
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Makes calls and handles bookings; Trusted Pals lets personal assistants coordinate with per-person sharing controls.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home"
+      ],
+      "shortValue": "Calls & Pally-to-Pally sharing"
+    },
+    {
+      "field": "computerUse",
+      "value": "Mac companion can read the screen, access granted folders and photos, control apps and run terminal commands. The Mac must be online.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-mac"
+      ],
+      "shortValue": "Mac screen & app control"
+    },
+    {
+      "field": "browserUse",
+      "value": "Completes website bookings and purchases.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-pricing"
+      ],
+      "shortValue": "Bookings & checkout"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Pally Mac companion requires macOS 13 or later.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-mac"
+      ],
+      "shortValue": "macOS companion"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Conversations use existing messaging apps; no separate Pally phone app.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home"
+      ],
+      "shortValue": "Messaging apps"
+    },
+    {
+      "field": "channels",
+      "value": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ],
+      "shortValue": "iMessage \u00b7 RCS \u00b7 WhatsApp \u00b7 Telegram"
+    },
+    {
+      "field": "api",
+      "value": "MCP server exposes message_pally and check_pally with OAuth 2.1; a general REST API is not described.",
+      "status": "limited",
+      "sourceIds": [
+        "pally-mcp"
+      ],
+      "shortValue": "MCP connector"
+    },
+    {
+      "field": "voice",
+      "value": "Call Pally or ask it to call businesses for bookings, quotes and follow-ups.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-facts"
+      ],
+      "shortValue": "Phone calls"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled and event-triggered automations, morning briefs, important-message alerts and reminders.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-pricing"
+      ],
+      "shortValue": "Time & event triggers"
+    },
+    {
+      "field": "pricing",
+      "value": "Free with a replenishing usage allowance. Cloud Mac is a paid add-on. Invite-only VIP costs $1,000/month or $10,000/year.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-pricing"
+      ],
+      "shortValue": "Free \u00b7 paid Cloud Mac"
+    },
+    {
+      "field": "approvals",
+      "value": "Checks before sends, bookings or purchases that were not already requested or approved; unrequested Mac changes need approval.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home",
+        "pally-mac"
+      ],
+      "shortValue": "Approval for unrequested actions"
+    },
+    {
+      "field": "memory",
+      "value": "Remembers people, plans and personal details; memory can be viewed and edited.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home"
+      ],
+      "shortValue": "Editable personal memory"
+    },
+    {
+      "field": "portability",
+      "value": "View and edit remembered information, revoke Mac permissions and delete the account.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home",
+        "pally-mac"
+      ],
+      "shortValue": "Memory & account controls"
+    },
+    {
+      "field": "security",
+      "value": "Publisher states encryption in transit and at rest.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-home"
+      ],
+      "shortValue": "Encryption in transit & at rest"
+    },
+    {
+      "field": "availability",
+      "value": "Free signup without a card, invitation or waitlist.",
+      "status": "documented",
+      "sourceIds": [
+        "pally-pricing"
+      ],
+      "shortValue": "Available"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pally-home",
+      "title": "Pally product overview",
+      "url": "https://pally.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-pricing",
+      "title": "Pally pricing and free plan",
+      "url": "https://pally.com/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-facts",
+      "title": "Pally official product facts",
+      "url": "https://pally.com/ai",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-mac",
+      "title": "Your Mac, from anywhere",
+      "url": "https://pally.com/recipes/your-mac-from-anywhere",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "pally-mcp",
+      "title": "Pally MCP server",
+      "url": "https://pally.com/mcp",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/pally.png",
+    "sourceUrl": "https://pally.com/brand/app-icon.png?v=2",
+    "sourcePage": "https://pally.com/",
+    "kind": "product"
+  }
+}

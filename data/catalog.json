@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 3,
+  "title": "Agentlist",
+  "edition": 1,
+  "checkedAt": "2026-10-21",
+  "disclosure": "Project creator affiliated with Ambi; uniform evidence rules and an editorial featured default order.",
+  "methodology": {
+    "documented": "Supported by official documentation; not independently tested.",
+    "limited": "Only partial or conditional support established.",
+    "unknown": "Not established by reviewed sources; does not mean unsupported.",
+    "news": "Curated snapshot; no automatic publishing."
+  },
+  "relationships": [
+    {
+      "from": "openclaw",
+      "to": "nanoclaw",
+      "type": "alternative",
+      "note": "NanoClaw positions itself as a smaller alternative to OpenClaw. This is a documented comparison, not proof of shared code or fork ancestry.",
+      "sourceUrl": "https://raw.githubusercontent.com/nanocoai/nanoclaw/main/README.md"
+    },
+    {
+      "from": "openclaw",
+      "to": "nanobot",
+      "type": "inspired",
+      "note": "The versioned v0.1.4.post6 README explicitly credits OpenClaw inspiration.",
+      "sourceUrl": "https://raw.githubusercontent.com/HKUDS/nanobot/v0.1.4.post6/README.md"
+    },
+    {
+      "from": "nanobot",
+      "to": "picoclaw",
+      "type": "inspired",
+      "note": "README explicitly credits nanobot inspiration and says PicoClaw was written from scratch, not forked.",
+      "sourceUrl": "https://raw.githubusercontent.com/sipeed/picoclaw/main/README.md"
+    },
+    {
+      "from": "openclaw",
+      "to": "ironclaw",
+      "type": "inspired",
+      "note": "README explicitly calls IronClaw an OpenClaw-inspired Rust reimplementation.",
+      "sourceUrl": "https://raw.githubusercontent.com/nearai/ironclaw/main/README.md"
+    },
+    {
+      "from": "openclaw",
+      "to": "kimi-claw",
+      "type": "built-on",
+      "note": "Kimi documents deploying OpenClaw in its cloud and connecting existing OpenClaw installations.",
+      "sourceUrl": "https://www.kimi.com/en/help/kimi-claw/overview"
+    },
+    {
+      "from": "openclaw",
+      "to": "maxclaw",
+      "type": "built-on",
+      "note": "MiniMax explicitly says MaxClaw is built on OpenClaw; this is a managed deployment relationship, not verified fork ancestry.",
+      "sourceUrl": "https://agent.minimax.io/activity/max-claw"
+    },
+    {
+      "from": "hermes",
+      "to": "openfang",
+      "type": "inspired",
+      "note": "OpenFang v0.6.0 credits three Hermes-inspired features. This edge records feature influence, not whole-runtime ancestry.",
+      "sourceUrl": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.0"
+    },
+    {
+      "from": "antigravity",
+      "to": "gemini-spark",
+      "type": "built-on",
+      "note": "Google identifies the Antigravity harness as part of Spark\u2019s execution stack at launch. This is a dependency, not a fork.",
+      "sourceUrl": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-10-21",
+      "title": "Claude Duet enters research preview",
+      "summary": "Anthropic opens a waitlist for a proactive personal agent, starting with US Pro and Max subscribers.",
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "agentIds": [
+        "claude-duet"
+      ],
+      "type": "launch",
+      "publisher": "Anthropic",
+      "id": "claude-duet-2026-10-21-00bdb3d5cf",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "OpenClaw publishes v2026.10.5",
+      "summary": "The GitHub release publishes the stable version and links its full changelog. The publication date differs from the version string.",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.5",
+      "agentIds": [
+        "openclaw"
+      ],
+      "id": "openclaw-2026-10-18-de33139494",
+      "type": "release",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Underdog adds a Windows beta",
+      "summary": "The official release log announces Windows availability for its local personal assistant.",
+      "url": "https://underdog.ai/ship",
+      "agentIds": [
+        "underdog"
+      ],
+      "type": "release",
+      "id": "underdog-2026-10-15-41fa03a016",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "title": "Eney launches for Mac and iPhone",
+      "url": "https://macpaw.com/news/eney-announcement",
+      "date": "2026-10-15",
+      "summary": "MacPaw releases Eney with proactive workflows, Mac tools and a 14-day credit trial.",
+      "type": "launch",
+      "agentIds": [
+        "eney"
+      ],
+      "checkedAt": "2026-10-21",
+      "id": "eney-2026-10-15-8865281f25"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Hermes v0.22.0 adds guided onboarding and local models",
+      "summary": "Release notes introduce conversational desktop setup, connectors, and a managed llama.cpp runtime. Notes date the release October 13; GitHub publication is October 14 UTC.",
+      "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0",
+      "agentIds": [
+        "hermes"
+      ],
+      "id": "hermes-2026-10-13-517434581b",
+      "type": "release",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Release-note date; GitHub publication was October 14 UTC."
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Underdog adds purchases through Link",
+      "summary": "Version 1.4.1 introduces purchases using a one-time Link card approved by the user.",
+      "url": "https://underdog.ai/ship",
+      "agentIds": [
+        "underdog"
+      ],
+      "type": "release",
+      "id": "underdog-2026-10-13-ff03f37c1d",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "title": "Skye rebuilds around a contextual home feed",
+      "url": "https://apps.apple.com/us/app/skye-personal-ai-agent/id6748042747",
+      "date": "2026-10-01",
+      "summary": "Version 1.0.8 introduces a rebuilt home-feed experience for the personal assistant.",
+      "type": "release",
+      "agentIds": [
+        "skye"
+      ],
+      "checkedAt": "2026-10-21",
+      "id": "skye-2026-10-01-f9ce3e5972"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Town 2.0 introduces conversation threads",
+      "summary": "Tasks become shareable threads, with updated approval behavior.",
+      "url": "https://www.town.com/updates",
+      "agentIds": [
+        "town"
+      ],
+      "type": "release",
+      "id": "town-2026-09-30-e54b65037d",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "OpenAI introduces Dots",
+      "summary": "The launch introduces ongoing personal agents with cloud computers, connected apps, and user-defined permissions.",
+      "url": "https://openai.com/index/introducing-dots/",
+      "agentIds": [
+        "dots"
+      ],
+      "type": "launch",
+      "publisher": "OpenAI",
+      "id": "dots-2026-09-29-f73b2774a7",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Wabi 3.0 becomes an AI messenger",
+      "summary": "The release adds group conversations, task assistance, proactive updates, and generated interfaces inside chats.",
+      "url": "https://apps.apple.com/us/app/wabi-ai-assistant/id6747768928",
+      "agentIds": [
+        "wabi"
+      ],
+      "type": "release",
+      "id": "wabi-2026-09-28-99c2f8ea06",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-15",
+      "title": "nanobot v0.3.5 unifies terminal and browser continuity",
+      "summary": "The release adds a native terminal client sharing saved conversations with the browser, plus improved automation views and session recovery.",
+      "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.5",
+      "agentIds": [
+        "nanobot"
+      ],
+      "id": "nanobot-2026-09-15-55c57b08b9",
+      "type": "release",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "title": "Lucas launches an encrypted credential Vault",
+      "url": "https://meetlucas.ai/updates/2026-09-15-introducing-vault/",
+      "date": "2026-09-15",
+      "summary": "Vault stores logins, cards and IDs for browser errands while keeping secret fields out of the agent model\u2019s context; purchases still require approval.",
+      "type": "release",
+      "agentIds": [
+        "lucas"
+      ],
+      "checkedAt": "2026-10-21",
+      "id": "lucas-2026-09-15-04aef367e2"
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Meta introduces Muse",
+      "summary": "Meta announces a personal agent in the Muse app and WhatsApp, running on a dedicated virtual machine.",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "agentIds": [
+        "muse"
+      ],
+      "type": "launch",
+      "publisher": "Meta",
+      "id": "muse-2026-09-08-c36278195b",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Grok Bot expands to more subscription plans",
+      "summary": "Access expands to SuperGrok, Cursor Pro, and Cursor Teams plans, with a separate Bot usage allowance.",
+      "url": "https://x.ai/news/grok-bot-more-plans",
+      "agentIds": [
+        "grok-bot"
+      ],
+      "type": "availability",
+      "publisher": "Grok",
+      "id": "grok-bot-2026-08-26-2614159a22",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Gemini Spark expands to India",
+      "summary": "Google announces a rollout for AI Pro subscribers and describes scheduled and event-driven Workspace tasks.",
+      "url": "https://blog.google/intl/en-in/company-news/technology/introducing-gemini-spark-your-247-personal-ai-agent-in-country/",
+      "agentIds": [
+        "gemini-spark"
+      ],
+      "type": "availability",
+      "publisher": "Google",
+      "id": "gemini-spark-2026-07-29-7ba3f6aa08",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "title": "Tomo launches its personal AI in iMessage",
+      "url": "https://www.tomo.ai/blog/introducing-tomo",
+      "date": "2026-06-25",
+      "summary": "Mapo Labs introduces a goal-focused personal AI with reminders, group chats and connected calendars.",
+      "type": "launch",
+      "agentIds": [
+        "tomo"
+      ],
+      "checkedAt": "2026-10-21",
+      "id": "tomo-2026-06-25-975e148c9f"
+    },
+    {
+      "date": "2026-04-19",
+      "title": "OpenFang v0.6.0 credits Hermes-inspired features",
+      "summary": "The release adds multi-destination cron delivery, skill configuration templates, and a shared slash-command registry.",
+      "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.0",
+      "agentIds": [
+        "openfang",
+        "hermes"
+      ],
+      "id": "openfang-2026-04-19-ab75d98e36",
+      "type": "release",
+      "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    }
+  ],
+  "externalNodes": [
+    {
+      "id": "antigravity",
+      "name": "Antigravity",
+      "category": "adjacent"
+    }
+  ],
+  "researchQueue": [
+    "Letta",
+    "Khoj",
+    "Agent Zero",
+    "Moltis",
+    "Copilot Autopilot",
+    "Manus",
+    "Alexa+",
+    "OpenClaw rename history",
+    "Verified Git fork ancestry",
+    "Permissions and memory export tests"
+  ],
+  "repository": "https://github.com/sunnya97/agentlist"
+}

@@ -1,0 +1,381 @@
+{
+  "id": "openclaw",
+  "name": "OpenClaw",
+  "organization": "OpenClaw Foundation",
+  "summary": "A persistent assistant gateway connecting your devices, tools, models, and chat channels.",
+  "website": "https://openclaw.ai",
+  "repository": "https://github.com/openclaw/openclaw",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "openclaw-readme",
+      "title": "OpenClaw README",
+      "url": "https://raw.githubusercontent.com/openclaw/openclaw/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-memory",
+      "title": "Memory overview",
+      "url": "https://docs.openclaw.ai/concepts/memory",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-scheduling",
+      "title": "Automations",
+      "url": "https://docs.openclaw.ai/automation/cron-jobs",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-computer-use",
+      "title": "OpenClaw computer use",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/computer-use.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-browser-use",
+      "title": "OpenClaw browser automation",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/browser.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-onepassword-plugin",
+      "title": "OpenClaw 1Password plugin",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/plugins/onepassword.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-vault-plugin",
+      "title": "OpenClaw HashiCorp Vault integration",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/plugins/vault.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-platform-apps",
+      "title": "OpenClaw platform apps",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/index.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-ios-app",
+      "title": "OpenClaw iOS app",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/ios.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-android-app",
+      "title": "OpenClaw Android app",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/android.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-developer-api",
+      "title": "OpenClaw HTTP API",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/openai-http-api.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-talk-mode",
+      "title": "OpenClaw Talk mode",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/talk.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "openclaw-command-approvals",
+      "title": "OpenClaw command approvals",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/exec-approvals.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "One persistent gateway connects messaging, device companions, and swappable model or coding-agent backends.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-readme",
+        "openclaw-platform-apps"
+      ],
+      "shortValue": "Messaging + device nodes + swappable agent backends"
+    },
+    {
+      "field": "computerUse",
+      "value": "Controls local/paired Mac desktops and cloud desktops; Windows/Linux driver support is experimental.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-computer-use"
+      ],
+      "shortValue": "Local/paired Mac + cloud desktops; Windows/Linux experimental"
+    },
+    {
+      "field": "browserUse",
+      "value": "Dedicated agent browser, existing signed-in Chrome, or a remote browser connection.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-browser-use"
+      ],
+      "shortValue": "Agent browser, signed-in Chrome, or remote browser"
+    },
+    {
+      "field": "voice",
+      "value": "Continuous Talk conversations on macOS/iOS/Android and the web, with realtime voice options.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-talk-mode"
+      ],
+      "shortValue": "Continuous Talk mode + realtime voice options"
+    },
+    {
+      "field": "scheduling",
+      "value": "Persistent scheduler with channel and webhook delivery.",
+      "sourceIds": [
+        "openclaw-scheduling"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "macOS menu-bar app, Windows Hub, and Linux companion apps.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-platform-apps"
+      ],
+      "shortValue": "macOS, Windows Hub, Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Official iOS and Android companion apps; both connect to your running Gateway.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-ios-app",
+        "openclaw-android-app"
+      ],
+      "shortValue": "iOS + Android companion apps; Gateway required"
+    },
+    {
+      "field": "channels",
+      "value": "Telegram, WhatsApp, Discord, Slack, Teams, iMessage, and others.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Self-hosted OpenAI-compatible Chat Completions and Responses APIs; enable them in Gateway settings.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-developer-api"
+      ],
+      "shortValue": "OpenAI-compatible HTTP APIs; opt-in"
+    },
+    {
+      "field": "models",
+      "value": "Swappable hosted models, local models, and harness plugins.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Swappable hosted/local model providers and agent harnesses, using your own credentials.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "shortValue": "Own models, provider keys, and agent harnesses"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "OpenClaw has no paid tier; model and hosting accounts are separate.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "shortValue": "No OpenClaw paid tier; provider accounts are separate"
+    },
+    {
+      "field": "pricing",
+      "value": "No paid software tier; model and hosting costs depend on deployment.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted: local computer or server.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Opt-in 1Password and HashiCorp Vault integrations; 1Password agent reads can reveal selected secrets to the model.",
+      "status": "limited",
+      "sourceIds": [
+        "openclaw-onepassword-plugin",
+        "openclaw-vault-plugin"
+      ],
+      "shortValue": "1Password + HashiCorp Vault integrations"
+    },
+    {
+      "field": "approvals",
+      "value": "Configurable command approvals and allowlists; full-permission modes can bypass prompts.",
+      "status": "documented",
+      "sourceIds": [
+        "openclaw-command-approvals"
+      ],
+      "shortValue": "Command approvals and allowlists; configurable bypass"
+    },
+    {
+      "field": "memory",
+      "value": "Editable Markdown workspace files and searchable memory.",
+      "sourceIds": [
+        "openclaw-memory"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "State and credentials remain on operator hardware. Full state export / restore not verified.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Sender pairing; main-session tools use host unless sandboxing is configured.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "openclaw-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/openclaw.svg",
+    "sourceUrl": "https://openclaw.ai/favicon.svg",
+    "sourcePage": "https://openclaw.ai",
+    "kind": "product",
+    "note": "Official OpenClaw lobster mark."
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "macOS menu-bar app, Windows Hub, and Linux companion apps.",
+      "sourceIds": [
+        "openclaw-platform-apps"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "macOS menu-bar app, Windows Hub, and Linux companion apps.",
+      "sourceIds": [
+        "openclaw-platform-apps"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "macOS menu-bar app, Windows Hub, and Linux companion apps.",
+      "sourceIds": [
+        "openclaw-platform-apps"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Official iOS and Android companion apps; both connect to your running Gateway.",
+      "sourceIds": [
+        "openclaw-ios-app",
+        "openclaw-android-app"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Official iOS and Android companion apps; both connect to your running Gateway.",
+      "sourceIds": [
+        "openclaw-ios-app",
+        "openclaw-android-app"
+      ]
+    }
+  ],
+  "color": "#b06b4a",
+  "aliases": [],
+  "plans": [],
+  "discussions": [
+    {
+      "title": "A week running OpenClaw on a Mac mini",
+      "url": "https://news.ycombinator.com/item?id=46895546",
+      "platform": "Hacker News",
+      "date": "2026-02-05",
+      "summary": "A business owner reports useful overnight research and integrations, alongside invented claims, brittle browser automation and continuing review work.",
+      "sentiment": "mixed",
+      "kind": "community"
+    },
+    {
+      "title": "Users question OpenClaw's memory reliability",
+      "url": "https://news.ycombinator.com/item?id=47721955",
+      "platform": "Hacker News",
+      "date": "2026-04-10",
+      "summary": "Participants describe inconsistent recurring workflows and update regressions, and discuss more deterministic tools and simpler agent setups.",
+      "sentiment": "critical",
+      "kind": "community"
+    },
+    {
+      "title": "Who is still using OpenClaw?",
+      "url": "https://news.ycombinator.com/item?id=47783940",
+      "platform": "Hacker News",
+      "date": "2026-04-15",
+      "summary": "Users share editable Obsidian memory, reminders and family-history workflows. Replies debate everyday usefulness, maintenance and consent.",
+      "sentiment": "mixed",
+      "kind": "community"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 39195,
+    "positiveUserWeeks": 3099,
+    "negativeUserWeeks": 3808,
+    "positiveShare": 44.9,
+    "channels": [
+      "App Store",
+      "Play Store",
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

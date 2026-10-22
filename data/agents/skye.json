@@ -1,0 +1,206 @@
+{
+  "plans": [
+    {
+      "name": "Free",
+      "price": "$0",
+      "billing": "Free App Store download",
+      "includes": [
+        "Context feed, widgets, briefings and chat over connected services"
+      ],
+      "limits": [
+        "Public usage quotas are not listed."
+      ],
+      "sourceIds": [
+        "skye-app"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iPhone app with widgets; requires iOS 26+.",
+      "sourceIds": [
+        "skye-app"
+      ]
+    },
+    {
+      "platform": "ipados",
+      "status": "available",
+      "detail": "iPad app; requires iPadOS 26+.",
+      "sourceIds": [
+        "skye-app"
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Skye: Your life at a glance that lives on your home screen",
+      "url": "https://www.reddit.com/r/iosapps/comments/1x1wvcl/skye_your_life_at_a_glance_that_lives_on_your/",
+      "platform": "Reddit",
+      "date": "2026-10-09",
+      "summary": "Launch discussion mixes appreciation with concerns about 90-day data retention and wordy presentation. Several commenters report regional availability gaps; the team explains its retention trade-off.",
+      "sentiment": "mixed",
+      "kind": "announcement"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "id": "skye",
+  "name": "Skye",
+  "organization": "Signull Labs",
+  "website": "https://skyeapp.ai/",
+  "summary": "A proactive home-screen assistant that combines calendar, email, finances and health into a ranked feed of contextual cards and briefings.",
+  "repository": null,
+  "category": "managed",
+  "aliases": [
+    "Skye Personal AI Agent",
+    "Signull Skye"
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Home- and lock-screen widgets surface ranked context from email, calendar, spending, location and Apple Health.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-app"
+      ],
+      "shortValue": "Proactive home-screen feed"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone and iPad apps require iOS / iPadOS 26+.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-app"
+      ],
+      "shortValue": "iPhone \u00b7 iPad"
+    },
+    {
+      "field": "scheduling",
+      "value": "Morning briefings and context-sensitive cards appear without opening a chat.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-app"
+      ],
+      "shortValue": "Briefings & contextual alerts"
+    },
+    {
+      "field": "voice",
+      "value": "Audio briefings use ElevenLabs voice generation.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "Audio briefings"
+    },
+    {
+      "field": "models",
+      "value": "OpenAI is the primary provider, with Anthropic, Gemini fallback and Groq for latency-sensitive features.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Gemini \u00b7 Groq"
+    },
+    {
+      "field": "pricing",
+      "value": "Listed as free on the US App Store.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-app"
+      ],
+      "shortValue": "Free"
+    },
+    {
+      "field": "hosting",
+      "value": "Cloud-backed app hosted on Google Cloud, with external model processing.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "Cloud-backed mobile app"
+    },
+    {
+      "field": "memory",
+      "value": "Derives memories and relationships from connected sources, including preferences and routines.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "Context & relationship memory"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Uses an encrypted app-specific password for iCloud Mail; no general credential vault is described.",
+      "status": "limited",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "iCloud connector credential"
+    },
+    {
+      "field": "approvals",
+      "value": "Connections are optional and revocable. Financial integrations are read-only and cannot transfer money.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "Revocable connections"
+    },
+    {
+      "field": "security",
+      "value": "Publisher says AI providers use zero retention and no model training; Skye keeps its own data under a separate retention policy.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-privacy"
+      ],
+      "shortValue": "Provider zero retention"
+    },
+    {
+      "field": "availability",
+      "value": "Available on the US App Store.",
+      "status": "documented",
+      "sourceIds": [
+        "skye-app"
+      ],
+      "shortValue": "Available"
+    }
+  ],
+  "sources": [
+    {
+      "id": "skye-home",
+      "title": "Skye product overview",
+      "url": "https://skyeapp.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "skye-app",
+      "title": "Skye on the App Store",
+      "url": "https://apps.apple.com/us/app/skye-personal-ai-agent/id6748042747",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "skye-privacy",
+      "title": "Skye privacy policy",
+      "url": "https://skyeapp.ai/privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "skye-terms",
+      "title": "Skye terms",
+      "url": "https://skyeapp.ai/terms",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/skye.png",
+    "sourceUrl": "https://skyeapp.ai/icon.png",
+    "sourcePage": "https://skyeapp.ai/",
+    "kind": "product"
+  }
+}

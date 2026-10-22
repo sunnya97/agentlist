@@ -1,0 +1,244 @@
+{
+  "id": "nanobot",
+  "name": "nanobot",
+  "organization": "HKUDS",
+  "summary": "A Python personal-agent framework with persistent workflows across terminal, browser, and chat apps.",
+  "website": "https://nanobot.wiki",
+  "repository": "https://github.com/HKUDS/nanobot",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "nanobot-readme",
+      "title": "nanobot README",
+      "url": "https://raw.githubusercontent.com/HKUDS/nanobot/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-security",
+      "title": "nanobot security policy",
+      "url": "https://raw.githubusercontent.com/HKUDS/nanobot/main/SECURITY.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-origin",
+      "title": "nanobot v0.1.4.post6 README: OpenClaw inspiration",
+      "url": "https://raw.githubusercontent.com/HKUDS/nanobot/v0.1.4.post6/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-configuration-features",
+      "title": "nanobot configuration",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-mcp-presets",
+      "title": "nanobot MCP presets",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/mcp-presets.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-developer-api",
+      "title": "nanobot agent HTTP API",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/openai-api.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-mobile-web-app",
+      "title": "nanobot iOS home-screen web app",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/guides/ios-pwa-status-bar.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "nanobot-model-providers",
+      "title": "nanobot model providers",
+      "url": "https://github.com/HKUDS/nanobot/blob/main/docs/providers.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Dream long-term memory, long-horizon goals, and built-in Office/PDF file reading.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "shortValue": "Dream memory; ongoing goals; Office and PDF tools"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browserbase integration through MCP; web search and page fetching are built in.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-mcp-presets",
+        "nanobot-configuration-features"
+      ],
+      "shortValue": "Browserbase via MCP; built-in search and page reading"
+    },
+    {
+      "field": "voice",
+      "value": "Transcribes voice messages and WebUI microphone input into editable text.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-configuration-features"
+      ],
+      "shortValue": "Voice-message transcription and microphone dictation"
+    },
+    {
+      "field": "scheduling",
+      "value": "Cron, scheduled automations, and long-horizon goals.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Browser interface and terminal on macOS, Windows, and Linux; native desktop app not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "shortValue": "Browser interface + terminal"
+    },
+    {
+      "field": "mobileApps",
+      "value": "iOS home-screen web app (PWA); native iOS or Android app not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "nanobot-mobile-web-app"
+      ],
+      "shortValue": "iOS home-screen web app (PWA)"
+    },
+    {
+      "field": "channels",
+      "value": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Python SDK plus self-hosted OpenAI-compatible chat API with streaming and file uploads.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-readme",
+        "nanobot-developer-api"
+      ],
+      "shortValue": "Python SDK + OpenAI-compatible HTTP API"
+    },
+    {
+      "field": "models",
+      "value": "Hosted providers, OpenAI-compatible endpoints, and local servers.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Own provider keys or local servers including Ollama, vLLM, and LM Studio.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-model-providers"
+      ],
+      "shortValue": "Own API keys or local models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Supports Codex, eligible X Premium/Grok, and GitHub Copilot account sign-in; nanobot supplies no model account.",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-model-providers",
+        "nanobot-readme"
+      ],
+      "shortValue": "Codex, Grok, or Copilot account sign-in"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted local or server gateway.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Can load secrets through 1Password, Bitwarden, or pass command-line wrappers; no built-in autofill specified.",
+      "status": "limited",
+      "sourceIds": [
+        "nanobot-configuration-features"
+      ],
+      "shortValue": "External secret-manager CLI wrappers"
+    },
+    {
+      "field": "memory",
+      "value": "Saved sessions and Dream long-term memory.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Python SDK and OpenAI-compatible API. Full state export / restore not verified.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Documented channel allowlists and environment-based secret configuration.",
+      "sourceIds": [
+        "nanobot-security"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/nanobot.png",
+    "sourceUrl": "https://nanobot.wiki/assets/nanobot_icon.png?v=20260406d",
+    "sourcePage": "https://nanobot.wiki",
+    "kind": "product",
+    "note": "Official nanobot site icon."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Browser interface and terminal on macOS, Windows, and Linux; native desktop app not specified.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    }
+  ],
+  "color": "#577d94",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

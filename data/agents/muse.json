@@ -1,0 +1,260 @@
+{
+  "id": "muse",
+  "name": "Muse",
+  "organization": "Meta",
+  "summary": "A personal agent that uses a dedicated virtual machine and connected apps to advance ongoing goals.",
+  "website": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "muse-intro",
+      "title": "Meta introduces Muse, its plans and future glasses access",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "muse-design",
+      "title": "How We Designed Muse",
+      "url": "https://introducing.muse.ai/",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Tracks long-running goals and event-driven follow-ups; memory files can be read and edited directly.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-design"
+      ],
+      "shortValue": "Goal tracking \u00b7 editable memory files"
+    },
+    {
+      "field": "computerUse",
+      "value": "Dedicated cloud virtual machine with browser, terminal, and files; local desktop control is not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-design"
+      ],
+      "shortValue": "Dedicated cloud computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Cloud browser searches, fills forms, books, and purchases.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-design"
+      ],
+      "shortValue": "Cloud browser for bookings + purchases"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled and event-triggered background work.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-design"
+      ],
+      "shortValue": "Schedules + event triggers"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Web at muse.ai; no native desktop app is listed in the launch announcement.",
+      "status": "limited",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "Web on desktop"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS and Android apps, plus WhatsApp access.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "iOS \u00b7 Android; also WhatsApp"
+    },
+    {
+      "field": "channels",
+      "value": "Muse app and WhatsApp",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "Muse Spark at launch",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Muse Spark supplied by the service at launch; BYO models are not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "Muse model included; BYO not specified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Muse service with free usage and subscription upgrades; no wider paid bundle is listed.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "Standalone Muse plans"
+    },
+    {
+      "field": "pricing",
+      "value": "Free for everyday use, with paid subscriptions for higher usage; paid tier prices and numerical allowances are not listed in the launch announcement.",
+      "shortValue": "Free tier; paid upgrades",
+      "status": "limited",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Muse Secure VM with its own browser",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in protected credential storage; the agent cannot see passwords. 1Password integration was announced as coming soon.",
+      "status": "limited",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "Built-in credential vault; 1Password planned"
+    },
+    {
+      "field": "approvals",
+      "value": "Requests approval for emails and purchases; a separate Sentinel checks outgoing activity.",
+      "status": "documented",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "shortValue": "Sensitive-action approvals + Sentinel"
+    },
+    {
+      "field": "memory",
+      "value": "Learns from conversations and personal context",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Memory files are readable and editable; exporting the full runtime is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "muse-design"
+      ],
+      "shortValue": "Readable, editable memory files"
+    },
+    {
+      "field": "security",
+      "value": "User chooses access; dedicated VM",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Launched; current regional coverage needs review",
+      "sourceIds": [
+        "muse-intro"
+      ],
+      "status": "limited"
+    }
+  ],
+  "logo": {
+    "path": "./logos/muse.svg",
+    "sourceUrl": "https://introducing.muse.ai/landing/MuseLogo.svg",
+    "sourcePage": "https://introducing.muse.ai",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web at muse.ai; no native desktop app is listed in the launch announcement.",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS and Android apps, plus WhatsApp access.",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Native iOS and Android apps, plus WhatsApp access.",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    }
+  ],
+  "color": "#4f6cd1",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free",
+      "includes": [
+        "Everyday use through the Muse app and web"
+      ],
+      "limits": [
+        "Numerical allowance not published",
+        "Meta also announces paid subscriptions for heavier use, without public tier prices"
+      ],
+      "sourceIds": [
+        "muse-intro"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "announced",
+    "name": "Meta AI glasses",
+    "detail": "Muse access on Meta's AI glasses is announced as coming soon. Its cloud virtual machine is separate from this physical hardware integration.",
+    "sourceIds": [
+      "muse-intro"
+    ]
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 60878,
+    "positiveUserWeeks": 13490,
+    "negativeUserWeeks": 4694,
+    "positiveShare": 74.2,
+    "channels": [
+      "App Store",
+      "Play Store",
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

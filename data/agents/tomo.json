@@ -1,0 +1,240 @@
+{
+  "plans": [
+    {
+      "name": "Base",
+      "price": "From $19.99/month",
+      "billing": "Monthly; cancel in dashboard",
+      "includes": [
+        "Personal AI, reminders and connected calendar/email"
+      ],
+      "limits": [
+        "Messaging quota is not published",
+        "Offers and pricing may vary by account"
+      ],
+      "sourceIds": [
+        "tomo-about"
+      ]
+    },
+    {
+      "name": "Higher messaging plans",
+      "price": "Shown in account",
+      "billing": "Account-specific",
+      "includes": [
+        "Larger messaging allowance"
+      ],
+      "limits": [
+        "Names, quotas and prices are not publicly itemized"
+      ],
+      "sourceIds": [
+        "tomo-about"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ios",
+      "detail": "Requires iOS 18 or later.",
+      "sourceIds": [
+        "tomo-appstore"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "ipados",
+      "detail": "Requires iPadOS 18 or later.",
+      "sourceIds": [
+        "tomo-appstore"
+      ],
+      "status": "available"
+    },
+    {
+      "platform": "web",
+      "detail": "Account, billing and data controls in the web dashboard.",
+      "sourceIds": [
+        "tomo-about"
+      ],
+      "status": "limited"
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Tomo AI subscription?",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1ry23id/tomo_ai_subscription/",
+      "platform": "Reddit",
+      "date": "2026-03-19",
+      "summary": "Users praise accountability and proactive reminders, while others question pricing, value and access to personal accounts.",
+      "sentiment": "mixed",
+      "kind": "community"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "No dedicated hardware is specified in the reviewed product pages.",
+    "sourceIds": []
+  },
+  "id": "tomo",
+  "name": "Tomo",
+  "organization": "Mapo Labs, Inc.",
+  "summary": "A personal AI coach in iMessage and iOS that remembers goals, checks in, and builds tools to keep you on track.",
+  "website": "https://www.tomo.ai/",
+  "repository": null,
+  "category": "managed",
+  "aliases": [],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Goal coaching with proactive check-ins and custom trackers for habits, workouts and budgets.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-appstore"
+      ],
+      "shortValue": "Goal coaching and custom habit tools"
+    },
+    {
+      "field": "browserUse",
+      "value": "Can search the web; interactive browser control is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "tomo-about"
+      ],
+      "shortValue": "Web search"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone and iPad app, requiring iOS/iPadOS 18 or later.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-appstore"
+      ],
+      "shortValue": "iPhone and iPad"
+    },
+    {
+      "field": "channels",
+      "value": "iMessage and group chats, with a web account dashboard.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-home",
+        "tomo-about"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "Sends reminders and initiates check-ins around your goals.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-about"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "Conversation context and goals persist across chats.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-appstore"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Dashboard controls clear messages, reminders and memories; full account deletion can be requested.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-about"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed service; AI providers process conversations on its behalf.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-privacy"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Does not sell conversations; authorized team members can review chats for support, safety and improvement.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-privacy"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "Hosted AI responses; bring-your-own model access is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "tomo-privacy"
+      ]
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Tomo subscription.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-about"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Base plan starts at $19.99/month; larger messaging allowances and individual promotions are offered.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-about"
+      ],
+      "shortValue": "From $19.99/month"
+    },
+    {
+      "field": "availability",
+      "value": "Available through iMessage and the iPhone/iPad app.",
+      "status": "documented",
+      "sourceIds": [
+        "tomo-home",
+        "tomo-appstore"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "tomo-home",
+      "title": "Tomo personal AI",
+      "url": "https://www.tomo.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "tomo-about",
+      "title": "Tomo features and pricing FAQ",
+      "url": "https://www.tomo.ai/about",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "tomo-appstore",
+      "title": "Tomo iPhone and iPad app",
+      "url": "https://apps.apple.com/us/app/tomo-your-personal-ai/id6757726935",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "tomo-privacy",
+      "title": "Tomo privacy policy",
+      "url": "https://www.tomo.ai/privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "tomo-terms",
+      "title": "Tomo terms of service",
+      "url": "https://www.tomo.ai/terms",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "tomo-launch",
+      "title": "Introducing Tomo",
+      "url": "https://www.tomo.ai/blog/introducing-tomo",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/tomo.png",
+    "sourceUrl": "https://www.tomo.ai/apple-icon.png",
+    "sourcePage": "https://www.tomo.ai/",
+    "kind": "product"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "id": "zeroclaw",
+  "name": "ZeroClaw",
+  "organization": "ZeroClaw Labs",
+  "summary": "A Rust agent runtime combining persistent operation, messaging, tools, and hardware access.",
+  "website": "https://www.zeroclaw.com",
+  "repository": "https://github.com/zeroclaw-labs/zeroclaw",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "zeroclaw-readme",
+      "title": "ZeroClaw README",
+      "url": "https://raw.githubusercontent.com/zeroclaw-labs/zeroclaw/master/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-browser-use",
+      "title": "ZeroClaw browser automation",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/docs/book/src/tools/browser.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-desktop-app",
+      "title": "ZeroClaw desktop app",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/apps/tauri/TESTING.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-desktop-release",
+      "title": "ZeroClaw v0.8.6 release assets",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.6",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-android-runtime",
+      "title": "ZeroClaw Android runtime",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/docs/book/src/hardware/android-setup.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-developer-api",
+      "title": "ZeroClaw Gateway HTTP API",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/docs/book/src/gateway/api.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-voice-telephony",
+      "title": "ZeroClaw voice and telephony",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/docs/book/src/channels/voice.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "zeroclaw-runtime-security",
+      "title": "ZeroClaw security model",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/blob/master/docs/book/src/security/model.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Event-triggered procedures can react to MQTT, webhooks, timers, and hardware events.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "shortValue": "Procedures triggered by messages, timers, and hardware"
+    },
+    {
+      "field": "browserUse",
+      "value": "Opt-in Chrome/Chromium automation; actions normally go through the approval policy.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-browser-use"
+      ],
+      "shortValue": "Opt-in browser automation with approval policies"
+    },
+    {
+      "field": "voice",
+      "value": "Phone calls, local wake-word listening, and spoken output through configured speech providers.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-voice-telephony"
+      ],
+      "shortValue": "Phone calls + local wake word + spoken replies"
+    },
+    {
+      "field": "scheduling",
+      "value": "Cron and event-triggered operating procedures.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Tauri desktop apps with macOS, Windows, and Linux installers.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-desktop-app",
+        "zeroclaw-desktop-release"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Experimental Android command-line runtime via Termux/ADB; native mobile app not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "zeroclaw-android-runtime"
+      ],
+      "shortValue": "Experimental Android runtime; native app unspecified"
+    },
+    {
+      "field": "channels",
+      "value": "Discord, Telegram, Matrix, email, webhooks, voice, CLI.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Self-hosted Gateway REST API with bearer authentication and a built-in OpenAPI explorer.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-developer-api"
+      ],
+      "shortValue": "Gateway REST API + OpenAPI explorer"
+    },
+    {
+      "field": "models",
+      "value": "Anthropic, OpenAI, Ollama, and compatible endpoints.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Own provider credentials and local models such as Ollama.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "shortValue": "Own API keys and local models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Supports Codex subscription authentication and Claude Max setup-token authentication.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "shortValue": "Codex subscription or Claude Max setup token"
+    },
+    {
+      "field": "license",
+      "value": "MIT OR Apache-2.0",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted; background system service.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "approvals",
+      "value": "Supervised mode asks for medium-risk actions and blocks high-risk actions by default.",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-runtime-security"
+      ],
+      "shortValue": "Supervised approvals by default"
+    },
+    {
+      "field": "memory",
+      "value": "SQLite and embeddings.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Single Rust binary and configurable providers. Full state export / restore not verified.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "Supervised defaults, workspace boundaries, approval gates, OS sandboxes.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/zeroclaw.png",
+    "sourceUrl": "https://www.zeroclaw.com/images/zeroclawlabs.png",
+    "sourcePage": "https://www.zeroclaw.com",
+    "kind": "organization",
+    "note": "Official ZeroClaw Labs mark used as the product site icon."
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Tauri desktop apps with macOS, Windows, and Linux installers.",
+      "sourceIds": [
+        "zeroclaw-desktop-app",
+        "zeroclaw-desktop-release"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Tauri desktop apps with macOS, Windows, and Linux installers.",
+      "sourceIds": [
+        "zeroclaw-desktop-app",
+        "zeroclaw-desktop-release"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Tauri desktop apps with macOS, Windows, and Linux installers.",
+      "sourceIds": [
+        "zeroclaw-desktop-app",
+        "zeroclaw-desktop-release"
+      ]
+    }
+  ],
+  "color": "#9b7582",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "agentlist-observatory",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/validate.mjs",
+    "test": "node --test scripts/domain.test.mjs",
+    "dev": "node scripts/serve.mjs",
+    "collect:news": "node scripts/collect-news.mjs",
+    "verify": "npm run build && npm run check && npm test",
+    "add:agent": "node scripts/add-agent.mjs"
+  },
+  "license": "MIT"
+}

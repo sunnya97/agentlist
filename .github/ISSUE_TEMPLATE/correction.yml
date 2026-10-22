@@ -1,0 +1,23 @@
+name: Update an agent
+description: Correct a fact, update a plan, or add a discussion.
+title: "Update: "
+body:
+  - type: input
+    id: agent
+    attributes:
+      label: Agent
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting links
+      description: Official documentation for product claims; original threads for discussion summaries.
+    validations:
+      required: true

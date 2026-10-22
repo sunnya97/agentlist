@@ -1,0 +1,143 @@
+{
+  "id": "kimi-claw",
+  "name": "Kimi Claw",
+  "organization": "Kimi",
+  "summary": "Managed OpenClaw deployment and a Kimi chat connection for existing OpenClaw instances.",
+  "website": "https://www.kimi.com/bot",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "kimi-claw-overview",
+      "title": "Kimi Claw product introduction",
+      "url": "https://www.kimi.com/en/help/kimi-claw/overview",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "kimi-claw-terminal",
+      "title": "Kimi Claw terminal commands",
+      "url": "https://www.kimi.com/en/help/kimi-claw/concepts",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "One-click hosted OpenClaw, or connect an existing self-hosted OpenClaw to Kimi.",
+      "status": "documented",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "shortValue": "Hosted OpenClaw or connect your existing instance"
+    },
+    {
+      "field": "browserUse",
+      "value": "Kimi Web Search is included; interactive browser control is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "shortValue": "Web search included; browser control unspecified"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled tasks through /cron.",
+      "sourceIds": [
+        "kimi-claw-terminal"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "channels",
+      "value": "Kimi, Feishu, WeCom, WeChat, and others.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "Kimi K2.6 default; K3 configuration documented.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Kimi model access is included; custom model-provider/API-key support is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "shortValue": "Kimi included; own-model support unspecified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "One-click deployment is included with Kimi Allegretto and higher plans and uses membership credits.",
+      "status": "documented",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "shortValue": "Kimi Allegretto and above; membership credits"
+    },
+    {
+      "field": "pricing",
+      "value": "Allegretto or higher membership; price unverified.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Kimi cloud; existing self-hosted instances can connect.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "memory",
+      "value": "Long-term OpenClaw memory.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Links existing OpenClaw; hosted-state export unverified.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available with Allegretto or higher membership.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/kimi-claw.png",
+    "sourceUrl": "https://www.kimi.com/pwa-192.png",
+    "sourcePage": "https://www.kimi.com/bot",
+    "kind": "organization",
+    "note": "Official Kimi app icon; a distinct Kimi Claw mark was not found."
+  },
+  "platforms": [],
+  "color": "#b06b4a",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

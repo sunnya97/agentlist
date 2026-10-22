@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fafbfc">
+  <title>Agentlist — Compare personal agents</title>
+  <meta name="description" content="Understand and compare persistent personal AI agents. Explore sourced capabilities, product news, and the relationships behind the ecosystem.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Agentlist updates" href="./feed.xml">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header"><div class="header-inner">
+    <a href="#directory" class="brand" aria-label="Agentlist home"><span class="brand-mark" aria-hidden="true">a<span></span></span>agentlist</a>
+    <nav aria-label="Main navigation"><a href="#directory" data-nav="directory">Agents</a><a href="#compare" data-nav="compare">Compare <span id="nav-count"></span></a><a href="#lineage" data-nav="lineage">Ecosystem</a><a href="#news" data-nav="news">News</a><a href="#discussion" data-nav="discussion">Discussion</a></nav>
+    <button class="button small contribute" data-action="contribute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Suggest an agent</button>
+  </div></header>
+  <main id="main" tabindex="-1"><div class="loading">Loading agents…</div></main>
+  <footer><a class="brand footer-brand" href="#directory">agentlist<span class="brand-dot">•</span></a><div><a id="repository-link" hidden>GitHub ↗</a><a href="./data.json" download>Dataset ↗</a><a href="./feed.xml">RSS ↗</a><a href="#methodology">About the research</a></div><small>Edition 001 · Sources checked October 21, 2026</small></footer>
+  <aside id="compare-tray" aria-label="Selected agents" hidden></aside>
+  <div id="platform-popover" popover role="dialog" aria-label="App availability"></div>
+  <dialog id="agent-dialog" aria-labelledby="dialog-title"></dialog>
+  <dialog id="contribute-dialog" aria-labelledby="contribute-title"><button class="close" data-action="close-contribute" aria-label="Close suggestion form">×</button><h2 id="contribute-title">What are we missing?</h2><p>Add an agent and a link to its website, then download your suggestion as a JSON draft.</p><form id="suggest-form"><label>Agent name<input name="name" required maxlength="120" placeholder="Name of the agent"></label><label>Official website<input name="website" required type="url" placeholder="https://"></label><label>What should we know?<textarea name="notes" required maxlength="2500" placeholder="Persistent memory, background work, a fork relationship, or a correction…"></textarea></label><button class="button primary" type="submit">Download suggestion ↓</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

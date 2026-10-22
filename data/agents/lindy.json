@@ -1,0 +1,304 @@
+{
+  "id": "lindy",
+  "name": "Lindy",
+  "organization": "Lindy",
+  "summary": "A personal and team assistant with editable memory files, reusable skills, and recurring routines.",
+  "website": "https://www.lindy.ai",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "lindy-home",
+      "title": "Lindy \u00b7 Official product page",
+      "url": "https://www.lindy.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-memory",
+      "title": "Memory \u00b7 Lindy",
+      "url": "https://www.lindy.ai/product/memory",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-routines",
+      "title": "Routines \u00b7 Lindy",
+      "url": "https://www.lindy.ai/product/routines",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-pricing",
+      "title": "Lindy current plans, seat billing and credits",
+      "url": "https://www.lindy.ai/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-credentials",
+      "title": "Lindy credentials: API-key storage and sharing",
+      "url": "https://docs.lindy.ai/integrations/credentials",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-mcp",
+      "title": "Connect MCP servers to Lindy",
+      "url": "https://docs.lindy.ai/integrations/mcp",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-product",
+      "title": "Lindy current product capabilities",
+      "url": "https://www.lindy.ai/product",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lindy-phone",
+      "title": "Lindy phone calls",
+      "url": "https://www.lindy.ai/product/phone",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Teach tasks through a recording with Watch and Learn; reusable skills and memory shared with your team",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-product"
+      ],
+      "shortValue": "Learn a workflow from your recording"
+    },
+    {
+      "field": "computerUse",
+      "value": "Browser automation and shell/code tools; full local-desktop control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-home",
+        "lindy-credentials"
+      ],
+      "shortValue": "Browser automation + shell/code"
+    },
+    {
+      "field": "browserUse",
+      "value": "Can drive websites when integrations are unavailable; paid-plan access",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-home",
+        "lindy-pricing"
+      ],
+      "shortValue": "Website automation on paid plans"
+    },
+    {
+      "field": "voice",
+      "value": "Voice memos, meeting capture and phone calls; calls currently use US numbers",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-product",
+        "lindy-phone"
+      ],
+      "shortValue": "Voice memos, meetings and US phone calls"
+    },
+    {
+      "field": "scheduling",
+      "value": "Recurring routines on a schedule",
+      "sourceIds": [
+        "lindy-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Web app and Chrome extension; native desktop app not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-product"
+      ],
+      "shortValue": "Web app + Chrome extension"
+    },
+    {
+      "field": "mobileApps",
+      "value": "iMessage/SMS and Slack access; native mobile app not specified in current product guide",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-product"
+      ],
+      "shortValue": "iMessage, SMS and Slack"
+    },
+    {
+      "field": "channels",
+      "value": "Web and connected work tools",
+      "sourceIds": [
+        "lindy-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Connect hosted MCP tools; public agent-control API not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-mcp"
+      ],
+      "shortValue": "API not specified; MCP tools available"
+    },
+    {
+      "field": "models",
+      "value": "Multiple major models, selectable for each task",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "Choose a supplied model per task; use of your own inference keys is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-pricing"
+      ],
+      "shortValue": "Choose included models; BYO keys not specified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Lindy subscription with pooled credits",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Seven-day trial with US$50 credits. Team starts at US$49.99 per active user/month for 5,000 pooled credits; top-ups cost US$10 per 1,000 credits.",
+      "shortValue": "Trial; US$49.99/user/mo + top-ups",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Hosted service",
+      "sourceIds": [
+        "lindy-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in write-only API-key credentials, private or workspace-shared; general password vault not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-credentials"
+      ],
+      "shortValue": "API-key store with sharing controls"
+    },
+    {
+      "field": "approvals",
+      "value": "External-impact actions such as email, ticket changes and publishing wait for approval",
+      "status": "documented",
+      "sourceIds": [
+        "lindy-pricing"
+      ],
+      "shortValue": "Approval before external changes"
+    },
+    {
+      "field": "memory",
+      "value": "User-editable memory in plain files",
+      "sourceIds": [
+        "lindy-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Memory is stored in editable plain files with version history; full runtime export not specified",
+      "status": "limited",
+      "sourceIds": [
+        "lindy-home",
+        "lindy-product"
+      ],
+      "shortValue": "Editable memory files and version history"
+    },
+    {
+      "field": "availability",
+      "value": "Self-serve access",
+      "sourceIds": [
+        "lindy-home"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/lindy.png",
+    "sourceUrl": "https://www.lindy.ai/_sherpa/assets/static/lindy/69f7b166c2e11ba39f7b2b9e_lindy-avatar-favicon.png",
+    "sourcePage": "https://www.lindy.ai",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web app and Chrome extension; native desktop app not specified",
+      "sourceIds": [
+        "lindy-product"
+      ]
+    }
+  ],
+  "color": "#9c7653",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Free trial",
+      "price": "US$0",
+      "billing": "Seven days",
+      "includes": [
+        "US$50 in trial credits",
+        "No card required"
+      ],
+      "limits": [
+        "Credits expire after seven days"
+      ],
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    },
+    {
+      "name": "Team",
+      "price": "From US$49.99/user/month",
+      "billing": "Monthly; every active user is billed",
+      "includes": [
+        "5,000 credits per seat, pooled across the team",
+        "Model selection, computer use and onboarding"
+      ],
+      "limits": [
+        "Larger credit tiers available",
+        "Monthly credits expire; purchased top-ups do not",
+        "Top-ups: US$10/1,000 credits",
+        "Work pauses when the balance is depleted"
+      ],
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "billing": "Custom contract",
+      "includes": [
+        "Team features plus SSO, SCIM and audit logs",
+        "HIPAA support with BAA; dedicated support"
+      ],
+      "limits": [
+        "Custom credit allowance"
+      ],
+      "sourceIds": [
+        "lindy-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

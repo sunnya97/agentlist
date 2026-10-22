@@ -1,0 +1,271 @@
+{
+  "id": "poke",
+  "name": "Poke",
+  "organization": "The Interaction Company",
+  "summary": "A proactive assistant reached through familiar messaging apps, with integrations and shareable automation recipes.",
+  "website": "https://poke.com",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "poke-home",
+      "title": "Poke \u00b7 Official product page",
+      "url": "https://poke.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-faq",
+      "title": "Poke billing and human operators",
+      "url": "https://poke.com/faq",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-docs",
+      "title": "Poke welcome and supported messaging channels",
+      "url": "https://poke.com/docs",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-api",
+      "title": "Poke developer API",
+      "url": "https://poke.com/docs/api",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-mcp",
+      "title": "Poke MCP servers",
+      "url": "https://poke.com/docs/mcp-servers",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "poke-pricing",
+      "title": "Poke plans and usage",
+      "url": "https://poke.com/pricing",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Text-first assistant that can publish a website; Ultra can dispatch real-world tasks to human operators",
+      "status": "documented",
+      "sourceIds": [
+        "poke-docs",
+        "poke-faq"
+      ],
+      "shortValue": "Text-first; human operators on Ultra"
+    },
+    {
+      "field": "browserUse",
+      "value": "Web search is included; interactive browser control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "poke-docs"
+      ],
+      "shortValue": "Web search"
+    },
+    {
+      "field": "voice",
+      "value": "Accepts voice messages; ambient listening is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "shortValue": "Voice messages"
+    },
+    {
+      "field": "scheduling",
+      "value": "Reminders and scheduled tasks",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Messaging and web settings; native desktop app not specified",
+      "status": "limited",
+      "sourceIds": [
+        "poke-docs"
+      ],
+      "shortValue": "Messaging + web settings"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Apple Messages, WhatsApp, Telegram and RCS; separate native app not specified",
+      "status": "limited",
+      "sourceIds": [
+        "poke-docs"
+      ],
+      "shortValue": "Apple Messages, WhatsApp, Telegram, RCS"
+    },
+    {
+      "field": "channels",
+      "value": "Messages, WhatsApp, Telegram",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Developer API sends messages into your agent; custom integrations can connect through MCP",
+      "status": "documented",
+      "sourceIds": [
+        "poke-api",
+        "poke-mcp"
+      ],
+      "shortValue": "Inbound-message API + MCP"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Poke Pro or Ultra subscription",
+      "status": "documented",
+      "sourceIds": [
+        "poke-faq"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Many features free; Pro $19/month; Ultra $199/month, with pay-as-you-go usage on top",
+      "status": "documented",
+      "sourceIds": [
+        "poke-faq"
+      ],
+      "shortValue": "Free; Pro $19/mo; Ultra $199/mo + usage"
+    },
+    {
+      "field": "hosting",
+      "value": "Hosted messaging service",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "memory",
+      "value": "Personal context; memory implementation not verified",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "portability",
+      "value": "Shareable Recipes; full memory export not verified",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "availability",
+      "value": "Sign-up available on official site",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/poke.png",
+    "sourceUrl": "https://poke.com/icons/poke-512.png",
+    "sourcePage": "https://poke.com",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "limited",
+      "detail": "Messaging and web settings; native desktop app not specified",
+      "sourceIds": [
+        "poke-docs"
+      ]
+    }
+  ],
+  "color": "#bb7f39",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free",
+      "includes": [
+        "Email, calendar and app connections"
+      ],
+      "limits": [
+        "Lower usage limits than paid plans"
+      ],
+      "sourceIds": [
+        "poke-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$19/month",
+      "billing": "Monthly",
+      "includes": [
+        "Frontier models for complex tasks",
+        "Background automations and priority support"
+      ],
+      "limits": [
+        "Higher rate limits; numerical allowance not published"
+      ],
+      "sourceIds": [
+        "poke-pricing"
+      ]
+    },
+    {
+      "name": "Ultra",
+      "price": "US$199/month",
+      "billing": "Monthly",
+      "includes": [
+        "Frontier models for every action",
+        "Highest automation limits and support priority",
+        "Human operators for real-world tasks"
+      ],
+      "limits": [
+        "Additional usage beyond included credits is paid separately",
+        "Purchases made by human operators are charged at cost from your credit balance"
+      ],
+      "sourceIds": [
+        "poke-pricing",
+        "poke-faq"
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Building an accountability bot with Poke recipes",
+      "url": "https://www.reddit.com/r/buildinpublic/comments/1t19t5h/i_made_a_textbased_boss_bot_for_neurodivergent/",
+      "platform": "Reddit",
+      "date": "2026-05-01",
+      "summary": "A recipe creator shares scheduled check-ins, work timers and daily recaps built in Poke. A later reply asks whether the reminders sustain engagement.",
+      "sentiment": "positive",
+      "kind": "announcement"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 509,
+    "positiveUserWeeks": 73,
+    "negativeUserWeeks": 84,
+    "positiveShare": 46.5,
+    "channels": [
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

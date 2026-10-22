@@ -1,0 +1,300 @@
+{
+  "id": "underdog",
+  "name": "Underdog",
+  "organization": "Conway Research",
+  "summary": "An on-device assistant for email, calendars, notes, dictation, and errands, with locally stored memory.",
+  "website": "https://underdog.ai",
+  "repository": null,
+  "category": "local",
+  "sources": [
+    {
+      "id": "underdog-home",
+      "title": "Underdog official product site",
+      "url": "https://underdog.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "underdog-security",
+      "title": "Underdog security",
+      "url": "https://underdog.ai/security",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "underdog-pricing",
+      "title": "Underdog pricing",
+      "url": "https://underdog.ai/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "underdog-ships",
+      "title": "Underdog release log",
+      "url": "https://underdog.ai/ship",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "underdog-model",
+      "title": "Conway Research Underdog-27B-1.0 model repository",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-27B-1.0",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Local model inference, mail, memory and audio processing; optional Naval mode restricts network contact",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "shortValue": "Local-first AI, memory and audio"
+    },
+    {
+      "field": "computerUse",
+      "value": "On-device AI and a browser agent; general desktop control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "shortValue": "On-device AI + browser agent"
+    },
+    {
+      "field": "browserUse",
+      "value": "Local browser agent handles bookings and purchases, with approval before consequential actions",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-security"
+      ],
+      "shortValue": "Local browser agent"
+    },
+    {
+      "field": "voice",
+      "value": "Local dictation and meeting notes; audio is not uploaded",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-security"
+      ],
+      "shortValue": "On-device dictation and meeting notes"
+    },
+    {
+      "field": "scheduling",
+      "value": "Automatic email categorization; recurring job scheduler unverified",
+      "status": "limited",
+      "sourceIds": [
+        "underdog-ships"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "macOS on Apple silicon; Windows beta; Linux announced",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ],
+      "shortValue": "macOS; Windows beta"
+    },
+    {
+      "field": "mobileApps",
+      "value": "iPhone and iPad on iOS 18+; Android announced",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ],
+      "shortValue": "iOS/iPadOS; Android coming"
+    },
+    {
+      "field": "channels",
+      "value": "Mac, iPhone/iPad, Windows beta",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "field": "models",
+      "value": "Woof 4B, Underdog 27B, Saluki 27B",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "Ships its own local models; importing other models or inference keys is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "underdog-home"
+      ],
+      "shortValue": "Local models included; BYO not specified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Free standalone app",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free; revenue comes from purchases it facilitates",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-pricing"
+      ]
+    },
+    {
+      "field": "license",
+      "value": "App license unverified; some model weights Apache-2.0",
+      "status": "limited",
+      "sourceIds": [
+        "underdog-model"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "AI inference runs on the user's device; mail connects directly to the user's provider",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "shortValue": "On-device AI; direct mail sync"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in encrypted saved logins on Mac; agent fills passwords without reading them",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-security"
+      ],
+      "shortValue": "Encrypted login vault and protected autofill"
+    },
+    {
+      "field": "approvals",
+      "value": "Browser agent asks before buying, paying, sending or deleting",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-security"
+      ],
+      "shortValue": "Ask before buy, pay, send or delete"
+    },
+    {
+      "field": "memory",
+      "value": "Local memories can be viewed, edited, and deleted",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Local memory; portable agent-state export unverified",
+      "status": "limited",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Mac mail, calendar and saved logins are encrypted; key stays in Apple Keychain on the device",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-security"
+      ],
+      "shortValue": "Encrypted local vault on Mac"
+    },
+    {
+      "field": "availability",
+      "value": "Mac invite access; iOS available without invite; Windows beta",
+      "status": "documented",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/underdog.png",
+    "sourceUrl": "https://underdog.ai/icon.png",
+    "sourcePage": "https://underdog.ai",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "macOS on Apple silicon; Windows beta; Linux announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "beta",
+      "detail": "macOS on Apple silicon; Windows beta; Linux announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "announced",
+      "detail": "macOS on Apple silicon; Windows beta; Linux announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "iPhone and iPad on iOS 18+; Android announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "platform": "ipados",
+      "status": "available",
+      "detail": "iPhone and iPad on iOS 18+; Android announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "announced",
+      "detail": "iPhone and iPad on iOS 18+; Android announced",
+      "sourceIds": [
+        "underdog-home"
+      ]
+    }
+  ],
+  "color": "#577d94",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Underdog",
+      "price": "US$0",
+      "billing": "Free",
+      "includes": [
+        "Local processing on your computer",
+        "No seat or inference subscription"
+      ],
+      "limits": [
+        "Your computer supplies the compute",
+        "Underdog earns a share from purchases it facilitates"
+      ],
+      "sourceIds": [
+        "underdog-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

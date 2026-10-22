@@ -1,0 +1,350 @@
+{
+  "id": "dots",
+  "name": "OpenAI Dots",
+  "organization": "OpenAI",
+  "summary": "An always-on personal agent with its own cloud computer and context carried between conversations.",
+  "website": "https://openai.com/index/introducing-dots/",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "dots-intro",
+      "title": "Introducing dots \u00b7 OpenAI",
+      "url": "https://openai.com/index/introducing-dots/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "dots-help",
+      "title": "Dots eligible plans and launch limits",
+      "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "dots-security",
+      "title": "Dots privacy, security, and safety FAQs",
+      "url": "https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "chatgpt-pro-tiers",
+      "title": "ChatGPT Pro prices and allowances",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "chatgpt-business-plans",
+      "title": "ChatGPT Business Premium seat pricing",
+      "url": "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Shares ChatGPT context and connected apps; can delegate work into Codex cloud environments.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-security",
+        "dots-help"
+      ],
+      "shortValue": "Shared ChatGPT context \u00b7 Codex delegation"
+    },
+    {
+      "field": "computerUse",
+      "value": "Own cloud computer, plus optional access to a connected personal computer.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "shortValue": "Cloud + connected personal computer"
+    },
+    {
+      "field": "browserUse",
+      "value": "Operates its cloud browser; you can inspect the computer and take over.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-intro",
+        "dots-help"
+      ],
+      "shortValue": "Cloud browser with takeover"
+    },
+    {
+      "field": "voice",
+      "value": "Voice calls with your dot; it cannot initiate calls at launch.",
+      "status": "limited",
+      "sourceIds": [
+        "dots-intro",
+        "dots-help"
+      ],
+      "shortValue": "Voice calls; user-initiated"
+    },
+    {
+      "field": "scheduling",
+      "value": "Ongoing and scheduled work",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Available in the ChatGPT desktop app, including Windows, and desktop web; supported OS details beyond Windows are not listed in the dots setup guide.",
+      "status": "limited",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "shortValue": "ChatGPT desktop app + web"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Available inside ChatGPT for iOS and Android; mobile web is unsupported.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "shortValue": "iOS \u00b7 Android"
+    },
+    {
+      "field": "channels",
+      "value": "ChatGPT, Slack, Teams",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "models",
+      "value": "GPT-6 Astra at launch",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "GPT-6 Astra is supplied by the service; BYO model keys are not listed for dots.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "shortValue": "GPT-6 Astra included; BYO not listed"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "First dot included in ChatGPT Pro or Business Premium; Enterprise beta requires administrator enablement.",
+      "status": "limited",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "shortValue": "ChatGPT Pro / Business Premium"
+    },
+    {
+      "field": "pricing",
+      "value": "First dot included in ChatGPT Pro 100, 200 or 500 (US$100/200/500 per month) or Business Premium (US$125/user/month; US$100/user/month annually). Deeper-work allowances apply.",
+      "shortValue": "ChatGPT Pro from US$100/mo",
+      "status": "documented",
+      "sourceIds": [
+        "dots-help",
+        "chatgpt-pro-tiers",
+        "chatgpt-business-plans"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed cloud computer; optional connected devices",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Saved passwords and secure sign-in flows keep credentials out of the model; a standalone password vault is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "dots-intro",
+        "dots-security"
+      ],
+      "shortValue": "Secure saved logins"
+    },
+    {
+      "field": "approvals",
+      "value": "Action review follows custom rules; purchases need approval and some authentication steps stay manual.",
+      "status": "documented",
+      "sourceIds": [
+        "dots-security"
+      ],
+      "shortValue": "Custom rules + sensitive-action approvals"
+    },
+    {
+      "field": "memory",
+      "value": "ChatGPT memory and ongoing context",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Deleting the dot clears its context; individual dot memories cannot currently be viewed or edited.",
+      "status": "limited",
+      "sourceIds": [
+        "dots-security"
+      ],
+      "shortValue": "Reset whole dot; no individual memory edits"
+    },
+    {
+      "field": "security",
+      "value": "Custom Rules and action review; proactive research is read-only",
+      "sourceIds": [
+        "dots-intro"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Gradual rollout; plan and regional restrictions",
+      "sourceIds": [
+        "dots-help"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/dots.svg",
+    "sourceUrl": "https://images.ctfassets.net/8su2tbn87fck/PulStHeDuz5begF06sEwk/c2080ae53243122046ba61074a5f0bd2/dots-o-updated.svg",
+    "sourcePage": "https://chatgpt.com/features/dots/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Available in the ChatGPT desktop app, including Windows, and desktop web; supported OS details beyond Windows are not listed in the dots setup guide.",
+      "sourceIds": [
+        "dots-help"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Available in the ChatGPT desktop app, including Windows, and desktop web; supported OS details beyond Windows are not listed in the dots setup guide.",
+      "sourceIds": [
+        "dots-help"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Available inside ChatGPT for iOS and Android; mobile web is unsupported.",
+      "sourceIds": [
+        "dots-help"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Available inside ChatGPT for iOS and Android; mobile web is unsupported.",
+      "sourceIds": [
+        "dots-help"
+      ]
+    }
+  ],
+  "color": "#285b4c",
+  "aliases": [
+    "Dot",
+    "OpenAI Dot",
+    "ChatGPT dots"
+  ],
+  "plans": [
+    {
+      "name": "ChatGPT Pro 100",
+      "price": "US$100/month",
+      "billing": "Monthly",
+      "includes": [
+        "First dot; ChatGPT Pro tools and Codex"
+      ],
+      "limits": [
+        "Pro rollout excludes EEA, Switzerland and UK",
+        "Deeper-work allowance; expanded launch limits"
+      ],
+      "sourceIds": [
+        "dots-help",
+        "chatgpt-pro-tiers"
+      ]
+    },
+    {
+      "name": "ChatGPT Pro 200",
+      "price": "US$200/month",
+      "billing": "Monthly",
+      "includes": [
+        "First dot; more included Pro usage than Pro 100"
+      ],
+      "limits": [
+        "New subscriptions have a reduced allowance",
+        "Eligible existing allowance lasts through October 29, 2026"
+      ],
+      "sourceIds": [
+        "dots-help",
+        "chatgpt-pro-tiers"
+      ]
+    },
+    {
+      "name": "ChatGPT Pro 500",
+      "price": "US$500/month",
+      "billing": "Monthly",
+      "includes": [
+        "First dot; highest Pro allowance",
+        "Ultrafast service tier in ChatGPT Work and Codex"
+      ],
+      "limits": [
+        "Ultrafast consumes the included allowance faster"
+      ],
+      "sourceIds": [
+        "dots-help",
+        "chatgpt-pro-tiers"
+      ]
+    },
+    {
+      "name": "ChatGPT Business Premium",
+      "price": "US$125/user/month",
+      "billing": "Monthly, or US$100/user/month billed annually",
+      "includes": [
+        "First dot and a managed workspace",
+        "Five times Standard seat usage"
+      ],
+      "limits": [
+        "Subject to workspace controls",
+        "Deeper-work allowance; expanded launch limits"
+      ],
+      "sourceIds": [
+        "dots-help",
+        "chatgpt-business-plans"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 14581,
+    "positiveUserWeeks": 1417,
+    "negativeUserWeeks": 1877,
+    "positiveShare": 43.0,
+    "channels": [
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

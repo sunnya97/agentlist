@@ -1,0 +1,217 @@
+{
+  "id": "ambi",
+  "name": "Ambi",
+  "organization": "Ambi",
+  "summary": "Ambient intelligence carrying context, memory, tasks, and routines across devices and connected tools.",
+  "website": "https://www.ambi.ai/en",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "ambi-home",
+      "title": "Ambi early access and hardware announcement",
+      "url": "https://www.ambi.ai/en",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ambi-features",
+      "title": "Ambi features: Listening, Memory, Tasks and Routines",
+      "url": "https://www.ambi.ai/en/features",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ambi-download",
+      "title": "Download Ambi for desktop and mobile",
+      "url": "https://www.ambi.ai/download/",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Turns live conversations into Action Spotter follow-ups, Tasks and ongoing Routines across devices",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "Ambient listening \u2192 memory and follow-through"
+    },
+    {
+      "field": "computerUse",
+      "value": "Reads permitted conversations, screens and connected tools; full desktop control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "ambi-home"
+      ],
+      "shortValue": "Screen context and connected tools"
+    },
+    {
+      "field": "voice",
+      "value": "Real-time ambient Listening, with visible on/off control; transcription, recaps and follow-up",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "Ambient listening with on/off control"
+    },
+    {
+      "field": "scheduling",
+      "value": "Routines follow a standing brief and keep working as new context arrives",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "Ongoing Routines with new context"
+    },
+    {
+      "field": "desktopApps",
+      "value": "macOS on Apple silicon; Windows 11 x64",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    },
+    {
+      "field": "mobileApps",
+      "value": "iOS; Android is coming soon",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    },
+    {
+      "field": "channels",
+      "value": "macOS, Windows, iOS and watch context; connected messaging and work tools",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-download",
+        "ambi-home",
+        "ambi-features"
+      ],
+      "shortValue": "Mac, Windows, iOS; connected tools"
+    },
+    {
+      "field": "api",
+      "value": "MCP connections on Pro and Max; public developer API not specified",
+      "status": "limited",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "API not specified; MCP tools available"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Ambi Plus, Pro or Max subscription",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Seven-day trial: 4,000 credits and 3 full Insights; paid plans use shared weekly credits",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "7-day trial; shared-credit paid plans"
+    },
+    {
+      "field": "hosting",
+      "value": "Connected software and hardware; execution architecture unverified",
+      "sourceIds": [
+        "ambi-home"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "approvals",
+      "value": "Actions that cannot be undone wait for your approval",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-home",
+        "ambi-features"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "Personal memory built across conversations and devices, under user control",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-features"
+      ],
+      "shortValue": "Conversation memory across devices"
+    },
+    {
+      "field": "security",
+      "value": "Permission-based context access; decisions remain with user",
+      "sourceIds": [
+        "ambi-home"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Software downloads listed for macOS, Windows and iOS; hardware expected early next year",
+      "status": "documented",
+      "sourceIds": [
+        "ambi-download",
+        "ambi-home"
+      ],
+      "shortValue": "Mac, Windows and iOS downloads"
+    }
+  ],
+  "logo": {
+    "path": "./logos/ambi.png",
+    "sourceUrl": "https://www.ambi.ai/favicon-96x96.png",
+    "sourcePage": "https://www.ambi.ai/en",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "macOS on Apple silicon; Windows 11 x64",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "macOS on Apple silicon; Windows 11 x64",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "iOS; Android is coming soon",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "announced",
+      "detail": "iOS; Android is coming soon",
+      "sourceIds": [
+        "ambi-download"
+      ]
+    }
+  ],
+  "color": "#945e98",
+  "aliases": [],
+  "disclosure": "The project creator is affiliated with Ambi. This profile uses the same sourcing rules as every other entry; no preferential ranking.",
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "announced",
+    "name": "Ambi hardware",
+    "detail": "Dedicated hardware is announced for early 2027; the public site is accepting waitlist registrations.",
+    "sourceIds": [
+      "ambi-home"
+    ]
+  }
+}

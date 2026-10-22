@@ -1,0 +1,155 @@
+{
+  "id": "cue",
+  "name": "Cue",
+  "organization": "Manus AI",
+  "summary": "Agents with their own phone, email, wallet, and computer, continuing work after logout. This record refers specifically to cue.im.",
+  "website": "https://www.cue.im/",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "cue-home",
+      "title": "Cue personal agents",
+      "url": "https://www.cue.im/",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Each agent gets an email, phone, wallet and computer; multiple agents can share a group chat",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ],
+      "shortValue": "Own phone, email, wallet and computer"
+    },
+    {
+      "field": "computerUse",
+      "value": "Dedicated agent computer workspace; local versus cloud architecture is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "cue-home"
+      ],
+      "shortValue": "Dedicated agent computer"
+    },
+    {
+      "field": "voice",
+      "value": "Agents make and take calls from their own phone numbers",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "Connect services and define repeatable Routines; agents keep working after logout",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ],
+      "shortValue": "Routines and work after logout"
+    },
+    {
+      "field": "desktopApps",
+      "value": "macOS and Windows download options on the official site",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ],
+      "shortValue": "macOS, Windows"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Mobile download offered; iPhone/Android availability not specified",
+      "status": "limited",
+      "sourceIds": [
+        "cue-home"
+      ],
+      "shortValue": "Mobile download; OS not specified"
+    },
+    {
+      "field": "channels",
+      "value": "Agent workspace, group chat, email and phone",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Dedicated agent workspace; underlying hosting unverified",
+      "status": "limited",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "You choose access permissions and which actions need review",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "User-defined access and approval boundaries",
+      "status": "documented",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "field": "availability",
+      "value": "Official product site; access requirements unverified",
+      "status": "limited",
+      "sourceIds": [
+        "cue-home"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/cue.svg",
+    "sourceUrl": "https://www.cue.im/assets/cue/favicon.svg",
+    "sourcePage": "https://www.cue.im/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "macOS and Windows download options on the official site",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "macOS and Windows download options on the official site",
+      "sourceIds": [
+        "cue-home"
+      ]
+    },
+    {
+      "platform": "mobile",
+      "status": "limited",
+      "detail": "Mobile download offered; iPhone/Android availability not specified",
+      "sourceIds": [
+        "cue-home"
+      ]
+    }
+  ],
+  "color": "#9b7582",
+  "aliases": [],
+  "identityNote": "This profile is Cue at cue.im. Other products also use the Cue name; their features are not merged here.",
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

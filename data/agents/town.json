@@ -1,0 +1,360 @@
+{
+  "id": "town",
+  "name": "Town",
+  "organization": "Town.com, Inc.",
+  "summary": "A personal work assistant with shared memory across channels, connected accounts, and recurring background routines.",
+  "website": "https://www.town.com",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "town-start",
+      "title": "Town getting started",
+      "url": "https://www.town.com/docs/getting-started",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-memory",
+      "title": "Town context and memory",
+      "url": "https://www.town.com/docs/features/context-and-memory",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-routines",
+      "title": "Town routines",
+      "url": "https://www.town.com/docs/features/routines",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-pricing",
+      "title": "Town individual plans and credit overages",
+      "url": "https://www.town.com/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-models",
+      "title": "Town AI model providers",
+      "url": "https://www.town.com/ai-model-providers",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-updates",
+      "title": "Town product updates",
+      "url": "https://www.town.com/updates",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-security",
+      "title": "Town security and action approvals",
+      "url": "https://www.town.com/features/security",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-ios",
+      "title": "Town native iOS app",
+      "url": "https://www.town.com/docs/using-town/ios",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-integrations",
+      "title": "Town integrations and native desktop app",
+      "url": "https://www.town.com/integrations",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "town-mcp",
+      "title": "Town custom integrations through MCP",
+      "url": "https://www.town.com/docs/integrations/mcp-servers",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Recurring work across connected apps, with per-routine permissions and approvals from your phone",
+      "status": "documented",
+      "sourceIds": [
+        "town-mcp",
+        "town-security",
+        "town-ios"
+      ],
+      "shortValue": "App routines with adjustable permissions"
+    },
+    {
+      "field": "computerUse",
+      "value": "Acts in connected work apps; general desktop control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-start"
+      ],
+      "shortValue": "Connected-app actions"
+    },
+    {
+      "field": "browserUse",
+      "value": "Web search; interactive browser control is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-start"
+      ],
+      "shortValue": "Web search"
+    },
+    {
+      "field": "voice",
+      "value": "Voice notes, meeting/conversation recording, transcripts and action items in the iOS app",
+      "status": "documented",
+      "sourceIds": [
+        "town-ios"
+      ],
+      "shortValue": "Voice notes and meeting recording"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled and event-triggered routines",
+      "status": "documented",
+      "sourceIds": [
+        "town-routines"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS app; Windows and Linux apps are not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-integrations"
+      ],
+      "shortValue": "macOS"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iOS app, available on the App Store; Android app not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-ios"
+      ],
+      "shortValue": "iOS"
+    },
+    {
+      "field": "channels",
+      "value": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "status": "documented",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ],
+      "shortValue": "Web, Mac, iOS and messaging"
+    },
+    {
+      "field": "api",
+      "value": "Custom MCP servers for agent tools; public agent-control API not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-mcp"
+      ],
+      "shortValue": "API not specified; custom MCP tools"
+    },
+    {
+      "field": "models",
+      "value": "Anthropic is primary; OpenAI and Gemini serve selected features and routes",
+      "status": "documented",
+      "sourceIds": [
+        "town-models"
+      ],
+      "shortValue": "Anthropic; selected OpenAI/Gemini routes"
+    },
+    {
+      "field": "byom",
+      "value": "Town chooses hosted model providers; personal inference keys are not specified",
+      "status": "limited",
+      "sourceIds": [
+        "town-models"
+      ],
+      "shortValue": "Included models; BYO keys not specified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Town individual or team plan",
+      "status": "documented",
+      "sourceIds": [
+        "town-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free plan includes 30 chats/month; Starter $15/month; Pro from $49/month billed annually",
+      "status": "documented",
+      "sourceIds": [
+        "town-pricing"
+      ],
+      "shortValue": "Free; Starter $15/mo; Pro $49/mo annually"
+    },
+    {
+      "field": "hosting",
+      "value": "Provider-hosted service",
+      "status": "documented",
+      "sourceIds": [
+        "town-start",
+        "town-models"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "Ask-before-write by default; safe-actions and allow-all modes are configurable",
+      "status": "documented",
+      "sourceIds": [
+        "town-security"
+      ],
+      "shortValue": "Ask-before-write, safe-actions or allow-all"
+    },
+    {
+      "field": "memory",
+      "value": "Editable profile, preferences, and people notes shared across channels",
+      "status": "documented",
+      "sourceIds": [
+        "town-memory"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Configurable approvals; AI training disabled by default",
+      "status": "documented",
+      "sourceIds": [
+        "town-start",
+        "town-routines"
+      ]
+    },
+    {
+      "field": "availability",
+      "value": "Public signup",
+      "status": "documented",
+      "sourceIds": [
+        "town-start"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/town.png",
+    "sourceUrl": "https://www.town.com/favicon.png",
+    "sourcePage": "https://www.town.com",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS app; Windows and Linux apps are not specified",
+      "sourceIds": [
+        "town-integrations"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iOS app, available on the App Store; Android app not specified",
+      "sourceIds": [
+        "town-ios"
+      ]
+    }
+  ],
+  "color": "#687c4a",
+  "aliases": [],
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free",
+      "includes": [
+        "All integrations; weekly briefing",
+        "Seven-day Pro trial"
+      ],
+      "limits": [
+        "30 chats/month"
+      ],
+      "sourceIds": [
+        "town-pricing"
+      ]
+    },
+    {
+      "name": "Starter",
+      "price": "US$15/month",
+      "billing": "Monthly",
+      "includes": [
+        "1,250 monthly credits",
+        "Daily briefing and inbox triage",
+        "Two daily routines"
+      ],
+      "limits": [
+        "10 people lookups and 15 meeting briefings/month",
+        "No credit overage"
+      ],
+      "sourceIds": [
+        "town-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "US$49/user/month",
+      "billing": "Annual commitment; US$588/year",
+      "includes": [
+        "5,000 monthly credits",
+        "Unlimited routines and automatic meeting briefings"
+      ],
+      "limits": [
+        "50 people lookups/month",
+        "Overage: US$0.044/credit"
+      ],
+      "sourceIds": [
+        "town-pricing"
+      ]
+    },
+    {
+      "name": "Power",
+      "price": "US$99/user/month",
+      "billing": "Annual commitment; US$1,188/year",
+      "includes": [
+        "12,000 monthly credits",
+        "Priority model routing; higher routine concurrency"
+      ],
+      "limits": [
+        "150 people lookups/month",
+        "Overage: US$0.038/credit"
+      ],
+      "sourceIds": [
+        "town-pricing"
+      ]
+    },
+    {
+      "name": "Power Plus",
+      "price": "US$199/user/month",
+      "billing": "Annual commitment; US$2,388/year",
+      "includes": [
+        "40,000 monthly credits",
+        "Unlimited people lookups; early features"
+      ],
+      "limits": [
+        "Overage: US$0.032/credit",
+        "Email support within two business days"
+      ],
+      "sourceIds": [
+        "town-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

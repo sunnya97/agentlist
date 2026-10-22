@@ -1,0 +1,261 @@
+{
+  "plans": [
+    {
+      "name": "Free",
+      "price": "$0",
+      "billing": "Ongoing free tier",
+      "includes": [
+        "Seven-day paid-feature trial for new accounts"
+      ],
+      "limits": [
+        "Usage limits apply from day one; exact allowances are shown in the account."
+      ],
+      "sourceIds": [
+        "lucas-faq"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "$20/month or $192/year",
+      "billing": "Monthly or annual subscription",
+      "includes": [],
+      "limits": [
+        "Exact feature and usage allowances are shown in the account."
+      ],
+      "sourceIds": [
+        "lucas-faq"
+      ]
+    },
+    {
+      "name": "Max",
+      "price": "$100/month or $960/year",
+      "billing": "Monthly or annual subscription",
+      "includes": [],
+      "limits": [
+        "Exact feature and usage allowances are shown in the account."
+      ],
+      "sourceIds": [
+        "lucas-faq"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "limited",
+      "detail": "Web dashboard for integrations, account settings and Vault; conversations run through messaging.",
+      "sourceIds": [
+        "lucas-privacy",
+        "lucas-vault"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "id": "lucas",
+  "name": "Lucas",
+  "organization": "Lucas AI",
+  "website": "https://meetlucas.ai/",
+  "summary": "A proactive assistant in iMessage and WhatsApp that follows up on life admin and completes browser errands, with an encrypted credential vault.",
+  "repository": null,
+  "category": "managed",
+  "aliases": [
+    "meetlucasai",
+    "Meet Lucas"
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Completes reservations, refunds and other life admin from texts; encrypted Vault keeps logins, cards and ID documents ready for errands.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-home",
+        "lucas-vault"
+      ],
+      "shortValue": "Text-first errands & Vault"
+    },
+    {
+      "field": "browserUse",
+      "value": "Runs up to five browser errands concurrently, with a live view and handover when needed.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-browser"
+      ],
+      "shortValue": "5 parallel browser errands"
+    },
+    {
+      "field": "channels",
+      "value": "iMessage, WhatsApp and a web dashboard.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-home",
+        "lucas-privacy"
+      ],
+      "shortValue": "iMessage \u00b7 WhatsApp"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Uses existing messaging apps; no separate Lucas mobile app is required.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-about"
+      ],
+      "shortValue": "Messaging apps"
+    },
+    {
+      "field": "voice",
+      "value": "Transcribes WhatsApp voice notes and acts on them.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-updates"
+      ],
+      "shortValue": "Voice notes"
+    },
+    {
+      "field": "scheduling",
+      "value": "Proactive reminders, briefings, automation updates and meeting alerts.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-updates"
+      ],
+      "shortValue": "Proactive texts & automations"
+    },
+    {
+      "field": "models",
+      "value": "Uses third-party AI services including OpenAI, Anthropic and Google.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-privacy"
+      ],
+      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Google"
+    },
+    {
+      "field": "pricing",
+      "value": "Free tier; Pro $20/month or $192/year; Max $100/month or $960/year. New accounts get a seven-day paid-feature trial before reverting to Free.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-faq"
+      ],
+      "shortValue": "Free \u00b7 $20 \u00b7 $100/month"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in Vault encrypts passwords, payment cards and IDs. Browser filling keeps secret fields out of the errand model\u2019s context, with per-entry activity logs.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-vault"
+      ],
+      "shortValue": "Built-in Vault"
+    },
+    {
+      "field": "approvals",
+      "value": "Bookings and payments require approval of the final checkout screenshot; changed prices or details require fresh approval.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-browser"
+      ],
+      "shortValue": "Checkout approval"
+    },
+    {
+      "field": "memory",
+      "value": "Keeps personal facts, preferences, relationships and routines; ask Lucas to remember, change or forget details.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-faq",
+        "lucas-privacy"
+      ],
+      "shortValue": "Editable personal memory"
+    },
+    {
+      "field": "hosting",
+      "value": "Managed assistant using cloud infrastructure and third-party AI services.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-privacy"
+      ],
+      "shortValue": "Cloud"
+    },
+    {
+      "field": "portability",
+      "value": "Manage saved memory and connected accounts; account deletion starts removal subject to backup and legal retention.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-privacy"
+      ],
+      "shortValue": "Memory & account controls"
+    },
+    {
+      "field": "security",
+      "value": "Vault entries use AES-256 with per-user keys; secret fields are encrypted separately and restricted to approved sites.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-vault"
+      ],
+      "shortValue": "Encrypted credential vault"
+    },
+    {
+      "field": "availability",
+      "value": "Sign up with a mobile number and use iMessage or WhatsApp.",
+      "status": "documented",
+      "sourceIds": [
+        "lucas-faq"
+      ],
+      "shortValue": "Available"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lucas-home",
+      "title": "Lucas product overview",
+      "url": "https://meetlucas.ai/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-faq",
+      "title": "Lucas FAQ and pricing",
+      "url": "https://meetlucas.ai/faq/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-privacy",
+      "title": "Lucas privacy policy",
+      "url": "https://meetlucas.ai/privacy-policy/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-vault",
+      "title": "Introducing Vault",
+      "url": "https://meetlucas.ai/updates/2026-09-15-introducing-vault/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-browser",
+      "title": "Parallel errands and flight booking",
+      "url": "https://meetlucas.ai/updates/2026-09-14-parallel-errands-and-flight-booking/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-updates",
+      "title": "Lucas product updates",
+      "url": "https://meetlucas.ai/updates/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "lucas-about",
+      "title": "About Lucas",
+      "url": "https://meetlucas.ai/about/",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/lucas.svg",
+    "sourceUrl": "https://meetlucas.ai/favicon.svg?v=3",
+    "sourcePage": "https://meetlucas.ai/",
+    "kind": "product"
+  }
+}

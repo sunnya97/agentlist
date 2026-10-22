@@ -1,0 +1,354 @@
+{
+  "id": "codex",
+  "name": "Codex",
+  "organization": "OpenAI",
+  "summary": "OpenAI\u2019s coding agent across desktop, terminal, IDE, cloud, and iOS, with local computer use, scheduled tasks, and optional local models.",
+  "website": "https://learn.chatgpt.com/docs/codex/cli",
+  "repository": "https://github.com/openai/codex",
+  "category": "adjacent",
+  "sources": [
+    {
+      "id": "codex-repo",
+      "title": "Codex official repository",
+      "url": "https://github.com/openai/codex",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-glossary",
+      "title": "ChatGPT and Codex glossary",
+      "url": "https://learn.chatgpt.com/docs/glossary",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-cli",
+      "title": "Codex CLI",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-remote",
+      "title": "Remote connections",
+      "url": "https://learn.chatgpt.com/docs/remote-connections",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-linux",
+      "title": "ChatGPT and Codex updates",
+      "url": "https://learn.chatgpt.com/docs/whats-new",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-sdk",
+      "title": "Codex SDK",
+      "url": "https://learn.chatgpt.com/docs/codex-sdk",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-model-providers",
+      "title": "Custom and local model providers",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-advanced",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-auth",
+      "title": "Codex authentication",
+      "url": "https://learn.chatgpt.com/docs/auth",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-approvals",
+      "title": "Agent approvals and security",
+      "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-computer",
+      "title": "Computer Use in ChatGPT Work and Codex",
+      "url": "https://learn.chatgpt.com/docs/computer-use",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-browser",
+      "title": "Browser in ChatGPT Work and Codex",
+      "url": "https://learn.chatgpt.com/docs/browser",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-desktop",
+      "title": "ChatGPT desktop app",
+      "url": "https://learn.chatgpt.com/docs/app",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-mobile",
+      "title": "Codex on mobile",
+      "url": "https://learn.chatgpt.com/docs/mobile",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-pricing",
+      "title": "ChatGPT and Codex pricing",
+      "url": "https://learn.chatgpt.com/docs/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-voice",
+      "title": "Voice dictation in the desktop app",
+      "url": "https://learn.chatgpt.com/docs/prompting",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-memories",
+      "title": "Local Codex memories",
+      "url": "https://learn.chatgpt.com/docs/customization/memories",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "codex-schedules",
+      "title": "Scheduled tasks",
+      "url": "https://learn.chatgpt.com/docs/automations",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Local code work and cloud delegation, with an open CLI that supports custom or local model providers.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-cli",
+        "codex-model-providers",
+        "codex-repo"
+      ],
+      "shortValue": "Local + cloud coding \u00b7 optional local models"
+    },
+    {
+      "field": "computerUse",
+      "value": "Local GUI control on macOS and Windows through the desktop app. Windows tasks use the foreground; Linux computer use is not available in the preview.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-computer",
+        "codex-linux"
+      ],
+      "shortValue": "Local macOS / Windows desktop"
+    },
+    {
+      "field": "browserUse",
+      "value": "Built-in desktop browser plus browser-extension control of existing tabs; built-in browser is not available in CLI or IDE.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-browser"
+      ],
+      "shortValue": "Built-in browser + existing browser tabs"
+    },
+    {
+      "field": "voice",
+      "value": "Desktop voice dictation turns speech into an editable prompt; ambient listening is not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-voice"
+      ],
+      "shortValue": "Voice dictation"
+    },
+    {
+      "field": "scheduling",
+      "value": "Desktop recurring tasks; local project tasks need the computer on and app running.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-schedules"
+      ],
+      "shortValue": "Recurring tasks; local host must stay on"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native ChatGPT app with Codex on macOS, Windows, and Linux preview.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-desktop",
+        "codex-linux"
+      ],
+      "shortValue": "macOS \u00b7 Windows \u00b7 Linux preview"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Codex in ChatGPT for iOS can run tasks in cloud environments or connected computers. Android Codex support is not specified in the current mobile guide.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-mobile"
+      ],
+      "shortValue": "iOS; Android not specified"
+    },
+    {
+      "field": "channels",
+      "value": "Desktop, terminal, IDE, web cloud tasks, and iOS.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-cli",
+        "codex-desktop",
+        "codex-mobile"
+      ],
+      "shortValue": "Desktop \u00b7 CLI \u00b7 IDE \u00b7 web \u00b7 iOS"
+    },
+    {
+      "field": "api",
+      "value": "Codex SDK and app-server interface provide programmatic local-agent control.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-sdk"
+      ],
+      "shortValue": "SDK + app-server interface"
+    },
+    {
+      "field": "models",
+      "value": "OpenAI models, custom providers, or local models via Ollama and LM Studio.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-model-providers"
+      ],
+      "shortValue": "OpenAI + custom / local providers"
+    },
+    {
+      "field": "byom",
+      "value": "ChatGPT allowance or API credentials; configurable providers and local Ollama / LM Studio models.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-model-providers",
+        "codex-auth"
+      ],
+      "shortValue": "Included, BYO API, or local models"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included usage with ChatGPT Plus, Pro, and eligible business plans; API-key usage billed separately.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-pricing",
+        "codex-auth"
+      ],
+      "shortValue": "ChatGPT Plus / Pro / business plans"
+    },
+    {
+      "field": "pricing",
+      "value": "ChatGPT Plus starts at $20/month with Codex usage; Pro and business plans provide other allowances. API-key use is metered separately.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-pricing",
+        "codex-auth"
+      ],
+      "shortValue": "From $20/mo plan; API option"
+    },
+    {
+      "field": "license",
+      "value": "CLI is Apache-2.0 open source. That license does not describe the hosted product or desktop app.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-repo"
+      ],
+      "shortValue": "Open-source CLI; hosted app separate"
+    },
+    {
+      "field": "hosting",
+      "value": "Local desktop / CLI / IDE work or managed cloud tasks. The open CLI can use self-hosted model endpoints; hosted Codex is a separate service.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-cli",
+        "codex-mobile",
+        "codex-model-providers"
+      ],
+      "shortValue": "Local or managed cloud"
+    },
+    {
+      "field": "approvals",
+      "value": "Configurable sandbox and action approvals, with optional automatic review.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-approvals"
+      ],
+      "shortValue": "Sandbox + configurable approvals"
+    },
+    {
+      "field": "memory",
+      "value": "Optional local memory across chats, stored on the connected machine; separate from ChatGPT account memory.",
+      "status": "documented",
+      "sourceIds": [
+        "codex-memories"
+      ],
+      "shortValue": "Optional local memory across chats"
+    },
+    {
+      "field": "availability",
+      "value": "Public desktop, CLI, IDE, cloud, and iOS surfaces; specific tools depend on region, plan, and workspace.",
+      "status": "limited",
+      "sourceIds": [
+        "codex-desktop",
+        "codex-mobile",
+        "codex-computer"
+      ],
+      "shortValue": "Public; feature access varies"
+    }
+  ],
+  "logo": {
+    "path": "./logos/codex.png",
+    "sourceUrl": "https://developers.openai.com/favicon.png",
+    "sourcePage": "https://developers.openai.com/codex",
+    "kind": "organization",
+    "note": "Official OpenAI developer-site mark; a distinct CLI logo was not located."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Desktop, terminal, IDE, web cloud tasks, and iOS.",
+      "sourceIds": [
+        "codex-cli",
+        "codex-desktop",
+        "codex-mobile"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native ChatGPT app with Codex on macOS, Windows, and Linux preview.",
+      "sourceIds": [
+        "codex-desktop",
+        "codex-linux"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native ChatGPT app with Codex on macOS, Windows, and Linux preview.",
+      "sourceIds": [
+        "codex-desktop",
+        "codex-linux"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "preview",
+      "detail": "Native ChatGPT app with Codex on macOS, Windows, and Linux preview.",
+      "sourceIds": [
+        "codex-desktop",
+        "codex-linux"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Codex in ChatGPT for iOS can run tasks in cloud environments or connected computers. Android Codex support is not specified in the current mobile guide.",
+      "sourceIds": [
+        "codex-mobile"
+      ]
+    }
+  ],
+  "color": "#45634c",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

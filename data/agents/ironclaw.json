@@ -1,0 +1,211 @@
+{
+  "id": "ironclaw",
+  "name": "IronClaw",
+  "organization": "NEAR AI",
+  "summary": "A Rust personal assistant emphasizing credential protection and isolated tool execution.",
+  "website": "https://www.ironclaw.com",
+  "repository": "https://github.com/nearai/ironclaw",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "ironclaw-readme",
+      "title": "IronClaw README",
+      "url": "https://raw.githubusercontent.com/nearai/ironclaw/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-repo",
+      "title": "IronClaw official repository",
+      "url": "https://github.com/nearai/ironclaw",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-secret-store",
+      "title": "IronClaw encrypted secret store",
+      "url": "https://github.com/nearai/ironclaw/blob/main/crates/substrates/ironclaw_secrets/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-developer-api",
+      "title": "IronClaw OpenAI-compatible API contract",
+      "url": "https://github.com/nearai/ironclaw/blob/main/docs/internal/reborn/contracts/openai-compatible-api.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-model-providers",
+      "title": "IronClaw inference providers",
+      "url": "https://github.com/nearai/ironclaw/blob/main/docs/capabilities/llm-providers.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ironclaw-approval-system",
+      "title": "IronClaw approval system",
+      "url": "https://github.com/nearai/ironclaw/blob/main/crates/kernel/ironclaw_approvals/README.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "WASM tool isolation and credential injection that keeps raw secrets outside tool code.",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "shortValue": "Isolated WASM tools; secrets injected outside tools"
+    },
+    {
+      "field": "scheduling",
+      "value": "Cron, events, webhooks, and heartbeat.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Web interface and terminal on macOS, Linux, and Windows; native desktop app not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "shortValue": "Web interface + terminal; native app unspecified"
+    },
+    {
+      "field": "channels",
+      "value": "REPL, web gateway, webhooks, Telegram, Slack.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Self-hosted Chat Completions and Responses API routes, described in implementation docs.",
+      "status": "limited",
+      "sourceIds": [
+        "ironclaw-developer-api"
+      ],
+      "shortValue": "Chat Completions / Responses API routes"
+    },
+    {
+      "field": "models",
+      "value": "NEAR AI, Anthropic, OpenAI, Gemini, Copilot, Ollama, Bedrock, and compatible endpoints.",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-model-providers"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "Own keys for Anthropic, OpenAI, Gemini and other providers; Ollama and compatible endpoints.",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-model-providers"
+      ],
+      "shortValue": "Own keys, Ollama, compatible endpoints"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Can use a ChatGPT subscription through the OpenAI Codex provider.",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-model-providers"
+      ],
+      "shortValue": "ChatGPT subscription through Codex provider"
+    },
+    {
+      "field": "license",
+      "value": "MIT OR Apache-2.0",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Self-hosted; background service and browser interface.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in encrypted credential store; website-password autofill is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "ironclaw-secret-store"
+      ],
+      "shortValue": "Encrypted credential store; browser autofill unspecified"
+    },
+    {
+      "field": "approvals",
+      "value": "Scoped approval requests, durable denials, and configurable always-allow policies.",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-approval-system"
+      ],
+      "shortValue": "Scoped approvals and configurable always-allow policies"
+    },
+    {
+      "field": "memory",
+      "value": "Persistent workspace, identity files, hybrid full-text/vector search.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Native installers and editable local configuration. Full state export / restore not verified.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "WASM capabilities, credential injection, endpoint allowlists, Docker isolation.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/ironclaw.png",
+    "sourceUrl": "https://raw.githubusercontent.com/nearai/ironclaw/main/crates/product/ironclaw_webui/frontend/public/assets/favicon-96x96.png",
+    "sourcePage": "https://github.com/nearai/ironclaw/tree/main/crates/product/ironclaw_webui/frontend/public/assets",
+    "kind": "product",
+    "note": "Official IronClaw app icon; the marketing-site favicon instead depicts NEAR."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web interface and terminal on macOS, Linux, and Windows; native desktop app not specified.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ]
+    }
+  ],
+  "color": "#5e8985",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

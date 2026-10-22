@@ -1,0 +1,280 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code",
+  "organization": "Anthropic",
+  "summary": "A coding harness with memory, desktop scheduling, and cloud sessions. Tracked as adjacent because its primary scope is software work.",
+  "website": "https://code.claude.com/docs/en/overview",
+  "repository": null,
+  "category": "adjacent",
+  "sources": [
+    {
+      "id": "claude-code-docs",
+      "title": "Claude Code overview",
+      "url": "https://code.claude.com/docs/en/overview",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-computer",
+      "title": "Let Claude use your computer",
+      "url": "https://code.claude.com/docs/en/computer-use",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-desktop",
+      "title": "Claude Code desktop application",
+      "url": "https://code.claude.com/docs/en/desktop",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-linux",
+      "title": "Claude Desktop on Linux (beta)",
+      "url": "https://code.claude.com/docs/en/desktop-linux",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-mobile",
+      "title": "Claude Code on mobile",
+      "url": "https://code.claude.com/docs/en/mobile",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-sdk",
+      "title": "Run Claude Code programmatically",
+      "url": "https://code.claude.com/docs/en/headless",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-providers",
+      "title": "Claude Code deployment options",
+      "url": "https://code.claude.com/docs/en/third-party-integrations",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-plans",
+      "title": "Use Claude Code with your Pro or Max plan",
+      "url": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "claude-code-permissions",
+      "title": "Configure Claude Code permissions",
+      "url": "https://code.claude.com/docs/en/permissions",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Works directly in a codebase; can be scripted in CI or controlled from a phone.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-sdk",
+        "claude-code-mobile"
+      ],
+      "shortValue": "Codebase tools \u00b7 CI automation \u00b7 phone control"
+    },
+    {
+      "field": "computerUse",
+      "value": "Local desktop control: macOS and Windows through Desktop, macOS through CLI; CLI requires Pro/Max and interactive use.",
+      "status": "limited",
+      "sourceIds": [
+        "claude-code-computer"
+      ],
+      "shortValue": "Local macOS / Windows desktop"
+    },
+    {
+      "field": "browserUse",
+      "value": "Chrome extension for browser automation.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-docs"
+      ],
+      "shortValue": "Chrome extension"
+    },
+    {
+      "field": "scheduling",
+      "value": "Desktop recurring tasks; configuration dependent",
+      "status": "limited",
+      "sourceIds": [
+        "claude-code-docs"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native Claude desktop app for macOS and Windows; Linux desktop is in beta.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-desktop",
+        "claude-code-linux"
+      ],
+      "shortValue": "macOS \u00b7 Windows \u00b7 Linux beta"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Claude apps for iOS and Android can start and steer cloud or remotely connected sessions; code runs elsewhere.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-mobile"
+      ],
+      "shortValue": "iOS \u00b7 Android remote control"
+    },
+    {
+      "field": "channels",
+      "value": "Terminal, IDE, desktop, browser, mobile",
+      "sourceIds": [
+        "claude-code-docs"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Agent SDK for Python and TypeScript, plus non-interactive CLI execution.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-sdk"
+      ],
+      "shortValue": "Python / TypeScript SDK + CLI"
+    },
+    {
+      "field": "models",
+      "value": "Claude models via subscription, API, or supported cloud providers.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-providers"
+      ],
+      "shortValue": "Claude model family"
+    },
+    {
+      "field": "byom",
+      "value": "Claude subscription or own Anthropic API credentials; supported cloud providers include Amazon Bedrock, Google Cloud, and Microsoft Foundry.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-docs",
+        "claude-code-providers",
+        "claude-code-plans"
+      ],
+      "shortValue": "Included Claude or own API / cloud billing"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Included with eligible Claude subscriptions, including Pro and Max; shared plan limits or separate API billing.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-plans"
+      ],
+      "shortValue": "Claude Pro / Max; API option"
+    },
+    {
+      "field": "pricing",
+      "value": "Eligible Claude subscription usage or pay-as-you-go API billing.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-plans"
+      ],
+      "shortValue": "Subscription or API usage"
+    },
+    {
+      "field": "hosting",
+      "value": "Terminal, IDE, desktop, and cloud sessions",
+      "sourceIds": [
+        "claude-code-docs"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "approvals",
+      "value": "Configurable permission rules; manual approvals or automatic action review.",
+      "status": "documented",
+      "sourceIds": [
+        "claude-code-permissions"
+      ],
+      "shortValue": "Tool permissions + automatic review"
+    },
+    {
+      "field": "memory",
+      "value": "Project instructions and cross-session auto memory",
+      "sourceIds": [
+        "claude-code-docs"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Multiple surfaces with account requirements",
+      "sourceIds": [
+        "claude-code-docs"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/claude-code.png",
+    "sourceUrl": "https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/android-chrome-192x192.png",
+    "sourcePage": "https://code.claude.com/docs/en/overview",
+    "kind": "product",
+    "note": "Official Claude Code documentation favicon."
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Terminal, IDE, desktop, browser, mobile",
+      "sourceIds": [
+        "claude-code-docs"
+      ]
+    },
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native Claude desktop app for macOS and Windows; Linux desktop is in beta.",
+      "sourceIds": [
+        "claude-code-desktop",
+        "claude-code-linux"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Claude desktop app for macOS and Windows; Linux desktop is in beta.",
+      "sourceIds": [
+        "claude-code-desktop",
+        "claude-code-linux"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "beta",
+      "detail": "Native Claude desktop app for macOS and Windows; Linux desktop is in beta.",
+      "sourceIds": [
+        "claude-code-desktop",
+        "claude-code-linux"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Claude apps for iOS and Android can start and steer cloud or remotely connected sessions; code runs elsewhere.",
+      "sourceIds": [
+        "claude-code-mobile"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Claude apps for iOS and Android can start and steer cloud or remotely connected sessions; code runs elsewhere.",
+      "sourceIds": [
+        "claude-code-mobile"
+      ]
+    }
+  ],
+  "color": "#b76b4e",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  }
+}

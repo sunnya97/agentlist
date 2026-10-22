@@ -1,0 +1,372 @@
+{
+  "id": "grok-bot",
+  "name": "Grok Bot",
+  "organization": "Grok / Cursor",
+  "summary": "Named AI teammates that work across apps on a persistent computer and collaborate on ongoing projects.",
+  "website": "https://x.ai/bot",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "grok-product",
+      "title": "Grok Bot \u00b7 Official product page",
+      "url": "https://x.ai/bot",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-docs",
+      "title": "Grok Bot overview \u00b7 Official docs",
+      "url": "https://docs.x.ai/grok-bot/overview",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-computer",
+      "title": "Use the computer and apps",
+      "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-start",
+      "title": "Get started with Grok Bot",
+      "url": "https://docs.x.ai/grok-bot/get-started",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-mobile",
+      "title": "Grok Bot for Mobile",
+      "url": "https://docs.x.ai/grok-bot/mobile",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-teams",
+      "title": "Grok Bot for teams and enterprises",
+      "url": "https://docs.x.ai/grok-bot/teams-and-enterprises",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-approvals",
+      "title": "Approvals, security, and privacy",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-bot-plans",
+      "title": "Grok Bot plans, linked subscriptions and weekly usage",
+      "url": "https://cursor.com/help/grok-bot/plans",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "x-subscription-pricing",
+      "title": "The X Subscription prices",
+      "url": "https://docs.x.ai/x-subscription/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "cursor-legacy-pricing",
+      "title": "Legacy Cursor plan prices",
+      "url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Teach a workflow by demonstrating it; several named Bots can coordinate on shared work.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-product"
+      ],
+      "shortValue": "Learn by demonstration \u00b7 collaborating Bots"
+    },
+    {
+      "field": "computerUse",
+      "value": "Persistent cloud desktop; each Bot has a screen on the shared user computer.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-computer"
+      ],
+      "shortValue": "Cloud desktop; one screen per Bot"
+    },
+    {
+      "field": "browserUse",
+      "value": "Cloud browser with persistent logins; browser sessions are shared among your Bots.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-computer"
+      ],
+      "shortValue": "Cloud browser with saved sessions"
+    },
+    {
+      "field": "voice",
+      "value": "Dictation, voice chat, and voice memos.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-docs"
+      ],
+      "shortValue": "Voice chat \u00b7 dictation \u00b7 memos"
+    },
+    {
+      "field": "scheduling",
+      "value": "Scheduled routines and 24/7 work",
+      "sourceIds": [
+        "grok-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native Grok Bot applications for macOS, Windows, and Linux.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-start"
+      ],
+      "shortValue": "macOS \u00b7 Windows \u00b7 Linux"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Companion apps for iOS and Android.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-mobile"
+      ],
+      "shortValue": "iOS \u00b7 Android"
+    },
+    {
+      "field": "channels",
+      "value": "Desktop and mobile; text and voice",
+      "sourceIds": [
+        "grok-docs"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Admin API manages team access, policy, and computers; a public API for chatting with your personal Bot is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "grok-teams"
+      ],
+      "shortValue": "Team administration API"
+    },
+    {
+      "field": "byom",
+      "value": "Weekly model usage is included with eligible plans; bringing your own model key is not specified.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-docs"
+      ],
+      "shortValue": "Usage included; BYO not specified"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Bundled with The X Subscription Premium, Super and Ultra; eligible legacy Cursor and linked SuperGrok plans also grant access.",
+      "shortValue": "X Premium / Super / Ultra; legacy plans",
+      "status": "documented",
+      "sourceIds": [
+        "grok-bot-plans"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "New customers: The X Subscription Premium US$30/month, Super US$100/month or Ultra US$200/month; annual discounts available. Eligible legacy Cursor and linked SuperGrok plans continue.",
+      "shortValue": "From US$30/mo; legacy plans supported",
+      "status": "documented",
+      "sourceIds": [
+        "grok-bot-plans",
+        "x-subscription-pricing"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed cloud; bots share a computer per user",
+      "sourceIds": [
+        "grok-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Supports masked secret requests and manual sign-in takeover; all Bots share signed-in sessions. A personal password-manager vault is not specified.",
+      "status": "limited",
+      "sourceIds": [
+        "grok-computer"
+      ],
+      "shortValue": "Secure secret entry + saved sessions"
+    },
+    {
+      "field": "approvals",
+      "value": "Ask-first rules and automatic review; allow once, save a rule, or deny an action.",
+      "status": "documented",
+      "sourceIds": [
+        "grok-approvals"
+      ],
+      "shortValue": "Ask-first rules + automatic review"
+    },
+    {
+      "field": "memory",
+      "value": "Context accumulates across work",
+      "sourceIds": [
+        "grok-docs"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "security",
+      "value": "Action approvals; isolation is per user, not per bot",
+      "sourceIds": [
+        "grok-product"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Individual, team, and enterprise access",
+      "sourceIds": [
+        "grok-product"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/grok-bot.svg",
+    "sourceUrl": "https://grok.com/images/favicon.svg",
+    "sourcePage": "https://grok.com",
+    "kind": "product",
+    "note": "Grok product-family mark."
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native Grok Bot applications for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "grok-start"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native Grok Bot applications for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "grok-start"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Native Grok Bot applications for macOS, Windows, and Linux.",
+      "sourceIds": [
+        "grok-start"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Companion apps for iOS and Android.",
+      "sourceIds": [
+        "grok-mobile"
+      ]
+    },
+    {
+      "platform": "android",
+      "status": "available",
+      "detail": "Companion apps for iOS and Android.",
+      "sourceIds": [
+        "grok-mobile"
+      ]
+    }
+  ],
+  "color": "#30352e",
+  "aliases": [
+    "Grokbot"
+  ],
+  "plans": [
+    {
+      "name": "X Premium",
+      "price": "US$30/month",
+      "billing": "Monthly, or US$300/year",
+      "includes": [
+        "Grok Bot, Grok, Cursor and linked X benefits",
+        "4\u00d7 base included usage"
+      ],
+      "limits": [
+        "Weekly allowance shared across products",
+        "Extra usage uses prepaid credits"
+      ],
+      "sourceIds": [
+        "grok-bot-plans",
+        "x-subscription-pricing"
+      ]
+    },
+    {
+      "name": "X Super",
+      "price": "US$100/month",
+      "billing": "Monthly, or US$1,000/year",
+      "includes": [
+        "Premium features; 15\u00d7 base included usage"
+      ],
+      "limits": [
+        "Shared weekly allowance; paid top-ups"
+      ],
+      "sourceIds": [
+        "x-subscription-pricing"
+      ]
+    },
+    {
+      "name": "X Ultra",
+      "price": "US$200/month",
+      "billing": "Monthly, or US$2,000/year",
+      "includes": [
+        "Premium features; 50\u00d7 base included usage"
+      ],
+      "limits": [
+        "Shared weekly allowance; paid top-ups"
+      ],
+      "sourceIds": [
+        "x-subscription-pricing"
+      ]
+    },
+    {
+      "name": "Legacy Cursor Pro / Pro+ / Ultra",
+      "price": "US$20 / US$60 / US$200 per month",
+      "billing": "Existing Cursor plans",
+      "includes": [
+        "Grok Bot with progressively larger weekly allowances"
+      ],
+      "limits": [
+        "Grok links and Cursor allowances do not stack",
+        "Optional overage billed through Cursor"
+      ],
+      "sourceIds": [
+        "cursor-legacy-pricing",
+        "grok-bot-plans"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 55642,
+    "positiveUserWeeks": 9150,
+    "negativeUserWeeks": 6348,
+    "positiveShare": 59.0,
+    "channels": [
+      "App Store",
+      "Play Store",
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

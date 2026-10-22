@@ -1,0 +1,266 @@
+{
+  "plans": [
+    {
+      "name": "Free to start",
+      "price": "Free to start",
+      "billing": "No card required",
+      "includes": [],
+      "limits": [
+        "Public usage allowance is not stated."
+      ],
+      "sourceIds": [
+        "rene-home"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "$20 / $200",
+      "billing": "US App Store purchases",
+      "includes": [],
+      "limits": [
+        "The public listing does not identify billing periods or included allowances."
+      ],
+      "sourceIds": [
+        "rene-app"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": "$200",
+      "billing": "US App Store purchase",
+      "includes": [],
+      "limits": [
+        "The public listing does not identify the billing period or included allowances."
+      ],
+      "sourceIds": [
+        "rene-app"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Rene web app at app.rene.co.",
+      "sourceIds": [
+        "rene-privacy"
+      ]
+    },
+    {
+      "platform": "ios",
+      "status": "available",
+      "detail": "Native iPhone app; iOS 16.4+.",
+      "sourceIds": [
+        "rene-app"
+      ]
+    },
+    {
+      "platform": "ipados",
+      "status": "available",
+      "detail": "Native iPad app; iPadOS 16.4+.",
+      "sourceIds": [
+        "rene-app"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "id": "rene",
+  "name": "Rene",
+  "organization": "Marumaru / Second Enlightenment",
+  "website": "https://rene.co/",
+  "summary": "A messaging assistant that coordinates email, calendars and browser errands, with Rene-to-Rene planning between people.",
+  "repository": null,
+  "category": "managed",
+  "aliases": [],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Rene-to-Rene planning, connected-app coordination, and creating websites, slides and images from chat.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-home"
+      ],
+      "shortValue": "Rene-to-Rene planning"
+    },
+    {
+      "field": "browserUse",
+      "value": "Browses websites and completes errands such as restaurant reservations.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-home"
+      ],
+      "shortValue": "Web errands"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Native iPhone and iPad app; requires iOS / iPadOS 16.4 or later.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-app"
+      ],
+      "shortValue": "iPhone \u00b7 iPad"
+    },
+    {
+      "field": "channels",
+      "value": "Messages on iPhone, WhatsApp, Telegram and the web app.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-faq",
+        "rene-privacy"
+      ],
+      "shortValue": "Messages \u00b7 WhatsApp \u00b7 Telegram"
+    },
+    {
+      "field": "voice",
+      "value": "Accepts voice requests.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-terms"
+      ],
+      "shortValue": "Voice requests"
+    },
+    {
+      "field": "scheduling",
+      "value": "Recurring briefs, reminders and follow-ups; surfaces changes requiring attention.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-app"
+      ],
+      "shortValue": "Routines & reminders"
+    },
+    {
+      "field": "models",
+      "value": "OpenAI and DeepSeek inference, with OpenRouter for routing.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-models"
+      ],
+      "shortValue": "OpenAI \u00b7 DeepSeek"
+    },
+    {
+      "field": "pricing",
+      "value": "Free to start. US App Store lists Rene Pro purchases at $20 and $200, and Premium at $200; purchase periods and allowances are not listed.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-home",
+        "rene-app"
+      ],
+      "shortValue": "Free to start"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Email and calendar use delegated OAuth access rather than storing service passwords.",
+      "status": "limited",
+      "sourceIds": [
+        "rene-privacy"
+      ],
+      "shortValue": "OAuth connections"
+    },
+    {
+      "field": "approvals",
+      "value": "Asks before sensitive information is sent or changed.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-faq"
+      ],
+      "shortValue": "Sensitive-action approval"
+    },
+    {
+      "field": "memory",
+      "value": "Keeps conversations, preferences, saved context and connected-app state for future requests.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-privacy"
+      ],
+      "shortValue": "Cross-conversation context"
+    },
+    {
+      "field": "hosting",
+      "value": "Managed service with external AI inference providers.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-privacy",
+        "rene-models"
+      ],
+      "shortValue": "Cloud"
+    },
+    {
+      "field": "portability",
+      "value": "Access, correction, export and deletion can be requested; connected services can be disconnected.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-privacy"
+      ],
+      "shortValue": "Export by request"
+    },
+    {
+      "field": "security",
+      "value": "Encrypted in transit and at rest; requests consent before sending data to external AI providers.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-privacy"
+      ],
+      "shortValue": "Encryption & AI consent"
+    },
+    {
+      "field": "availability",
+      "value": "Available through messaging and the App Store.",
+      "status": "documented",
+      "sourceIds": [
+        "rene-faq",
+        "rene-app"
+      ],
+      "shortValue": "Available"
+    }
+  ],
+  "sources": [
+    {
+      "id": "rene-home",
+      "title": "Rene product overview",
+      "url": "https://rene.co/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "rene-faq",
+      "title": "Rene FAQ",
+      "url": "https://rene.co/faq",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "rene-privacy",
+      "title": "Rene privacy policy",
+      "url": "https://rene.co/privacy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "rene-models",
+      "title": "Rene AI provider list",
+      "url": "https://rene.co/ai-providers",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "rene-app",
+      "title": "Rene on the App Store",
+      "url": "https://apps.apple.com/us/app/rene-ai-with-friends/id6768238195",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "rene-terms",
+      "title": "Rene terms of service",
+      "url": "https://rene.co/terms",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "logo": {
+    "path": "./logos/rene.png",
+    "sourceUrl": "https://rene.co/apple-touch-icon.png?v=20260814-1",
+    "sourcePage": "https://rene.co/",
+    "kind": "product"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "id": "hermes",
+  "name": "Hermes Agent",
+  "organization": "Nous Research",
+  "summary": "A persistent assistant that retains knowledge and develops reusable skills through experience.",
+  "website": "https://hermes-agent.nousresearch.com",
+  "repository": "https://github.com/NousResearch/hermes-agent",
+  "category": "runtime",
+  "sources": [
+    {
+      "id": "hermes-readme",
+      "title": "Hermes Agent README",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/README.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-security",
+      "title": "Hermes security model",
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-computer-use",
+      "title": "Hermes computer use",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/computer-use.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-browser-use",
+      "title": "Hermes browser automation",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/browser.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-password-vault",
+      "title": "Hermes passwords and logins",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/credential-vault.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-desktop-app",
+      "title": "Hermes Desktop",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/desktop.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-developer-api",
+      "title": "Hermes API server",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/api-server.md",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "hermes-voice-mode",
+      "title": "Hermes voice mode",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/voice-mode.md",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Learns reusable skills from experience; imports OpenClaw settings, memory, and skills.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "shortValue": "Learns reusable skills; imports OpenClaw state"
+    },
+    {
+      "field": "computerUse",
+      "value": "Controls macOS, Windows, and Linux desktops; can target the host or a supported sandbox.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-computer-use"
+      ],
+      "shortValue": "Local desktop control on macOS, Windows, and Linux"
+    },
+    {
+      "field": "browserUse",
+      "value": "Local or cloud browser automation; can connect to an existing Chromium browser.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-browser-use"
+      ],
+      "shortValue": "Local, cloud, or an existing browser"
+    },
+    {
+      "field": "voice",
+      "value": "Microphone conversations, spoken replies, Discord voice channels, and optional wake-word activation.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-voice-mode"
+      ],
+      "shortValue": "Voice conversations, spoken replies, wake word"
+    },
+    {
+      "field": "scheduling",
+      "value": "Built-in cron with cross-platform delivery.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "desktopApps",
+      "value": "Native macOS (Apple Silicon), Windows, and Linux apps.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-desktop-app"
+      ],
+      "shortValue": "macOS, Windows, Linux"
+    },
+    {
+      "field": "channels",
+      "value": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "api",
+      "value": "Self-hosted OpenAI-compatible HTTP API with streaming and persistent sessions.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-developer-api"
+      ],
+      "shortValue": "OpenAI-compatible HTTP API"
+    },
+    {
+      "field": "models",
+      "value": "Nous Portal, OpenRouter, OpenAI, custom endpoints, and others.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "byom",
+      "value": "Bring your own provider keys or model endpoint; provider and tool credentials are configurable.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "shortValue": "Own API keys and model endpoints"
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Optional Nous Portal subscription includes models, web search, image generation, speech, and cloud browsing.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "shortValue": "Optional Nous Portal model + tools subscription"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "hosting",
+      "value": "Local, VPS, containers, or serverless backends.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "passwordManager",
+      "value": "Built-in encrypted login vault, browser autofill, and 1Password/Bitwarden integration.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-password-vault"
+      ],
+      "shortValue": "Built-in vault + 1Password and Bitwarden"
+    },
+    {
+      "field": "approvals",
+      "value": "Configurable dangerous-command approvals; every saved-card autofill asks first.",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-security",
+        "hermes-password-vault"
+      ],
+      "shortValue": "Command approvals + confirmation before card autofill"
+    },
+    {
+      "field": "memory",
+      "value": "Curated memory, session search, learned skills, and user modeling.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "portability",
+      "value": "Agent Skills standard; multiple execution backends. Full state export / restore not verified.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "limited"
+    },
+    {
+      "field": "security",
+      "value": "User authorization, command approvals, and configurable container isolation.",
+      "sourceIds": [
+        "hermes-security"
+      ],
+      "status": "documented"
+    },
+    {
+      "field": "availability",
+      "value": "Available for self-hosting.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "documented"
+    }
+  ],
+  "logo": {
+    "path": "./logos/hermes.png",
+    "sourceUrl": "https://web-assets.nousresearch.com/marketing/34527bc79603f36083cf1e5862deed57761cb90e/assets/hermes-agent/icon.png",
+    "sourcePage": "https://hermes-agent.nousresearch.com",
+    "kind": "product",
+    "note": "Official Hermes Agent site icon."
+  },
+  "platforms": [
+    {
+      "platform": "macos",
+      "status": "available",
+      "detail": "Native macOS (Apple Silicon), Windows, and Linux apps.",
+      "sourceIds": [
+        "hermes-desktop-app"
+      ]
+    },
+    {
+      "platform": "windows",
+      "status": "available",
+      "detail": "Native macOS (Apple Silicon), Windows, and Linux apps.",
+      "sourceIds": [
+        "hermes-desktop-app"
+      ]
+    },
+    {
+      "platform": "linux",
+      "status": "available",
+      "detail": "Native macOS (Apple Silicon), Windows, and Linux apps.",
+      "sourceIds": [
+        "hermes-desktop-app"
+      ]
+    }
+  ],
+  "color": "#817aa2",
+  "aliases": [],
+  "plans": [],
+  "discussions": [
+    {
+      "title": "Hermes user experiences: homelabs, memory and interface friction",
+      "url": "https://news.ycombinator.com/item?id=48419000",
+      "platform": "Hacker News",
+      "date": "2026-06-05",
+      "summary": "Users report useful homelab and Matrix automation alongside slow startup and CLI complaints. The thread also flags its submitted website as unofficial.",
+      "sentiment": "mixed",
+      "kind": "community"
+    }
+  ],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 36804,
+    "positiveUserWeeks": 5389,
+    "negativeUserWeeks": 3094,
+    "positiveShare": 63.5,
+    "channels": [
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

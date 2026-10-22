@@ -1,0 +1,153 @@
+{
+  "id": "instinct",
+  "name": "Instinct",
+  "organization": "Spear Street Technology, Inc.",
+  "summary": "A personal assistant for errands and bookings through text or calls. Durable memory and background scheduling need further documentation.",
+  "website": "https://instinct.com",
+  "repository": null,
+  "category": "watchlist",
+  "sources": [
+    {
+      "id": "instinct-home",
+      "title": "Instinct",
+      "url": "https://instinct.com/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "instinct-privacy",
+      "title": "Instinct privacy policy",
+      "url": "https://instinct.com/privacy-policy",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Handles real-world errands such as grocery orders, travel bookings and sending flowers",
+      "status": "documented",
+      "sourceIds": [
+        "instinct-home"
+      ],
+      "shortValue": "Errands through text or a phone call"
+    },
+    {
+      "field": "computerUse",
+      "value": "Agent can operate a phone and computer; local versus cloud execution is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-home"
+      ],
+      "shortValue": "Agent-operated phone and computer"
+    },
+    {
+      "field": "voice",
+      "value": "Phone conversations with the assistant",
+      "status": "documented",
+      "sourceIds": [
+        "instinct-home"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "Text and phone access; a native desktop app is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-home"
+      ],
+      "shortValue": "Native app not specified; text/phone access"
+    },
+    {
+      "field": "mobileApps",
+      "value": "Text or call the assistant; a native mobile app is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-home"
+      ],
+      "shortValue": "Text and phone calls; native app not specified"
+    },
+    {
+      "field": "channels",
+      "value": "Text and phone calls",
+      "status": "documented",
+      "sourceIds": [
+        "instinct-home"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Managed service; execution architecture unverified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-privacy"
+      ]
+    },
+    {
+      "field": "passwordManager",
+      "value": "Can use third-party account credentials you supply; a password vault is not specified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-privacy"
+      ],
+      "shortValue": "Account sign-in with supplied credentials"
+    },
+    {
+      "field": "memory",
+      "value": "Personalized context; durable memory unverified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-privacy"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Connected-account access follows granted permissions; model-training opt-out is available",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-privacy"
+      ],
+      "shortValue": "Account permissions; training opt-out"
+    },
+    {
+      "field": "availability",
+      "value": "Website links to app access; access requirements unverified",
+      "status": "limited",
+      "sourceIds": [
+        "instinct-home"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/instinct.png",
+    "sourceUrl": "https://instinct.com/redesign/favicon.ico",
+    "sourcePage": "https://instinct.com",
+    "kind": "product"
+  },
+  "platforms": [],
+  "color": "#a28349",
+  "aliases": [],
+  "plans": [],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "sentiment": {
+    "provider": "Feedback Bench",
+    "url": "https://feedbackbench.com/",
+    "dataUrl": "https://feedbackbench.com/data/personal.json",
+    "windowStart": "2026-08-31",
+    "windowEnd": "2026-10-18",
+    "checkedAt": "2026-10-21",
+    "posts": 1535,
+    "positiveUserWeeks": 198,
+    "negativeUserWeeks": 72,
+    "positiveShare": 73.3,
+    "channels": [
+      "Reddit",
+      "X",
+      "YouTube"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+research/
+.openai/
+.impeccable/
+.env
+.env.*
+!.env.example
+.DS_Store
+*preview.png
+preview.jpg
