@@ -24,6 +24,24 @@
       "title": "Meta investor relations: stock listing",
       "url": "https://investor.atmeta.com/stock-info/default.aspx",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "muse-accounts-center",
+      "title": "Meta: building toward a smarter, more personalized assistant",
+      "url": "https://about.fb.com/news/2025/01/building-toward-a-smarter-more-personalized-assistant/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "muse-genai-guide",
+      "title": "Meta generative AI privacy guide",
+      "url": "https://www.facebook.com/privacy/guide/genai/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "muse-whatsapp-privacy",
+      "title": "WhatsApp privacy questions: Meta AI and personal messages",
+      "url": "https://www.whatsapp.com/privacyquestions",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -319,5 +337,31 @@
       ],
       "status": "limited"
     }
-  }
+  },
+  "dataAccess": [
+    {
+      "source": "instagram-graph",
+      "path": "first-party",
+      "detail": "Reaches Instagram and Facebook profile and engagement data through Meta's Accounts Center. No third-party agent has an equivalent route to a personal Meta graph.",
+      "sourceIds": [
+        "muse-accounts-center"
+      ]
+    },
+    {
+      "source": "instagram-dms",
+      "path": "none",
+      "detail": "Meta states its generative AI excludes private messages, so Instagram DMs are out of reach for Meta's own assistant as well as for others.",
+      "sourceIds": [
+        "muse-genai-guide"
+      ]
+    },
+    {
+      "source": "whatsapp",
+      "path": "none",
+      "detail": "WhatsApp personal messages are end-to-end encrypted and WhatsApp states they are not seen by Meta AI.",
+      "sourceIds": [
+        "muse-whatsapp-privacy"
+      ]
+    }
+  ]
 }

@@ -7,9 +7,20 @@ import {channelLabels} from '../src/channels.js';
 import {accessStates,accessRestrictions} from '../src/access.js';
 import {computeFacets,agentScreenAccess} from '../src/compute.js';
 import {continuityFacets} from '../src/continuity.js';
+import {thirdPartyAccess,accessPaths} from '../src/datasources.js';
 import {platformLabels as platformKeys} from '../src/platforms.js';
 export function validate(data){
-  const ids=new Set();const fields=fieldDefinitions.map(([key])=>key);
+  const ids=new Set();
+  const refSources=new Set((data.dataSources?.sources||[]).map(s=>s.id));
+  const sourceIds_=new Set();
+  for(const item of data.dataSources?.items||[]){
+    assert(item.id&&!sourceIds_.has(item.id),`duplicate data source ${item.id}`);sourceIds_.add(item.id);
+    assert(item.label&&item.group&&item.note,`data source ${item.id} needs label, group and note`);
+    assert(Object.hasOwn(thirdPartyAccess,item.thirdParty),`data source ${item.id}: invalid openness`);
+    assert(item.sourceIds?.length,`data source ${item.id} needs evidence`);
+    for(const id of item.sourceIds)assert(refSources.has(id),`data source ${item.id} references missing source ${id}`);
+  }
+  const knownDataSources=sourceIds_;const fields=fieldDefinitions.map(([key])=>key);
   const url=u=>assert(['https:','http:'].includes(new URL(u).protocol),`Invalid URL ${u}`);
   const date=d=>assert(typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&new Date(d+'T12:00:00Z').toISOString().startsWith(d)&&d<=data.checkedAt,`Invalid or future date ${d}`);
   const partialDate=d=>{assert(typeof d==='string'&&/^\d{4}(-\d{2})?(-\d{2})?$/.test(d),`Invalid date ${d}`);date((d+'-01-01').slice(0,10))};
@@ -67,6 +78,12 @@ export function validate(data){
       if(facet==='agentComputer'&&v.remote)assert(Object.hasOwn(agentScreenAccess,v.remote),`${a.id}/${facet}: invalid remote access`);
       // A facet that says the agent has no machine cannot also describe reaching into one.
       if(facet==='agentComputer'&&v.state==='none')assert(!v.remote||v.remote==='none',`${a.id}: no agent computer cannot offer remote access`);
+    }
+    const reached=new Set();for(const entry of a.dataAccess||[]){
+      assert(knownDataSources.has(entry.source),`${a.id}: unknown data source ${entry.source}`);
+      assert(!reached.has(entry.source),`${a.id}: duplicate data source ${entry.source}`);reached.add(entry.source);
+      assert(Object.hasOwn(accessPaths,entry.path),`${a.id}/${entry.source}: invalid access path`);
+      assert(entry.detail,`${a.id}/${entry.source} needs a detail`);evidence(entry,`dataAccess:${entry.source}`);
     }
     if(a.access){
       const x=a.access;

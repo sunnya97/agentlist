@@ -72,6 +72,18 @@
       "title": "Grok Bot availability in the developer release notes",
       "url": "https://docs.x.ai/developers/release-notes",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "grok-x-search",
+      "title": "xAI X Search tool pricing",
+      "url": "https://docs.x.ai/developers/tools/x-search",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "grok-x-enterprise",
+      "title": "X Enterprise API: full public post firehose",
+      "url": "https://docs.x.com/enterprise-api/introduction",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -418,5 +430,16 @@
       ],
       "status": "limited"
     }
-  }
+  },
+  "dataAccess": [
+    {
+      "source": "x-posts",
+      "path": "first-party",
+      "detail": "Reads X posts as part of xAI. This is not exclusive: xAI sells an X Search tool and X sells an enterprise firehose of all public posts, and nothing documents Grok receiving data its API customers cannot buy.",
+      "sourceIds": [
+        "grok-x-search",
+        "grok-x-enterprise"
+      ]
+    }
+  ]
 }

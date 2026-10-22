@@ -47,6 +47,8 @@ export const fieldGroups = [
 export const fields = fieldGroups.flatMap(group=>group.fields);
 
 // Compact directory columns can combine several detailed comparison fields.
+// Rendered from the dataAccess list and the shared source table, not from claims.
+export const renderedColumns = ['exclusiveData'];
 export const compositeFields = {nativeApps:['desktopApps','mobileApps','channels'],computerControl:['onYourComputer','agentComputer','whileYouAreOff']};
 export const structuredFields = {messaging:'messaging'};
 
@@ -66,7 +68,7 @@ export const columnCatalog = [
     ['uniqueFeatures','What stands out']
   ]},
   {label:'Apps & access',columns:[
-    ['nativeApps','Apps'],['messaging','Messaging'],['channels','Web & messaging'],
+    ['nativeApps','Apps'],['messaging','Messaging'],['exclusiveData','Exclusive data'],['channels','Web & messaging'],
     ['hardware','Hardware'],['api','API'],['availability','Availability']
   ]},
   {label:'Models & price',columns:[

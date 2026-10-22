@@ -78,6 +78,18 @@
       "title": "Google I/O announcement: Gemini Spark and Antigravity",
       "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "gemini-personal-intelligence",
+      "title": "Gemini Personal Intelligence: Gmail, Photos, YouTube and Search",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "gemini-photos-updates",
+      "title": "Google Photos APIs: library scopes removed",
+      "url": "https://developers.google.com/photos/support/updates",
+      "checkedAt": "2026-10-22"
     }
   ],
   "claims": [
@@ -394,5 +406,24 @@
       ],
       "status": "limited"
     }
-  }
+  },
+  "dataAccess": [
+    {
+      "source": "gphotos",
+      "path": "first-party",
+      "detail": "Reads the Google Photos library directly. Google removed the equivalent third-party scopes after March 2025, so no other agent can follow.",
+      "sourceIds": [
+        "gemini-personal-intelligence",
+        "gemini-photos-updates"
+      ]
+    },
+    {
+      "source": "gmail",
+      "path": "first-party",
+      "detail": "Reads Gmail natively. Third parties can reach the same mail, but only through restricted scopes with Google verification and an annual security assessment.",
+      "sourceIds": [
+        "gemini-personal-intelligence"
+      ]
+    }
+  ]
 }

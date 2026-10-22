@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {filterAgents,parseSelection,compareRows,sortedNews,sortAgents} from '../src/domain.js';
 import {validate} from './validate.mjs';
-import {fields,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,compositeFields} from '../src/catalog.js';
+import {fields,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,compositeFields,renderedColumns} from '../src/catalog.js';
 import {channelLabels,channelOrder} from '../src/channels.js';
 import {accessStates,accessSummary} from '../src/access.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
@@ -19,7 +19,7 @@ test('data validation rejects unsupported claims and dangling edges',()=>{assert
 test('every offered column resolves to the feature schema',()=>{
   const keys=new Set(fields.map(([key])=>key));
   for(const group of columnCatalog)for(const [key] of group.columns)
-    assert(keys.has(key)||compositeFields[key]?.every(part=>keys.has(part)),`unknown column ${key}`);
+    assert(keys.has(key)||renderedColumns.includes(key)||compositeFields[key]?.every(part=>keys.has(part)),`unknown column ${key}`);
   for(const a of data.agents)assert.equal(a.claims.length,keys.size);
   assert(defaultColumns.every(key=>columnLabels[key]),'defaults must be offerable');
   assert(defaultColumns.length<=maxColumns);
@@ -238,4 +238,24 @@ test('the control cell keeps "no" distinct from "nobody has said"',async()=>{
   const bond=data.agents.find(a=>a.id==='bond');
   assert.equal(computeTone('onYourComputer',bond.compute.onYourComputer),'no');
   assert.equal(computeTone('whileYouAreOff',bond.compute.whileYouAreOff),'unknown');
+});
+
+test('exclusive reach means first-party access nobody else can get',async()=>{
+  const {thirdPartyAccess,accessPaths}=await import('../src/datasources.js');
+  const items=new Map(data.dataSources.items.map(i=>[i.id,i]));
+  assert(items.size>10,'the reference table should cover the major sources');
+  for(const a of data.agents)for(const e of a.dataAccess||[]){
+    assert(items.has(e.source));assert(Object.hasOwn(accessPaths,e.path));assert(e.sourceIds.length);
+  }
+  const exclusive=a=>(a.dataAccess||[]).filter(e=>e.path==='first-party'&&['closed','none'].includes(items.get(e.source).thirdParty));
+  // Meta's assistant reaches a graph nobody else can; its messaging is shut to everyone.
+  const muse=data.agents.find(a=>a.id==='muse');
+  assert.deepEqual(exclusive(muse).map(e=>e.source),['instagram-graph']);
+  assert.equal(muse.dataAccess.find(e=>e.source==='whatsapp').path,'none');
+  // Grok reads X, but anyone can buy the same firehose, so it is not exclusive.
+  const grok=data.agents.find(a=>a.id==='grok-bot');
+  assert.equal(grok.dataAccess.find(e=>e.source==='x-posts').path,'first-party');
+  assert.equal(exclusive(grok).length,0,'purchasable access is not exclusive access');
+  assert(Object.hasOwn(thirdPartyAccess,items.get('x-posts').thirdParty));
+  assert.equal(items.get('x-posts').thirdParty,'open');
 });

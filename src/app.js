@@ -4,6 +4,7 @@ import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js'
 import {channelLabels,channelIcons} from './channels.js';
 import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
 import {computeFacets,computeLabels,computeIcons,computeTone,computeSummary} from './compute.js';
+import {thirdPartyAccess,accessPaths} from './datasources.js';
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=u=>{try{const p=new URL(u);return /^https?:$/.test(p.protocol)?esc(p.href):'#'}catch{return '#'}};
@@ -53,6 +54,14 @@ const controlListHTML=a=>`<div class="platform-list control-list">${Object.keys(
   if(!value)return `<span class="platform-icon control-icon ctl-unknown" title="${title}" aria-label="${title}">${computeIcons[facet]}</span>`;
   return `<button class="platform-icon control-icon ctl-${tone}" data-platform="${a.id}:${facet}:compute" title="${title}" aria-label="${title}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${computeIcons[facet]}</button>`;
 }).join('')}</div>`;
+const dataSourceById=id=>data.dataSources?.items.find(x=>x.id===id);
+const exclusiveReach=a=>(a.dataAccess||[]).filter(e=>e.path==='first-party'&&['closed','none'].includes(dataSourceById(e.source)?.thirdParty));
+const exclusiveHTML=a=>{
+  const list=exclusiveReach(a);
+  if(!(a.dataAccess||[]).length)return '<span class="unknown-value" aria-label="Data reach not researched" title="Data reach not researched">—</span>';
+  if(!list.length)return '<span class="claim no-exclusive" title="Everything it reaches is reachable by other agents too">None</span>';
+  return `<div class="claim">${list.map(e=>esc(dataSourceById(e.source).label)).join(', ')}</div>`;
+};
 const platformListHTML=a=>iconListHTML(a,'platforms',5,'App availability not specified');
 const messagingListHTML=a=>iconListHTML(a,'messaging',3,'Messaging services not specified');
 function renderColumnsPicker(){
@@ -90,6 +99,7 @@ function openPlatform(button){
 const claimHTML=(a,key,compact=false)=>{
   if(key==='nativeApps')return platformListHTML(a);
   if(key==='computerControl')return controlListHTML(a);
+  if(key==='exclusiveData')return exclusiveHTML(a);
   if(key==='messaging')return messagingListHTML(a)+(compact||!a.messaging?.length?'':`<div class="platform-sources">${sourceLinks(a,getClaim(a,'messaging'))}</div>`);
   if(compact&&key==='launchDate'&&firstLaunch(a)){const event=firstLaunch(a);return `<div class="claim">${formatCatalogDate(event.date)}<small class="launch-detail">${launchKinds[event.kind]}</small></div>`}
   if(compact&&key==='funding'&&a.company?.funding){const f=a.company.funding;return `<div class="claim">${esc(f.amount)}<small class="launch-detail">${esc(f.round)} · ${formatCatalogDate(f.date)}</small></div>`}
