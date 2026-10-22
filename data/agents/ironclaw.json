@@ -179,6 +179,16 @@
         "ironclaw-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "ironclaw-readme",
+        "ironclaw-model-providers"
+      ]
     }
   ],
   "logo": {
@@ -200,7 +210,24 @@
   ],
   "color": "#5e8985",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT OR Apache-2.0 open-source license",
+        "Own keys for Anthropic, OpenAI, Gemini and other providers; Ollama and compatible endpoints."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "ironclaw-readme",
+        "ironclaw-model-providers"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

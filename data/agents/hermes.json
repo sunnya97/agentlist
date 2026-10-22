@@ -219,6 +219,15 @@
         "hermes-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "hermes-readme"
+      ]
     }
   ],
   "logo": {
@@ -256,7 +265,23 @@
   ],
   "color": "#817aa2",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT open-source license",
+        "Bring your own provider keys or model endpoint; provider and tool credentials are configurable."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    }
+  ],
   "discussions": [
     {
       "title": "Hermes user experiences: homelabs, memory and interface friction",

@@ -323,7 +323,23 @@
   ],
   "color": "#b06b4a",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT open-source license",
+        "Swappable hosted/local model providers and agent harnesses, using your own credentials."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "openclaw-readme"
+      ]
+    }
+  ],
   "discussions": [
     {
       "title": "A week running OpenClaw on a Mac mini",

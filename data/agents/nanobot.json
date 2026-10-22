@@ -212,6 +212,16 @@
         "nanobot-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "nanobot-readme",
+        "nanobot-model-providers"
+      ]
     }
   ],
   "logo": {
@@ -233,7 +243,24 @@
   ],
   "color": "#577d94",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT open-source license",
+        "Own provider keys or local servers including Ollama, vLLM, and LM Studio."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "nanobot-readme",
+        "nanobot-model-providers"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

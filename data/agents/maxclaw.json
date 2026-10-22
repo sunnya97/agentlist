@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "maxclaw-overview",
-      "title": "MaxClaw official cloud agent overview",
+      "title": "MaxClaw official hosted plan",
       "url": "https://agent.minimax.io/activity/max-claw",
       "checkedAt": "2026-10-21"
     }
@@ -120,7 +120,24 @@
   ],
   "color": "#817aa2",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "MaxClaw",
+      "price": "US$19/month",
+      "billing": "Monthly listed rate",
+      "includes": [
+        "Hosted OpenClaw with MiniMax M2.7",
+        "50GB cloud workspace for new users",
+        "Browser tools, integrations and automatic maintenance"
+      ],
+      "limits": [
+        "Numerical inference allowance and overage rates not listed"
+      ],
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

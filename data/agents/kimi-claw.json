@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "kimi-claw-overview",
-      "title": "Kimi Claw product introduction",
+      "title": "Kimi Claw cloud deployment and legacy eligibility",
       "url": "https://www.kimi.com/en/help/kimi-claw/overview",
       "checkedAt": "2026-10-21"
     },
@@ -17,6 +17,18 @@
       "id": "kimi-claw-terminal",
       "title": "Kimi Claw terminal commands",
       "url": "https://www.kimi.com/en/help/kimi-claw/concepts",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "kimi-membership-pricing",
+      "title": "Kimi China membership prices and cloud-host charges",
+      "url": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "kimi-membership-benefits",
+      "title": "Kimi China membership benefits and legacy plans",
+      "url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checkedAt": "2026-10-21"
     }
   ],
@@ -74,18 +86,20 @@
     },
     {
       "field": "bundledPlan",
-      "value": "One-click deployment is included with Kimi Allegretto and higher plans and uses membership credits.",
-      "status": "documented",
+      "value": "Dedicated Kimi Claw is included with China's current Pro, Max and Ultra plans. Eligible legacy Allegretto and higher subscriptions continue; features draw on shared membership credits.",
+      "shortValue": "China Pro / Max / Ultra; eligible legacy plans",
       "sourceIds": [
+        "kimi-membership-benefits",
         "kimi-claw-overview"
       ],
-      "shortValue": "Kimi Allegretto and above; membership credits"
+      "status": "documented"
     },
     {
       "field": "pricing",
-      "value": "Allegretto or higher membership; price unverified.",
+      "value": "China plans with dedicated Kimi Claw: Pro CNY199/month, Max CNY699/month, Ultra CNY1,399/month; annual discounts available. The deployed cloud host also consumes about 0.6% of membership credits daily.",
+      "shortValue": "China: from CNY199/mo + host credits",
       "sourceIds": [
-        "kimi-claw-overview"
+        "kimi-membership-pricing"
       ],
       "status": "documented"
     },
@@ -132,7 +146,59 @@
   "platforms": [],
   "color": "#b06b4a",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Pro \u00b7 China",
+      "price": "CNY199/month",
+      "billing": "Monthly, or CNY1,908/year",
+      "includes": [
+        "Dedicated Kimi Claw and Goal Mode",
+        "4\u00d7 Agent credits; Kimi Code and Agent Swarm"
+      ],
+      "limits": [
+        "Monthly shared credits do not roll over",
+        "Cloud host consumes about 0.6% of membership credits/day"
+      ],
+      "sourceIds": [
+        "kimi-membership-pricing",
+        "kimi-membership-benefits"
+      ]
+    },
+    {
+      "name": "Max \u00b7 China",
+      "price": "CNY699/month",
+      "billing": "Monthly, or CNY6,708/year",
+      "includes": [
+        "Dedicated Kimi Claw; 14\u00d7 Agent credits",
+        "Four concurrent Agent tasks"
+      ],
+      "limits": [
+        "Monthly shared credit pool",
+        "Daily host credit charge also applies"
+      ],
+      "sourceIds": [
+        "kimi-membership-pricing",
+        "kimi-membership-benefits"
+      ]
+    },
+    {
+      "name": "Ultra \u00b7 China",
+      "price": "CNY1,399/month",
+      "billing": "Monthly, or CNY13,428/year",
+      "includes": [
+        "Dedicated Kimi Claw; 28\u00d7 Agent credits",
+        "Four concurrent Agent tasks; 50GB project storage"
+      ],
+      "limits": [
+        "Monthly shared credit pool",
+        "Daily host credit charge also applies"
+      ],
+      "sourceIds": [
+        "kimi-membership-pricing",
+        "kimi-membership-benefits"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

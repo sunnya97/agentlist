@@ -210,6 +210,15 @@
         "zeroclaw-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
     }
   ],
   "logo": {
@@ -250,7 +259,23 @@
   ],
   "color": "#9b7582",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT OR Apache-2.0 open-source license",
+        "Own provider credentials and local models such as Ollama."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

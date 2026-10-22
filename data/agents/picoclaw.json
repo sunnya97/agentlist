@@ -183,6 +183,15 @@
         "picoclaw-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
     }
   ],
   "logo": {
@@ -212,7 +221,23 @@
   ],
   "color": "#687c4a",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT open-source license",
+        "Own API keys for hosted providers, or local Ollama/vLLM servers."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

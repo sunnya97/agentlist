@@ -174,6 +174,16 @@
         "openfang-readme"
       ],
       "status": "documented"
+    },
+    {
+      "field": "pricing",
+      "value": "Open-source software with no software subscription. Supply your own model access and deployment; their costs and limits vary.",
+      "shortValue": "Free software; model & hosting costs vary",
+      "status": "documented",
+      "sourceIds": [
+        "openfang-readme",
+        "openfang-model-providers"
+      ]
     }
   ],
   "logo": {
@@ -219,7 +229,24 @@
   ],
   "color": "#4e7d68",
   "aliases": [],
-  "plans": [],
+  "plans": [
+    {
+      "name": "Self-hosted",
+      "price": "Free software",
+      "billing": "Model access and hosting are supplied separately.",
+      "includes": [
+        "MIT open-source license",
+        "Own provider keys or local Ollama, vLLM, and LM Studio servers."
+      ],
+      "limits": [
+        "Usage limits and running costs depend on your chosen provider and deployment."
+      ],
+      "sourceIds": [
+        "openfang-readme",
+        "openfang-model-providers"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",

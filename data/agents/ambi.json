@@ -24,6 +24,12 @@
       "title": "Download Ambi for desktop and mobile",
       "url": "https://www.ambi.ai/download/",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "ambi-pricing",
+      "title": "Ambi plans, trial and credit rules",
+      "url": "https://www.ambi.ai/pricing/",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -204,7 +210,72 @@
   "color": "#945e98",
   "aliases": [],
   "disclosure": "The project creator is affiliated with Ambi. This profile uses the same sourcing rules as every other entry; no preferential ranking.",
-  "plans": [],
+  "plans": [
+    {
+      "name": "Free trial",
+      "price": "US$0",
+      "billing": "One seven-day trial",
+      "includes": [
+        "4,000 credits, 3 active Routines and 3 full Insights",
+        "Listening, transcription, Recaps and connectors"
+      ],
+      "limits": [
+        "No card required; no automatic charge",
+        "Trial credits expire after seven days"
+      ],
+      "sourceIds": [
+        "ambi-pricing"
+      ]
+    },
+    {
+      "name": "Plus",
+      "price": "Not published",
+      "billing": "Monthly or yearly; yearly saves 15%",
+      "includes": [
+        "Everyday use with shared weekly credits",
+        "User-started recording and transcription do not consume credits"
+      ],
+      "limits": [
+        "Weekly credits do not roll over",
+        "Paid top-ups last twelve months"
+      ],
+      "sourceIds": [
+        "ambi-pricing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "Not published",
+      "billing": "Monthly or yearly; yearly saves 15%",
+      "includes": [
+        "More active Routines than Plus",
+        "External MCP connections"
+      ],
+      "limits": [
+        "Shared credits reset weekly",
+        "Top-ups do not increase Routine or Insight limits"
+      ],
+      "sourceIds": [
+        "ambi-pricing"
+      ]
+    },
+    {
+      "name": "Max",
+      "price": "Not published",
+      "billing": "Monthly or yearly; yearly saves 15%",
+      "includes": [
+        "Largest weekly credit allowance",
+        "Unlimited Routines and nightly Insights"
+      ],
+      "limits": [
+        "Credit-using features pause when the balance runs out",
+        "Recording and transcription remain available"
+      ],
+      "sourceIds": [
+        "ambi-pricing"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "announced",

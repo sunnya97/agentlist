@@ -1,6 +1,6 @@
 {
   "id": "gemini-spark",
-  "name": "Gemini Spark",
+  "name": "Gemini Tasks",
   "organization": "Google",
   "summary": "A cloud personal agent connected to Workspace, designed to work in the background under user direction.",
   "website": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
@@ -48,6 +48,24 @@
       "title": "Manage Gemini tasks on Android",
       "url": "https://support.google.com/gemini/answer/17094196?co=GENIE.Platform%3DAndroid&hl=en",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "gemini-tasks-help",
+      "title": "Tasks in Gemini: Spark rename, eligibility and limits",
+      "url": "https://support.google.com/gemini/answer/17094507",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "google-ai-plans",
+      "title": "Google AI plan benefits and Ultra tiers",
+      "url": "https://one.google.com/about/google-ai-plans/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "google-one-pricing",
+      "title": "Google One US monthly pricing",
+      "url": "https://one.google.com/about/plans",
+      "checkedAt": "2026-10-21"
     }
   ],
   "claims": [
@@ -80,9 +98,10 @@
     },
     {
       "field": "scheduling",
-      "value": "Scheduled and email-triggered tasks",
+      "value": "Tasks can run on a schedule or an event trigger, with up to 15 tasks executing concurrently. A scheduled run does not start if all 15 slots are occupied.",
+      "shortValue": "Scheduled + event-triggered; 15 concurrent",
       "sourceIds": [
-        "spark-india"
+        "gemini-tasks-help"
       ],
       "status": "documented"
     },
@@ -132,18 +151,21 @@
     },
     {
       "field": "bundledPlan",
-      "value": "Included with eligible Google AI Pro and Ultra subscriptions.",
-      "status": "documented",
+      "value": "Included with Google AI Pro or Ultra on eligible personal Google accounts.",
+      "shortValue": "Google AI Pro / Ultra",
       "sourceIds": [
-        "spark-india"
+        "gemini-tasks-help"
       ],
-      "shortValue": "Google AI Pro / Ultra"
+      "status": "documented"
     },
     {
       "field": "pricing",
-      "value": "Eligible Google AI Pro / Ultra subscription",
+      "value": "Google AI Pro is US$19.99/month in the US. Tasks are also included with Google AI Ultra; Ultra's current price varies by tier and market.",
+      "shortValue": "US Pro US$19.99/mo; Ultra options",
       "sourceIds": [
-        "spark-india"
+        "google-one-pricing",
+        "google-ai-plans",
+        "gemini-tasks-help"
       ],
       "status": "documented"
     },
@@ -184,11 +206,12 @@
     },
     {
       "field": "availability",
-      "value": "Regional rollout; confirm account eligibility",
+      "value": "Available to adults with eligible personal Google accounts, Google AI Pro or Ultra, Keep Activity enabled, and Personal Intelligence enabled. Excludes EEA, Nigeria, Switzerland and the UK.",
+      "shortValue": "Pro / Ultra; personal accounts; regional limits",
       "sourceIds": [
-        "spark-india"
+        "gemini-tasks-help"
       ],
-      "status": "limited"
+      "status": "documented"
     }
   ],
   "logo": {
@@ -235,8 +258,50 @@
     }
   ],
   "color": "#4d7ca0",
-  "aliases": [],
-  "plans": [],
+  "aliases": [
+    "Gemini Spark",
+    "Spark",
+    "Tasks in Gemini"
+  ],
+  "plans": [
+    {
+      "name": "Google AI Pro",
+      "price": "US$19.99/month",
+      "billing": "Monthly US price",
+      "includes": [
+        "Tasks in Gemini; 5TB storage",
+        "Gemini 4 Argon, Google app features and Deep Research",
+        "YouTube Premium Lite and Google Home Premium Standard where available"
+      ],
+      "limits": [
+        "Up to 15 simultaneous tasks",
+        "Compute allowance shared across Gemini tools"
+      ],
+      "sourceIds": [
+        "google-one-pricing",
+        "google-ai-plans",
+        "gemini-tasks-help"
+      ]
+    },
+    {
+      "name": "Google AI Ultra",
+      "price": "Not published",
+      "billing": "Monthly; regional price and tier shown at signup",
+      "includes": [
+        "Tasks in Gemini with higher compute limits",
+        "Ultra 5\u00d7: 20TB storage; Ultra 20\u00d7: 30TB",
+        "YouTube Premium where available"
+      ],
+      "limits": [
+        "Up to 15 simultaneous tasks",
+        "Tier multipliers compare overall Gemini usage to Pro, not task counts"
+      ],
+      "sourceIds": [
+        "google-ai-plans",
+        "gemini-tasks-help"
+      ]
+    }
+  ],
   "discussions": [],
   "hardware": {
     "status": "unknown",
