@@ -259,3 +259,16 @@ test('exclusive reach means first-party access nobody else can get',async()=>{
   assert(Object.hasOwn(thirdPartyAccess,items.get('x-posts').thirdParty));
   assert.equal(items.get('x-posts').thirdParty,'open');
 });
+
+test('freshness is per agent, not one date for the whole catalogue',()=>{
+  for(const a of data.agents){
+    const dates=a.sources.map(s=>s.checkedAt).filter(Boolean).sort();
+    assert.equal(a.checkedAt,dates[dates.length-1],`${a.id}: checkedAt must be its newest source`);
+    assert.equal(a.oldestSource,dates[0],`${a.id}: oldestSource must be its oldest source`);
+    assert(a.checkedAt<=data.checkedTo,`${a.id} cannot be newer than the catalogue`);
+  }
+  // The catalogue reports a span, so re-checking one agent never restates the rest.
+  assert(data.checkedFrom<=data.checkedTo);
+  const distinct=new Set(data.agents.map(a=>a.checkedAt));
+  assert(distinct.size>1||data.checkedFrom===data.checkedTo,'a span implies agents differ');
+});
