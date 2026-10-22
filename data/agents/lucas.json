@@ -96,7 +96,7 @@
         "lucas-home",
         "lucas-privacy"
       ],
-      "shortValue": "iMessage \u00b7 WhatsApp"
+      "shortValue": "iMessage · WhatsApp"
     },
     {
       "field": "mobileApps",
@@ -132,7 +132,7 @@
       "sourceIds": [
         "lucas-privacy"
       ],
-      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Google"
+      "shortValue": "OpenAI · Anthropic · Google"
     },
     {
       "field": "pricing",
@@ -141,11 +141,11 @@
       "sourceIds": [
         "lucas-faq"
       ],
-      "shortValue": "Free \u00b7 $20 \u00b7 $100/month"
+      "shortValue": "Free · $20 · $100/month"
     },
     {
       "field": "passwordManager",
-      "value": "Built-in Vault encrypts passwords, payment cards and IDs. Browser filling keeps secret fields out of the errand model\u2019s context, with per-entry activity logs.",
+      "value": "Built-in Vault encrypts passwords, payment cards and IDs. Browser filling keeps secret fields out of the errand model’s context, with per-entry activity logs.",
       "status": "documented",
       "sourceIds": [
         "lucas-vault"
@@ -263,6 +263,33 @@
     "type": "startup",
     "sourceIds": [
       "lucas-about"
+    ]
+  },
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "iMessage, WhatsApp and a web dashboard.",
+      "sourceIds": [
+        "lucas-home",
+        "lucas-privacy"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "iMessage, WhatsApp and a web dashboard.",
+      "sourceIds": [
+        "lucas-home",
+        "lucas-privacy"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Sign up with a mobile number and use iMessage or WhatsApp.",
+    "sourceIds": [
+      "lucas-faq"
     ]
   }
 }

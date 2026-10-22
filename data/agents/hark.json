@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "hark-using",
-      "title": "Using Hark Pro \u00b7 Hark",
+      "title": "Using Hark Pro · Hark",
       "url": "https://hark.com/using-hark",
       "checkedAt": "2026-10-21"
     },
@@ -52,7 +52,7 @@
       "sourceIds": [
         "hark-using"
       ],
-      "shortValue": "Action Buttons \u00b7 custom mini-apps"
+      "shortValue": "Action Buttons · custom mini-apps"
     },
     {
       "field": "computerUse",
@@ -96,7 +96,7 @@
       "sourceIds": [
         "hark-launch"
       ],
-      "shortValue": "iOS \u00b7 Android"
+      "shortValue": "iOS · Android"
     },
     {
       "field": "channels",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "name": "Hark Pro\u00b2",
+      "name": "Hark Pro²",
       "price": "US$20/month",
       "billing": "Monthly",
       "includes": [
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "name": "Hark Pro\u00b3",
+      "name": "Hark Pro³",
       "price": "US$100/month",
       "billing": "Monthly",
       "includes": [
@@ -319,5 +319,12 @@
         "hark-launch-date"
       ]
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Free and paid plans",
+    "sourceIds": [
+      "hark-pricing"
+    ]
+  }
 }

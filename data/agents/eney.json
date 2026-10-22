@@ -212,7 +212,7 @@
     },
     {
       "field": "pricing",
-      "value": "14-day trial with 10,000 credits, then $14.99\u2013$49.99/month.",
+      "value": "14-day trial with 10,000 credits, then $14.99–$49.99/month.",
       "status": "documented",
       "sourceIds": [
         "eney-home"
@@ -315,5 +315,12 @@
       ],
       "label": "Original Mac announcement"
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for Mac and iPhone; released October 15, 2026.",
+    "sourceIds": [
+      "eney-launch"
+    ]
+  }
 }

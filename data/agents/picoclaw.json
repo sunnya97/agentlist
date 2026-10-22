@@ -245,5 +245,62 @@
     "detail": "",
     "sourceIds": []
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "service": "wechat",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    },
+    {
+      "service": "matrix",
+      "status": "available",
+      "detail": "Telegram, Discord, WhatsApp, Weixin, Slack, Matrix, and others.",
+      "sourceIds": [
+        "picoclaw-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "picoclaw-readme"
+    ]
+  }
 }

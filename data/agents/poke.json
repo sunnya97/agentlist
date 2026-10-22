@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "poke-home",
-      "title": "Poke \u00b7 Official product page",
+      "title": "Poke · Official product page",
       "url": "https://poke.com/",
       "checkedAt": "2026-10-21"
     },
@@ -286,7 +286,7 @@
       "poke-cognition",
       "poke-launch-funding"
     ],
-    "stage": "Acquired \u00b7 July 2026",
+    "stage": "Acquired · July 2026",
     "parent": "Cognition",
     "funding": {
       "amount": "US$15M",
@@ -306,5 +306,38 @@
         "poke-launch-funding"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Messages, WhatsApp, Telegram",
+      "sourceIds": [
+        "poke-home"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Messages, WhatsApp, Telegram",
+      "sourceIds": [
+        "poke-home"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Messages, WhatsApp, Telegram",
+      "sourceIds": [
+        "poke-home"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Sign-up available on official site",
+    "sourceIds": [
+      "poke-home"
+    ]
+  }
 }

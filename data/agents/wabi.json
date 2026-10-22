@@ -293,5 +293,12 @@
       ]
     }
   },
-  "launches": []
+  "launches": [],
+  "access": {
+    "state": "available",
+    "detail": "iOS, Android, and Mac downloads listed",
+    "sourceIds": [
+      "wabi-download"
+    ]
+  }
 }

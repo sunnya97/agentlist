@@ -4,6 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {filterAgents,parseSelection,compareRows,sortedNews,sortAgents} from '../src/domain.js';
 import {validate} from './validate.mjs';
 import {fields,directoryViews,featuredOrder,compositeFields} from '../src/catalog.js';
+import {channelLabels,channelOrder} from '../src/channels.js';
+import {accessStates,accessSummary} from '../src/access.js';
 const data=JSON.parse(await readFile(new URL('../dist/data.json',import.meta.url),'utf8'));
 test('every user-named anchor is represented without collapsing distinct products',()=>{for(const id of ['dots','claude-duet','grok-bot','hark','muse','hermes','openclaw','nanoclaw','ironclaw','instinct','poke','underdog','town','ambi','cue','wabi'])assert(data.agents.some(a=>a.id===id),id);assert.equal(data.agents.find(a=>a.id==='underdog').category,'local')});
 test('adjacent harnesses are opt-in and aliases resolve',()=>{assert(!filterAgents(data.agents).some(a=>a.category==='adjacent'));assert(filterAgents(data.agents,{adjacent:true}).some(a=>a.id==='codex'));assert.equal(filterAgents(data.agents,{search:'Grokbot'})[0].id,'grok-bot')});
@@ -83,4 +85,64 @@ test('company and launch records reject unsupported facts, invalid dates and wea
   invalid(d=>d.agents.find(a=>a.launches.length).launches[0].sourceIds=[]);
   invalid(d=>d.relationships[0].type='alternative');
   assert(data.agents.some(a=>a.launches.some(e=>e.date.length===7)));
+});
+
+test('messaging services are structured channels, never native apps',()=>{
+  const listed=data.agents.filter(a=>a.messaging.length);
+  assert(listed.length,'expected structured messaging services');
+  for(const a of listed){
+    const claim=a.claims.find(c=>c.field==='messaging');
+    assert.equal(claim.status==='unknown',false,`${a.id} messaging claim should be derived`);
+    // Derived from the list, ordered by channelOrder, and carrying its evidence.
+    assert.deepEqual(a.messaging.map(m=>m.service),[...a.messaging.map(m=>m.service)].sort((x,y)=>channelOrder.indexOf(x)-channelOrder.indexOf(y)),`${a.id} messaging order`);
+    assert.equal(claim.shortValue,a.messaging.map(m=>channelLabels[m.service]).join(', '));
+    assert(claim.sourceIds.length,`${a.id} messaging needs evidence`);
+    // A messaging service must not be claimed as a native platform.
+    for(const m of a.messaging)assert(!a.platforms.some(p=>p.platform===m.service),`${a.id}: ${m.service} listed as a platform`);
+  }
+  assert(data.agents.some(a=>a.messaging.some(m=>m.service==='imessage')),'iMessage should be tracked');
+});
+
+test('messaging records reject unknown services, duplicates and missing evidence',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  const pick=d=>d.agents.find(a=>a.messaging.length);
+  invalid(d=>pick(d).messaging[0].service='carrierpigeon');
+  invalid(d=>{const a=pick(d);a.messaging.push({...a.messaging[0]})});
+  invalid(d=>pick(d).messaging[0].sourceIds=[]);
+  invalid(d=>pick(d).messaging[0].sourceIds=['missing']);
+  invalid(d=>pick(d).messaging[0].status='someday');
+  invalid(d=>pick(d).messaging[0].detail='');
+});
+
+test('availability separates shipping products from waitlists and reservations',()=>{
+  for(const a of data.agents){
+    assert(a.access,`${a.id} needs an access state`);
+    assert(Object.hasOwn(accessStates,a.access.state),`${a.id} access state`);
+    assert(a.access.sourceIds.length,`${a.id} access needs evidence`);
+    // The prose claim keeps the detail; the short text comes from the structure.
+    assert.equal(a.claims.find(c=>c.field==='availability').shortValue,accessSummary(a.access));
+  }
+  const open=filterAgents(data.agents,{access:'open'}),upcoming=filterAgents(data.agents,{access:'upcoming'});
+  assert(open.length&&upcoming.length);
+  assert(!open.some(a=>(a.access.restrictions||[]).length),'"available to anyone" must carry no catch');
+  assert(upcoming.every(a=>a.access.state!=='available'),'upcoming must not be shipping');
+  // A product that is not shipping is never counted as available.
+  const vora=data.agents.find(a=>a.id==='vora');
+  assert.equal(vora.access.state,'reservation');
+  assert.equal(vora.access.expected,'2027-03');
+  assert(!filterAgents(data.agents,{access:'open'}).some(a=>a.id==='vora'));
+  assert(!vora.launches.length,'a future ship date is not a launch event');
+});
+
+test('access records reject unknown states, bad restrictions and unsourced claims',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  const pick=d=>d.agents.find(a=>a.id==='vora');
+  invalid(d=>pick(d).access.state='maybe');
+  invalid(d=>pick(d).access.restrictions=['vibes']);
+  invalid(d=>pick(d).access.restrictions=['region','region']);
+  invalid(d=>pick(d).access.sourceIds=[]);
+  invalid(d=>pick(d).access.detail='');
+  invalid(d=>pick(d).access.expected='not-a-date');
+  // An expected date only makes sense for something you cannot have yet.
+  invalid(d=>{const a=pick(d);a.access.state='available';a.access.expected='2027-03'});
 });

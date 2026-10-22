@@ -3,6 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {fields as fieldDefinitions,companyTypes,launchKinds} from '../src/catalog.js';
 import {platformLabels,platformStatusLabels} from '../src/platforms.js';
+import {channelLabels} from '../src/channels.js';
+import {accessStates,accessRestrictions} from '../src/access.js';
 export function validate(data){
   const ids=new Set();const fields=fieldDefinitions.map(([key])=>key);
   const url=u=>assert(['https:','http:'].includes(new URL(u).protocol),`Invalid URL ${u}`);
@@ -37,6 +39,21 @@ export function validate(data){
       assert(Object.hasOwn(platformLabels,p.platform)&&!platforms.has(p.platform),`${a.id} invalid or duplicate platform`);platforms.add(p.platform);
       assert(Object.hasOwn(platformStatusLabels,p.status));assert(p.detail&&p.sourceIds.length);
       for(const sourceId of p.sourceIds)assert(sourceIds.has(sourceId),`${a.id}/${p.platform} references missing source`);
+    }
+    assert(Array.isArray(a.messaging||[]),`${a.id} messaging must be a list`);
+    const services=new Set();for(const m of a.messaging||[]){
+      assert(Object.hasOwn(channelLabels,m.service)&&!services.has(m.service),`${a.id} invalid or duplicate messaging service ${m.service}`);services.add(m.service);
+      assert(Object.hasOwn(platformStatusLabels,m.status),`${a.id}/${m.service} invalid status`);
+      assert(m.detail,`${a.id}/${m.service} needs a detail`);evidence(m,`messaging:${m.service}`);
+    }
+    if(a.access){
+      const x=a.access;
+      assert(Object.hasOwn(accessStates,x.state),`${a.id}: invalid access state ${x.state}`);
+      for(const r of x.restrictions||[])assert(Object.hasOwn(accessRestrictions,r),`${a.id}: invalid access restriction ${r}`);
+      assert(new Set(x.restrictions||[]).size===(x.restrictions||[]).length,`${a.id}: duplicate access restriction`);
+      // An expected date may be in the future, unlike a launch that already happened.
+      if(x.expected){assert(/^\d{4}(-\d{2})?(-\d{2})?$/.test(x.expected),`${a.id}: invalid expected date`);assert(x.state!=='available',`${a.id}: an available product needs no expected date`)}
+      assert(x.detail,`${a.id}: access needs a detail`);evidence(x,'access');
     }
     for(const field of fields){const matches=a.claims.filter(c=>c.field===field);assert(matches.length===1,`${a.id} missing or duplicate ${field}`);const c=matches[0];assert(['documented','limited','unknown'].includes(c.status));assert(typeof c.value==='string'&&c.value);assert(c.status==='unknown'||c.sourceIds.length,`${a.id}/${field} needs evidence`);for(const s of c.sourceIds)assert(sourceIds.has(s),`${a.id}/${field} references missing source ${s}`)}
   }

@@ -102,7 +102,7 @@
       "sourceIds": [
         "thine-mac"
       ],
-      "shortValue": "macOS \u00b7 Apple Silicon"
+      "shortValue": "macOS · Apple Silicon"
     },
     {
       "field": "mobileApps",
@@ -111,7 +111,7 @@
       "sourceIds": [
         "thine-app"
       ],
-      "shortValue": "iPhone \u00b7 Apple Watch"
+      "shortValue": "iPhone · Apple Watch"
     },
     {
       "field": "models",
@@ -120,7 +120,7 @@
       "sourceIds": [
         "thine-privacy"
       ],
-      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Google"
+      "shortValue": "OpenAI · Anthropic · Google"
     },
     {
       "field": "pricing",
@@ -129,7 +129,7 @@
       "sourceIds": [
         "thine-recorder"
       ],
-      "shortValue": "Free \u00b7 $14.99/month"
+      "shortValue": "Free · $14.99/month"
     },
     {
       "field": "bundledPlan",
@@ -234,6 +234,13 @@
     "type": "startup",
     "sourceIds": [
       "thine-privacy"
+    ]
+  },
+  "access": {
+    "state": "available",
+    "detail": "iPhone and Mac apps are available.",
+    "sourceIds": [
+      "thine-mac"
     ]
   }
 }

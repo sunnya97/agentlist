@@ -34,7 +34,7 @@
       "sourceIds": [
         "muse-design"
       ],
-      "shortValue": "Goal tracking \u00b7 editable memory files"
+      "shortValue": "Goal tracking · editable memory files"
     },
     {
       "field": "computerUse",
@@ -79,7 +79,7 @@
       "sourceIds": [
         "muse-intro"
       ],
-      "shortValue": "iOS \u00b7 Android; also WhatsApp"
+      "shortValue": "iOS · Android; also WhatsApp"
     },
     {
       "field": "channels",
@@ -268,7 +268,7 @@
     "sourceIds": [
       "muse-meta-stock"
     ],
-    "stage": "Public \u00b7 NASDAQ: META"
+    "stage": "Public · NASDAQ: META"
   },
   "launches": [
     {
@@ -278,5 +278,25 @@
         "muse-intro"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Muse app and WhatsApp",
+      "sourceIds": [
+        "muse-intro"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "region"
+    ],
+    "detail": "Launched; current regional coverage needs review",
+    "sourceIds": [
+      "muse-intro"
+    ]
+  }
 }

@@ -255,5 +255,30 @@
         "ironclaw-launch"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "REPL, web gateway, webhooks, Telegram, Slack.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "REPL, web gateway, webhooks, Telegram, Slack.",
+      "sourceIds": [
+        "ironclaw-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "ironclaw-readme"
+    ]
+  }
 }

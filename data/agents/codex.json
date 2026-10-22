@@ -2,7 +2,7 @@
   "id": "codex",
   "name": "Codex",
   "organization": "OpenAI",
-  "summary": "OpenAI\u2019s coding agent across desktop, terminal, IDE, cloud, and iOS, with local computer use, scheduled tasks, and optional local models.",
+  "summary": "OpenAI’s coding agent across desktop, terminal, IDE, cloud, and iOS, with local computer use, scheduled tasks, and optional local models.",
   "website": "https://learn.chatgpt.com/docs/codex/cli",
   "repository": "https://github.com/openai/codex",
   "category": "adjacent",
@@ -132,7 +132,7 @@
         "codex-model-providers",
         "codex-repo"
       ],
-      "shortValue": "Local + cloud coding \u00b7 optional local models"
+      "shortValue": "Local + cloud coding · optional local models"
     },
     {
       "field": "computerUse",
@@ -179,7 +179,7 @@
         "codex-desktop",
         "codex-linux"
       ],
-      "shortValue": "macOS \u00b7 Windows \u00b7 Linux preview"
+      "shortValue": "macOS · Windows · Linux preview"
     },
     {
       "field": "mobileApps",
@@ -199,7 +199,7 @@
         "codex-desktop",
         "codex-mobile"
       ],
-      "shortValue": "Desktop \u00b7 CLI \u00b7 IDE \u00b7 web \u00b7 iOS"
+      "shortValue": "Desktop · CLI · IDE · web · iOS"
     },
     {
       "field": "api",
@@ -388,5 +388,18 @@
       ],
       "label": "Codex CLI"
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "region",
+      "plan"
+    ],
+    "detail": "Public desktop, CLI, IDE, cloud, and iOS surfaces; specific tools depend on region, plan, and workspace.",
+    "sourceIds": [
+      "codex-desktop",
+      "codex-mobile",
+      "codex-computer"
+    ]
+  }
 }

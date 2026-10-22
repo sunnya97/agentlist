@@ -39,7 +39,7 @@
     },
     {
       "id": "underdog-funding",
-      "title": "Andreessen Horowitz leads Conway Research\u2019s first funding round",
+      "title": "Andreessen Horowitz leads Conway Research’s first funding round",
       "url": "https://a16z.com/announcement/investing-in-conway-the-creator-of-underdog/",
       "checkedAt": "2026-10-21"
     }
@@ -319,5 +319,15 @@
       "note": "Led by a16z"
     }
   },
-  "launches": []
+  "launches": [],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "invite"
+    ],
+    "detail": "Mac invite access; iOS available without invite; Windows beta",
+    "sourceIds": [
+      "underdog-home"
+    ]
+  }
 }

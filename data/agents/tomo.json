@@ -260,5 +260,24 @@
         "tomo-launch"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "iMessage and group chats, with a web account dashboard.",
+      "sourceIds": [
+        "tomo-home",
+        "tomo-about"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available through iMessage and the iPhone/iPad app.",
+    "sourceIds": [
+      "tomo-home",
+      "tomo-appstore"
+    ]
+  }
 }

@@ -108,7 +108,7 @@
   "claims": [
     {
       "field": "uniqueFeatures",
-      "value": "AI character that calls businesses, uses websites and coordinates with friends\u2019 Pickles.",
+      "value": "AI character that calls businesses, uses websites and coordinates with friends’ Pickles.",
       "status": "documented",
       "sourceIds": [
         "pickle-start"
@@ -341,5 +341,16 @@
       "pickle-yc"
     ]
   },
-  "launches": []
+  "launches": [],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "age"
+    ],
+    "detail": "iPhone app; 18 and older.",
+    "sourceIds": [
+      "pickle-appstore",
+      "pickle-start"
+    ]
+  }
 }

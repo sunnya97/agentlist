@@ -258,5 +258,54 @@
         "nanoclaw-seed-announcement"
       ]
     }
+  },
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ]
+    },
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Slack, Telegram, WhatsApp, Discord, iMessage, and installable adapters.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "nanoclaw-readme"
+    ]
   }
 }

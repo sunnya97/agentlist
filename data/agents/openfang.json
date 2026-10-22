@@ -254,5 +254,22 @@
     "detail": "",
     "sourceIds": []
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Messaging adapters including Telegram; browser dashboard.",
+      "sourceIds": [
+        "openfang-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "openfang-readme"
+    ]
+  }
 }

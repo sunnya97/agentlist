@@ -21,7 +21,7 @@
     },
     {
       "id": "instinct-funding-2026",
-      "title": "Instinct\u2019s August 2026 Series B financing",
+      "title": "Instinct’s August 2026 Series B financing",
       "url": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
       "checkedAt": "2026-10-21"
     }
@@ -162,7 +162,7 @@
     "sourceIds": [
       "instinct-funding-2026"
     ],
-    "stage": "Series B \u00b7 Aug 2026",
+    "stage": "Series B · Aug 2026",
     "funding": {
       "amount": "US$250M",
       "round": "Series B",
@@ -171,5 +171,12 @@
         "instinct-funding-2026"
       ]
     }
+  },
+  "access": {
+    "state": "unverified",
+    "detail": "Website links to app access; access requirements unverified",
+    "sourceIds": [
+      "instinct-home"
+    ]
   }
 }

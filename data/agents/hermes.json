@@ -345,5 +345,54 @@
         "hermes-funding-2026"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    },
+    {
+      "service": "signal",
+      "status": "available",
+      "detail": "Telegram, Discord, Slack, WhatsApp, Signal, CLI.",
+      "sourceIds": [
+        "hermes-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "hermes-readme"
+    ]
+  }
 }

@@ -40,7 +40,9 @@ Place a short introduction above one filter row, followed by the view tabs and a
 Views organize overview, capabilities, models and plans, and ownership and control.
 Desktop rows align selection, identity, concise feature summaries, and following controls.
 The overview combines desktop and mobile into Native apps, using platform icons with hover labels and click-to-open availability details.
+A separate Messaging column lists the services an agent can be reached through, using the same icon and popover treatment in a lighter weight. Messaging and native apps stay in distinct columns so an integration is never read as an app.
 Announced platforms use muted dashed outlines; beta and limited access have small status dots.
+A small availability chip follows the agent name when a product is not simply available: amber for waitlist, reservation and announced, grey for unverified access and for open products carrying a plan, region, age, rollout or invite catch. Shipping products with no catch carry no chip, so the marker only appears when it says something.
 Keep summaries compact; open the agent identity to inspect its profile.
 Each agent has a full page at `#agent/<id>`, with a breadcrumb, company and launch facts, and linkable Overview, Plans, Discussion, and Sources tabs. Browser back and forward follow normal page navigation.
 Profiles and comparisons retain full claim text and numbered source links.

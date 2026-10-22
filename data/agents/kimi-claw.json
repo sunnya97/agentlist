@@ -148,12 +148,12 @@
   "aliases": [],
   "plans": [
     {
-      "name": "Pro \u00b7 China",
+      "name": "Pro · China",
       "price": "CNY199/month",
       "billing": "Monthly, or CNY1,908/year",
       "includes": [
         "Dedicated Kimi Claw and Goal Mode",
-        "4\u00d7 Agent credits; Kimi Code and Agent Swarm"
+        "4× Agent credits; Kimi Code and Agent Swarm"
       ],
       "limits": [
         "Monthly shared credits do not roll over",
@@ -165,11 +165,11 @@
       ]
     },
     {
-      "name": "Max \u00b7 China",
+      "name": "Max · China",
       "price": "CNY699/month",
       "billing": "Monthly, or CNY6,708/year",
       "includes": [
-        "Dedicated Kimi Claw; 14\u00d7 Agent credits",
+        "Dedicated Kimi Claw; 14× Agent credits",
         "Four concurrent Agent tasks"
       ],
       "limits": [
@@ -182,11 +182,11 @@
       ]
     },
     {
-      "name": "Ultra \u00b7 China",
+      "name": "Ultra · China",
       "price": "CNY1,399/month",
       "billing": "Monthly, or CNY13,428/year",
       "includes": [
-        "Dedicated Kimi Claw; 28\u00d7 Agent credits",
+        "Dedicated Kimi Claw; 28× Agent credits",
         "Four concurrent Agent tasks; 50GB project storage"
       ],
       "limits": [
@@ -206,5 +206,41 @@
     "detail": "",
     "sourceIds": []
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "feishu",
+      "status": "available",
+      "detail": "Kimi, Feishu, WeCom, WeChat, and others.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ]
+    },
+    {
+      "service": "wecom",
+      "status": "available",
+      "detail": "Kimi, Feishu, WeCom, WeChat, and others.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ]
+    },
+    {
+      "service": "wechat",
+      "status": "available",
+      "detail": "Kimi, Feishu, WeCom, WeChat, and others.",
+      "sourceIds": [
+        "kimi-claw-overview"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "plan"
+    ],
+    "detail": "Available with Allegretto or higher membership.",
+    "sourceIds": [
+      "kimi-claw-overview"
+    ]
+  }
 }

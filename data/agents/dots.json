@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "dots-intro",
-      "title": "Introducing dots \u00b7 OpenAI",
+      "title": "Introducing dots · OpenAI",
       "url": "https://openai.com/index/introducing-dots/",
       "checkedAt": "2026-10-21"
     },
@@ -53,7 +53,7 @@
         "dots-security",
         "dots-help"
       ],
-      "shortValue": "Shared ChatGPT context \u00b7 Codex delegation"
+      "shortValue": "Shared ChatGPT context · Codex delegation"
     },
     {
       "field": "computerUse",
@@ -108,7 +108,7 @@
       "sourceIds": [
         "dots-help"
       ],
-      "shortValue": "iOS \u00b7 Android"
+      "shortValue": "iOS · Android"
     },
     {
       "field": "channels",
@@ -377,5 +377,35 @@
         "dots-intro"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "ChatGPT, Slack, Teams",
+      "sourceIds": [
+        "dots-intro"
+      ]
+    },
+    {
+      "service": "teams",
+      "status": "available",
+      "detail": "ChatGPT, Slack, Teams",
+      "sourceIds": [
+        "dots-intro"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "rollout",
+      "plan",
+      "region"
+    ],
+    "detail": "Gradual rollout; plan and regional restrictions",
+    "sourceIds": [
+      "dots-help"
+    ]
+  }
 }

@@ -9,13 +9,13 @@
   "sources": [
     {
       "id": "grok-product",
-      "title": "Grok Bot \u00b7 Official product page",
+      "title": "Grok Bot · Official product page",
       "url": "https://x.ai/bot",
       "checkedAt": "2026-10-21"
     },
     {
       "id": "grok-docs",
-      "title": "Grok Bot overview \u00b7 Official docs",
+      "title": "Grok Bot overview · Official docs",
       "url": "https://docs.x.ai/grok-bot/overview",
       "checkedAt": "2026-10-21"
     },
@@ -82,7 +82,7 @@
       "sourceIds": [
         "grok-product"
       ],
-      "shortValue": "Learn by demonstration \u00b7 collaborating Bots"
+      "shortValue": "Learn by demonstration · collaborating Bots"
     },
     {
       "field": "computerUse",
@@ -109,7 +109,7 @@
       "sourceIds": [
         "grok-docs"
       ],
-      "shortValue": "Voice chat \u00b7 dictation \u00b7 memos"
+      "shortValue": "Voice chat · dictation · memos"
     },
     {
       "field": "scheduling",
@@ -126,7 +126,7 @@
       "sourceIds": [
         "grok-start"
       ],
-      "shortValue": "macOS \u00b7 Windows \u00b7 Linux"
+      "shortValue": "macOS · Windows · Linux"
     },
     {
       "field": "mobileApps",
@@ -135,7 +135,7 @@
       "sourceIds": [
         "grok-mobile"
       ],
-      "shortValue": "iOS \u00b7 Android"
+      "shortValue": "iOS · Android"
     },
     {
       "field": "channels",
@@ -293,7 +293,7 @@
       "billing": "Monthly, or US$300/year",
       "includes": [
         "Grok Bot, Grok, Cursor and linked X benefits",
-        "4\u00d7 base included usage"
+        "4× base included usage"
       ],
       "limits": [
         "Weekly allowance shared across products",
@@ -309,7 +309,7 @@
       "price": "US$100/month",
       "billing": "Monthly, or US$1,000/year",
       "includes": [
-        "Premium features; 15\u00d7 base included usage"
+        "Premium features; 15× base included usage"
       ],
       "limits": [
         "Shared weekly allowance; paid top-ups"
@@ -323,7 +323,7 @@
       "price": "US$200/month",
       "billing": "Monthly, or US$2,000/year",
       "includes": [
-        "Premium features; 50\u00d7 base included usage"
+        "Premium features; 50× base included usage"
       ],
       "limits": [
         "Shared weekly allowance; paid top-ups"
@@ -388,6 +388,13 @@
     "type": "lab",
     "sourceIds": [
       "grok-bot-release-date"
+    ]
+  },
+  "access": {
+    "state": "available",
+    "detail": "Individual, team, and enterprise access",
+    "sourceIds": [
+      "grok-product"
     ]
   }
 }

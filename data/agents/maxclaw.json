@@ -158,5 +158,38 @@
       "maxclaw-minimax-investors"
     ],
     "stage": "Public"
+  },
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Web, mobile, Telegram, Discord, Slack.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Web, mobile, Telegram, Discord, Slack.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Web, mobile, Telegram, Discord, Slack.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available as a hosted subscription.",
+    "sourceIds": [
+      "maxclaw-overview"
+    ]
   }
 }

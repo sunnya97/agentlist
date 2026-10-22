@@ -283,5 +283,46 @@
     "detail": "",
     "sourceIds": []
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "Discord, Telegram, Matrix, email, webhooks, voice, CLI.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Discord, Telegram, Matrix, email, webhooks, voice, CLI.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
+    },
+    {
+      "service": "matrix",
+      "status": "available",
+      "detail": "Discord, Telegram, Matrix, email, webhooks, voice, CLI.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Discord, Telegram, Matrix, email, webhooks, voice, CLI.",
+      "sourceIds": [
+        "zeroclaw-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "zeroclaw-readme"
+    ]
+  }
 }

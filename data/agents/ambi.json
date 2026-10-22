@@ -40,7 +40,7 @@
       "sourceIds": [
         "ambi-features"
       ],
-      "shortValue": "Ambient listening \u2192 memory and follow-through"
+      "shortValue": "Ambient listening → memory and follow-through"
     },
     {
       "field": "computerUse",
@@ -289,6 +289,14 @@
   "company": {
     "type": "startup",
     "sourceIds": [
+      "ambi-home"
+    ]
+  },
+  "access": {
+    "state": "available",
+    "detail": "Software downloads listed for macOS, Windows and iOS; hardware expected early next year",
+    "sourceIds": [
+      "ambi-download",
       "ambi-home"
     ]
   }

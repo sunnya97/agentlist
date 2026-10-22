@@ -78,7 +78,7 @@
       "sourceIds": [
         "skye-app"
       ],
-      "shortValue": "iPhone \u00b7 iPad"
+      "shortValue": "iPhone · iPad"
     },
     {
       "field": "scheduling",
@@ -105,7 +105,7 @@
       "sourceIds": [
         "skye-privacy"
       ],
-      "shortValue": "OpenAI \u00b7 Anthropic \u00b7 Gemini \u00b7 Groq"
+      "shortValue": "OpenAI · Anthropic · Gemini · Groq"
     },
     {
       "field": "pricing",
@@ -198,7 +198,7 @@
     },
     {
       "id": "skye-funding",
-      "title": "Skye\u2019s pre-seed financing",
+      "title": "Skye’s pre-seed financing",
       "url": "https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/",
       "checkedAt": "2026-10-21"
     }
@@ -224,5 +224,15 @@
       ]
     }
   },
-  "launches": []
+  "launches": [],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "region"
+    ],
+    "detail": "Available on the US App Store.",
+    "sourceIds": [
+      "skye-app"
+    ]
+  }
 }

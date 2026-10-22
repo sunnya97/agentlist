@@ -1,0 +1,373 @@
+{
+  "id": "vora",
+  "name": "Vora Aegis",
+  "organization": "Vora",
+  "summary": "A local AI appliance you own: an assistant called a Guardian builds an encrypted database of your digital life on the device and runs open models on it. Announced for Spring 2027; reservations only.",
+  "website": "https://vora.io",
+  "repository": null,
+  "category": "local",
+  "sources": [
+    {
+      "id": "vora-home",
+      "title": "Vora Aegis official website",
+      "url": "https://vora.io/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "vora-specs",
+      "title": "Vora Aegis technical specifications",
+      "url": "https://vora.io/technical-specifications/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "vora-faq",
+      "title": "Vora Aegis frequently asked questions",
+      "url": "https://vora.io/faq/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "vora-about",
+      "title": "About Vora: team and principles",
+      "url": "https://vora.io/about/",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "vora-shop",
+      "title": "Vora Aegis Reservation, $2,499 Super Early Bird",
+      "url": "https://shop.vora.io/products/vora-aegis-vip-deposit",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "A desktop appliance you own that runs open models on-device, split so the layer holding your data has no unrestricted internet access and the internet-facing layer holds no private data",
+      "shortValue": "Owned appliance with split-agent isolation",
+      "status": "documented",
+      "sourceIds": [
+        "vora-home",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "computerUse",
+      "value": "Acts from its own appliance through connected accounts and a secure browser; it does not control your Mac or PC, and no remote interface onto the device's own screen is described",
+      "shortValue": "Own appliance; not your computer",
+      "status": "limited",
+      "sourceIds": [
+        "vora-home",
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "browserUse",
+      "value": "A secure browser runs errands on the internet from the internet-facing layer, which holds no private data",
+      "shortValue": "Secure browser for errands",
+      "status": "documented",
+      "sourceIds": [
+        "vora-home",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "voice",
+      "value": "No ambient listening by design; the company contrasts Aegis with always-on speakers and says you talk to it through the app when you choose. A voice interface is not described",
+      "shortValue": "No live microphone by design",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "Runs errands sent out to the internet and keeps a current brief in the app; scheduled or event-triggered routines are not specified",
+      "shortValue": "Errands and a brief; triggers not specified",
+      "status": "limited",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "No native desktop app is described; deeper work such as connecting accounts happens in the web app from a laptop",
+      "shortValue": "Web app, not a native desktop app",
+      "status": "limited",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "mobileApps",
+      "value": "A phone app pairs the device and handles quick questions and notifications; iPhone and Android availability is not separately specified, and full phone-desktop parity is described as growing after launch",
+      "shortValue": "Phone app; platforms unspecified",
+      "status": "limited",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "channels",
+      "value": "A phone app and a web app. The device itself has no screen or keyboard",
+      "shortValue": "Phone app and web app",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "models",
+      "value": "Ships running Gemma 4 26B entirely on the device; the specifications cite over 100 tokens per second for open models of that size, naming Qwen 3.6 35B and Ornith 1.5 35B",
+      "shortValue": "Gemma 4 26B on-device at launch",
+      "status": "documented",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "The model is the owner's to choose and can be replaced with newer open models as they are released",
+      "shortValue": "Swap in any open model",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Bought outright; the company states the machine runs the full experience with no subscription, and all three optional plans are future development that will not be available at launch",
+      "shortValue": "One-time purchase; no subscription required",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "US$2,499 Super Early Bird reservation with a US$50 refundable deposit; a published ladder runs to US$2,799 Early Bird and US$2,999 retail. Optional post-launch plans are US$20/month Guardian Care, US$20/month Aegis Pro and US$100/month Aegis Pro+",
+      "shortValue": "US$2,499 device; US$50 deposit",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq",
+        "vora-shop",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "license",
+      "value": "The specifications state open source top to bottom, and the company says updates are checked against published source; no public repository is linked from the site, so the code could not be inspected",
+      "shortValue": "Open source stated; no repository linked",
+      "status": "limited",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Runs on the owner's appliance on EnclaveOS, a hardened security-first operating system. Account data flows from the provider straight to the device rather than through a Vora server. Optional frontier-model credits would send only approved content off-device, and are not available at launch",
+      "shortValue": "On your own appliance",
+      "status": "documented",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "passwordManager",
+      "value": "Sign-in keys for connected accounts are held on the device, and the Harpē security module holds the encryption keys plus a hardware wallet for payments; a general-purpose password manager is not described",
+      "shortValue": "On-device account keys and wallet",
+      "status": "limited",
+      "sourceIds": [
+        "vora-faq",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "Anything consequential is drafted and waits for approval before it is sent; NFC tap-to-verify provides multi-signature confirmation of sensitive data and of payments above a threshold the owner sets",
+      "shortValue": "Approval before consequential actions",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "One encrypted database on the device holds mail, messages, photos, calendar, files, financial and health accounts; conversation history imports from ChatGPT, Claude and Gemini. One owner per device, with household modes not yet offered",
+      "shortValue": "One encrypted on-device database",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq",
+        "vora-home"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Everything exports in open formats at any time, and connected data can be deleted from Settings; the company states there is no lock-in and the device keeps working without its servers",
+      "shortValue": "Full export in open formats",
+      "status": "documented",
+      "sourceIds": [
+        "vora-faq",
+        "vora-specs"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Harpē, a hardware security module with dual secure elements, holds keys locally; the split-agent design is presented as structural protection against prompt-injection exfiltration. No training on customer data, signed updates verified against published source with automatic rollback, and a recovery phrase the company states it cannot recover",
+      "shortValue": "On-device HSM and split-agent isolation",
+      "status": "documented",
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "field": "availability",
+      "value": "Not yet available. Reservations only: the US$50 Super Early Bird deposit holds one of 200 units, refundable until the unit ships. Aegis is stated to ship Spring 2027, launching in the United States, Canada and the European Union",
+      "shortValue": "Reservation only; ships Spring 2027",
+      "status": "documented",
+      "sourceIds": [
+        "vora-home",
+        "vora-faq",
+        "vora-shop"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/vora.png",
+    "sourceUrl": "https://vora.io/images/favicon.png",
+    "sourcePage": "https://vora.io/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "announced",
+      "detail": "A web app is described for connecting accounts and managing settings; it ships with the device in Spring 2027",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    },
+    {
+      "platform": "mobile",
+      "status": "announced",
+      "detail": "A phone app pairs the device and handles quick questions and notifications; iPhone and Android are not separately specified, and it ships with the device in Spring 2027",
+      "sourceIds": [
+        "vora-faq"
+      ]
+    }
+  ],
+  "color": "#262523",
+  "aliases": [
+    "Vora",
+    "Aegis",
+    "Guardian"
+  ],
+  "messaging": [],
+  "plans": [
+    {
+      "name": "Aegis Super Early Bird",
+      "price": "US$2,499",
+      "billing": "One-time purchase; US$50 refundable deposit to reserve",
+      "includes": [
+        "Vora Aegis appliance, owned outright",
+        "AMD Ryzen AI Max+ 395, Radeon 8060S, 64GB unified memory, 1TB SSD",
+        "Harpē hardware security module with dual secure elements",
+        "Two-year hardware warranty, not tied to any subscription"
+      ],
+      "limits": [
+        "One of 200 units at this tier; Founders at US$1,999 is sold out",
+        "Ladder continues at US$2,799 Early Bird and US$2,999 retail",
+        "Ships Spring 2027; deposit refundable until the unit ships"
+      ],
+      "sourceIds": [
+        "vora-shop",
+        "vora-faq",
+        "vora-specs"
+      ]
+    },
+    {
+      "name": "Guardian Care",
+      "price": "US$20/month",
+      "billing": "Optional subscription; not available at launch",
+      "includes": [
+        "Complete off-site encrypted backup under keys only the owner holds",
+        "Restores a replacement device after loss or hardware failure"
+      ],
+      "limits": [
+        "Future development; the company states it is not available at launch",
+        "Recovery phrase is the only key and cannot be recovered by Vora"
+      ],
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "name": "Aegis Pro",
+      "price": "US$20/month",
+      "billing": "Optional subscription; not available at launch",
+      "includes": [
+        "Monthly allotment of frontier cloud-model credits for heavier work"
+      ],
+      "limits": [
+        "Future development; the company states it is not available at launch",
+        "Only content approved for a task leaves the device"
+      ],
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    },
+    {
+      "name": "Aegis Pro+",
+      "price": "US$100/month",
+      "billing": "Optional subscription; not available at launch",
+      "includes": [
+        "Larger allotment of frontier cloud-model credits",
+        "Guardian Care included"
+      ],
+      "limits": [
+        "Future development; the company states it is not available at launch"
+      ],
+      "sourceIds": [
+        "vora-specs",
+        "vora-faq"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "announced",
+    "name": "Vora Aegis",
+    "detail": "A compact desktop appliance, 225mm x 185mm x 50mm and 2.2 lbs, with an AMD Ryzen AI Max+ 395, Radeon 8060S, 64GB unified memory, a 1TB SSD expandable through two M.2 sockets, and the Harpē security module. The device is required: it is the product. Announced to ship Spring 2027, and the site states its images are renders of the production enclosure",
+    "sourceIds": [
+      "vora-specs",
+      "vora-faq",
+      "vora-home"
+    ]
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "vora-about"
+    ]
+  },
+  "launches": [],
+  "access": {
+    "state": "reservation",
+    "restrictions": [
+      "region"
+    ],
+    "expected": "2027-03",
+    "detail": "Not yet available. Reservations only: the US$50 Super Early Bird deposit holds one of 200 units, refundable until the unit ships. Aegis is stated to ship Spring 2027, launching in the United States, Canada and the European Union",
+    "sourceIds": [
+      "vora-home",
+      "vora-faq",
+      "vora-shop"
+    ]
+  }
+}

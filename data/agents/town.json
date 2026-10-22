@@ -386,5 +386,54 @@
         "town-series-b"
       ]
     }
-  ]
+  ],
+  "messaging": [
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Web, macOS and iOS, plus email, Slack, WhatsApp and Telegram",
+      "sourceIds": [
+        "town-integrations",
+        "town-ios",
+        "town-pricing"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Public signup",
+    "sourceIds": [
+      "town-start"
+    ]
+  }
 }

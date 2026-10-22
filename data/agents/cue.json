@@ -152,5 +152,22 @@
     "detail": "",
     "sourceIds": []
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "Agent workspace, group chat, email and phone",
+      "sourceIds": [
+        "cue-home"
+      ]
+    }
+  ],
+  "access": {
+    "state": "unverified",
+    "detail": "Official product site; access requirements unverified",
+    "sourceIds": [
+      "cue-home"
+    ]
+  }
 }

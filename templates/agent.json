@@ -23,6 +23,12 @@
     }
   ],
   "platforms": [],
+  "messaging": [],
+  "access": {
+    "state": "unverified",
+    "detail": "",
+    "sourceIds": []
+  },
   "plans": [],
   "hardware": {
     "status": "unknown",

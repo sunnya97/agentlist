@@ -104,7 +104,7 @@
       "sourceIds": [
         "rene-app"
       ],
-      "shortValue": "iPhone \u00b7 iPad"
+      "shortValue": "iPhone · iPad"
     },
     {
       "field": "channels",
@@ -114,7 +114,7 @@
         "rene-faq",
         "rene-privacy"
       ],
-      "shortValue": "Messages \u00b7 WhatsApp \u00b7 Telegram"
+      "shortValue": "Messages · WhatsApp · Telegram"
     },
     {
       "field": "voice",
@@ -141,7 +141,7 @@
       "sourceIds": [
         "rene-models"
       ],
-      "shortValue": "OpenAI \u00b7 DeepSeek"
+      "shortValue": "OpenAI · DeepSeek"
     },
     {
       "field": "pricing",
@@ -268,6 +268,43 @@
     "type": "startup",
     "sourceIds": [
       "rene-home"
+    ]
+  },
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Messages on iPhone, WhatsApp, Telegram and the web app.",
+      "sourceIds": [
+        "rene-faq",
+        "rene-privacy"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "Messages on iPhone, WhatsApp, Telegram and the web app.",
+      "sourceIds": [
+        "rene-faq",
+        "rene-privacy"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "Messages on iPhone, WhatsApp, Telegram and the web app.",
+      "sourceIds": [
+        "rene-faq",
+        "rene-privacy"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available through messaging and the App Store.",
+    "sourceIds": [
+      "rene-faq",
+      "rene-app"
     ]
   }
 }

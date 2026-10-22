@@ -83,7 +83,7 @@
         "claude-code-sdk",
         "claude-code-mobile"
       ],
-      "shortValue": "Codebase tools \u00b7 CI automation \u00b7 phone control"
+      "shortValue": "Codebase tools · CI automation · phone control"
     },
     {
       "field": "computerUse",
@@ -119,7 +119,7 @@
         "claude-code-desktop",
         "claude-code-linux"
       ],
-      "shortValue": "macOS \u00b7 Windows \u00b7 Linux beta"
+      "shortValue": "macOS · Windows · Linux beta"
     },
     {
       "field": "mobileApps",
@@ -128,7 +128,7 @@
       "sourceIds": [
         "claude-code-mobile"
       ],
-      "shortValue": "iOS \u00b7 Android remote control"
+      "shortValue": "iOS · Android remote control"
     },
     {
       "field": "channels",
@@ -312,5 +312,12 @@
         "claude-code-launch"
       ]
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Multiple surfaces with account requirements",
+    "sourceIds": [
+      "claude-code-docs"
+    ]
+  }
 }

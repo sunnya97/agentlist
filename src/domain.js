@@ -1,9 +1,14 @@
 import {companyTypes,launchKinds} from './catalog.js';
-export function filterAgents(agents, {search='', category='all', hosting='all', companyType='all', adjacent=false, watching=false, watchlist=[]}={}) {
+export function filterAgents(agents, {search='', category='all', hosting='all', companyType='all', access='all', adjacent=false, watching=false, watchlist=[]}={}) {
   const q = search.trim().toLocaleLowerCase();
   return agents.filter(a => (adjacent || a.category !== 'adjacent') &&
     (category === 'all' || a.category === category) &&
     (companyType === 'all' || a.company?.type === companyType) &&
+    (access === 'all' ||
+      (access === 'open' ? a.access?.state === 'available' && !(a.access.restrictions||[]).length :
+       access === 'gated' ? a.access?.state === 'available' && (a.access.restrictions||[]).length > 0 :
+       access === 'upcoming' ? ['waitlist','reservation','announced'].includes(a.access?.state) :
+       a.access?.state === access)) &&
     (hosting === 'all' || (hosting === 'self' ? a.category === 'runtime' : a.category === 'managed')) &&
     (!watching || watchlist.includes(a.id)) &&
     (!q || [a.name,a.organization,a.summary,...(a.aliases||[]),...(a.plans||[]).flatMap(p=>[p.name,p.price,...p.includes,...p.limits]),...a.claims.filter(c=>c.status!=='unknown').flatMap(c=>[c.value,c.shortValue||''])].join(' ').toLocaleLowerCase().includes(q)));

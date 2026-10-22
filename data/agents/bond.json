@@ -1,0 +1,361 @@
+{
+  "id": "bond",
+  "name": "Bond",
+  "organization": "BOND App Inc.",
+  "summary": "A work assistant that reads connected tools and keeps one prioritized to-do list of commitments, drafting follow-ups and briefs for the person to send.",
+  "website": "https://www.bondapp.io",
+  "repository": null,
+  "category": "managed",
+  "sources": [
+    {
+      "id": "bond-home",
+      "title": "Bond official website",
+      "url": "https://www.bondapp.io/",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "bond-pricing",
+      "title": "Bond pricing, plans and frequently asked questions",
+      "url": "https://www.bondapp.io/pricing",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "bond-privacy",
+      "title": "Bond privacy policy",
+      "url": "https://www.bondapp.io/privacy-policy",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "bond-app",
+      "title": "Bond web application sign-in",
+      "url": "https://app.bondapp.io/login",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "bond-yc",
+      "title": "Bond company profile, Y Combinator",
+      "url": "https://www.ycombinator.com/companies/bond",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "bond-yc-launch",
+      "title": "Launch YC: BOND, AI Chief of Staff for CEOs and busy execs",
+      "url": "https://www.ycombinator.com/launches/Ncl-bond-ai-chief-of-staff-for-ceos-and-busy-execs",
+      "checkedAt": "2026-10-21"
+    }
+  ],
+  "claims": [
+    {
+      "field": "uniqueFeatures",
+      "value": "Pulls commitments out of connected work tools into one self-updating to-do list ranked P0–P3, with a morning brief and per-meeting context briefs",
+      "shortValue": "Self-updating P0–P3 commitment list",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "computerUse",
+      "value": "Reads and writes through connected app integrations; no control of your computer or of a cloud desktop is described",
+      "shortValue": "Connected-app actions only",
+      "status": "limited",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "browserUse",
+      "value": "Researches meeting context from connected tools; interactive browser control is not specified",
+      "shortValue": "No browser control specified",
+      "status": "limited",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "voice",
+      "value": "Ingests notes from connected meeting recorders such as Granola, Fireflies, Fathom, Circleback and Read AI; its own voice interface or ambient listening is not specified",
+      "shortValue": "Meeting-recorder notes; no own voice mode",
+      "status": "limited",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "scheduling",
+      "value": "Runs a daily morning brief, prepares briefs ahead of meetings, tracks overdue commitments owed by others, and runs custom routines on a daily, weekly or monthly cycle",
+      "shortValue": "Morning brief and custom routines",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "desktopApps",
+      "value": "No native desktop app; the product states there is no new app to learn and runs in Slack and the web application",
+      "shortValue": "None",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-app"
+      ]
+    },
+    {
+      "field": "mobileApps",
+      "value": "No native iPhone or Android app; mobile access is through iMessage and Slack",
+      "shortValue": "None; iMessage and Slack",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "channels",
+      "value": "Web application, Slack and iMessage",
+      "shortValue": "Web, Slack and iMessage",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing",
+        "bond-app"
+      ]
+    },
+    {
+      "field": "api",
+      "value": "No public API is specified; Enterprise lists custom integrations and deployment options arranged with the team",
+      "shortValue": "API not specified",
+      "status": "limited",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "models",
+      "value": "Third-party AI model providers under zero-data-retention agreements; the specific models and providers are not named",
+      "shortValue": "Unnamed third-party providers",
+      "status": "limited",
+      "sourceIds": [
+        "bond-pricing",
+        "bond-privacy"
+      ]
+    },
+    {
+      "field": "byom",
+      "value": "Fully managed service; personal model keys or model selection are not specified",
+      "shortValue": "Included models; no BYO keys specified",
+      "status": "limited",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "bundledPlan",
+      "value": "Standalone Bond individual or Enterprise subscription",
+      "status": "documented",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "pricing",
+      "value": "Free tier with 10,000 credits; individual plan US$49/month; Enterprise priced on request",
+      "shortValue": "Free tier; US$49/mo; Enterprise custom",
+      "status": "documented",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "hosting",
+      "value": "Provider-hosted service that connects to the user's third-party work accounts",
+      "shortValue": "Provider-hosted",
+      "status": "documented",
+      "sourceIds": [
+        "bond-privacy",
+        "bond-home"
+      ]
+    },
+    {
+      "field": "approvals",
+      "value": "Drafts follow-ups, replies and briefs and leaves sending to the person; the product describes the user staying in control of what gets sent",
+      "shortValue": "Drafts; person sends",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home"
+      ]
+    },
+    {
+      "field": "memory",
+      "value": "Builds lasting company context from documents, messages and decisions in connected tools; each person keeps their own context and to-do list",
+      "shortValue": "Company context from connected tools",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "portability",
+      "value": "Everything can be exported, and data is deleted within 30 days of cancellation",
+      "shortValue": "Export; deletion within 30 days",
+      "status": "documented",
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "security",
+      "value": "Zero-data-retention agreements with model providers and no training on customer data; encrypted in transit and at rest; continuously monitored against ISO 27001 controls through Aikido Security. SOC 2 Type II, SSO, SCIM and audit logs are listed under Enterprise",
+      "shortValue": "Zero retention; no training; ISO 27001 monitoring",
+      "status": "documented",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing"
+      ]
+    },
+    {
+      "field": "availability",
+      "value": "Public sign-up with a free credit allowance; Enterprise access is arranged with the team",
+      "shortValue": "Public sign-up; Enterprise on request",
+      "status": "documented",
+      "sourceIds": [
+        "bond-pricing",
+        "bond-app"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "./logos/bond.png",
+    "sourceUrl": "https://framerusercontent.com/images/FcrIXzrRYpAhh1hF1bPqjca57E.png",
+    "sourcePage": "https://www.bondapp.io/",
+    "kind": "product"
+  },
+  "platforms": [
+    {
+      "platform": "web",
+      "status": "available",
+      "detail": "Web application at app.bondapp.io, with Google, Microsoft or work-email sign-in",
+      "sourceIds": [
+        "bond-app"
+      ]
+    }
+  ],
+  "color": "#281e15",
+  "aliases": [
+    "BOND",
+    "Bond App"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "price": "US$0",
+      "billing": "Free tier",
+      "includes": [
+        "10,000 credits",
+        "Self-managing to-do list, follow-up and commitment tracking",
+        "Slack and iMessage access; all Bond integrations"
+      ],
+      "limits": [
+        "Credit allowance is one-off; renewal terms are not published"
+      ],
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "name": "Bond",
+      "price": "US$49/month",
+      "billing": "Stated as a monthly price; annual billing terms are not published",
+      "includes": [
+        "Self-managing to-do list that updates while you work",
+        "Automatic follow-up and commitment tracking",
+        "Available in Slack and iMessage",
+        "Automated routines for repetitive work",
+        "All Bond integrations included"
+      ],
+      "limits": [
+        "Included credit allowance is not published"
+      ],
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "billing": "Priced on request",
+      "includes": [
+        "Shared company brain across the organization",
+        "SOC 2 Type II, SSO, SCIM and audit logs",
+        "Dedicated onboarding and a forward-deployed AE",
+        "Custom integrations and deployment options",
+        "SLA and priority support"
+      ],
+      "limits": [
+        "Requires contacting the team; no published price"
+      ],
+      "sourceIds": [
+        "bond-pricing"
+      ]
+    }
+  ],
+  "discussions": [],
+  "hardware": {
+    "status": "unknown",
+    "name": "",
+    "detail": "",
+    "sourceIds": []
+  },
+  "company": {
+    "type": "startup",
+    "sourceIds": [
+      "bond-yc"
+    ],
+    "stage": "Y Combinator Spring 2025"
+  },
+  "launches": [
+    {
+      "date": "2025-05-28",
+      "kind": "launch",
+      "label": "Launch YC",
+      "sourceIds": [
+        "bond-yc-launch"
+      ]
+    }
+  ],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "Web application, Slack and iMessage",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing",
+        "bond-app"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "Web application, Slack and iMessage",
+      "sourceIds": [
+        "bond-home",
+        "bond-pricing",
+        "bond-app"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Public sign-up with a free credit allowance; Enterprise access is arranged with the team",
+    "sourceIds": [
+      "bond-pricing",
+      "bond-app"
+    ]
+  }
+}

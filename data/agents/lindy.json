@@ -9,19 +9,19 @@
   "sources": [
     {
       "id": "lindy-home",
-      "title": "Lindy \u00b7 Official product page",
+      "title": "Lindy · Official product page",
       "url": "https://www.lindy.ai/",
       "checkedAt": "2026-10-21"
     },
     {
       "id": "lindy-memory",
-      "title": "Memory \u00b7 Lindy",
+      "title": "Memory · Lindy",
       "url": "https://www.lindy.ai/product/memory",
       "checkedAt": "2026-10-21"
     },
     {
       "id": "lindy-routines",
-      "title": "Routines \u00b7 Lindy",
+      "title": "Routines · Lindy",
       "url": "https://www.lindy.ai/product/routines",
       "checkedAt": "2026-10-21"
     },
@@ -57,7 +57,7 @@
     },
     {
       "id": "lindy-launch",
-      "title": "Lindy\u2019s first product announcement",
+      "title": "Lindy’s first product announcement",
       "url": "https://www.lindy.ai/blog/meet-lindy",
       "checkedAt": "2026-10-21"
     }
@@ -321,5 +321,12 @@
         "lindy-launch"
       ]
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Self-serve access",
+    "sourceIds": [
+      "lindy-home"
+    ]
+  }
 }

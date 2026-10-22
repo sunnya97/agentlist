@@ -2,7 +2,7 @@
 
 An open directory of persistent personal AI agents. Compare capabilities, native apps, hardware, models and pricing; follow product news and public discussion.
 
-The catalog includes 33 personal agents and two optional coding tools. Each profile has an official logo, linked sources, detailed feature comparisons, and separate Plans, Discussion and Sources tabs. Profiles include pricing tiers where published and distinguish announced hardware from available devices.
+The catalog includes 35 personal agents and two optional coding tools. Each profile has an official logo, linked sources, detailed feature comparisons, and separate Plans, Discussion and Sources tabs. Native apps and messaging services are tracked separately, so a Slack or iMessage integration is never counted as an app. Profiles include pricing tiers where published, distinguish announced hardware from available devices, and say whether a product is actually available or still a waitlist or reservation.
 
 ## Contribute
 
@@ -28,12 +28,14 @@ Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` wor
 
 ## Structure
 
-- `data/agents/`: editable profiles, sources, plans, hardware and discussions.
+- `data/agents/`: editable profiles, sources, plans, platforms, messaging, hardware and discussions.
 - `data/catalog.json`: news, relationships, research date, and repository URL.
 - `src/`: interface and official logo assets.
 - `src/catalog.js`: feature definitions and editorial default ordering.
+- `src/platforms.js`, `src/channels.js`: native platform and messaging-service marks.
+- `src/access.js`: availability states, from shipping to waitlist and reservation.
 - `scripts/build.mjs`: builds the static site, dataset, RSS and standalone bundle.
-- `scripts/validate.mjs`: validates sources, platforms, plans, hardware, discussions and sentiment samples.
+- `scripts/validate.mjs`: validates sources, platforms, messaging, plans, hardware, discussions and sentiment samples.
 - `scripts/domain.test.mjs`: comparison, filtering, catalog integrity and regression checks.
 - `.github/`: contribution forms and pull-request validation.
 

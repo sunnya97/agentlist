@@ -9,19 +9,19 @@
   "sources": [
     {
       "id": "spark-intro",
-      "title": "Workspace updates \u00b7 Google",
+      "title": "Workspace updates · Google",
       "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
       "checkedAt": "2026-10-21"
     },
     {
       "id": "spark-keynote",
-      "title": "Google I/O 2026 keynote \u00b7 Google",
+      "title": "Google I/O 2026 keynote · Google",
       "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
       "checkedAt": "2026-10-21"
     },
     {
       "id": "spark-india",
-      "title": "Gemini Spark in India \u00b7 Google",
+      "title": "Gemini Spark in India · Google",
       "url": "https://blog.google/intl/en-in/company-news/technology/introducing-gemini-spark-your-247-personal-ai-agent-in-country/",
       "checkedAt": "2026-10-21"
     },
@@ -88,7 +88,7 @@
       "sourceIds": [
         "spark-india"
       ],
-      "shortValue": "Google Workspace \u00b7 email-triggered tasks"
+      "shortValue": "Google Workspace · email-triggered tasks"
     },
     {
       "field": "computerUse",
@@ -134,7 +134,7 @@
         "spark-ios",
         "spark-android"
       ],
-      "shortValue": "iOS \u00b7 Android"
+      "shortValue": "iOS · Android"
     },
     {
       "field": "channels",
@@ -301,7 +301,7 @@
       "billing": "Monthly; regional price and tier shown at signup",
       "includes": [
         "Tasks in Gemini with higher compute limits",
-        "Ultra 5\u00d7: 20TB storage; Ultra 20\u00d7: 30TB",
+        "Ultra 5×: 20TB storage; Ultra 20×: 30TB",
         "YouTube Premium where available"
       ],
       "limits": [
@@ -343,7 +343,7 @@
     "sourceIds": [
       "gemini-spark-alphabet-stock"
     ],
-    "stage": "Public \u00b7 NASDAQ: GOOGL / GOOG",
+    "stage": "Public · NASDAQ: GOOGL / GOOG",
     "parent": "Alphabet"
   },
   "launches": [
@@ -355,5 +355,16 @@
       ],
       "label": "Introduced as Gemini Spark"
     }
-  ]
+  ],
+  "access": {
+    "state": "available",
+    "restrictions": [
+      "plan",
+      "age"
+    ],
+    "detail": "Available to adults with eligible personal Google accounts, Google AI Pro or Ultra, Keep Activity enabled, and Personal Intelligence enabled. Excludes EEA, Nigeria, Switzerland and the UK.",
+    "sourceIds": [
+      "gemini-tasks-help"
+    ]
+  }
 }

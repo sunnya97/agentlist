@@ -66,7 +66,7 @@
   "name": "Pally",
   "organization": "Pally Technologies",
   "website": "https://pally.com/",
-  "summary": "A personal assistant in messaging that remembers people, handles bookings and calls, and can work with your Mac or other people\u2019s Pallys.",
+  "summary": "A personal assistant in messaging that remembers people, handles bookings and calls, and can work with your Mac or other people’s Pallys.",
   "repository": null,
   "category": "managed",
   "aliases": [
@@ -126,7 +126,7 @@
         "pally-home",
         "pally-pricing"
       ],
-      "shortValue": "iMessage \u00b7 RCS \u00b7 WhatsApp \u00b7 Telegram"
+      "shortValue": "iMessage · RCS · WhatsApp · Telegram"
     },
     {
       "field": "api",
@@ -162,7 +162,7 @@
       "sourceIds": [
         "pally-pricing"
       ],
-      "shortValue": "Free \u00b7 paid Cloud Mac"
+      "shortValue": "Free · paid Cloud Mac"
     },
     {
       "field": "approvals",
@@ -262,5 +262,59 @@
       "pally-yc"
     ]
   },
-  "launches": []
+  "launches": [],
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ]
+    },
+    {
+      "service": "rcs",
+      "status": "available",
+      "detail": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ]
+    },
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ]
+    },
+    {
+      "service": "sms",
+      "status": "available",
+      "detail": "iMessage, RCS, WhatsApp and Telegram; SMS is a fallback.",
+      "sourceIds": [
+        "pally-home",
+        "pally-pricing"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Free signup without a card, invitation or waitlist.",
+    "sourceIds": [
+      "pally-pricing"
+    ]
+  }
 }

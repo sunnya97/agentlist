@@ -52,7 +52,7 @@
       "sourceIds": [
         "duet-product"
       ],
-      "shortValue": "Morning briefings \u00b7 shared Claude context"
+      "shortValue": "Morning briefings · shared Claude context"
     },
     {
       "field": "computerUse",
@@ -105,7 +105,7 @@
       "sourceIds": [
         "duet-product"
       ],
-      "shortValue": "iOS \u00b7 Android"
+      "shortValue": "iOS · Android"
     },
     {
       "field": "channels",
@@ -144,7 +144,7 @@
     {
       "field": "pricing",
       "value": "US research preview included in Claude Pro (US$20/month or US$200/year) and Max (US$100 or US$200/month). Duet's background work shares Claude plan usage.",
-      "shortValue": "Claude Pro US$20/mo; Max US$100\u2013200/mo",
+      "shortValue": "Claude Pro US$20/mo; Max US$100–200/mo",
       "status": "documented",
       "sourceIds": [
         "duet-product",
@@ -321,5 +321,16 @@
         "duet-launch"
       ]
     }
-  ]
+  ],
+  "access": {
+    "state": "waitlist",
+    "restrictions": [
+      "region",
+      "plan"
+    ],
+    "detail": "US Pro / Max waitlist research preview",
+    "sourceIds": [
+      "duet-launch"
+    ]
+  }
 }

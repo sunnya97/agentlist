@@ -288,5 +288,54 @@
     "sourceIds": [
       "nanobot-launch-history"
     ]
+  },
+  "messaging": [
+    {
+      "service": "telegram",
+      "status": "available",
+      "detail": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    },
+    {
+      "service": "discord",
+      "status": "available",
+      "detail": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    },
+    {
+      "service": "slack",
+      "status": "available",
+      "detail": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    },
+    {
+      "service": "wechat",
+      "status": "available",
+      "detail": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    },
+    {
+      "service": "email",
+      "status": "available",
+      "detail": "WebUI, Telegram, Discord, Slack, WeChat, email, and others.",
+      "sourceIds": [
+        "nanobot-readme"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Available for self-hosting.",
+    "sourceIds": [
+      "nanobot-readme"
+    ]
   }
 }

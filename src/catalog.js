@@ -14,6 +14,7 @@ export const fieldGroups = [
     ['desktopApps','Native desktop apps'],
     ['mobileApps','iPhone & Android apps'],
     ['channels','Web & messaging'],
+    ['messaging','Messaging services'],
     ['hardware','Native hardware'],
     ['api','Developer API']
   ]},
@@ -39,6 +40,7 @@ export const fields = fieldGroups.flatMap(group=>group.fields);
 
 // Compact directory columns can combine several detailed comparison fields.
 export const compositeFields = {nativeApps:['desktopApps','mobileApps','channels']};
+export const structuredFields = {messaging:'messaging'};
 
 // Editorial overview: the original flagship shortlist, then distinct personal
 // agents. Unlisted projects follow alphabetically; this is not a quality score.
@@ -48,10 +50,10 @@ export const featuredOrder = [
 ];
 
 export const directoryViews = {
-  overview:{label:'Overview',fields:[['uniqueFeatures','What stands out'],['computerUse','Computer use'],['nativeApps','Native apps']]},
+  overview:{label:'Overview',fields:[['uniqueFeatures','What stands out'],['computerUse','Computer use'],['nativeApps','Native apps'],['messaging','Messaging']]},
   capabilities:{label:'Capabilities',fields:[['browserUse','Browser control'],['passwordManager','Passwords'],['api','Developer API'],['voice','Voice & listening']]},
   models:{label:'Models & plans',fields:[['models','Models'],['byom','Bring your own model'],['bundledPlan','Bundled with'],['pricing','Cost']]},
-  access:{label:'Apps & hardware',fields:[['nativeApps','Native apps'],['hardware','Native hardware'],['channels','Web & messaging'],['api','Developer API']]},
+  access:{label:'Apps & hardware',fields:[['nativeApps','Native apps'],['messaging','Messaging'],['hardware','Native hardware'],['api','Developer API']]},
   company:{label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Stage'],['funding','Disclosed funding'],['launchDate','Launch']]},
   control:{label:'Ownership & control',fields:[['license','Open source'],['hosting','Where it runs'],['memory','Memory'],['scheduling','Background work']]}
 };

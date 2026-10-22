@@ -263,5 +263,32 @@
     "sourceIds": [
       "persona-terms"
     ]
+  },
+  "messaging": [
+    {
+      "service": "imessage",
+      "status": "available",
+      "detail": "iMessage, WhatsApp and a web dashboard.",
+      "sourceIds": [
+        "persona-band",
+        "persona-home"
+      ]
+    },
+    {
+      "service": "whatsapp",
+      "status": "available",
+      "detail": "iMessage, WhatsApp and a web dashboard.",
+      "sourceIds": [
+        "persona-band",
+        "persona-home"
+      ]
+    }
+  ],
+  "access": {
+    "state": "available",
+    "detail": "Messaging service available; Band ships in December 2026.",
+    "sourceIds": [
+      "persona-band"
+    ]
   }
 }
