@@ -35,6 +35,48 @@
   ],
   "news": [
     {
+      "date": "2026-10-22",
+      "title": "OpenClaw 2026.10.6 requires a patched Node runtime",
+      "summary": "Now requires Node 24.22.1 or 26.12.1 and later, which reject TLS chains signed with the certificate keys compromised in the October 2026 Node.js security releases. Docker images and installers ship the patched runtime.",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.6",
+      "agentIds": [
+        "openclaw"
+      ],
+      "type": "release",
+      "publisher": "OpenClaw Foundation",
+      "id": "openclaw-2026-10-22-7e5eb6c2dd",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "Letta v0.34.21",
+      "summary": "Carries MCP originator tokens through to tool calls for user-scoped connections, and sends the selected reasoning effort for xAI model handles.",
+      "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.21",
+      "agentIds": [
+        "letta"
+      ],
+      "type": "release",
+      "publisher": "Letta",
+      "id": "letta-2026-10-22-487265c647",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "QwenPaw v2.2.2.post1",
+      "summary": "Security remediation removing emSign certificate authority trust across dependencies, installers and builds, and updating the bundled Node.js runtime.",
+      "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.2.post1",
+      "agentIds": [
+        "qwenpaw"
+      ],
+      "type": "release",
+      "publisher": "AgentScope",
+      "id": "qwenpaw-2026-10-22-8225dabe8c",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
       "date": "2026-10-21",
       "title": "Claude Duet enters research preview",
       "summary": "Anthropic opens a waitlist for a proactive personal agent, starting with US Pro and Max subscribers.",
@@ -49,6 +91,34 @@
       "dateBasis": "Date stated by publisher"
     },
     {
+      "date": "2026-10-21",
+      "title": "Hermes Agent v0.22.4",
+      "summary": "A patch release across the CLI, installer, Microsoft Store app, Docker and Hermes Cloud, removing suggestion pills from the desktop composer and fixing plugin and dashboard issues.",
+      "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.4",
+      "agentIds": [
+        "hermes"
+      ],
+      "type": "release",
+      "publisher": "Nous Research",
+      "id": "hermes-2026-10-21-8e4437e914",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "Moltis 20261019.01",
+      "summary": "A dated build published to the project's releases; no written release notes accompany this tag.",
+      "url": "https://github.com/moltis-org/moltis/releases/tag/20261019.01",
+      "agentIds": [
+        "moltis"
+      ],
+      "type": "release",
+      "publisher": "Moltis",
+      "id": "moltis-2026-10-19-9660979bff",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
       "date": "2026-10-18",
       "title": "OpenClaw publishes v2026.10.5",
       "summary": "The GitHub release publishes the stable version and links its full changelog. The publication date differs from the version string.",
@@ -60,6 +130,20 @@
       "type": "release",
       "checkedAt": "2026-10-21",
       "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "ZeroClaw v0.8.6",
+      "summary": "573 commits from 74 contributors. Command-line release archives now carry the WebAssembly plugin host, the plugin registry offers channel and tool packages, and the release adds authenticated principals.",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.6",
+      "agentIds": [
+        "zeroclaw"
+      ],
+      "type": "release",
+      "publisher": "ZeroClaw Labs",
+      "id": "zeroclaw-2026-10-18-88a70834cc",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
     },
     {
       "date": "2026-10-15",
@@ -111,6 +195,48 @@
       "id": "underdog-2026-10-13-ff03f37c1d",
       "checkedAt": "2026-10-21",
       "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Agent Zero v2.14",
+      "summary": "Startup and chat loading are significantly faster, with embedding warm-up overlapping chat restoration for roughly 27% lower median time to first token, alongside upgraded model-routing dependencies.",
+      "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.14",
+      "agentIds": [
+        "agent-zero"
+      ],
+      "type": "release",
+      "publisher": "Agent Zero",
+      "id": "agent-zero-2026-10-13-dc4765e755",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "NanoClaw 2026.10.0 moves to calendar versioning",
+      "summary": "The first release numbered by calendar date and the first the updater installs by default, so updates follow published releases rather than the tip of the main branch, with more dependable updates and rollbacks.",
+      "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0",
+      "agentIds": [
+        "nanoclaw"
+      ],
+      "type": "release",
+      "publisher": "NanoClaw",
+      "id": "nanoclaw-2026-10-09-7e70e33af1",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "OpenHuman v0.64.15",
+      "summary": "A reliability release for installed builds, with a hotfix to module admission so critical modules such as search and memory load correctly again.",
+      "url": "https://github.com/tinyhumansai/openhuman/releases/tag/v0.64.15",
+      "agentIds": [
+        "openhuman"
+      ],
+      "type": "release",
+      "publisher": "Tiny Human Intelligence",
+      "id": "openhuman-2026-10-09-2e72a69cba",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
     },
     {
       "date": "2026-10-08",
@@ -178,6 +304,20 @@
       "id": "dots-2026-09-29-f73b2774a7",
       "checkedAt": "2026-10-21",
       "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "IronClaw 1.4.1",
+      "summary": "Stable promotion of a release candidate, fixing Google OAuth activation so Gmail and Calendar extensions work when the operator supplies their own OAuth client, and taking a Wasmtime security update.",
+      "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.1",
+      "agentIds": [
+        "ironclaw"
+      ],
+      "type": "release",
+      "publisher": "NEAR AI",
+      "id": "ironclaw-2026-09-29-ee36ef5195",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
     },
     {
       "date": "2026-09-28",
@@ -288,6 +428,34 @@
       "dateBasis": "Date stated by publisher"
     },
     {
+      "date": "2026-07-25",
+      "title": "nanobot v0.3.0",
+      "summary": "260 merged pull requests and 38 new contributors. A single command now prepares the local web interface, starts the gateway and opens a browser workbench, with guided provider setup on a fresh install.",
+      "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0",
+      "agentIds": [
+        "nanobot"
+      ],
+      "type": "release",
+      "publisher": "HKUDS",
+      "id": "nanobot-2026-07-25-11776d7577",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-07-03",
+      "title": "PicoClaw v0.3.1",
+      "summary": "A maintenance release collecting provider and storage fixes; the published notes list merged changes without a written summary.",
+      "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1",
+      "agentIds": [
+        "picoclaw"
+      ],
+      "type": "release",
+      "publisher": "Sipeed",
+      "id": "picoclaw-2026-07-03-864181a6e8",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
+    },
+    {
       "title": "Tomo launches its personal AI in iMessage",
       "url": "https://www.tomo.ai/blog/introducing-tomo",
       "date": "2026-06-25",
@@ -298,6 +466,20 @@
       ],
       "checkedAt": "2026-10-21",
       "id": "tomo-2026-06-25-975e148c9f"
+    },
+    {
+      "date": "2026-05-12",
+      "title": "OpenFang v0.6.9 security patches",
+      "summary": "Dependency security updates addressing advisories in certificate-chain parsing, including a reachable panic in revocation-list parsing and incorrectly accepted name constraints, plus a Wasmtime patch.",
+      "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9",
+      "agentIds": [
+        "openfang"
+      ],
+      "type": "release",
+      "publisher": "RightNow AI",
+      "id": "openfang-2026-05-12-8a1e7474b0",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
     },
     {
       "date": "2026-04-19",
@@ -312,6 +494,20 @@
       "type": "release",
       "checkedAt": "2026-10-21",
       "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-03-26",
+      "title": "Khoj 2.0.0-beta.28",
+      "summary": "Fixes use of the web app after disabling memories for users who never set a chat model, and stops a deprecation banner showing on the hosted service.",
+      "url": "https://github.com/khoj-ai/khoj/releases/tag/2.0.0-beta.28",
+      "agentIds": [
+        "khoj"
+      ],
+      "type": "release",
+      "publisher": "Khoj AI",
+      "id": "khoj-2026-03-26-518a12c0f6",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "GitHub release publication date"
     }
   ],
   "externalNodes": [

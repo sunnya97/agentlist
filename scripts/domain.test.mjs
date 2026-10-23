@@ -272,3 +272,16 @@ test('freshness is per agent, not one date for the whole catalogue',()=>{
   const distinct=new Set(data.agents.map(a=>a.checkedAt));
   assert(distinct.size>1||data.checkedFrom===data.checkedTo,'a span implies agents differ');
 });
+
+test('each agent news feed is that agent\'s own updates, newest first',()=>{
+  for(const a of data.agents){
+    const feed=sortedNews(data.news,{agent:a.id});
+    for(const n of feed)assert(n.agentIds.includes(a.id),`${a.id} feed contains an unrelated item`);
+    for(let i=1;i<feed.length;i++)assert(feed[i-1].date>=feed[i].date,`${a.id} feed is out of order`);
+    // An item naming several agents belongs in each of their feeds.
+    const expected=data.news.filter(n=>n.agentIds.includes(a.id)).length;
+    assert.equal(feed.length,expected,`${a.id} feed is missing shared items`);
+  }
+  const covered=new Set(data.news.flatMap(n=>n.agentIds));
+  assert(covered.size>=25,`expected broad coverage, got ${covered.size}`);
+});
