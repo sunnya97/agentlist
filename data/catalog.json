@@ -105,6 +105,34 @@
       "dateBasis": "GitHub release publication date"
     },
     {
+      "date": "2026-10-21",
+      "title": "Agent S4 and evolving agent interfaces",
+      "summary": "A research release reporting that evolving the interfaces a computer-use agent works through lifts a 27B open model to 21.3% on a desktop benchmark, several times the same model with fixed interfaces.",
+      "url": "https://www.simular.ai/articles/agent-s4-evolving-the-interfaces-computer-use-agents-work-throughagen",
+      "agentIds": [
+        "simular"
+      ],
+      "type": "research",
+      "publisher": "Simular",
+      "id": "simular-2026-10-21-b00539fcf8",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Build routines together in threads",
+      "summary": "Teammates can be invited into a thread to edit a routine's name, description, instructions or triggers directly.",
+      "url": "https://www.town.com/updates#release-2026-10-21",
+      "agentIds": [
+        "town"
+      ],
+      "type": "release",
+      "publisher": "Town",
+      "id": "town-2026-10-21-15bef00026",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
       "date": "2026-10-19",
       "title": "Moltis 20261019.01",
       "summary": "A dated build published to the project's releases; no written release notes accompany this tag.",
@@ -117,6 +145,20 @@
       "id": "moltis-2026-10-19-9660979bff",
       "checkedAt": "2026-10-22",
       "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "Ultrafast Computer models, Decisions API and connector controls",
+      "summary": "Faster models in Computer, a Decisions API for scored classification, and role-based connector permissions for enterprise administrators.",
+      "url": "https://www.perplexity.ai/changelog/ultrafast-computer-models-decisions-api-and-connector-controls",
+      "agentIds": [
+        "perplexity-computer"
+      ],
+      "type": "release",
+      "publisher": "Perplexity",
+      "id": "perplexity-computer-2026-10-19-304bd6943d",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
     },
     {
       "date": "2026-10-18",
@@ -144,6 +186,34 @@
       "id": "zeroclaw-2026-10-18-88a70834cc",
       "checkedAt": "2026-10-22",
       "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "New integrations and quick questions",
+      "summary": "Adds connectors including Airtable, Intercom, Google Analytics and ClickUp, plus decision forms that ask the user a quick question mid-task.",
+      "url": "https://www.lindy.ai/changelog#2026-10-18-integrations",
+      "agentIds": [
+        "lindy"
+      ],
+      "type": "release",
+      "publisher": "Lindy",
+      "id": "lindy-2026-10-18-6aab05b08c",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Booking links",
+      "summary": "Shareable scheduling links with configurable duration, hours, breaks and video app, syncing to Google and Outlook calendars.",
+      "url": "https://www.lindy.ai/changelog#2026-10-16-booking-links",
+      "agentIds": [
+        "lindy"
+      ],
+      "type": "release",
+      "publisher": "Lindy",
+      "id": "lindy-2026-10-16-0b36bac309",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
     },
     {
       "date": "2026-10-15",
@@ -253,6 +323,20 @@
       "dateBasis": "Date stated by publisher"
     },
     {
+      "date": "2026-10-08",
+      "title": "Amazon Alexa Tablets with Alexa+ built in",
+      "summary": "Three tablets at 8, 11 and 12 inches ship with Alexa+ and on-screen intelligence built in, from US$229.99.",
+      "url": "https://www.aboutamazon.com/news/devices/new-amazon-alexa-tablets-alexa-plus",
+      "agentIds": [
+        "alexa-plus"
+      ],
+      "type": "release",
+      "publisher": "Amazon",
+      "id": "alexa-plus-2026-10-08-0b2dbdb6dc",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date from the article's published-time metadata; not printed in the page body"
+    },
+    {
       "date": "2026-10-06",
       "agentIds": [
         "hark"
@@ -263,6 +347,20 @@
       "url": "https://hark.com/articles/introducing-hark-pro",
       "summary": "Hark Labs introduces Hark Pro across web and both mobile platforms.",
       "id": "hark-2026-10-06-6b5ba4e96d",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Automations, inline visualizations and new models",
+      "summary": "Adds recurring Automations, inline data visualisations, additional frontier models, video generation and new connectors.",
+      "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol",
+      "agentIds": [
+        "perplexity-computer"
+      ],
+      "type": "release",
+      "publisher": "Perplexity",
+      "id": "perplexity-computer-2026-10-05-641c37194a",
       "checkedAt": "2026-10-22",
       "dateBasis": "Date stated by publisher"
     },
@@ -279,6 +377,34 @@
       "id": "skye-2026-10-01-f9ce3e5972"
     },
     {
+      "date": "2026-10-01",
+      "title": "Video Editor in Manus 2.0",
+      "summary": "A desktop timeline editor that keeps generated video as separate layers for captions, music and effects, alongside prompt-to-video generation.",
+      "url": "https://manus.im/blog/introducing-video-editor",
+      "agentIds": [
+        "manus"
+      ],
+      "type": "release",
+      "publisher": "Manus",
+      "id": "manus-2026-10-01-ff5e7274be",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "Game Dev mode",
+      "summary": "A game-building mode with a live panel for tweaking parameters, swapping assets and hosting multiplayer.",
+      "url": "https://manus.im/blog/introducing-game-developer",
+      "agentIds": [
+        "manus"
+      ],
+      "type": "release",
+      "publisher": "Manus",
+      "id": "manus-2026-10-01-c953ebabb8",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
       "date": "2026-09-30",
       "title": "Town 2.0 introduces conversation threads",
       "summary": "Tasks become shareable threads, with updated approval behavior.",
@@ -289,6 +415,48 @@
       "type": "release",
       "id": "town-2026-09-30-e54b65037d",
       "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "What's new in Zo",
+      "summary": "Adds several new models, a reasoning-effort setting, in-chat rendering of MCP apps, a concurrency setting for the ask endpoint, and reorganised billing.",
+      "url": "https://www.zo.computer/updates/2026-09-30",
+      "agentIds": [
+        "zo"
+      ],
+      "type": "release",
+      "publisher": "Zo Computer",
+      "id": "zo-2026-09-30-a65692c54d",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Month stated by publisher; day taken from the entry URL"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Alexa+ comes to Fire TV with conversational search and a hub",
+      "summary": "Adds complex conversational search on Fire TV and a dedicated Alexa+ hub carrying history across devices.",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-fire-tv-hub-mobile-app-updates",
+      "agentIds": [
+        "alexa-plus"
+      ],
+      "type": "release",
+      "publisher": "Amazon",
+      "id": "alexa-plus-2026-09-30-d8a3adafd0",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date from the article's published-time metadata; not printed in the page body"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Town 2.0",
+      "summary": "Turns tasks into shareable threads and changes how the agent requests approvals.",
+      "url": "https://www.town.com/updates#release-2026-09-30",
+      "agentIds": [
+        "town"
+      ],
+      "type": "release",
+      "publisher": "Town",
+      "id": "town-2026-09-30-b48fe1d80c",
+      "checkedAt": "2026-10-22",
       "dateBasis": "Date stated by publisher"
     },
     {
@@ -320,6 +488,20 @@
       "dateBasis": "GitHub release publication date"
     },
     {
+      "date": "2026-09-29",
+      "title": "Manus Flex brings your own API key",
+      "summary": "Lets people use their own inference provider keys in the Manus workspace, billed by that provider rather than in Manus credits.",
+      "url": "https://manus.im/blog/introducing-manus-flex",
+      "agentIds": [
+        "manus"
+      ],
+      "type": "release",
+      "publisher": "Manus",
+      "id": "manus-2026-09-29-574bf9b6f8",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
       "date": "2026-09-28",
       "title": "Wabi 3.0 becomes an AI messenger",
       "summary": "The release adds group conversations, task assistance, proactive updates, and generated interfaces inside chats.",
@@ -330,6 +512,34 @@
       "type": "release",
       "id": "wabi-2026-09-28-99c2f8ea06",
       "checkedAt": "2026-10-21",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-24",
+      "title": "CC your Townie",
+      "summary": "Copying the agent on an email delegates file retrieval and meeting coordination to it.",
+      "url": "https://www.town.com/updates#release-2026-09-24",
+      "agentIds": [
+        "town"
+      ],
+      "type": "release",
+      "publisher": "Town",
+      "id": "town-2026-09-24-393930cca6",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Effort Mode, new models and a Skills Marketplace",
+      "summary": "Introduces an effort setting trading intelligence against cost, a skills marketplace, and Portable Computer with hybrid compute on Mac.",
+      "url": "https://www.perplexity.ai/changelog/effort-mode-gpt-6-astra-and-skills-marketplace",
+      "agentIds": [
+        "perplexity-computer"
+      ],
+      "type": "release",
+      "publisher": "Perplexity",
+      "id": "perplexity-computer-2026-09-21-cc4293ced7",
+      "checkedAt": "2026-10-22",
       "dateBasis": "Date stated by publisher"
     },
     {
@@ -412,6 +622,20 @@
       "id": "grok-bot-2026-08-26-2614159a22",
       "checkedAt": "2026-10-21",
       "dateBasis": "Date stated by publisher"
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Alexa+ free on Fire TV for all US customers",
+      "summary": "Eligible Fire TV devices in the United States are upgraded to Alexa+ with no subscription and no Prime requirement.",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-fire-tv-free-ai",
+      "agentIds": [
+        "alexa-plus"
+      ],
+      "type": "availability",
+      "publisher": "Amazon",
+      "id": "alexa-plus-2026-08-19-74d71a387e",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date from the article's published-time metadata; not printed in the page body"
     },
     {
       "date": "2026-07-29",
@@ -508,6 +732,20 @@
       "id": "khoj-2026-03-26-518a12c0f6",
       "checkedAt": "2026-10-22",
       "dateBasis": "GitHub release publication date"
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Apps, Notes, v2 to-dos and more languages",
+      "summary": "Adds an apps surface, Notes, a rebuilt to-do system and more supported languages. The product blog has published nothing since.",
+      "url": "https://www.trymartin.com/blog/introducing-martin-apps",
+      "agentIds": [
+        "martin"
+      ],
+      "type": "release",
+      "publisher": "Martin",
+      "id": "martin-2025-04-23-6bd5216a9b",
+      "checkedAt": "2026-10-22",
+      "dateBasis": "Date stated by publisher"
     }
   ],
   "externalNodes": [

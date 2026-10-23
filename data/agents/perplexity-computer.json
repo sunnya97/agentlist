@@ -455,5 +455,10 @@
         "pc-blog"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": "https://www.perplexity.ai/changelog",
+    "note": "Dated changelog",
+    "checkedAt": "2026-10-22"
+  }
 }

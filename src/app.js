@@ -266,7 +266,8 @@ function renderDiscussion(){
 function agentNews(id){return sortedNews(data.news,{agent:id})}
 function agentNewsHTML(a){
   const list=agentNews(a.id);
-  if(!list.length)return `<p class="section-empty">No dated updates recorded yet.${data.repository?` <a class="read-more" href="${safeUrl(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('News: '+a.name))}" target="_blank" rel="noopener noreferrer">Suggest one ↗</a>`:''}</p>`;
+  const suggest=data.repository?` <a class="read-more" href="${safeUrl(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('News: '+a.name))}" target="_blank" rel="noopener noreferrer">Suggest one ↗</a>`:'';
+  if(!list.length)return `<p class="section-empty">${a.newsSource?esc(a.newsSource.note)+'.':'No dated updates recorded yet.'}${suggest}</p>`;
   return `<div class="news-list">${list.map(n=>`<article class="news-card"><div class="news-meta"><time datetime="${n.date}">${formatDate(n.date)}</time><span>·</span><span class="type">${esc(n.type)}</span>${n.publisher?`<span>·</span><span>${esc(n.publisher)}</span>`:''}</div><h3>${external(n.url,esc(n.title)+' ↗')}</h3><p>${esc(n.summary)}</p></article>`).join('')}</div>`;
 }
 function companyFactsHTML(a){
@@ -298,7 +299,7 @@ function renderProfile(id,tab='overview'){
   const tabs=[['overview','Overview'],['plans','Plans'],['news','News'],['discussion','Discussion'],['sources','Sources']];
   let content='';
   if(tab==='plans')content=`<div class="profile-section-heading"><h3>Plans & pricing</h3><span>Checked ${formatDate(data.checkedAt)}</span></div>${plansHTML(a)}`;
-  else if(tab==='news')content=`<div class="profile-section-heading"><h3>Updates</h3><span>${agentNews(a.id).length} recorded</span></div>${agentNewsHTML(a)}`;
+  else if(tab==='news')content=`<div class="profile-section-heading"><h3>Updates</h3><span>${agentNews(a.id).length} recorded</span></div>${agentNewsHTML(a)}${a.newsSource?`<p class="profile-checked">${a.newsSource.url?`Collected from ${external(a.newsSource.url,esc(new URL(a.newsSource.url).hostname))}. `:''}${esc(a.newsSource.note)}. Checked ${formatDate(a.newsSource.checkedAt)}.</p>`:''}`;
   else if(tab==='discussion')content=`${sentimentHTML(a)}<div class="profile-section-heading"><h3>In the conversation</h3>${data.repository?external(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('Discussion: '+a.name),'Add a thread ↗','read-more'):''}</div>${discussionHTML(a)}`;
   else if(tab==='sources')content=`<p class="profile-checked">Each source carries the date it was checked.</p><ol class="source-list">${a.sources.map(source=>`<li>${external(source.url,esc(source.title)+' ↗')} <span>· checked ${source.checkedAt}</span></li>`).join('')}</ol>`;
   else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>`<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${group.fields.map(([key,label])=>`<section class="profile-field"><h4>${label}</h4>${key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`:claimHTML(a,key)}</section>`).join('')}</div></section>`).join('')}${dataAccessHTML(a)}${timelineHTML(a)}`;

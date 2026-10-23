@@ -285,3 +285,16 @@ test('each agent news feed is that agent\'s own updates, newest first',()=>{
   const covered=new Set(data.news.flatMap(n=>n.agentIds));
   assert(covered.size>=25,`expected broad coverage, got ${covered.size}`);
 });
+
+test('a news source says where updates come from, or that none exists',()=>{
+  const sourced=data.agents.filter(a=>a.newsSource);
+  assert(sourced.length,'expected recorded news sources');
+  for(const a of sourced){
+    assert(a.newsSource.note,`${a.id} needs a note`);
+    assert(a.newsSource.checkedAt<=data.checkedTo);
+  }
+  // A verified absence is a finding, not a gap: it carries a note and no URL.
+  const absent=sourced.filter(a=>!a.newsSource.url);
+  assert(absent.length,'expected some vendors checked and found to publish nothing');
+  for(const a of absent)assert(/checked/i.test(a.newsSource.note),`${a.id} must say it was checked`);
+});

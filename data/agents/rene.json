@@ -324,5 +324,10 @@
         "rene-privacy"
       ]
     }
+  },
+  "newsSource": {
+    "url": null,
+    "note": "Checked: no blog, changelog or updates page on the official site",
+    "checkedAt": "2026-10-22"
   }
 }

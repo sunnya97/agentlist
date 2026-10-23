@@ -354,5 +354,10 @@
         "lindy-privacy"
       ]
     }
+  },
+  "newsSource": {
+    "url": "https://www.lindy.ai/changelog",
+    "note": "Dated changelog with per-entry anchors",
+    "checkedAt": "2026-10-22"
   }
 }

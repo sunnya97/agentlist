@@ -24,6 +24,7 @@ const agents=await Promise.all(files.map(async file=>{
   const compute=record.compute||{};
   const continuity=record.continuity||{};
   const dataAccess=record.dataAccess||[];
+  const newsSource=record.newsSource||null;
   const context=contextClaims(record);
   const claims=fields.map(([field])=>{
     if(field==='messaging'&&messaging.length){
@@ -50,7 +51,7 @@ const agents=await Promise.all(files.map(async file=>{
   const sourceDates=record.sources.map(source=>source.checkedAt).filter(Boolean).sort();
   const checkedAt=sourceDates[sourceDates.length-1]||metadata.checkedAt;
   const oldestSource=sourceDates[0]||metadata.checkedAt;
-  const agent={...record,checkedAt,oldestSource,claims,hardware,messaging,access,compute,continuity,dataAccess,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[],company:record.company||null,launches:record.launches||[]};
+  const agent={...record,checkedAt,oldestSource,newsSource,claims,hardware,messaging,access,compute,continuity,dataAccess,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[],company:record.company||null,launches:record.launches||[]};
   const logo=await readFile(new URL(`src/${agent.logo.path}`,root));
   if(!logo.length)throw new Error(`${file}: empty logo`);
   return agent;

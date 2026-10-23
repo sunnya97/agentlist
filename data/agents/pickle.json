@@ -380,5 +380,10 @@
         "pickle-privacy"
       ]
     }
+  },
+  "newsSource": {
+    "url": null,
+    "note": "Checked: the site is client-rendered and serves no readable changelog at any path",
+    "checkedAt": "2026-10-22"
   }
 }

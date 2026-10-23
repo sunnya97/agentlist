@@ -365,5 +365,10 @@
         "alexa-prime"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": "https://www.aboutamazon.com",
+    "note": "No dedicated changelog; updates appear as dated newsroom posts",
+    "checkedAt": "2026-10-22"
+  }
 }

@@ -344,5 +344,10 @@
         "martin-appstore"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": "https://www.trymartin.com/blog",
+    "note": "Product blog, dated, with nothing published since April 2025",
+    "checkedAt": "2026-10-22"
+  }
 }

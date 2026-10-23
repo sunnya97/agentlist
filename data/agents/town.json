@@ -469,5 +469,10 @@
         "town-trust"
       ]
     }
+  },
+  "newsSource": {
+    "url": "https://www.town.com/updates",
+    "note": "Dated release notes with per-entry anchors",
+    "checkedAt": "2026-10-22"
   }
 }

@@ -435,5 +435,10 @@
         "sim-ga"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": "https://www.simular.ai/blog",
+    "note": "Research and product posts, dated",
+    "checkedAt": "2026-10-22"
+  }
 }

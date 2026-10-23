@@ -451,5 +451,10 @@
         "manus-2"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": "https://manus.im/blog",
+    "note": "Product blog with dated posts",
+    "checkedAt": "2026-10-22"
+  }
 }

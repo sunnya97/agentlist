@@ -477,5 +477,10 @@
       "zo-team"
     ]
   },
-  "launches": []
+  "launches": [],
+  "newsSource": {
+    "url": "https://www.zo.computer/updates",
+    "note": "Monthly update posts and a weekly changelog",
+    "checkedAt": "2026-10-22"
+  }
 }

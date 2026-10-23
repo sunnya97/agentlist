@@ -383,5 +383,10 @@
         "omi-repo"
       ]
     }
-  ]
+  ],
+  "newsSource": {
+    "url": null,
+    "note": "Checked: the blog carries auto-generated marketing content and no dated product updates",
+    "checkedAt": "2026-10-22"
+  }
 }

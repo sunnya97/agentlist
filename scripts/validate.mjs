@@ -93,6 +93,12 @@ export function validate(data){
       assert(Object.hasOwn(accessPaths,entry.path),`${a.id}/${entry.source}: invalid access path`);
       assert(entry.detail,`${a.id}/${entry.source} needs a detail`);evidence(entry,`dataAccess:${entry.source}`);
     }
+    if(a.newsSource){
+      const n=a.newsSource;
+      assert(n.note,`${a.id}: newsSource needs a note`);
+      if(n.url)url(n.url);
+      date(n.checkedAt);
+    }
     if(a.access){
       const x=a.access;
       assert(Object.hasOwn(accessStates,x.state),`${a.id}: invalid access state ${x.state}`);
