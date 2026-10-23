@@ -270,6 +270,24 @@ function agentNewsHTML(a){
   if(!list.length)return `<p class="section-empty">${a.newsSource?esc(a.newsSource.note)+'.':'No dated updates recorded yet.'}${suggest}</p>`;
   return `<div class="news-list">${list.map(n=>`<article class="news-card"><div class="news-meta"><time datetime="${n.date}">${formatDate(n.date)}</time><span>·</span><span class="type">${esc(n.type)}</span>${n.publisher?`<span>·</span><span>${esc(n.publisher)}</span>`:''}</div><h3>${external(n.url,esc(n.title)+' ↗')}</h3><p>${esc(n.summary)}</p></article>`).join('')}</div>`;
 }
+function glanceHTML(a){
+  const short=key=>{const c=getClaim(a,key);return c.status==='unknown'?null:(c.shortValue||c.value)};
+  const cells=[
+    ['Price',short('pricing')],
+    ['Where it runs',short('hosting')],
+    ['What you keep',short('dataAfterExit')],
+  ].filter(([,v])=>v);
+  const icons=[
+    ['Native apps',a.platforms?.length?platformListHTML(a):null],
+    ['Messaging',a.messaging?.length?messagingListHTML(a):null],
+    ['Control',a.compute&&Object.keys(a.compute).length?controlListHTML(a):null],
+  ].filter(([,v])=>v);
+  if(!cells.length&&!icons.length)return '';
+  return `<dl class="glance" aria-label="Key facts">
+    ${cells.map(([k,v])=>`<div class="glance-cell"><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}
+    ${icons.map(([k,v])=>`<div class="glance-cell"><dt>${k}</dt><dd class="glance-icons">${v}</dd></div>`).join('')}
+  </dl>`;
+}
 function companyFactsHTML(a){
   const company=a.company,launch=firstLaunch(a),funding=company?.funding;
   const access=a.access;
@@ -302,8 +320,17 @@ function renderProfile(id,tab='overview'){
   else if(tab==='news')content=`<div class="profile-section-heading"><h3>Updates</h3><span>${agentNews(a.id).length} recorded</span></div>${agentNewsHTML(a)}${a.newsSource?`<p class="profile-checked">${a.newsSource.url?`Collected from ${external(a.newsSource.url,esc(new URL(a.newsSource.url).hostname))}. `:''}${esc(a.newsSource.note)}. Checked ${formatDate(a.newsSource.checkedAt)}.</p>`:''}`;
   else if(tab==='discussion')content=`${sentimentHTML(a)}<div class="profile-section-heading"><h3>In the conversation</h3>${data.repository?external(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('Discussion: '+a.name),'Add a thread ↗','read-more'):''}</div>${discussionHTML(a)}`;
   else if(tab==='sources')content=`<p class="profile-checked">Each source carries the date it was checked.</p><ol class="source-list">${a.sources.map(source=>`<li>${external(source.url,esc(source.title)+' ↗')} <span>· checked ${source.checkedAt}</span></li>`).join('')}</ol>`;
-  else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>`<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${group.fields.map(([key,label])=>`<section class="profile-field"><h4>${label}</h4>${key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`:claimHTML(a,key)}</section>`).join('')}</div></section>`).join('')}${dataAccessHTML(a)}${timelineHTML(a)}`;
-  $('#main').innerHTML=`<article class="page agent-page"><nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="${hrefFor('directory')}">All agents</a><span aria-hidden="true">/</span><span>${esc(a.name)}</span></nav><header class="profile-header"><div class="profile-heading">${icon(a)}<div><h1>${esc(a.name)}</h1><small>${esc(a.organization)}</small></div></div>${tag(a)}<p class="profile-summary">${esc(a.summary)}</p>${a.identityNote?`<div class="disclosure">${esc(a.identityNote)}</div>`:''}${a.disclosure?`<div class="disclosure">${esc(a.disclosure)}</div>`:''}<div class="profile-actions">${external(a.website,'Official website ↗','button small')}${a.repository?external(a.repository,'Source code ↗','button small'):''}<button class="button small" data-profile-compare="${a.id}">${selected.includes(a.id)?'Remove from comparison':'Add to comparison ＋'}</button><button class="button small" data-watch="${a.id}" aria-pressed="${watchlist.includes(a.id)}">${watchlist.includes(a.id)?'★ Following':'☆ Follow updates'}</button>${data.repository?external(data.repository+'/edit/main/data/agents/'+a.id+'.json','Edit on GitHub ↗','button small ghost'):''}<button class="button small ghost" data-copy-profile="${a.id}">Copy link ↗</button></div>${companyFactsHTML(a)}</header><p class="profile-checked">Sources checked ${formatDate(a.checkedAt)}${a.oldestSource!==a.checkedAt?`, oldest ${formatDate(a.oldestSource)}`:''}</p><div class="profile-tabs" role="tablist" aria-label="Agent details">${tabs.map(([key,label])=>`<a href="${profileHref(a.id,key)}" role="tab" id="profile-tab-${key}" aria-controls="profile-panel" aria-selected="${key===tab}" tabindex="${key===tab?0:-1}" >${label}${key==='discussion'&&a.discussions.length?` <span>${a.discussions.length}</span>`:''}${key==='news'&&agentNews(a.id).length?` <span>${agentNews(a.id).length}</span>`:''}</a>`).join('')}</div><section id="profile-panel" role="tabpanel" aria-labelledby="profile-tab-${tab}">${content}</section></article>`;
+  else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>{
+    const known=group.fields.filter(([key])=>getClaim(a,key).status!=='unknown');
+    const unknown=group.fields.filter(([key])=>getClaim(a,key).status==='unknown');
+    const field=([key,label])=>`<section class="profile-field"><h4>${label}</h4>${
+      key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`
+      :claimHTML(a,key)}</section>`;
+    if(!known.length&&!unknown.length)return '';
+    return `<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${known.map(field).join('')}</div>${
+      unknown.length?`<p class="profile-unanswered">Not established in the sources reviewed: ${unknown.map(([,l])=>esc(l)).join(', ')}.</p>`:''}</section>`;
+  }).join('')}${dataAccessHTML(a)}${timelineHTML(a)}`;
+  $('#main').innerHTML=`<article class="page agent-page"><nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="${hrefFor('directory')}">All agents</a><span aria-hidden="true">/</span><span>${esc(a.name)}</span></nav><header class="profile-header"><div class="profile-heading">${icon(a)}<div><h1>${esc(a.name)}</h1><small>${esc(a.organization)}</small></div></div>${tag(a)}<p class="profile-summary">${esc(a.summary)}</p>${a.identityNote?`<div class="disclosure">${esc(a.identityNote)}</div>`:''}${a.disclosure?`<div class="disclosure">${esc(a.disclosure)}</div>`:''}<div class="profile-actions">${external(a.website,'Official website ↗','button small')}${a.repository?external(a.repository,'Source code ↗','button small'):''}<button class="button small" data-profile-compare="${a.id}">${selected.includes(a.id)?'Remove from comparison':'Add to comparison ＋'}</button><button class="button small" data-watch="${a.id}" aria-pressed="${watchlist.includes(a.id)}">${watchlist.includes(a.id)?'★ Following':'☆ Follow updates'}</button>${data.repository?external(data.repository+'/edit/main/data/agents/'+a.id+'.json','Edit on GitHub ↗','button small ghost'):''}<button class="button small ghost" data-copy-profile="${a.id}">Copy link ↗</button></div>${companyFactsHTML(a)}${glanceHTML(a)}</header><p class="profile-checked">Sources checked ${formatDate(a.checkedAt)}${a.oldestSource!==a.checkedAt?`, oldest ${formatDate(a.oldestSource)}`:''}</p><div class="profile-tabs" role="tablist" aria-label="Agent details">${tabs.map(([key,label])=>`<a href="${profileHref(a.id,key)}" role="tab" id="profile-tab-${key}" aria-controls="profile-panel" aria-selected="${key===tab}" tabindex="${key===tab?0:-1}" >${label}${key==='discussion'&&a.discussions.length?` <span>${a.discussions.length}</span>`:''}${key==='news'&&agentNews(a.id).length?` <span>${agentNews(a.id).length}</span>`:''}</a>`).join('')}</div><section id="profile-panel" role="tabpanel" aria-labelledby="profile-tab-${tab}">${content}</section></article>`;
 }
 function configureContributions(){
   const spans=data.checkedFrom&&data.checkedFrom!==data.checkedTo;

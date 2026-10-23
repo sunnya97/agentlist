@@ -52,7 +52,7 @@ export const computeIcons = {
 };
 
 // Table wording. The full sentence stays in the claim value.
-const short = {
+const computeShort = {
   onYourComputer:{full:'Yes',partial:'Limited',none:'No'},
   agentComputer:{cloud:'Cloud',local:'Own hardware',none:'None'},
   whileYouAreOff:{yes:'Keeps working',no:'Stops',partial:'Partly'}
@@ -60,7 +60,7 @@ const short = {
 const platformShort = {macos:'Mac',windows:'Windows',linux:'Linux',ios:'iOS',android:'Android'};
 export const computeSummary = (facet, value) => {
   if(!value) return 'Not specified';
-  const base = short[facet]?.[value.state] || computeFacets[facet]?.[value.state] || value.state;
+  const base = computeShort[facet]?.[value.state] || computeFacets[facet]?.[value.state] || value.state;
   if(facet === 'onYourComputer' && value.platforms?.length)
     return `${base} · ${value.platforms.map(p=>platformShort[p]||p).join(', ')}`;
   if(facet === 'agentComputer' && value.remote === 'none') return `${base} · no remote view`;

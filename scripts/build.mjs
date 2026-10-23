@@ -138,5 +138,8 @@ const bundledJS=[catalog,platformModule,channelModule,accessModule,computeModule
 const embeddedData=structuredClone(dataset);
 for(const a of embeddedData.agents){const bytes=await readFile(new URL(`../src/${a.logo.path}`,import.meta.url));const mime=a.logo.path.endsWith('.svg')?'image/svg+xml':a.logo.path.endsWith('.webp')?'image/webp':'image/png';a.logo.path=`data:${mime};base64,${bytes.toString('base64')}`}
 const standalone=html.replace('<link rel="stylesheet" href="/styles.css">',`<style>${css}</style>`).replace('<script type="module" src="/app.js"></script>','').replace('</body>',`<script id="agentlist-data" type="application/json">${JSON.stringify(embeddedData).replaceAll('<','\\u003c')}</script><script type="module">${bundledJS.replaceAll('</script','<\\/script')}</script></body>`);
+// Concatenating modules drops their scope, so a name used twice becomes a
+// syntax error that only shows up in the standalone edition. Fail the build.
+try{new Function(`return (async()=>{${bundledJS}})`)}catch(error){throw new Error(`Standalone bundle does not parse: ${error.message}`)}
 await writeFile(new URL('../dist/agentlist.html',import.meta.url),standalone);
 console.log(`Built ${agents.length} profiles, ${relationships.length} relationships, ${news.length} updates.`);

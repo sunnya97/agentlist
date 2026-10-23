@@ -31,6 +31,12 @@ dialog{border:0;border-radius:14px;padding:32px;color:var(--ink);width:min(860px
 .directory-table .platform-col{width:210px}.directory-table .messaging-col{width:165px}.directory-table .control-col{width:110px}
 .access-note{flex:none;color:#8a6a28;white-space:nowrap}.access-note::before{content:"·";margin:0 5px;color:#c3cad6}.access-note.unverified{color:var(--muted)}
 .platform-list{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}.messaging-list{flex-wrap:nowrap}.messaging-list .platform-icon{color:#798392}.no-exclusive{color:var(--muted)}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;margin-top:18px;background:var(--line);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.glance-cell{background:var(--paper);padding:12px 14px;min-height:62px}
+.glance-cell dt{font-size:10px;letter-spacing:.055em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.glance-cell dd{font-size:14px;font-weight:600;line-height:1.35;letter-spacing:-.012em;color:var(--ink)}
+.glance-icons{margin-top:-3px}.glance-icons .platform-list{gap:5px}
+.profile-unanswered{margin-top:10px;font-size:11px;line-height:1.6;color:var(--muted)}
 .profile-checked{font-size:11px;color:var(--muted);margin-top:14px}
 .reach-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .reach-item{background:var(--paper);padding:13px 15px}

@@ -298,3 +298,13 @@ test('a news source says where updates come from, or that none exists',()=>{
   assert(absent.length,'expected some vendors checked and found to publish nothing');
   for(const a of absent)assert(/checked/i.test(a.newsSource.note),`${a.id} must say it was checked`);
 });
+
+test('the standalone bundle is a parseable module',async()=>{
+  const {readFile}=await import('node:fs/promises');
+  const html=await readFile(new URL('../dist/agentlist.html',import.meta.url),'utf8');
+  const script=html.match(/<script type="module">([\s\S]*?)<\/script>/);
+  assert(script,'the standalone edition must carry its bundled script');
+  // Concatenation drops module scope, so a name reused across two modules
+  // becomes a syntax error only the standalone edition sees.
+  assert.doesNotThrow(()=>new Function(`return (async()=>{${script[1]}})`),'bundle must parse');
+});

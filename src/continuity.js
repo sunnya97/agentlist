@@ -32,10 +32,10 @@ export const continuityLabels = {
 };
 
 // Table wording; the detail carries the full answer.
-const short = {
+const continuityShort = {
   worksWithoutVendor:{yes:'Keeps working',partial:'Partly',no:'Stops'},
   remoteDisable:{none:'Not possible',possible:'Possible',required:'Licence check'},
   dataAfterExit:{'self-serve':'Self-serve','on-request':'On request',partial:'Partial',none:'None described'}
 };
 export const continuitySummary = (facet, value) =>
-  value ? (short[facet]?.[value.state] || continuityFacets[facet]?.[value.state] || value.state) : 'Not specified';
+  value ? (continuityShort[facet]?.[value.state] || continuityFacets[facet]?.[value.state] || value.state) : 'Not specified';
