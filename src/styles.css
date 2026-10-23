@@ -71,7 +71,7 @@ button.platform-icon.control-icon{cursor:pointer}
 .column-option.on{background:var(--lime);border-color:#c3c9f0;color:var(--accent);font-weight:600}
 .column-option:disabled{opacity:.4;cursor:not-allowed}
 #platform-popover{position:fixed;inset:auto;margin:0;width:min(280px,calc(100vw - 24px));padding:17px;background:var(--paper);border:1px solid var(--line);border-radius:10px;color:var(--ink)}.platform-popover-heading{display:flex;align-items:center;gap:11px}.platform-popover-heading>svg{width:25px;height:25px;color:#59667a;flex-shrink:0}.platform-popover-heading h3{font-size:14px}.platform-popover-heading span{font-size:11px;color:var(--muted)}#platform-popover p{margin-top:12px;font-size:12px;line-height:1.7;color:#59667a}.platform-sources{margin-top:10px}.platform-sources .citation{vertical-align:baseline;font-size:10px;margin-left:0;margin-right:8px}
-@media(max-width:680px){.directory-table td[data-label="Apps"],.directory-table td[data-label="Messaging"],.directory-table td[data-label="Control"]{grid-column:1/-1}.platform-list{gap:10px}.platform-icon{width:30px;height:32px}.platform-icon svg{width:20px;height:20px}}
+@media(max-width:680px){.directory-table td[data-label="Native apps"],.directory-table td[data-label="Messaging"],.directory-table td[data-label="Control"]{grid-column:1/-1}.platform-list{gap:10px}.platform-icon{width:30px;height:32px}.platform-icon svg{width:20px;height:20px}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 /* Profile sections keep plans and conversations easy to find. */

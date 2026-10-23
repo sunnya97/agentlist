@@ -68,7 +68,7 @@ export const columnCatalog = [
     ['uniqueFeatures','What stands out']
   ]},
   {label:'Apps & access',columns:[
-    ['nativeApps','Apps'],['messaging','Messaging'],['exclusiveData','Exclusive data'],['channels','Web & messaging'],
+    ['nativeApps','Native apps'],['messaging','Messaging'],['exclusiveData','Exclusive data'],['channels','Web & messaging'],
     ['hardware','Hardware'],['api','API'],['availability','Availability']
   ]},
   {label:'Models & price',columns:[
