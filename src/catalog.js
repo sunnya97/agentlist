@@ -2,8 +2,8 @@ export const companyTypes = {public:'Public company',lab:'Major AI lab',startup:
 export const launchKinds = {launch:'Public launch',preview:'Research preview',beta:'Public beta',announcement:'Announcement',release:'Open-source release',update:'Major update'};
 
 export const fieldGroups = [
-  {id:'company',label:'Company & launch',fields:[['companyType','Company type'],['companyStage','Company stage'],['funding','Disclosed funding'],['launchDate','Launch date']]},
-  {id:'capabilities',label:'What it can do',fields:[
+  {id:'company',label:'Company & launch',note:'Who makes it and when it arrived. Company type and funding are context, not a quality score: an open-source project and a public company carry different risks, not better or worse ones.',fields:[['companyType','Company type'],['companyStage','Company stage'],['funding','Disclosed funding'],['launchDate','Launch date']]},
+  {id:'capabilities',label:'What it can do',note:'What this agent can actually operate — a machine of its own, yours, or neither. Computer control is three separate questions, and most products answer only some of them.',fields:[
     ['uniqueFeatures','What stands out'],
     ['computerUse','Computer use'],
     ['onYourComputer','Controls your computer'],
@@ -13,7 +13,7 @@ export const fieldGroups = [
     ['voice','Voice & ambient listening'],
     ['scheduling','Background work & triggers']
   ]},
-  {id:'access',label:'Apps & access',fields:[
+  {id:'access',label:'Apps & access',note:'Where you reach it and on what. A messaging integration is not a native app, so the two are tracked apart; an app listed here is a real first-party client.',fields:[
     ['desktopApps','Native desktop apps'],
     ['mobileApps','iPhone & Android apps'],
     ['channels','Web & messaging'],
@@ -21,18 +21,18 @@ export const fieldGroups = [
     ['hardware','Native hardware'],
     ['api','Developer API']
   ]},
-  {id:'models',label:'Models & plans',fields:[
+  {id:'models',label:'Models & plans',note:"What you pay and what runs underneath. Where an agent is bundled into a larger subscription, the price shown is that subscription's — there is no separate fee for the agent.",fields:[
     ['models','Models & providers'],
     ['byom','Bring your own model'],
     ['bundledPlan','Included in another plan'],
     ['pricing','Price & usage costs']
   ]},
-  {id:'continuity',label:'If it goes away',fields:[
+  {id:'continuity',label:'If it goes away',note:'Whether the product survives the company behind it, and what you take with you. Almost no hosted vendor publishes a shutdown commitment, so an answer here is usually read from the architecture rather than from a promise.',fields:[
     ['worksWithoutVendor','If the vendor stops'],
     ['remoteDisable','Remote shut-off'],
     ['dataAfterExit','What you keep']
   ]},
-  {id:'control',label:'Ownership & control',fields:[
+  {id:'control',label:'Ownership & control',note:'What it asks before acting, what it remembers, and who else can see it. These are the questions that decide whether you would hand it your inbox.',fields:[
     ['license','Open source & license'],
     ['hosting','Where it runs'],
     ['passwordManager','Passwords & credentials'],

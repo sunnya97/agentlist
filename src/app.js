@@ -170,7 +170,11 @@ function route(){
   if(page==='agent'){
     const id=agentId;
     const tab=new URLSearchParams(query).get('tab');
-    if(byId.has(id))renderProfile(id,['overview','plans','news','discussion','sources'].includes(tab)?tab:'overview');
+    if(byId.has(id)){
+      renderProfile(id);
+      const anchor={plans:'models',news:'updates',discussion:'discussion',sources:'sources'}[tab];
+      if(anchor)requestAnimationFrame(()=>document.getElementById(anchor)?.scrollIntoView({block:'start'}));
+    }
     else{profileState={id:null,tab:'overview'};document.title='Agent not found — Agentlist';$('#main').innerHTML=`<div class="page"><div class="empty"><h1>Agent not found</h1><p>This profile link doesn’t match an agent in the directory.</p><a class="button primary" href="${hrefFor('directory')}">All agents →</a></div></div>`}
   }else{
     profileState={id:null,tab:'overview'};
@@ -270,6 +274,36 @@ function agentNewsHTML(a){
   if(!list.length)return `<p class="section-empty">${a.newsSource?esc(a.newsSource.note)+'.':'No dated updates recorded yet.'}${suggest}</p>`;
   return `<div class="news-list">${list.map(n=>`<article class="news-card"><div class="news-meta"><time datetime="${n.date}">${formatDate(n.date)}</time><span>·</span><span class="type">${esc(n.type)}</span>${n.publisher?`<span>·</span><span>${esc(n.publisher)}</span>`:''}</div><h3>${external(n.url,esc(n.title)+' ↗')}</h3><p>${esc(n.summary)}</p></article>`).join('')}</div>`;
 }
+const sectionsFor=a=>{
+  const groups=fieldGroups.filter(g=>g.id!=='company').map(g=>({
+    id:g.id,label:g.label,note:g.note,
+    known:g.fields.filter(([k])=>getClaim(a,k).status!=='unknown'),
+    unknown:g.fields.filter(([k])=>getClaim(a,k).status==='unknown')
+  })).filter(g=>g.known.length||g.unknown.length);
+  const extra=[];
+  if((a.dataAccess||[]).length)extra.push({id:'reach',label:'Data it can reach',count:a.dataAccess.length});
+  if(agentNews(a.id).length)extra.push({id:'updates',label:'Updates',count:agentNews(a.id).length});
+  if(a.sentiment||a.discussions.length)extra.push({id:'discussion',label:'Discussion',count:a.discussions.length||null});
+  extra.push({id:'sources',label:'Sources',count:a.sources.length});
+  return {groups,extra};
+};
+// Citations get their own column, the way a reference table carries its source.
+function claimRowsHTML(a,fields){
+  return `<table class="claims"><thead><tr><th>Field</th><th>Finding</th><th class="r">Source</th></tr></thead><tbody>${
+    fields.map(([key,label])=>{
+      const c=getClaim(a,key);
+      const value=key==='pricing'&&a.plans.length
+        ? `${esc(c.value)}`
+        : key==='nativeApps'?platformListHTML(a)
+        : key==='messaging'?messagingListHTML(a)
+        : esc(c.value);
+      const cites=c.sourceIds.map(id=>{
+        const i=a.sources.findIndex(x=>x.id===id);if(i<0)return '';
+        return `<a href="#source-${i+1}" title="${esc(a.sources[i].title)}">${i+1}</a>`;
+      }).join('');
+      return `<tr><td class="f">${esc(label)}${c.status==='limited'?'<span class="partly">partly</span>':''}</td><td class="v">${value}</td><td class="s r">${cites||'<span class="nocite">—</span>'}</td></tr>`;
+    }).join('')}</tbody></table>`;
+}
 function glanceHTML(a){
   const short=key=>{const c=getClaim(a,key);return c.status==='unknown'?null:(c.shortValue||c.value)};
   const cells=[
@@ -293,18 +327,18 @@ function companyFactsHTML(a){
   const access=a.access;
   return `<dl class="company-facts"><div><dt>Availability</dt><dd>${access?`${esc(accessSummary(access))}${sourceLinks(a,getClaim(a,'availability'))}${access.expected?`<small>Expected ${formatCatalogDate(access.expected)}</small>`:''}`:'—'}</dd></div><div><dt>Company</dt><dd>${esc(a.organization)}${company?sourceLinks(a,company):''}${company?`<small>${esc(companyTypes[company.type])}${company.parent?' · '+esc(company.parent):''}</small>`:''}</dd></div><div><dt>Company stage</dt><dd>${company?.stage?esc(company.stage):'—'}</dd></div><div><dt>Disclosed funding</dt><dd>${funding?`${esc(funding.amount)}${sourceLinks(a,funding)}<small>${esc(funding.round)} · ${formatCatalogDate(funding.date)}</small>${funding.note?`<small>${esc(funding.note)}</small>`:''}`:'—'}</dd></div><div><dt>Launch date</dt><dd>${launch?`${formatCatalogDate(launch.date)}${sourceLinks(a,launch)}<small>${launchKinds[launch.kind]}${launch.label?' · '+esc(launch.label):''}</small>`:'—'}</dd></div></dl>`;
 }
-function dataAccessHTML(a){
+function dataAccessHTML(a,standalone){
   const list=a.dataAccess||[];
   if(!list.length)return '';
   const order={'first-party':0,'official-api':1,portability:2,automation:3,none:4};
-  return `<section class="profile-group"><h3>Data it can reach</h3><div class="reach-list">${[...list]
+  return `<h2>Data it can reach</h2><p class="note">Which of your accounts it can actually read, and whether anyone else could reach the same source. Openness is a property of the platform, not of this agent.</p><div class="reach-list">${[...list]
     .sort((x,y)=>order[x.path]-order[y.path])
     .map(entry=>{
       const item=dataSourceById(entry.source);if(!item)return '';
       return `<article class="reach-item"><div class="reach-head"><b>${esc(item.label)}</b><span class="reach-path reach-${pathTone[entry.path]}">${esc(accessPaths[entry.path])}</span></div>
         <p>${esc(entry.detail)}${sourceLinks(a,entry)}</p>
         <p class="reach-openness">${esc(thirdPartyAccess[item.thirdParty])} · ${esc(item.note)}</p></article>`;
-    }).join('')}</div></section>`;
+    }).join('')}</div>`;
 }
 function timelineHTML(a){
   if(!a.launches.length)return '';
@@ -312,25 +346,64 @@ function timelineHTML(a){
 }
 function renderProfile(id,tab='overview'){
   const a=byId.get(id);if(!a)return;
-  document.title=`${a.name}${tab==='overview'?'':' · '+tab[0].toUpperCase()+tab.slice(1)} — Agentlist`;
+  document.title=`${a.name} — Agentlist`;
   profileState={id,tab};
-  const tabs=[['overview','Overview'],['plans','Plans'],['news','News'],['discussion','Discussion'],['sources','Sources']];
-  let content='';
-  if(tab==='plans')content=`<div class="profile-section-heading"><h3>Plans & pricing</h3><span>Checked ${formatDate(data.checkedAt)}</span></div>${plansHTML(a)}`;
-  else if(tab==='news')content=`<div class="profile-section-heading"><h3>Updates</h3><span>${agentNews(a.id).length} recorded</span></div>${agentNewsHTML(a)}${a.newsSource?`<p class="profile-checked">${a.newsSource.url?`Collected from ${external(a.newsSource.url,esc(new URL(a.newsSource.url).hostname))}. `:''}${esc(a.newsSource.note)}. Checked ${formatDate(a.newsSource.checkedAt)}.</p>`:''}`;
-  else if(tab==='discussion')content=`${sentimentHTML(a)}<div class="profile-section-heading"><h3>In the conversation</h3>${data.repository?external(data.repository+'/issues/new?template=correction.yml&title='+encodeURIComponent('Discussion: '+a.name),'Add a thread ↗','read-more'):''}</div>${discussionHTML(a)}`;
-  else if(tab==='sources')content=`<p class="profile-checked">Each source carries the date it was checked.</p><ol class="source-list">${a.sources.map(source=>`<li>${external(source.url,esc(source.title)+' ↗')} <span>· checked ${source.checkedAt}</span></li>`).join('')}</ol>`;
-  else content=`${fieldGroups.filter(group=>group.id!=='company').map(group=>{
-    const known=group.fields.filter(([key])=>getClaim(a,key).status!=='unknown');
-    const unknown=group.fields.filter(([key])=>getClaim(a,key).status==='unknown');
-    const field=([key,label])=>`<section class="profile-field"><h4>${label}</h4>${
-      key==='pricing'&&a.plans.length?`<a class="read-more" href="${profileHref(a.id,'plans')}">${a.plans.length} plans · View prices & limits →</a>`
-      :claimHTML(a,key)}</section>`;
-    if(!known.length&&!unknown.length)return '';
-    return `<section class="profile-group"><h3>${group.label}</h3><div class="profile-fields">${known.map(field).join('')}</div>${
-      unknown.length?`<p class="profile-unanswered">Not established in the sources reviewed: ${unknown.map(([,l])=>esc(l)).join(', ')}.</p>`:''}</section>`;
-  }).join('')}${dataAccessHTML(a)}${timelineHTML(a)}`;
-  $('#main').innerHTML=`<article class="page agent-page"><nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="${hrefFor('directory')}">All agents</a><span aria-hidden="true">/</span><span>${esc(a.name)}</span></nav><header class="profile-header"><div class="profile-heading">${icon(a)}<div><h1>${esc(a.name)}</h1><small>${esc(a.organization)}</small></div></div>${tag(a)}<p class="profile-summary">${esc(a.summary)}</p>${a.identityNote?`<div class="disclosure">${esc(a.identityNote)}</div>`:''}${a.disclosure?`<div class="disclosure">${esc(a.disclosure)}</div>`:''}<div class="profile-actions">${external(a.website,'Official website ↗','button small')}${a.repository?external(a.repository,'Source code ↗','button small'):''}<button class="button small" data-profile-compare="${a.id}">${selected.includes(a.id)?'Remove from comparison':'Add to comparison ＋'}</button><button class="button small" data-watch="${a.id}" aria-pressed="${watchlist.includes(a.id)}">${watchlist.includes(a.id)?'★ Following':'☆ Follow updates'}</button>${data.repository?external(data.repository+'/edit/main/data/agents/'+a.id+'.json','Edit on GitHub ↗','button small ghost'):''}<button class="button small ghost" data-copy-profile="${a.id}">Copy link ↗</button></div>${companyFactsHTML(a)}${glanceHTML(a)}</header><p class="profile-checked">Sources checked ${formatDate(a.checkedAt)}${a.oldestSource!==a.checkedAt?`, oldest ${formatDate(a.oldestSource)}`:''}</p><div class="profile-tabs" role="tablist" aria-label="Agent details">${tabs.map(([key,label])=>`<a href="${profileHref(a.id,key)}" role="tab" id="profile-tab-${key}" aria-controls="profile-panel" aria-selected="${key===tab}" tabindex="${key===tab?0:-1}" >${label}${key==='discussion'&&a.discussions.length?` <span>${a.discussions.length}</span>`:''}${key==='news'&&agentNews(a.id).length?` <span>${agentNews(a.id).length}</span>`:''}</a>`).join('')}</div><section id="profile-panel" role="tabpanel" aria-labelledby="profile-tab-${tab}">${content}</section></article>`;
+  const {groups,extra}=sectionsFor(a);
+  const answered=a.claims.filter(c=>c.status!=='unknown').length;
+  const coverage=Math.round(answered/a.claims.length*10);
+  const short=key=>{const c=getClaim(a,key);return c.status==='unknown'?null:(c.shortValue||c.value)};
+  const stat=(label,body,foot)=>`<div class="stat"><dt>${label}</dt><dd>${body}</dd>${foot?`<p>${foot}</p>`:''}</div>`;
+
+  $('#main').innerHTML=`<article class="page agent-page">
+    <nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="${hrefFor('directory')}">All agents</a><span aria-hidden="true">/</span><span>${esc(a.name)}</span></nav>
+
+    <header class="top">
+      ${icon(a)}
+      <div class="title"><h1>${esc(a.name)}</h1>
+        <p class="slug">${esc(a.organization)}<span>·</span>${categoryLabels[a.category]||esc(a.category)}${a.company?`<span>·</span>${esc(companyTypes[a.company.type])}`:''}</p></div>
+      <div class="acts">
+        <button class="button small" data-profile-compare="${a.id}">${selected.includes(a.id)?'Remove from comparison':'Compare'}</button>
+        <button class="button small" data-watch="${a.id}" aria-pressed="${watchlist.includes(a.id)}">${watchlist.includes(a.id)?'★ Following':'☆ Follow'}</button>
+        ${external(a.website,'Official site ↗','button small key')}
+      </div>
+    </header>
+
+    <p class="lede">${esc(a.summary)}</p>
+    ${a.identityNote?`<div class="disclosure">${esc(a.identityNote)}</div>`:''}${a.disclosure?`<div class="disclosure">${esc(a.disclosure)}</div>`:''}
+
+    <dl class="strip">
+      ${stat('Cost',esc(short('pricing')||'Not specified'),a.plans.length?`${a.plans.length} plan${a.plans.length===1?'':'s'} below`:'')}
+      ${stat('Where it runs',esc(short('hosting')||'Not specified'),short('worksWithoutVendor')?`If the vendor stops: ${esc(short('worksWithoutVendor')).toLowerCase()}`:'')}
+      ${stat('Availability',esc(a.access?accessSummary(a.access):short('availability')||'Not specified'),a.access?.expected?`Expected ${formatCatalogDate(a.access.expected)}`:'')}
+      ${stat('Native apps',a.platforms.length?`<span class="statrow">${platformListHTML(a)}</span>`:'<span class="none">None recorded</span>',a.messaging?.length?`Messaging: ${a.messaging.length}`:'')}
+      ${stat('Record coverage',`${answered}<small> of ${a.claims.length}</small>`,
+        `<span class="meter">${Array.from({length:10},(_,i)=>`<i class="${i<coverage?'':'off'}"></i>`).join('')}</span>Checked ${formatDate(a.checkedAt)}`)}
+    </dl>
+
+    <div class="split">
+      <nav class="rail" aria-label="Sections">
+        ${groups.map(g=>`<a href="#${g.id}">${esc(g.label)}<b>${g.known.length}</b></a>`).join('')}
+        <hr>
+        ${extra.map(x=>`<a href="#${x.id}">${esc(x.label)}${x.count?`<b>${x.count}</b>`:''}</a>`).join('')}
+      </nav>
+      <div class="record">
+        ${groups.map(g=>`<section id="${g.id}"><h2>${esc(g.label)}</h2>${g.note?`<p class="note">${esc(g.note)}</p>`:''}
+          ${g.known.length?claimRowsHTML(a,g.known):''}
+          ${g.id==='models'&&a.plans.length?`<h3 class="sub">Plans</h3>${plansHTML(a)}`:''}
+          ${g.unknown.length?`<p class="gap">Nobody has established — <b>${g.unknown.map(([,l])=>esc(l)).join('</b>, <b>')}</b>. Recorded as unknown, not as a no.</p>`:''}
+        </section>`).join('')}
+        ${(a.dataAccess||[]).length?`<section id="reach">${dataAccessHTML(a,true)}</section>`:''}
+        ${agentNews(a.id).length?`<section id="updates"><h2>Updates</h2><p class="note">Dated changes from the maker's own announcements, newest first.</p>${agentNewsHTML(a)}</section>`:''}
+        ${a.sentiment||a.discussions.length?`<section id="discussion"><h2>Discussion</h2><p class="note">Attributed feedback and linked threads. These are other people's words, summarised; nothing here is a test result.</p>${sentimentHTML(a)}${discussionHTML(a)}</section>`:''}
+        <section id="sources"><h2>Sources</h2>
+          <p class="note">Every claim above is drawn from one of these, each with the date it was checked. These are the makers' own descriptions; nothing on this page is independently tested.</p>
+          <ol class="srcs">${a.sources.map((source,i)=>`<li id="source-${i+1}">${external(source.url,esc(source.title)+' ↗')}<time>${formatDate(source.checkedAt)}</time></li>`).join('')}</ol>
+          ${timelineHTML(a)}
+        </section>
+        <p class="foot">${a.sources.length} source${a.sources.length===1?'':'s'} · checked ${a.oldestSource!==a.checkedAt?`${formatDate(a.oldestSource)} – ${formatDate(a.checkedAt)}`:formatDate(a.checkedAt)}${data.repository?` · ${external(data.repository+'/edit/main/data/agents/'+a.id+'.json','Correct this record ↗')}`:''}</p>
+      </div>
+    </div>
+  </article>`;
 }
 function configureContributions(){
   const spans=data.checkedFrom&&data.checkedFrom!==data.checkedTo;
