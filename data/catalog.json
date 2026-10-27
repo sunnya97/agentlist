@@ -406,19 +406,6 @@
     },
     {
       "date": "2026-09-30",
-      "title": "Town 2.0 introduces conversation threads",
-      "summary": "Tasks become shareable threads, with updated approval behavior.",
-      "url": "https://www.town.com/updates",
-      "agentIds": [
-        "town"
-      ],
-      "type": "release",
-      "id": "town-2026-09-30-e54b65037d",
-      "checkedAt": "2026-10-21",
-      "dateBasis": "Date stated by publisher"
-    },
-    {
-      "date": "2026-09-30",
       "title": "What's new in Zo",
       "summary": "Adds several new models, a reasoning-effort setting, in-chat rendering of MCP apps, a concurrency setting for the ask endpoint, and reorganised billing.",
       "url": "https://www.zo.computer/updates/2026-09-30",

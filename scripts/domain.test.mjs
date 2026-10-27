@@ -299,6 +299,69 @@ test('a news source says where updates come from, or that none exists',()=>{
   for(const a of absent)assert(/checked/i.test(a.newsSource.note),`${a.id} must say it was checked`);
 });
 
+const dist=path=>readFile(new URL('../dist'+path,import.meta.url),'utf8');
+test('the Markdown edition covers every agent and stays tied to the dataset',async()=>{
+  const [entry,full,index,method]=await Promise.all(['/llms.txt','/llms-full.txt','/index.md','/method.md'].map(dist));
+  assert.match(entry,new RegExp(`^# ${data.title}\\n\\n> `),'llms.txt needs a title and a summary blockquote');
+  assert(entry.includes(`${data.agents.length} persistent personal AI agents`),'the summary must count the catalogue');
+  assert(entry.includes(`${data.checkedFrom} to ${data.checkedTo}`),'the summary must give the checked range');
+  assert.match(entry,/MIT-licensed/,'the summary must carry the licence and attribution note');
+  assert(entry.split('\n').length<400,'the entry point must stay short enough to read whole');
+  for(const agent of data.agents){
+    const record=await dist(`/agents/${agent.id}.md`);
+    assert.equal(record.split('\n')[0],`# ${agent.name}`);
+    // Every edition links the record and says what the agent is, in one line.
+    assert(entry.includes(`[${agent.name}](${data.siteUrl}/agents/${agent.id}.md): ${agent.summary}`),`${agent.id} missing from llms.txt`);
+    assert(index.includes(`[${agent.id}.md](${data.siteUrl}/agents/${agent.id}.md)`),`${agent.id} missing from the directory`);
+    assert(full.includes(record.trim()),`${agent.id} record missing from llms-full.txt`);
+  }
+  // Field definitions live with the data, so both files must name all of them.
+  for(const [,label] of fields)assert(method.includes(`**${label}**`)&&full.includes(`**${label}**`),`${label} undefined`);
+});
+
+test('an agent record names its sources, its limited claims and its unknown fields',async()=>{
+  for(const agent of data.agents){
+    const record=await dist(`/agents/${agent.id}.md`);
+    for(const [field,label] of fields){
+      const claim=agent.claims.find(c=>c.field===field);
+      // An unknown field is named and marked, never quietly dropped.
+      assert(record.includes(`- **${label}** \`${claim.status}\``)||(claim.status==='limited'&&record.includes(`- **${label}** \`limited\` (`)),
+        `${agent.id}/${field}: ${claim.status} claim is not marked in the record`);
+      if(claim.status!=='unknown')assert(record.includes(claim.value),`${agent.id}/${field}: value missing from the record`);
+    }
+    // Numbered source list, in dataset order, with the date each was checked.
+    agent.sources.forEach((source,index)=>
+      assert(record.includes(`${index+1}. [${source.title}](${source.url}) — checked ${source.checkedAt}`),`${agent.id} source ${source.id}`));
+    // Each claim carries its own evidence, as footnote numbers into that list.
+    for(const [field,label] of fields){
+      const claim=agent.claims.find(c=>c.field===field);
+      if(!claim.sourceIds.length)continue;
+      const line=record.split('\n').find(l=>l.startsWith(`- **${label}** \``));
+      const numbers=claim.sourceIds.map(id=>agent.sources.findIndex(s=>s.id===id)+1).sort((a,b)=>a-b);
+      assert(line.endsWith(` [${numbers.join(', ')}]`),`${agent.id}/${field}: expected [${numbers.join(', ')}], got ${line}`);
+    }
+  }
+  // Town is well covered, and its gaps are recorded as gaps.
+  const town=await dist('/agents/town.md');
+  assert(town.includes('[Town individual plans and credit overages](https://www.town.com/pricing) — checked 2026-10-21'));
+  assert.match(town,/\*\*Passwords & credentials\*\* `unknown`/);
+  assert.match(town,/\*\*Computer use\*\* `limited`/);
+});
+
+test('each page points at its Markdown twin, and the files are discoverable',async()=>{
+  const markdown=['/llms.txt','/llms-full.txt','/index.md','/method.md',...data.agents.map(a=>`/agents/${a.id}.md`)];
+  const [sitemap,robots]=await Promise.all(['/sitemap.xml','/robots.txt'].map(dist));
+  for(const path of markdown){
+    assert(sitemap.includes(`<loc>${data.siteUrl}${path}</loc>`),`${path} missing from the sitemap`);
+    assert(robots.includes(`Allow: ${path}\n`),`${path} missing from robots.txt`);
+  }
+  const alternate=/<link rel="alternate" type="text\/markdown" title="Markdown edition" href="([^"]+)">/;
+  assert.equal((await dist('/index.html')).match(alternate)[1],'/index.md');
+  assert.equal((await dist('/about/index.html')).match(alternate)[1],'/method.md');
+  for(const agent of data.agents)
+    assert.equal((await dist(`/agent/${agent.id}/index.html`)).match(alternate)[1],`/agents/${agent.id}.md`);
+});
+
 test('the standalone bundle is a parseable module',async()=>{
   const {readFile}=await import('node:fs/promises');
   const html=await readFile(new URL('../dist/agentlist.html',import.meta.url),'utf8');

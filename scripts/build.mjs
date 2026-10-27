@@ -7,6 +7,7 @@ import {computeFacets,computeSummary} from '../src/compute.js';
 import {continuityFacets,continuitySummary} from '../src/continuity.js';
 import {platformStatusLabels} from '../src/platforms.js';
 import {contextClaims} from '../src/domain.js';
+import {markdownEdition,recordPath} from './markdown.mjs';
 const root=new URL('../',import.meta.url);
 const metadata=JSON.parse(await readFile(new URL('data/catalog.json',root),'utf8'));
 const dataSources=JSON.parse(await readFile(new URL('data/datasources.json',root),'utf8'));
@@ -68,6 +69,15 @@ const xml=s=>String(s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'
 const origin=metadata.siteUrl||'http://127.0.0.1:4173';
 const rss=`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Agentlist — ecosystem updates</title><link>${origin}/#news</link><description>Curated primary-source updates about persistent personal agents. Snapshot checked ${metadata.checkedAt}.</description><lastBuildDate>${new Date(metadata.checkedAt+'T12:00:00Z').toUTCString()}</lastBuildDate>${news.map(n=>`<item><title>${xml(n.title)}</title><link>${xml(n.url)}</link><guid isPermaLink="false">${xml(n.id)}</guid><pubDate>${new Date(n.date+'T12:00:00Z').toUTCString()}</pubDate><description>${xml(n.summary)}</description></item>`).join('')}</channel></rss>`;
 await writeFile(new URL('../dist/feed.xml',import.meta.url),rss);
+// A Markdown edition of the same dataset, for readers that are language models:
+// /llms.txt as the entry point, /llms-full.txt for everything at once, a
+// directory, the method, and one record per agent.
+const markdown=markdownEdition(dataset,origin);
+for(const [path,contents] of markdown){
+  const target=new URL('../dist'+path,import.meta.url);
+  await mkdir(new URL('.',target),{recursive:true});
+  await writeFile(target,contents);
+}
 const [html,css,app,domain,catalog,platformModule,channelModule,accessModule,computeModule,continuityModule,dataSourceModule]=await Promise.all(['index.html','styles.css','app.js','domain.js','catalog.js','platforms.js','channels.js','access.js','compute.js','continuity.js','datasources.js'].map(name=>readFile(new URL(`../src/${name}`,import.meta.url),'utf8')));
 // A custom domain needs a CNAME beside the output, and a static host should not
 // run Jekyll over it.
@@ -79,9 +89,11 @@ if(metadata.siteUrl){
 // its own preview card. Each one boots the same app.
 if(metadata.siteUrl){
   const origin=metadata.siteUrl.replace(/\/$/,'');
-  const page=(path,{title,description,extraHead='',body=''})=>{
+  const page=(path,{title,description,extraHead='',body='',markdownHref='/llms.txt'})=>{
     const abs=origin+path;
     let out=html
+      .replace(/<link rel="alternate" type="text\/markdown" title="[^"]*" href="[^"]*">/,
+        `<link rel="alternate" type="text/markdown" title="Markdown edition" href="${xml(markdownHref)}">`)
       .replace(/<title>[^<]*<\/title>/,`<title>${xml(title)}</title>`)
       .replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${xml(description)}">`)
       .replace(/<link rel="canonical" href="[^"]*">/,`<link rel="canonical" href="${xml(abs)}">`)
@@ -99,15 +111,17 @@ if(metadata.siteUrl){
     await mkdir(dir,{recursive:true});
     await writeFile(new URL('../dist'+path+'/index.html',import.meta.url),contents);
   };
+  // The fourth entry is the page's Markdown twin, or the entry point where a
+  // route has none of its own.
   const routes=[
-    ['/compare','Compare personal agents','Put up to four personal agents side by side: what they can do, what they cost, where they run, and what you keep if you leave.'],
-    ['/ecosystem','What personal agents are built on','Verified runtime dependencies, code forks and renames between personal agents.'],
-    ['/news','Personal agent news','Dated launches, releases and availability changes across the personal agent ecosystem, each linked to its source.'],
-    ['/discussion','What people say about personal agents','Attributed feedback snapshots and linked discussion threads for personal agents.'],
-    ['/about','How Agentlist researches agents','Scope, evidence standards, lineage rules and update process behind the catalogue.']
+    ['/compare','Compare personal agents','Put up to four personal agents side by side: what they can do, what they cost, where they run, and what you keep if you leave.','/index.md'],
+    ['/ecosystem','What personal agents are built on','Verified runtime dependencies, code forks and renames between personal agents.','/llms-full.txt'],
+    ['/news','Personal agent news','Dated launches, releases and availability changes across the personal agent ecosystem, each linked to its source.','/llms-full.txt'],
+    ['/discussion','What people say about personal agents','Attributed feedback snapshots and linked discussion threads for personal agents.','/llms-full.txt'],
+    ['/about','How Agentlist researches agents','Scope, evidence standards, lineage rules and update process behind the catalogue.','/method.md']
   ];
-  for(const [path,title,description] of routes){
-    await write(path,page(path+'/',{title:`${title} — Agentlist`,description}));
+  for(const [path,title,description,markdownHref] of routes){
+    await write(path,page(path+'/',{title:`${title} — Agentlist`,description,markdownHref}));
   }
   const claimOf=(agent,field)=>{const c=agent.claims.find(x=>x.field===field);return c&&c.status!=='unknown'?(c.shortValue||c.value):null};
   for(const agent of agents){
@@ -121,15 +135,25 @@ if(metadata.siteUrl){
     await write(`/agent/${agent.id}`,page(`/agent/${agent.id}/`,{
       title:`${agent.name} — Agentlist`,
       description,
-      body
+      body,
+      markdownHref:recordPath(agent.id)
     }));
   }
-  const urls=[origin+'/',...routes.map(([path])=>origin+path+'/'),...agents.map(a=>`${origin}/agent/${a.id}/`)];
+  const urls=[origin+'/',...routes.map(([path])=>origin+path+'/'),...agents.map(a=>`${origin}/agent/${a.id}/`),
+    ...[...markdown.keys()].map(path=>origin+path)];
   await writeFile(new URL('../dist/sitemap.xml',import.meta.url),
     `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${
       urls.map(u=>`<url><loc>${xml(u)}</loc><lastmod>${metadata.checkedAt}</lastmod></url>`).join('')}</urlset>\n`);
+  // The Markdown edition is listed explicitly, so a text-only reader can find
+  // every record without parsing the sitemap or the interface.
   await writeFile(new URL('../dist/robots.txt',import.meta.url),
-    `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
+    `User-agent: *\nAllow: /\n\n`
+    +`# Markdown edition\n# ${origin}/llms.txt — entry point\n`
+    +`# ${origin}/llms-full.txt — the whole catalogue in one file\n`
+    +`# ${origin}/index.md — directory table\n# ${origin}/method.md — scope, evidence rules and field definitions\n`
+    +`# ${origin}/agents/<id>.md — one record per agent, ${agents.length} in this edition\n`
+    +[...markdown.keys()].map(path=>`Allow: ${path}\n`).join('')
+    +`\nSitemap: ${origin}/sitemap.xml\n`);
 }
 
 // A standalone edition remains usable when hosting or a local server is unavailable.

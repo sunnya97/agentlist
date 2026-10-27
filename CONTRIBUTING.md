@@ -172,4 +172,6 @@ npm run verify
 npm run dev
 ```
 
+The build also renders the Markdown edition read by language models — `dist/llms.txt`, `dist/llms-full.txt`, `dist/index.md`, `dist/method.md` and `dist/agents/<id>.md` — entirely from these JSON records and the definitions in `src/`. Never hand-write a fact there: edit the record, and the Markdown follows.
+
 Open http://127.0.0.1:4173. CI runs the same build, data validation and domain checks on each pull request. Generated `dist/` files are not committed. Browser-test visual changes on desktop and mobile.

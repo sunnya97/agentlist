@@ -26,6 +26,8 @@ npm run dev
 
 Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` works on any static host. `dist/agentlist.html` is a standalone bundle containing the interface, logos, and dataset. Hash routes allow direct links to profiles and comparisons.
 
+The same dataset is published as Markdown for language models: `/llms.txt` is the entry point, `/llms-full.txt` holds everything in one file, `/index.md` is the directory, `/method.md` the research method, and `/agents/<id>.md` one record per agent. Every page links its Markdown twin with `<link rel="alternate" type="text/markdown">`, and the files are listed in `sitemap.xml` and `robots.txt`. Nothing there is hand-written: all of it is generated from the JSON records.
+
 ## Structure
 
 - `data/agents/`: editable profiles, sources, plans, platforms, messaging, hardware and discussions.
@@ -36,7 +38,8 @@ Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` wor
 - `src/access.js`: availability states, from shipping to waitlist and reservation.
 - `src/compute.js`: the three computer-control questions, kept independent.
 - `src/continuity.js`: whether it survives its vendor, can be switched off remotely, and what you keep.
-- `scripts/build.mjs`: builds the static site, dataset, RSS and standalone bundle.
+- `scripts/build.mjs`: builds the static site, dataset, RSS, Markdown edition and standalone bundle.
+- `scripts/markdown.mjs`: renders the Markdown edition for language models: `llms.txt`, `llms-full.txt`, `index.md`, `method.md` and one record per agent.
 - `scripts/validate.mjs`: validates sources, platforms, messaging, plans, hardware, discussions and sentiment samples.
 - `scripts/domain.test.mjs`: comparison, filtering, catalog integrity and regression checks.
 - `.github/`: contribution forms and pull-request validation.
@@ -45,7 +48,7 @@ Open http://127.0.0.1:4173. Set `AGENTLIST_PORT` to change the port. `dist/` wor
 
 ## Research and discussion
 
-This is a snapshot checked October 21, 2026. Product capabilities and plan details link to official sources. They are descriptions, not independent performance tests. The build fills unresearched fields without treating them as unsupported.
+This is a snapshot checked October 22, 2026. Product capabilities and plan details link to official sources. They are descriptions, not independent performance tests. The build fills unresearched fields without treating them as unsupported.
 
 Discussion summaries link to original dated threads and distinguish community posts from announcements. Nine profiles include attributed [Feedback Bench](https://feedbackbench.com/) snapshots for August 31–October 18, 2026, broken down by the areas it labels — what people praise and complain about, not one number. Their displayed percentage is the raw positive share of rated user-weeks, not Feedback Bench's composite score. Coverage varies by agent; collection and labels are explained in each profile. These snapshots and discussion links are curated, not a live social feed.
 
