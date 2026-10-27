@@ -5,3 +5,8 @@ export const platformIcons = {"macos": "<svg fill=\"currentColor\" aria-hidden=\
 export const platformStatusLabels = {available:'Available',beta:'Beta',preview:'Preview',announced:'Coming soon',limited:'Limited availability'};
 
 platformIcons.watchos='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="6" width="14" height="12" rx="4"/><path d="m8 6 1-4h6l1 4M8 18l1 4h6l1-4M12 9v3l2 1"/></svg>';
+
+// Announced and preview platforms have not shipped, so they never count toward
+// what an agent runs on today. Beta and limited access have shipped, and do.
+export const shippedStatuses = new Set(['available','beta','limited']);
+export const isShipped = entry => shippedStatuses.has(entry.status);

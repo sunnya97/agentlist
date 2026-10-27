@@ -5,6 +5,7 @@ import {filterAgents,parseSelection,compareRows,sortedNews,sortAgents} from '../
 import {validate} from './validate.mjs';
 import {fields,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,compositeFields,renderedColumns} from '../src/catalog.js';
 import {channelLabels,channelOrder} from '../src/channels.js';
+import {isShipped} from '../src/platforms.js';
 import {accessStates,accessSummary} from '../src/access.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
 import {continuityFacets,continuitySummary} from '../src/continuity.js';
@@ -370,4 +371,16 @@ test('the standalone bundle is a parseable module',async()=>{
   // Concatenation drops module scope, so a name reused across two modules
   // becomes a syntax error only the standalone edition sees.
   assert.doesNotThrow(()=>new Function(`return (async()=>{${script[1]}})`),'bundle must parse');
+});
+
+test('an announced platform is not something the agent runs on today',()=>{
+  for(const a of data.agents)for(const p of a.platforms)
+    assert.equal(isShipped(p),!['announced','preview'].includes(p.status),`${a.id}/${p.platform}`);
+  // Vora's apps ship with the device in 2027, so nothing it has has shipped.
+  const vora=data.agents.find(a=>a.id==='vora');
+  assert(vora.platforms.length,'Vora records platforms');
+  assert.equal(vora.platforms.filter(isShipped).length,0,'none of them have shipped');
+  // Beta and limited access have shipped and still count.
+  const qwenpaw=data.agents.find(a=>a.id==='qwenpaw');
+  assert(qwenpaw.platforms.filter(isShipped).length>0,'beta desktop apps count');
 });

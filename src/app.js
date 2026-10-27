@@ -1,6 +1,6 @@
 import {filterAgents,parseSelection,getClaim,compareRows,sortedNews,sortAgents,firstLaunch,formatCatalogDate} from './domain.js';
 import {fields,fieldGroups,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,companyTypes,launchKinds} from './catalog.js';
-import {platformLabels,platformIcons,platformStatusLabels} from './platforms.js';
+import {platformLabels,platformIcons,platformStatusLabels,isShipped} from './platforms.js';
 import {channelLabels,channelIcons} from './channels.js';
 import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
 import {computeFacets,computeLabels,computeIcons,computeTone,computeSummary} from './compute.js';
@@ -58,13 +58,16 @@ const iconListHTML=(a,kind,limit,empty)=>{
   const isPlatform=kind==='platforms';
   const nameOf=p=>isPlatform?platformLabels[p.platform]:channelLabels[p.service];
   const iconOf=p=>isPlatform?platformIcons[p.platform]:channelIcons[p.service];
-  const shown=list.slice(0,limit),rest=list.slice(limit);
+  const shipped=list.filter(isShipped),pending=list.filter(p=>!isShipped(p));
+  const ordered=[...shipped,...pending];
+  const shown=ordered.slice(0,limit),rest=ordered.slice(limit);
   const button=(p,i)=>{
     const label=nameOf(p),state=p.status==='available'?'':` · ${platformStatusLabels[p.status]}`;
-    return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${i}:${kind}" data-tip="${esc(label+state)}" aria-label="${esc(label+state)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${iconOf(p)}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
+    return `<button class="platform-icon ${p.status}" data-platform="${a.id}:${list.indexOf(p)}:${kind}" data-tip="${esc(label+state)}" aria-label="${esc(label+state)}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${iconOf(p)}${p.status!=='available'?'<span class="platform-status" aria-hidden="true"></span>':''}</button>`;
   };
   const more=rest.length?`<span class="platform-more" data-tip="${esc(rest.map(nameOf).join(', '))}" tabindex="0">+${rest.length}</span>`:'';
-  return `<div class="platform-list${isPlatform?'':' messaging-list'}">${shown.map(button).join('')}${more}</div>`;
+  const note=isPlatform&&!shipped.length?'<span class="platform-pending">announced only</span>':'';
+  return `<div class="platform-list${isPlatform?'':' messaging-list'}">${shown.map(button).join('')}${more}${note}</div>`;
 };
 const controlListHTML=a=>`<div class="platform-list control-list">${Object.keys(computeFacets).map(facet=>{
   const value=a.compute?.[facet],tone=computeTone(facet,value),label=computeLabels[facet];
@@ -375,7 +378,9 @@ function renderProfile(id,tab='overview'){
       ${stat('Cost',esc(short('pricing')||'Not specified'),a.plans.length?`${a.plans.length} plan${a.plans.length===1?'':'s'} below`:'')}
       ${stat('Where it runs',esc(short('hosting')||'Not specified'),short('worksWithoutVendor')?`If the vendor stops: ${esc(short('worksWithoutVendor')).toLowerCase()}`:'')}
       ${stat('Availability',esc(a.access?accessSummary(a.access):short('availability')||'Not specified'),a.access?.expected?`Expected ${formatCatalogDate(a.access.expected)}`:'')}
-      ${stat('Native apps',a.platforms.length?`<span class="statrow">${platformListHTML(a)}</span>`:'<span class="none">None recorded</span>',a.messaging?.length?`Messaging: ${a.messaging.length}`:'')}
+      ${stat('Native apps',a.platforms.length?`<span class="statrow">${platformListHTML(a)}</span>`:'<span class="none">None recorded</span>',
+        (()=>{const shipped=a.platforms.filter(isShipped).length,pending=a.platforms.length-shipped;
+          return [shipped?`${shipped} shipped`:'none shipped',pending?`${pending} announced`:''].filter(Boolean).join(' · ')})())}
       ${stat('Record coverage',`${answered}<small> of ${a.claims.length}</small>`,
         `<span class="meter">${Array.from({length:10},(_,i)=>`<i class="${i<coverage?'':'off'}"></i>`).join('')}</span>Checked ${formatDate(a.checkedAt)}`)}
     </dl>

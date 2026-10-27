@@ -36,6 +36,12 @@
       "title": "Ambi privacy policy",
       "url": "https://ambi.ai/en/privacy",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "ambi-appstore",
+      "title": "Ambi: Ambient intelligence on the App Store",
+      "url": "https://apps.apple.com/us/app/ambi-ambient-intelligence/id6787026123",
+      "checkedAt": "2026-10-26"
     }
   ],
   "claims": [
@@ -85,11 +91,13 @@
     },
     {
       "field": "mobileApps",
-      "value": "iOS; Android is coming soon",
+      "value": "iPhone and Apple Watch; Android is coming soon",
       "status": "documented",
       "sourceIds": [
+        "ambi-appstore",
         "ambi-download"
-      ]
+      ],
+      "shortValue": "iOS, Apple Watch"
     },
     {
       "field": "channels",
@@ -211,6 +219,14 @@
       "detail": "iOS; Android is coming soon",
       "sourceIds": [
         "ambi-download"
+      ]
+    },
+    {
+      "platform": "watchos",
+      "status": "available",
+      "detail": "The App Store listing supports Apple Watch alongside iPhone.",
+      "sourceIds": [
+        "ambi-appstore"
       ]
     }
   ],

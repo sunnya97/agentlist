@@ -58,6 +58,7 @@ dialog{border:0;border-radius:14px;padding:32px;color:var(--ink);width:min(860px
 .feedback-area-figure{font-size:11px;font-weight:600;text-align:right;color:#4a5464}
 .feedback-area-figure small{display:block;font-weight:400;font-size:10px;color:var(--muted)}
 .feedback-areas-note{margin-top:10px;font-size:11px;line-height:1.6;color:var(--muted)}
+.platform-pending{font:500 10px/1 var(--mono);letter-spacing:.05em;color:var(--absent);white-space:nowrap}
 .platform-more{flex:none;font-size:11px;font-weight:600;color:#8a93a3;margin-left:3px;white-space:nowrap}.platform-icon{position:relative;width:28px;height:30px;padding:5px;border-radius:5px;color:#626d7e;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.platform-icon svg{width:18px;height:18px}.platform-icon:hover,.platform-icon[aria-expanded=true]{background:#eef0fa;color:var(--accent)}.platform-icon.announced{color:#98a2b1;border:1px dashed #dce1e9;padding:4px}.platform-status{position:absolute;width:5px;height:5px;right:1px;bottom:2px;border-radius:50%;background:#a0834b}.platform-icon.announced .platform-status{background:#a3acba}.platform-icon.limited .platform-status{background:#8996b2}
 .control-list{gap:5px}.platform-icon.control-icon{cursor:default}
 .platform-icon.ctl-yes{color:var(--accent)}

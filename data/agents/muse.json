@@ -54,6 +54,12 @@
       "title": "Muse data controls and download",
       "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "muse-glasses",
+      "title": "Introducing Ray-Ban Meta Audio and more AI glasses styles, plus Muse",
+      "url": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "checkedAt": "2026-10-26"
     }
   ],
   "claims": [
@@ -279,9 +285,10 @@
   "hardware": {
     "status": "announced",
     "name": "Meta AI glasses",
-    "detail": "Muse access on Meta's AI glasses is announced as coming soon. Its cloud virtual machine is separate from this physical hardware integration.",
+    "detail": "Meta says Muse is coming to its AI glasses in the coming months, where you say the agent's name and it can act on what you are looking at. Meta's own pages still describe this as coming soon, and the AI glasses release notes do not list it as shipped. Muse's cloud virtual machine is separate from this.",
     "sourceIds": [
-      "muse-intro"
+      "muse-intro",
+      "muse-glasses"
     ]
   },
   "sentiment": {
