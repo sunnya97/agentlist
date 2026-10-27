@@ -27,7 +27,7 @@ export const fieldGroups = [
     ['bundledPlan','Included in another plan'],
     ['pricing','Price & usage costs']
   ]},
-  {id:'continuity',label:'If it goes away',note:'Whether the product survives the company behind it, and what you take with you. Almost no hosted vendor publishes a shutdown commitment, so an answer here is usually read from the architecture rather than from a promise.',fields:[
+  {id:'continuity',label:'Vendor lock-in',note:'How hard it is to leave, and what survives if the company does. Almost no hosted vendor publishes a shutdown commitment, so an answer here is usually read from the architecture rather than from a promise.',fields:[
     ['worksWithoutVendor','If the vendor stops'],
     ['remoteDisable','Remote shut-off'],
     ['dataAfterExit','What you keep']
@@ -78,7 +78,7 @@ export const columnCatalog = [
     ['hosting','Where it runs'],['license','Open source'],['memory','Memory'],
     ['approvals','Approvals'],['passwordManager','Passwords'],['portability','Export'],['security','Privacy']
   ]},
-  {label:'If it goes away',columns:[
+  {label:'Vendor lock-in',columns:[
     ['worksWithoutVendor','If vendor stops'],['remoteDisable','Remote shut-off'],['dataAfterExit','What you keep']
   ]},
   {label:'Company',columns:[
