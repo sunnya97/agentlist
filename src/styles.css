@@ -58,6 +58,18 @@ dialog{border:0;border-radius:14px;padding:32px;color:var(--ink);width:min(860px
 .feedback-area-figure{font-size:11px;font-weight:600;text-align:right;color:#4a5464}
 .feedback-area-figure small{display:block;font-weight:400;font-size:10px;color:var(--muted)}
 .feedback-areas-note{margin-top:10px;font-size:11px;line-height:1.6;color:var(--muted)}
+.avail{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px}
+.pill{display:inline-flex;align-items:center;gap:5px;font:600 11px/1 var(--sans);letter-spacing:-.005em;
+  padding:4px 8px 4px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.pill.live{background:var(--lime);color:var(--accent);border-color:#bcdedd}
+.pill.wait{background:var(--qualified-soft);color:var(--qualified);border-color:#ecdcb4}
+.pill.soon{background:transparent;color:var(--muted);border-color:var(--line)}
+.pill.soon::before{background:transparent;border:1.5px solid currentColor;width:7px;height:7px}
+.pill.unknown{background:transparent;color:var(--absent);border:1px dashed var(--line)}
+.pill.unknown::before{background:var(--absent)}
+.rtag{font:500 10px/1 var(--mono);letter-spacing:.03em;color:var(--muted);
+  padding:3px 5px;border:1px solid var(--line);border-radius:3px;white-space:nowrap}
 .platform-pending{font:500 10px/1 var(--mono);letter-spacing:.05em;color:var(--absent);white-space:nowrap}
 .platform-more{flex:none;font-size:11px;font-weight:600;color:#8a93a3;margin-left:3px;white-space:nowrap}.platform-icon{position:relative;width:28px;height:30px;padding:5px;border-radius:5px;color:#626d7e;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.platform-icon svg{width:18px;height:18px}.platform-icon:hover,.platform-icon[aria-expanded=true]{background:#eef0fa;color:var(--accent)}.platform-icon.announced{color:#98a2b1;border:1px dashed #dce1e9;padding:4px}.platform-status{position:absolute;width:5px;height:5px;right:1px;bottom:2px;border-radius:50%;background:#a0834b}.platform-icon.announced .platform-status{background:#a3acba}.platform-icon.limited .platform-status{background:#8996b2}
 .control-list{gap:5px}.platform-icon.control-icon{cursor:default}

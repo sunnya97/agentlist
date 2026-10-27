@@ -2,7 +2,7 @@ import {filterAgents,parseSelection,getClaim,compareRows,sortedNews,sortAgents,f
 import {fields,fieldGroups,columnCatalog,columnLabels,defaultColumns,maxColumns,featuredOrder,companyTypes,launchKinds} from './catalog.js';
 import {platformLabels,platformIcons,platformStatusLabels,isShipped} from './platforms.js';
 import {channelLabels,channelIcons} from './channels.js';
-import {accessStates,accessRestrictions,accessSummary,accessShort} from './access.js';
+import {accessStates,accessRestrictions,accessSummary,accessShort,accessTone,accessPill,restrictionTag} from './access.js';
 import {computeFacets,computeLabels,computeIcons,computeTone,computeSummary} from './compute.js';
 import {thirdPartyAccess,accessPaths,pathTone} from './datasources.js';
 const $=s=>document.querySelector(s);
@@ -77,6 +77,12 @@ const controlListHTML=a=>`<div class="platform-list control-list">${Object.keys(
   if(!value)return `<span class="platform-icon control-icon ctl-unknown" data-tip="${tip}" aria-label="${tip}" tabindex="0">${computeIcons[facet]}</span>`;
   return `<button class="platform-icon control-icon ctl-${tone}" data-platform="${a.id}:${facet}:compute" data-tip="${tip}" aria-label="${tip}" aria-haspopup="dialog" aria-controls="platform-popover" aria-expanded="false">${computeIcons[facet]}</button>`;
 }).join('')}</div>`;
+const accessCellHTML=a=>{
+  const x=a.access;
+  if(!x)return '<span class="unknown-value" aria-label="Availability not researched">—</span>';
+  const tags=(x.restrictions||[]).map(r=>`<span class="rtag">${esc(restrictionTag[r]||r)}</span>`).join('');
+  return `<span class="avail" data-tip="${esc(accessSummary(x)+' — '+x.detail)}"><span class="pill ${accessTone[x.state]}">${esc(accessPill[x.state])}</span>${tags}</span>`;
+};
 const dataSourceById=id=>data.dataSources?.items.find(x=>x.id===id);
 const exclusiveReach=a=>(a.dataAccess||[]).filter(e=>e.path==='first-party'&&['closed','none'].includes(dataSourceById(e.source)?.thirdParty));
 const exclusiveHTML=a=>{
@@ -143,6 +149,7 @@ function openPlatform(button){
 const claimHTML=(a,key,compact=false)=>{
   if(key==='nativeApps')return platformListHTML(a);
   if(key==='computerControl')return controlListHTML(a);
+  if(key==='availability'&&compact)return accessCellHTML(a);
   if(key==='exclusiveData')return exclusiveHTML(a);
   if(key==='messaging')return messagingListHTML(a)+(compact||!a.messaging?.length?'':`<div class="platform-sources">${sourceLinks(a,getClaim(a,'messaging'))}</div>`);
   if(compact&&key==='launchDate'&&firstLaunch(a)){const event=firstLaunch(a);return `<div class="claim">${formatCatalogDate(event.date)}<small class="launch-detail">${launchKinds[event.kind]}</small></div>`}

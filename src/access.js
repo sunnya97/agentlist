@@ -27,3 +27,8 @@ export const accessSummary = access => {
   const base = accessStates[access.state];
   return caveats.length ? `${base} · ${caveats.join(', ')}` : base;
 };
+
+// A pill, not a sentence: one mark for the state, then the catches as short tags.
+export const accessTone = {available:'live',waitlist:'wait',reservation:'wait',announced:'soon',unverified:'unknown'};
+export const accessPill = {available:'Live',waitlist:'Waitlist',reservation:'Reservation',announced:'Coming soon',unverified:'Unverified'};
+export const restrictionTag = {plan:'paid',region:'region',age:'18+',rollout:'rollout',invite:'invite'};
