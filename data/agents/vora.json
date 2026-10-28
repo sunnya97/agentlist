@@ -339,6 +339,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "device",
+    "floor": 2499,
+    "currency": "USD",
+    "period": "once",
+    "note": "Super Early Bird price; a US$50 refundable deposit reserves a unit",
+    "sourceIds": [
+      "vora-faq",
+      "vora-shop",
+      "vora-specs"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "announced",

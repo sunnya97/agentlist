@@ -237,6 +237,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "ironclaw-readme",
+      "ironclaw-model-providers"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

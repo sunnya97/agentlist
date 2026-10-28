@@ -45,6 +45,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": null,
+    "note": "paid Cloud Mac add-on price is not published; invite-only VIP is US$1,000 a month",
+    "sourceIds": [
+      "pally-pricing"
+    ]
+  },
   "platforms": [
     {
       "platform": "macos",
@@ -339,6 +347,15 @@
       "sourceIds": [
         "pally-mac"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Anything on the Mac needs that Mac online, as the companion states, while briefs, alerts, reminders and calls keep arriving through messaging.",
+      "sourceIds": [
+        "pally-mac",
+        "pally-pricing"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

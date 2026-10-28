@@ -299,6 +299,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "revenue comes from purchases it facilitates",
+    "sourceIds": [
+      "underdog-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -334,6 +342,19 @@
     ]
   },
   "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "Inference and the browser agent both run on the person's own Mac or Windows PC, where bookings and purchases wait for approval; general desktop control is not described.",
+      "sourceIds": [
+        "underdog-home",
+        "underdog-security"
+      ],
+      "status": "limited"
+    },
     "whileYouAreOff": {
       "state": "no",
       "detail": "AI inference runs on the user's own device, so nothing runs while that device is off.",

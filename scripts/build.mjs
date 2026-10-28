@@ -3,6 +3,7 @@ import {validate} from './validate.mjs';
 import {fields} from '../src/catalog.js';
 import {channelLabels,channelOrder} from '../src/channels.js';
 import {accessSummary} from '../src/access.js';
+import {costShort,costSummary} from '../src/cost.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
 import {continuityFacets,continuitySummary} from '../src/continuity.js';
 import {platformStatusLabels} from '../src/platforms.js';
@@ -22,6 +23,7 @@ const agents=await Promise.all(files.map(async file=>{
   // Messaging services are channels, not native apps, and keep their own list.
   const messaging=[...(record.messaging||[])].sort((x,y)=>channelOrder.indexOf(x.service)-channelOrder.indexOf(y.service));
   const access=record.access||null;
+  const cost=record.cost||null;
   const compute=record.compute||{};
   const continuity=record.continuity||{};
   const dataAccess=record.dataAccess||[];
@@ -46,13 +48,19 @@ const agents=await Promise.all(files.map(async file=>{
       const written=record.claims.find(c=>c.field==='availability');
       return {field,value:written?.value||access.detail,shortValue:accessSummary(access),status:written?.status||'documented',sourceIds:written?.sourceIds||access.sourceIds,access,checkedAt:metadata.checkedAt};
     }
+    // The prose keeps the plan detail; the short cell is derived from the
+    // structured cost, so one column reads the same way for every agent.
+    if(field==='pricing'&&cost){
+      const written=record.claims.find(c=>c.field==='pricing');
+      return {field,value:written?.value||costSummary(cost),shortValue:costShort(cost),status:written?.status||'documented',sourceIds:written?.sourceIds||cost.sourceIds,cost,checkedAt:metadata.checkedAt};
+    }
     if(field==='hardware'&&hardware.detail&&hardware.sourceIds.length)return {field,value:hardware.detail,shortValue:hardware.name?`${hardware.name} · ${hardware.status==='announced'?'announced':hardware.status==='unknown'?'availability unclear':hardware.status}`:hardware.status,status:['announced','unknown'].includes(hardware.status)?'limited':'documented',sourceIds:hardware.sourceIds,checkedAt:metadata.checkedAt};
     return {field,value:'Not specified',status:'unknown',sourceIds:[],checkedAt:metadata.checkedAt,...(context.find(c=>c.field===field)||record.claims.find(c=>c.field===field))};
   });
   const sourceDates=record.sources.map(source=>source.checkedAt).filter(Boolean).sort();
   const checkedAt=sourceDates[sourceDates.length-1]||metadata.checkedAt;
   const oldestSource=sourceDates[0]||metadata.checkedAt;
-  const agent={...record,checkedAt,oldestSource,newsSource,claims,hardware,messaging,access,compute,continuity,dataAccess,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[],company:record.company||null,launches:record.launches||[]};
+  const agent={...record,checkedAt,oldestSource,newsSource,claims,hardware,messaging,access,cost,compute,continuity,dataAccess,plans:record.plans||[],discussions:record.discussions||[],platforms:record.platforms||[],company:record.company||null,launches:record.launches||[]};
   const logo=await readFile(new URL(`src/${agent.logo.path}`,root));
   if(!logo.length)throw new Error(`${file}: empty logo`);
   return agent;

@@ -306,6 +306,15 @@
       "sourceIds": [
         "omi-home"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Screen capture ends when the computer does, while the phone or the optional pendant keeps listening and the hosted backend keeps summarising.",
+      "sourceIds": [
+        "omi-home",
+        "omi-repo"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -357,6 +366,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "device",
+    "floor": 179,
+    "currency": "USD",
+    "period": "once",
+    "note": "free plan with every device; Pro is US$269 a year",
+    "sourceIds": [
+      "omi-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "optional",

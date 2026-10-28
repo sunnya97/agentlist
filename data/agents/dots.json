@@ -344,6 +344,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 100,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "ChatGPT Pro",
+    "note": "also in Business Premium; deeper-work allowances apply",
+    "sourceIds": [
+      "dots-help",
+      "chatgpt-pro-tiers"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -514,6 +526,15 @@
       "sourceIds": [
         "dots-intro"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Ongoing and scheduled work happens on the managed cloud computer; the connection to a personal computer is an extra, not what the work depends on.",
+      "sourceIds": [
+        "dots-intro",
+        "dots-help"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

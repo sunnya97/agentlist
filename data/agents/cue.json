@@ -170,5 +170,14 @@
     "sourceIds": [
       "cue-home"
     ]
+  },
+  "compute": {
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Routines keep running after you log out, which is how the product describes what its agents do.",
+      "sourceIds": [
+        "cue-home"
+      ]
+    }
   }
 }

@@ -8,6 +8,7 @@ import {channelLabels,channelOrder} from '../src/channels.js';
 import {isShipped} from '../src/platforms.js';
 import {accessStates,accessSummary} from '../src/access.js';
 import {computeFacets,computeSummary} from '../src/compute.js';
+import {costModels,costPeriods,costShort} from '../src/cost.js';
 import {continuityFacets,continuitySummary} from '../src/continuity.js';
 const data=JSON.parse(await readFile(new URL('../dist/data.json',import.meta.url),'utf8'));
 test('every user-named anchor is represented without collapsing distinct products',()=>{for(const id of ['dots','claude-duet','grok-bot','hark','muse','hermes','openclaw','nanoclaw','ironclaw','instinct','poke','underdog','town','ambi','cue','wabi'])assert(data.agents.some(a=>a.id===id),id);assert.equal(data.agents.find(a=>a.id==='underdog').category,'local')});
@@ -383,4 +384,83 @@ test('an announced platform is not something the agent runs on today',()=>{
   // Beta and limited access have shipped and still count.
   const qwenpaw=data.agents.find(a=>a.id==='qwenpaw');
   assert(qwenpaw.platforms.filter(isShipped).length>0,'beta desktop apps count');
+});
+
+test('cost structures the price claim without guessing one',()=>{
+  const priced=data.agents.filter(a=>a.cost);
+  assert(priced.length>40,'most records should carry a structured cost');
+  for(const a of priced){
+    const c=a.cost,ids=new Set(a.sources.map(s=>s.id));
+    assert(Object.hasOwn(costModels,c.model),`${a.id}: unknown cost model ${c.model}`);
+    // Every cost resolves its evidence to that record's own sources.
+    assert(c.sourceIds.length,`${a.id}: cost needs evidence`);
+    for(const id of c.sourceIds)assert(ids.has(id),`${a.id}: cost cites missing source ${id}`);
+    // Free has no paid tier to price; bundled must name the subscription you buy.
+    if(c.model==='free')assert.equal(c.floor,null,`${a.id}: a free product cannot carry a floor`);
+    assert.equal(Boolean(c.bundledWith),c.model==='bundled',`${a.id}: bundledWith is only for bundled pricing`);
+    if(c.floor!==null)assert(typeof c.floor==='number'&&Object.hasOwn(costPeriods,c.period),`${a.id}: a floor needs a period`);
+    // The short cell is derived; the prose claim keeps the plan detail.
+    const claim=a.claims.find(x=>x.field==='pricing');
+    assert.equal(claim.shortValue,costShort(c),`${a.id}: pricing short text must match the cost object`);
+    assert.notEqual(claim.value,claim.shortValue,`${a.id}: the claim should still carry the prose`);
+  }
+  // A price nobody has published carries no object at all: absent is not free.
+  const unpriced=data.agents.filter(a=>!a.cost);
+  assert(unpriced.length,'expected records with no established price');
+  for(const a of unpriced)assert.notEqual(a.claims.find(c=>c.field==='pricing').status,'documented',`${a.id}: a documented price should be structured`);
+  assert.equal(costShort({model:'free',floor:null}),'Free');
+  assert.equal(costShort({model:'freemium',floor:20,currency:'USD',period:'month'}),'Free · $20/mo');
+  assert.equal(costShort({model:'paid',floor:49,currency:'USD',period:'month'}),'$49/mo');
+  assert.equal(costShort({model:'bundled',floor:100,currency:'USD',period:'month',bundledWith:'ChatGPT Pro'}),'In ChatGPT Pro · $100/mo');
+  assert.equal(costShort({model:'device',floor:2499,currency:'USD',period:'once'}),'$2,499 device');
+  assert.equal(costShort({model:'bundled',floor:199,currency:'CNY',period:'month',bundledWith:'Kimi Pro (China)'}),'In Kimi Pro (China) · CN¥199/mo');
+  assert.equal(costShort({model:'freemium',floor:null}),'Free · paid tiers');
+});
+
+test('cost records reject unknown models, stray prices and unsourced claims',()=>{
+  const invalid=(mutate)=>{const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy))};
+  const bundled=d=>d.agents.find(a=>a.id==='dots').cost;
+  const free=d=>d.agents.find(a=>a.id==='openclaw').cost;
+  invalid(d=>bundled(d).model='cheap');
+  invalid(d=>bundled(d).period='fortnight');
+  invalid(d=>bundled(d).currency='DOGE');
+  invalid(d=>bundled(d).floor='100');
+  invalid(d=>bundled(d).sourceIds=[]);
+  invalid(d=>bundled(d).sourceIds=['missing']);
+  invalid(d=>bundled(d).note='Ends with a stop.');
+  // Bundled pricing must say what you are buying; nothing else may claim it.
+  invalid(d=>delete bundled(d).bundledWith);
+  invalid(d=>free(d).bundledWith='Some other subscription');
+  // Free software with a monthly price is a contradiction, not a free tier.
+  invalid(d=>Object.assign(free(d),{floor:20,currency:'USD',period:'month'}));
+});
+
+test('the structured compute facets carry the answer the prose column could not',()=>{
+  const facets=Object.keys(computeFacets);
+  let covered=0,recorded=0;
+  for(const agent of data.agents){
+    const sources=new Set(agent.sources.map(s=>s.id));
+    const present=facets.filter(facet=>agent.compute?.[facet]);
+    if(present.length)covered++;
+    for(const facet of present){
+      const value=agent.compute[facet];
+      recorded++;
+      // Each facet is its own claim: a sentence about this agent and its own evidence.
+      assert(value.detail?.trim().length>20,`${agent.id}/${facet} needs a real detail`);
+      assert.notEqual(value.detail.trim(),computeFacets[facet][value.state],`${agent.id}/${facet}: the detail restates the label`);
+      assert(value.sourceIds?.length,`${agent.id}/${facet} needs evidence`);
+      for(const id of value.sourceIds)
+        assert(sources.has(id),`${agent.id}/${facet} cites ${id}, which the record does not list`);
+      // Whether the screen can be watched is recorded only where a source says so.
+      if(value.remote)assert.equal(facet,'agentComputer',`${agent.id}/${facet}: remote access belongs to the agent's own machine`);
+    }
+  }
+  // The structure now answers for most of the catalogue, not a corner of it.
+  assert(covered>30,`expected more than 30 records with a facet, got ${covered}`);
+  assert(recorded>=covered,'every covered record contributes at least one facet');
+  // Where the prose spelled one fact many ways, the facets use one vocabulary.
+  const prose=new Set(data.agents.map(a=>a.claims.find(c=>c.field==='computerUse')).filter(c=>c.status!=='unknown').map(c=>c.shortValue||c.value));
+  const states=new Set(data.agents.filter(a=>a.compute?.onYourComputer).map(a=>a.compute.onYourComputer.state));
+  assert(states.size<=Object.keys(computeFacets.onYourComputer).length);
+  assert(prose.size>states.size,'the prose column had more spellings than the facet has answers');
 });

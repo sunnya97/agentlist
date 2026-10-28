@@ -263,6 +263,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "no paid tier or usage limits are published",
+    "sourceIds": [
+      "wabi-appstore"
+    ]
+  },
   "discussions": [
     {
       "title": "Replika 2? Wabi",
@@ -302,6 +310,27 @@
     "sourceIds": [
       "wabi-download"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "platforms": [
+        "macos"
+      ],
+      "detail": "The Mac app reads permitted screen and file context and can share the screen during a call; general desktop control is not described.",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Website tasks are completed in Wabi's hosted browser sessions rather than on the Mac; those are browsers, and no wider machine is described.",
+      "sourceIds": [
+        "wabi-privacy"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

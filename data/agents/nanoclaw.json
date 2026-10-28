@@ -229,6 +229,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "nanoclaw-repo",
+      "nanoclaw-readme"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -310,6 +319,25 @@
     "sourceIds": [
       "nanoclaw-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Each agent is confined to its own container with an isolated filesystem, and the bundled browser skill clicks and fills pages inside that container rather than on the host desktop.",
+      "sourceIds": [
+        "nanoclaw-browser-skill",
+        "nanoclaw-readme"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "local",
+      "detail": "A Docker container per agent on the machine you run it on — macOS, Linux or WSL2 — holding that agent's own workspace, tools and browser.",
+      "sourceIds": [
+        "nanoclaw-readme"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

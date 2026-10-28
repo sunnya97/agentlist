@@ -63,7 +63,7 @@ export const featuredOrder = [
 // Short labels: a table header is not the place for a full question.
 export const columnCatalog = [
   {label:'What it does',columns:[
-    ['computerUse','Computer use'],['computerControl','Control'],['onYourComputer','Your computer'],['agentComputer','Its own computer'],
+    ['computerControl','Control'],['computerUse','Computer use'],['onYourComputer','Your computer'],['agentComputer','Its own computer'],
     ['whileYouAreOff','Works when off'],['browserUse','Browser'],['voice','Voice'],['scheduling','Background work'],
     ['uniqueFeatures','What stands out']
   ]},

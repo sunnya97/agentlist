@@ -279,6 +279,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "note": "free usage cap, with a US$100 tier above",
+    "sourceIds": [
+      "hark-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -414,12 +424,30 @@
     ]
   },
   "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Handoff works from a cloud computer and the published workflows are all websites; there is no native desktop app and nothing is described as reaching the person's own machine.",
+      "sourceIds": [
+        "hark-home",
+        "hark-launch"
+      ],
+      "status": "limited"
+    },
     "agentComputer": {
       "state": "cloud",
       "detail": "A personal cloud computer runs Handoff tasks. Whether you can watch its screen is not specified.",
       "sourceIds": [
         "hark-home"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Scheduled tasks and reusable Specialties run on the cloud computer behind Handoff, not on the laptop the web app was opened from.",
+      "sourceIds": [
+        "hark-using",
+        "hark-home"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

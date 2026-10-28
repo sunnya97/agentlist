@@ -270,6 +270,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "nanobot-readme",
+      "nanobot-model-providers"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -340,6 +349,16 @@
     "sourceIds": [
       "nanobot-readme"
     ]
+  },
+  "compute": {
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Self-hosted either locally or as a server gateway, so cron automations and long-horizon goals continue only where that install is a machine that stays on.",
+      "sourceIds": [
+        "nanobot-readme"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

@@ -427,6 +427,17 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "note": "free tier carries 300 daily credits",
+    "sourceIds": [
+      "manus-pricing",
+      "manus-plans"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

@@ -402,6 +402,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 50,
+    "currency": "USD",
+    "period": "month",
+    "note": "no annual pricing is offered",
+    "sourceIds": [
+      "sim-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "optional",

@@ -345,6 +345,14 @@
       "sourceIds": [
         "qp-repo"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "The heartbeat and the parallel cron jobs run wherever it is installed: inside the desktop app they stop with the machine, deployed to Alibaba Cloud, the AgentScope Platform or ModelScope they keep going.",
+      "sourceIds": [
+        "qp-repo"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -390,6 +398,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "free hosted deployment; a cloud model key is required unless you run local models",
+    "sourceIds": [
+      "qp-repo"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

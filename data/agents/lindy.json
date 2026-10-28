@@ -309,6 +309,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 49.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "per active user; seven-day trial with US$50 of credits",
+    "sourceIds": [
+      "lindy-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -337,6 +347,26 @@
     "sourceIds": [
       "lindy-home"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Browser automation and the shell and code tools execute inside Lindy's hosted service; it is not described as a durable machine you can open and inspect.",
+      "sourceIds": [
+        "lindy-home",
+        "lindy-credentials"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Recurring routines run on the hosted service against their own schedule rather than on the browser the web app was opened in.",
+      "sourceIds": [
+        "lindy-home",
+        "lindy-pricing"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

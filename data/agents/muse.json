@@ -281,6 +281,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": null,
+    "note": "paid tier prices are not published",
+    "sourceIds": [
+      "muse-intro"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "announced",
@@ -429,6 +437,15 @@
       "sourceIds": [
         "muse-design"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Scheduled and event-triggered background work runs on the dedicated secure virtual machine rather than on the phone or Mac it is asked from.",
+      "sourceIds": [
+        "muse-design",
+        "muse-intro"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

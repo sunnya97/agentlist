@@ -39,6 +39,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "note": "seven-day paid-feature trial on new accounts",
+    "sourceIds": [
+      "lucas-faq"
+    ]
+  },
   "platforms": [
     {
       "platform": "web",
@@ -291,6 +301,17 @@
     "sourceIds": [
       "lucas-faq"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "remote": "takeover",
+      "detail": "Errands run on Lucas's cloud browsers, up to five at a time, with a live view and a handover when one needs a person.",
+      "sourceIds": [
+        "lucas-browser",
+        "lucas-privacy"
+      ]
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

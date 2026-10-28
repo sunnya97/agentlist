@@ -208,6 +208,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 199,
+    "currency": "CNY",
+    "period": "month",
+    "bundledWith": "Kimi Pro (China)",
+    "note": "the cloud host also consumes membership credits daily",
+    "sourceIds": [
+      "kimi-membership-pricing",
+      "kimi-membership-benefits"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -251,6 +263,26 @@
     "sourceIds": [
       "kimi-claw-overview"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "A one-click OpenClaw instance deployed on Kimi's own cloud host, which draws about 0.6% of membership credits every day it exists.",
+      "sourceIds": [
+        "kimi-claw-overview",
+        "kimi-membership-pricing"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "The deployed cloud host is what runs /cron tasks, and it bills its daily credit slice whether or not anyone is at a keyboard.",
+      "sourceIds": [
+        "kimi-claw-overview",
+        "kimi-claw-terminal",
+        "kimi-membership-pricing"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

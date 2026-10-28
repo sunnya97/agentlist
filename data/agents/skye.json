@@ -15,6 +15,13 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "sourceIds": [
+      "skye-app"
+    ]
+  },
   "platforms": [
     {
       "platform": "ios",
@@ -234,6 +241,26 @@
     "sourceIds": [
       "skye-app"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "An iPhone and iPad app with a cloud backend; no desktop component is offered, and the financial connections are read-only.",
+      "sourceIds": [
+        "skye-app",
+        "skye-privacy"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Morning briefings and the ranked cards are assembled on the hosted backend from connected sources, not on a computer of the person's.",
+      "sourceIds": [
+        "skye-privacy",
+        "skye-app"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

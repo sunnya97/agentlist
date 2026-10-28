@@ -278,6 +278,22 @@
       "sourceIds": [
         "hn-privacy"
       ]
+    },
+    "agentComputer": {
+      "state": "none",
+      "detail": "No browser or computer of its own: the company states Noah acts only through connected integrations and collects no screenshots.",
+      "sourceIds": [
+        "hn-privacy"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "No component runs on the person's device, so nothing Noah does waits for a computer; the product publishes no named scheduling feature to pin that to.",
+      "sourceIds": [
+        "hn-privacy",
+        "hn-home"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

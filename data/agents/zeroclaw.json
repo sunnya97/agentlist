@@ -279,6 +279,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "zeroclaw-readme"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -327,6 +335,17 @@
     "sourceIds": [
       "zeroclaw-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Opt-in Chrome or Chromium automation runs on whichever machine hosts the background service, which may be your own, and its actions go through the approval policy; desktop control is not claimed.",
+      "sourceIds": [
+        "zeroclaw-browser-use",
+        "zeroclaw-readme"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

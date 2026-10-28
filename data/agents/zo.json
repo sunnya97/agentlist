@@ -464,6 +464,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 18,
+    "currency": "USD",
+    "period": "month",
+    "note": "fourteen-day free trial; each tier includes AI credits",
+    "sourceIds": [
+      "zo-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

@@ -356,6 +356,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "openclaw-readme"
+    ]
+  },
   "discussions": [
     {
       "title": "A week running OpenClaw on a Mac mini",
@@ -578,6 +586,15 @@
       "sourceIds": [
         "openclaw-computer-use"
       ]
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Besides the paired Mac it can drive a cloud desktop, a dedicated agent browser of its own, or a remote browser it connects to.",
+      "sourceIds": [
+        "openclaw-computer-use",
+        "openclaw-browser-use"
+      ],
+      "status": "limited"
     },
     "whileYouAreOff": {
       "state": "partial",

@@ -282,6 +282,15 @@
   "color": "#b76b4e",
   "aliases": [],
   "plans": [],
+  "cost": {
+    "model": "bundled",
+    "floor": null,
+    "bundledWith": "a Claude subscription",
+    "note": "eligible Claude plan usage, or metered API billing",
+    "sourceIds": [
+      "claude-code-plans"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -319,5 +328,37 @@
     "sourceIds": [
       "claude-code-docs"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "Takes the local desktop on macOS and Windows through the Claude desktop app, and macOS through the CLI, which needs a Pro or Max plan and an interactive session.",
+      "sourceIds": [
+        "claude-code-computer"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Cloud sessions run the work on Anthropic's machines, which the iOS and Android apps can start and steer; whether their screen can be watched is not described.",
+      "sourceIds": [
+        "claude-code-docs",
+        "claude-code-mobile"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Cloud sessions carry on at Anthropic's end, while the desktop app's recurring tasks need that computer awake and the app running.",
+      "sourceIds": [
+        "claude-code-docs",
+        "claude-code-mobile"
+      ],
+      "status": "limited"
+    }
   }
 }

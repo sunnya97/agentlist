@@ -261,6 +261,17 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 19,
+    "currency": "USD",
+    "period": "month",
+    "note": "pay-as-you-go usage on top",
+    "sourceIds": [
+      "poke-faq",
+      "poke-pricing"
+    ]
+  },
   "discussions": [
     {
       "title": "Building an accountability bot with Poke recipes",
@@ -430,6 +441,25 @@
     "sourceIds": [
       "poke-home"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Lives in Messages, WhatsApp and Telegram against a hosted service; no desktop component is offered and interactive browser control is not among its tools.",
+      "sourceIds": [
+        "poke-home",
+        "poke-docs"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Reminders and scheduled tasks are sent by the hosted messaging service itself, so they do not wait for a computer of yours.",
+      "sourceIds": [
+        "poke-home"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

@@ -241,6 +241,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "picoclaw-readme"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -305,6 +313,17 @@
     "sourceIds": [
       "picoclaw-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "Runs as a binary, a container or an Android build on hardware you own, where the bundled skill drives a browser; control of desktop applications is not claimed.",
+      "sourceIds": [
+        "picoclaw-readme",
+        "picoclaw-browser-skill"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

@@ -37,6 +37,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": null,
+    "note": "App Store lists purchases at US$20 and US$200; periods are not published",
+    "sourceIds": [
+      "rene-home",
+      "rene-app"
+    ]
+  },
   "platforms": [
     {
       "platform": "web",
@@ -306,6 +315,26 @@
       "rene-faq",
       "rene-app"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "Reached through Messages, WhatsApp, Telegram and an iPhone or iPad app; no desktop client exists and nothing is described as running on a computer of the person's.",
+      "sourceIds": [
+        "rene-app",
+        "rene-privacy"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Recurring briefs, reminders and follow-ups are produced by the managed service, which is also where the connected-app state lives.",
+      "sourceIds": [
+        "rene-app",
+        "rene-privacy"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

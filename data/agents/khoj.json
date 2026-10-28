@@ -344,6 +344,15 @@
       "sourceIds": [
         "khoj-operator"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Cron-style automations run wherever Khoj is installed: on your own machine they stop with it, on a server you keep they continue and email the results.",
+      "sourceIds": [
+        "khoj-setup",
+        "khoj-automations"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -390,6 +399,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "no hosted tier since the vendor cloud closed",
+    "sourceIds": [
+      "khoj-cloud-shutdown"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

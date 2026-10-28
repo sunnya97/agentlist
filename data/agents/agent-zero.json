@@ -339,6 +339,15 @@
         "az-desktop",
         "az-browser"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Depends where it is installed: the Docker stack or launcher on your own machine stops with it, while the same stack on a VPS you control keeps its scheduled tasks running.",
+      "sourceIds": [
+        "az-install",
+        "az-usage"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -385,6 +394,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "az-home",
+      "az-repo"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

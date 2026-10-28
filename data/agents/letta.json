@@ -481,6 +481,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "note": "free open-source harness; Letta Cloud is free for three agents",
+    "sourceIds": [
+      "letta-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

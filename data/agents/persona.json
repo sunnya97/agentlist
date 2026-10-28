@@ -29,6 +29,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "optional US$179 Band",
+    "sourceIds": [
+      "persona-band"
+    ]
+  },
   "platforms": [
     {
       "platform": "ios",
@@ -293,6 +301,25 @@
     "sourceIds": [
       "persona-band"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Tasks run on the managed service's cloud infrastructure, where it operates a browser inside the accounts you have authorised.",
+      "sourceIds": [
+        "persona-privacy"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Standing instructions keep reminders, mail triage and tasks moving in the background on Persona's own infrastructure, not on a device of yours.",
+      "sourceIds": [
+        "persona-terms",
+        "persona-privacy"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

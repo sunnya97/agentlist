@@ -354,6 +354,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 19.99,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "Google AI Pro",
+    "note": "also in Google AI Ultra, whose price varies by market",
+    "sourceIds": [
+      "google-one-pricing",
+      "gemini-tasks-help"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -498,6 +510,15 @@
       "sourceIds": [
         "spark-keynote"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Tasks fire on a schedule or an event trigger inside Google's dedicated cloud virtual machines, up to fifteen at once, rather than on the person's computer.",
+      "sourceIds": [
+        "gemini-tasks-help",
+        "spark-keynote"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

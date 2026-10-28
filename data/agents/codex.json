@@ -356,6 +356,18 @@
   "color": "#45634c",
   "aliases": [],
   "plans": [],
+  "cost": {
+    "model": "bundled",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "ChatGPT Plus",
+    "note": "or metered API-key usage",
+    "sourceIds": [
+      "codex-pricing",
+      "codex-auth"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -401,5 +413,37 @@
       "codex-mobile",
       "codex-computer"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "full",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "detail": "The desktop app drives the GUI on macOS and Windows, where Windows tasks occupy the foreground; computer use is absent from the Linux preview.",
+      "sourceIds": [
+        "codex-computer",
+        "codex-linux"
+      ],
+      "status": "limited"
+    },
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "Work can be handed to OpenAI's managed cloud environments instead of the local machine, and the iOS app can start tasks there.",
+      "sourceIds": [
+        "codex-cli",
+        "codex-mobile"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Cloud tasks continue on OpenAI's side, while scheduled local project tasks are documented as needing the computer on and the app open.",
+      "sourceIds": [
+        "codex-schedules",
+        "codex-mobile"
+      ]
+    }
   }
 }

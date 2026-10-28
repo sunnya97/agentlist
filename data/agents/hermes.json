@@ -291,6 +291,14 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "hermes-readme"
+    ]
+  },
   "discussions": [
     {
       "title": "Hermes user experiences: homelabs, memory and interface friction",
@@ -486,6 +494,14 @@
       "sourceIds": [
         "hermes-computer-use"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "The built-in cron runs wherever the agent lives: on your own desktop it stops with the machine, on a VPS, container or serverless backend it does not.",
+      "sourceIds": [
+        "hermes-readme"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

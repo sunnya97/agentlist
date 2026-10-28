@@ -371,6 +371,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 15,
+    "currency": "USD",
+    "period": "month",
+    "note": "free plan carries 30 chats a month",
+    "sourceIds": [
+      "town-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -450,6 +460,18 @@
     "sourceIds": [
       "town-start"
     ]
+  },
+  "compute": {
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Routines run on Town's provider-hosted side against a schedule or an event trigger, and the approvals they raise arrive on the phone.",
+      "sourceIds": [
+        "town-routines",
+        "town-start",
+        "town-security"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

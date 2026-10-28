@@ -71,6 +71,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 14.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "fourteen-day trial with 10,000 credits",
+    "sourceIds": [
+      "eney-home"
+    ]
+  },
   "platforms": [
     {
       "platform": "macos",
@@ -335,6 +345,14 @@
       "sourceIds": [
         "eney-privacy"
       ]
+    },
+    "agentComputer": {
+      "state": "none",
+      "detail": "No machine of its own: the work happens on the user's Mac, and only model requests and signed-in chat sync leave for the cloud.",
+      "sourceIds": [
+        "eney-privacy"
+      ],
+      "status": "limited"
     },
     "whileYouAreOff": {
       "state": "partial",

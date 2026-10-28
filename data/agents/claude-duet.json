@@ -306,6 +306,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "Claude Pro",
+    "note": "shares Claude plan usage limits",
+    "sourceIds": [
+      "duet-product",
+      "claude-plans"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

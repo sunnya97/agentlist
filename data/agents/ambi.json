@@ -299,6 +299,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": null,
+    "note": "seven-day trial, then paid; plan prices are not published",
+    "sourceIds": [
+      "ambi-features",
+      "ambi-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "announced",

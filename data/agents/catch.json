@@ -261,6 +261,23 @@
       "sourceIds": [
         "ca-home"
       ]
+    },
+    "agentComputer": {
+      "state": "none",
+      "detail": "No computer or browser of its own is described; Catch works through connected integrations and outbound phone calls.",
+      "sourceIds": [
+        "ca-home"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "The morning brief, daily sync and follow-ups come out of Catch's provider cloud, which is the only place the product runs: there is no self-hosted or local component.",
+      "sourceIds": [
+        "ca-home",
+        "ca-security"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -299,6 +316,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 99,
+    "currency": "USD",
+    "period": "month",
+    "note": "ten-day free trial; one scheduling feature is free",
+    "sourceIds": [
+      "ca-home"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

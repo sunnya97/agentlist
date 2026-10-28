@@ -250,6 +250,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "openfang-readme",
+      "openfang-model-providers"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -274,6 +283,16 @@
     "sourceIds": [
       "openfang-readme"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "detail": "The daemon and its Playwright browser sessions run on whichever machine you install them on, which may be your own; driving desktop applications is not claimed.",
+      "sourceIds": [
+        "openfang-readme"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

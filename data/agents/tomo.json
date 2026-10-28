@@ -30,6 +30,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 19.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "larger messaging allowances cost more",
+    "sourceIds": [
+      "tomo-about"
+    ]
+  },
   "platforms": [
     {
       "platform": "ios",
@@ -282,6 +292,27 @@
       "tomo-home",
       "tomo-appstore"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "An iMessage and iPhone coach in front of a managed service; no desktop component is offered and interactive browser control is not specified.",
+      "sourceIds": [
+        "tomo-appstore",
+        "tomo-about",
+        "tomo-privacy"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Check-ins and reminders are initiated by the managed service, so they arrive whether or not a computer of yours is on.",
+      "sourceIds": [
+        "tomo-about",
+        "tomo-privacy"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "dataAfterExit": {

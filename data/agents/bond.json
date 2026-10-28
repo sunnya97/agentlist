@@ -304,6 +304,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 49,
+    "currency": "USD",
+    "period": "month",
+    "note": "free tier carries 10,000 credits",
+    "sourceIds": [
+      "bond-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

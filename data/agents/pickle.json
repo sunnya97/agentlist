@@ -69,6 +69,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "note": "weekly credit allowances per tier",
+    "sourceIds": [
+      "pickle-plans"
+    ]
+  },
   "platforms": [
     {
       "platform": "ios",
@@ -357,12 +367,31 @@
     ]
   },
   "compute": {
+    "onYourComputer": {
+      "state": "none",
+      "detail": "The work happens on Pickle's own computer, reached from the iPhone app; nothing is offered for a desktop of the person's.",
+      "sourceIds": [
+        "pickle-terms",
+        "pickle-appstore"
+      ],
+      "status": "limited"
+    },
     "agentComputer": {
       "state": "cloud",
       "detail": "A computer of its own, with isolated task execution. Whether you can watch it is not specified.",
       "sourceIds": [
         "pickle-terms"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "One-time and repeating tasks run on Pickle's own computer under the service's isolated execution, rather than on the phone they were set from.",
+      "sourceIds": [
+        "pickle-scheduled",
+        "pickle-home",
+        "pickle-terms"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {

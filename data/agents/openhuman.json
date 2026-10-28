@@ -399,6 +399,15 @@
         "oh-browser"
       ]
     },
+    "agentComputer": {
+      "state": "none",
+      "detail": "No machine of its own: it drives the person's real Chrome and desktop applications, and the optional hosted backend supplies only inference and billing.",
+      "sourceIds": [
+        "oh-browser",
+        "oh-repo"
+      ],
+      "status": "limited"
+    },
     "whileYouAreOff": {
       "state": "partial",
       "status": "limited",
@@ -478,6 +487,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 19.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "free app; paid tiers only buy cheaper hosted inference",
+    "sourceIds": [
+      "oh-billing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

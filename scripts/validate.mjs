@@ -5,6 +5,7 @@ import {fields as fieldDefinitions,companyTypes,launchKinds} from '../src/catalo
 import {platformLabels,platformStatusLabels} from '../src/platforms.js';
 import {channelLabels} from '../src/channels.js';
 import {accessStates,accessRestrictions} from '../src/access.js';
+import {costModels,costPeriods,currencySymbols} from '../src/cost.js';
 import {computeFacets,agentScreenAccess} from '../src/compute.js';
 import {continuityFacets} from '../src/continuity.js';
 import {thirdPartyAccess,accessPaths} from '../src/datasources.js';
@@ -107,6 +108,24 @@ export function validate(data){
       // An expected date may be in the future, unlike a launch that already happened.
       if(x.expected){assert(/^\d{4}(-\d{2})?(-\d{2})?$/.test(x.expected),`${a.id}: invalid expected date`);assert(x.state!=='available',`${a.id}: an available product needs no expected date`)}
       assert(x.detail,`${a.id}: access needs a detail`);evidence(x,'access');
+    }
+    // Structured cost summarizes the prose pricing claim. An unestablished
+    // price carries no object at all, because absent must never read as free.
+    if(a.cost){
+      const c=a.cost;
+      assert(Object.hasOwn(costModels,c.model),`${a.id}: invalid cost model ${c.model}`);
+      assert(c.floor===null||(typeof c.floor==='number'&&Number.isFinite(c.floor)&&c.floor>0),`${a.id}: cost floor must be a positive number or null`);
+      // Free software has no paid tier to price, so a floor would contradict it.
+      if(c.model==='free')assert(c.floor===null,`${a.id}: a free product cannot carry a price floor`);
+      if(c.floor===null)assert(!c.currency&&!c.period,`${a.id}: no floor means no currency or period`);
+      else{
+        assert(Object.hasOwn(currencySymbols,c.currency),`${a.id}: unknown currency ${c.currency}`);
+        assert(Object.hasOwn(costPeriods,c.period),`${a.id}: invalid cost period ${c.period}`);
+      }
+      // Bundled is the one model whose money buys something larger; name it.
+      assert(Boolean(c.bundledWith)===(c.model==='bundled'),`${a.id}: bundledWith belongs to bundled pricing and nothing else`);
+      if(c.note)assert(typeof c.note==='string'&&c.note.trim()===c.note&&!/[.!?]$/.test(c.note),`${a.id}: a cost note is a short qualifier with no trailing stop`);
+      evidence(c,'cost');
     }
     for(const field of fields){const matches=a.claims.filter(c=>c.field===field);assert(matches.length===1,`${a.id} missing or duplicate ${field}`);const c=matches[0];assert(['documented','limited','unknown'].includes(c.status));assert(typeof c.value==='string'&&c.value);assert(c.status==='unknown'||c.sourceIds.length,`${a.id}/${field} needs evidence`);for(const s of c.sourceIds)assert(sourceIds.has(s),`${a.id}/${field} references missing source ${s}`)}
   }

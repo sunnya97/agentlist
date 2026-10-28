@@ -331,6 +331,17 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 19.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "included with a Prime membership; a limited free text chat needs no subscription",
+    "sourceIds": [
+      "alexa-prime",
+      "alexa-intro"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "optional",

@@ -81,6 +81,28 @@ Use one entry per plan or add-on. Include currency, monthly versus annual billin
 }
 ```
 
+`cost` summarizes that prose into the one answer a column can sort on. Models are listed in `src/cost.js`:
+
+- `free` — no paid tier for the software itself. An open runtime where you only pay for models and hosting is `free` with a `note` saying so and no `floor`.
+- `freemium` — a genuine free tier *and* a paid tier; `floor` is the cheapest paid tier.
+- `paid` — no usable free tier; `floor` is the entry price. A free trial is not a free tier: record it in `note`.
+- `bundled` — only obtainable inside a larger subscription. `floor` is that subscription's price and `bundledWith` names it.
+- `device` — the main cost is hardware, so `floor` is the device price with `period: "once"`.
+
+```json
+"cost": {
+  "model": "bundled",
+  "floor": 100,
+  "currency": "USD",
+  "period": "month",
+  "bundledWith": "ChatGPT Pro",
+  "note": "deeper-work allowances apply",
+  "sourceIds": ["example-pricing"]
+}
+```
+
+Derive it from the `pricing` claim and the plans already in the record, and cite the same sources they do. Leave `floor` null where no price is published, rather than converting an annual total or quoting a tier the claim does not name; drop `currency` and `period` with it. The `note` is a short lower-case qualifier with no trailing stop. Omit the whole object when the price is not established — an absent `cost` must never read as free. The build derives the directory's short price text from it, so the `pricing` claim keeps the prose.
+
 ## Apps and hardware
 
 `platforms` lists real native clients and web access. A Telegram integration or CLI running on Android does not establish an Android app. Statuses distinguish available, beta, preview, announced, and limited access. Use `watchos` for Apple Watch.

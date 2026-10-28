@@ -152,6 +152,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 19,
+    "currency": "USD",
+    "period": "month",
+    "sourceIds": [
+      "maxclaw-overview"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -199,6 +208,23 @@
     "sourceIds": [
       "maxclaw-overview"
     ]
+  },
+  "compute": {
+    "agentComputer": {
+      "state": "cloud",
+      "detail": "A MiniMax-managed cloud workspace of 50 GB with its own built-in browser actions.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Scheduled monitoring, recurring collection and automatic reports run on a cloud the product describes as continuously available, not on a machine of yours.",
+      "sourceIds": [
+        "maxclaw-overview"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

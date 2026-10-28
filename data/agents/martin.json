@@ -277,6 +277,26 @@
       "sourceIds": [
         "martin-docs"
       ]
+    },
+    "agentComputer": {
+      "state": "none",
+      "detail": "No computer or browser of its own is described; Martin acts inside connected accounts and over the phone.",
+      "sourceIds": [
+        "martin-docs",
+        "martin-home"
+      ],
+      "status": "limited"
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "Wake-up calls, reminders and the proactive actions the paid tiers are counted in come from Martin's side, with nothing described as running on the person's computer.",
+      "sourceIds": [
+        "martin-wake",
+        "martin-reminders",
+        "martin-pricing",
+        "martin-home"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -322,6 +342,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "paid",
+    "floor": 21,
+    "currency": "USD",
+    "period": "month",
+    "note": "billed yearly; US$35 a month billed monthly, with seven days free",
+    "sourceIds": [
+      "martin-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

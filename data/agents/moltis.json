@@ -371,6 +371,16 @@
         "mo-repo",
         "mo-security"
       ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Cron jobs and the CalDAV and email connectors last as long as the daemon's host: installed on your own Mac or Linux box they stop with it, on a cloud host you manage they do not.",
+      "sourceIds": [
+        "mo-quick",
+        "mo-cloud",
+        "mo-docs"
+      ],
+      "status": "limited"
     }
   },
   "continuity": {
@@ -416,6 +426,15 @@
       ]
     }
   ],
+  "cost": {
+    "model": "free",
+    "floor": null,
+    "note": "you pay model and hosting costs",
+    "sourceIds": [
+      "mo-home",
+      "mo-docs"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",

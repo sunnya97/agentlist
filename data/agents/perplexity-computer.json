@@ -431,6 +431,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 20,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "Perplexity Pro",
+    "note": "Pro includes no Computer credits; Max at US$200 a month includes 10,000",
+    "sourceIds": [
+      "pc-plans",
+      "pc-max"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "optional",

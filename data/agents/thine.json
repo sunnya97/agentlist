@@ -32,6 +32,16 @@
       ]
     }
   ],
+  "cost": {
+    "model": "freemium",
+    "floor": 14.99,
+    "currency": "USD",
+    "period": "month",
+    "note": "recording and transcription are free for life",
+    "sourceIds": [
+      "thine-recorder"
+    ]
+  },
   "platforms": [
     {
       "platform": "macos",
@@ -242,6 +252,27 @@
     "sourceIds": [
       "thine-mac"
     ]
+  },
+  "compute": {
+    "onYourComputer": {
+      "state": "partial",
+      "platforms": [
+        "macos"
+      ],
+      "detail": "The Mac app records meetings from the microphone and system audio, with a countdown that can be skipped; it reads the machine rather than driving it.",
+      "sourceIds": [
+        "thine-mac"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "partial",
+      "detail": "Mac capture needs that Mac awake, while the iPhone keeps recording and transcription, summaries and chat are processed in the cloud.",
+      "sourceIds": [
+        "thine-mac",
+        "thine-privacy"
+      ],
+      "status": "limited"
+    }
   },
   "continuity": {
     "worksWithoutVendor": {

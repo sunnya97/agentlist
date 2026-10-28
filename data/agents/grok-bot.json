@@ -370,6 +370,18 @@
       ]
     }
   ],
+  "cost": {
+    "model": "bundled",
+    "floor": 30,
+    "currency": "USD",
+    "period": "month",
+    "bundledWith": "The X Subscription Premium",
+    "note": "eligible legacy Cursor and SuperGrok plans also grant access",
+    "sourceIds": [
+      "grok-bot-plans",
+      "x-subscription-pricing"
+    ]
+  },
   "discussions": [],
   "hardware": {
     "status": "unknown",
@@ -499,6 +511,14 @@
       "state": "cloud",
       "detail": "A persistent cloud desktop, with a screen for each Bot on a computer shared across your Bots.",
       "sourceIds": [
+        "grok-computer"
+      ]
+    },
+    "whileYouAreOff": {
+      "state": "yes",
+      "detail": "The Bots share a persistent cloud computer and are sold on scheduled routines and round-the-clock work, independent of any machine of yours.",
+      "sourceIds": [
+        "grok-product",
         "grok-computer"
       ]
     }
