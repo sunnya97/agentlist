@@ -1,0 +1,12 @@
+name = "agentlist-votes"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "agentlist-votes"
+database_id = "PLACEHOLDER"
+
+[vars]
+ALLOWED_ORIGIN = "https://agentlist.wiki"
+GITHUB_CLIENT_ID = ""
